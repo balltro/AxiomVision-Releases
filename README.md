@@ -2,7 +2,19 @@
 
 Public Windows release assets and Ed25519-signed update feed for Axiom Vision.
 
-## v0.18.0
+## Latest: v0.18.13 — Recovery Resume
+
+[Download v0.18.13](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.13).
+
+Existing installations: open **Settings → CHECK UPDATE**, wait for workers to stop, then close the Controller. The signed updater preserves runtime state, checkpoints, statistics, sessions and reward history. An active checkpoint defers installation; do not Reset a batch merely to install this update.
+
+This release keeps Resume available after Stop during blocked Universal recovery, and preserves Heart exclusion and archive-before-new-Start authority. Reward Archive and Send Log code remains unchanged from v0.18.12.
+
+Validation: 1,053 tests passed, 17 skipped; signed upgrades from v0.18.11 and v0.18.12 preserved nine runtime files each byte-for-byte. Native Windows/LDPlayer validation remains pending.
+
+ZIP SHA-256: `5fedaf38b5e8608c9f60e62c758b9ea27082e8ec8101728a99e29418b956211f`.
+
+## v0.18.0 (initial release)
 
 1. Download the ZIP from the [v0.18.0 release](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.0).
 2. Close the Controller and game workers. Back up the existing installation, extract the ZIP over the same folder without deleting runtime state, and run `RUN-SETUP-WINDOWS.bat` once.
