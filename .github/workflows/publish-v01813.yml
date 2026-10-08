@@ -41,23 +41,47 @@ jobs:
             --output "$RUNNER_TEMP/AxiomVision-v0.18.13-Recovery-Resume-Windows10.zip" \
             --signed-feed publishing/v0.18.13/signed-feed.json
           cp publishing/v0.18.13/signed-feed.json "$RUNNER_TEMP/updates-v0.18.13.json"
-      - name: Upload release privately before publication
+      - name: Create or inspect draft release
         run: |
-          gh release create v0.18.13 \
-            "$RUNNER_TEMP/AxiomVision-v0.18.13-Recovery-Resume-Windows10.zip" \
-            "$RUNNER_TEMP/updates-v0.18.13.json" \
-            --draft --target "$GITHUB_SHA" \
-            --title 'Axiom Vision v0.18.13 — Recovery Resume' \
-            --notes-file publishing/v0.18.13/publication-notes.md
+          gh api "repos/$GH_REPO/releases?per_page=100" > "$RUNNER_TEMP/release-list.json"
+          "$RUNNER_TEMP/axiom-release-env/bin/python" - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          releases = json.loads((root / 'release-list.json').read_bytes())
+          matching = [r for r in releases if r['tag_name'] == 'v0.18.13']
+          assert len(matching) <= 1, 'More than one matching release'
+          if matching:
+              (root / 'release-id.txt').write_text(str(matching[0]['id']))
+          PY
+          if [ ! -s "$RUNNER_TEMP/release-id.txt" ]; then
+            gh release create v0.18.13 \
+              "$RUNNER_TEMP/AxiomVision-v0.18.13-Recovery-Resume-Windows10.zip" \
+              "$RUNNER_TEMP/updates-v0.18.13.json" \
+              --draft --target "$GITHUB_SHA" \
+              --title 'Axiom Vision v0.18.13 — Recovery Resume' \
+              --notes-file publishing/v0.18.13/publication-notes.md
+            gh api "repos/$GH_REPO/releases?per_page=100" > "$RUNNER_TEMP/release-list.json"
+            "$RUNNER_TEMP/axiom-release-env/bin/python" - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          releases = json.loads((root / 'release-list.json').read_bytes())
+          matching = [r for r in releases if r['tag_name'] == 'v0.18.13']
+          assert len(matching) == 1 and matching[0]['draft']
+          (root / 'release-id.txt').write_text(str(matching[0]['id']))
+          PY
+          fi
       - name: Verify uploaded bytes before publishing
         run: |
-          gh api "repos/$GH_REPO/releases/tags/v0.18.13" > "$RUNNER_TEMP/release-result.json"
+          release_id="$(cat "$RUNNER_TEMP/release-id.txt")"
+          gh api "repos/$GH_REPO/releases/$release_id" > "$RUNNER_TEMP/release-result.json"
           "$RUNNER_TEMP/axiom-release-env/bin/python" - <<'PY'
           import hashlib, json, os
           from pathlib import Path
           root = Path(os.environ['RUNNER_TEMP'])
           result = json.loads((root / 'release-result.json').read_bytes())
-          assert result['draft'] and not result['prerelease']
+          assert result['tag_name'] == 'v0.18.13' and not result['prerelease']
           assets = {a['name']: a for a in result['assets']}
           for name in ('AxiomVision-v0.18.13-Recovery-Resume-Windows10.zip', 'updates-v0.18.13.json'):
               data = (root / name).read_bytes()
@@ -66,4 +90,5 @@ jobs:
               assert assets[name]['digest'] == 'sha256:' + hashlib.sha256(data).hexdigest()
           print('Both release asset hashes match the reviewed local files')
           PY
-          gh release edit v0.18.13 --draft=false --latest=true
+          gh api --method PATCH "repos/$GH_REPO/releases/$release_id" \
+            -F draft=false -f make_latest=true > "$RUNNER_TEMP/published-release.json"
