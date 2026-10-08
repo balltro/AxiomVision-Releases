@@ -1,0 +1,69 @@
+name: Publish Axiom Vision v0.18.13
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'publishing/v0.18.13/**'
+      - '.github/workflows/publish-v01813.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: axiom-vision-release-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Check out exact reviewed commit
+        run: |
+          git init .
+          git remote add origin "https://github.com/$GITHUB_REPOSITORY.git"
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Prepare signature verification
+        run: |
+          python3 -m venv "$RUNNER_TEMP/axiom-release-env"
+          "$RUNNER_TEMP/axiom-release-env/bin/pip" install cryptography==50.0.1
+      - name: Download verified baseline and reproduce signed package
+        run: |
+          gh release download v0.18.12 --pattern AxiomVision-v0.18.12-Auto-Recovery-Windows10.zip --dir "$RUNNER_TEMP"
+          "$RUNNER_TEMP/axiom-release-env/bin/python" publishing/v0.18.13/assemble_release.py \
+            --base-zip "$RUNNER_TEMP/AxiomVision-v0.18.12-Auto-Recovery-Windows10.zip" \
+            --output "$RUNNER_TEMP/AxiomVision-v0.18.13-Recovery-Resume-Windows10.zip" \
+            --signed-feed publishing/v0.18.13/signed-feed.json
+          cp publishing/v0.18.13/signed-feed.json "$RUNNER_TEMP/updates-v0.18.13.json"
+      - name: Upload release privately before publication
+        run: |
+          gh release create v0.18.13 \
+            "$RUNNER_TEMP/AxiomVision-v0.18.13-Recovery-Resume-Windows10.zip" \
+            "$RUNNER_TEMP/updates-v0.18.13.json" \
+            --draft --target "$GITHUB_SHA" \
+            --title 'Axiom Vision v0.18.13 — Recovery Resume' \
+            --notes-file publishing/v0.18.13/publication-notes.md
+      - name: Verify uploaded bytes before publishing
+        run: |
+          gh api "repos/$GH_REPO/releases/tags/v0.18.13" > "$RUNNER_TEMP/release-result.json"
+          "$RUNNER_TEMP/axiom-release-env/bin/python" - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          result = json.loads((root / 'release-result.json').read_bytes())
+          assert result['draft'] and not result['prerelease']
+          assets = {a['name']: a for a in result['assets']}
+          for name in ('AxiomVision-v0.18.13-Recovery-Resume-Windows10.zip', 'updates-v0.18.13.json'):
+              data = (root / name).read_bytes()
+              assert assets[name]['state'] == 'uploaded'
+              assert assets[name]['size'] == len(data)
+              assert assets[name]['digest'] == 'sha256:' + hashlib.sha256(data).hexdigest()
+          print('Both release asset hashes match the reviewed local files')
+          PY
+          gh release edit v0.18.13 --draft=false --latest=true

@@ -1,0 +1,42 @@
+{
+  "version": "0.18.13",
+  "unit_tests": {
+    "total": 1070,
+    "passed": 1053,
+    "skipped": 17,
+    "failed": 0
+  },
+  "upgrades": [
+    {
+      "from": "0.18.11",
+      "to": "0.18.13",
+      "package_members_verified": 121,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.12",
+      "to": "0.18.13",
+      "package_members_verified": 121,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "reward_archive_send_log_identical_to": "0.18.12",
+  "protected_files_byte_identical": 16,
+  "native_windows_ldplayer_tested": false
+}

@@ -1,0 +1,36 @@
+def checkpoint_is_resumable(
+    mission: dict[str, Any],
+    checkpoint: dict[str, Any],
+) -> bool:
+    status = checkpoint.get("status")
+    if status == "blocked":
+        # Bridge recovery preserves blocked Universal checkpoints. An offline
+        # Stop must not hide their Resume/Heart exclusion/archive authority.
+        # This recognition grants no input and leaves all Bridge gates intact.
+        plan = mission.get("universal_plan")
+        if not (
+            isinstance(plan, dict)
+            and plan.get("plan_id") == UNIVERSAL_MISSION_ID
+            and checkpoint.get("mission_source") == "universal-code"
+            and checkpoint.get("mission_contract_sha256") == plan.get("plan_hash")
+            and checkpoint.get("current_stage_phase") in {"entered", "action_committed", "completed"}
+        ):
+            return False
+    elif status != "active":
+        return False
+    stage_id = checkpoint.get("current_stage_id")
+    if not isinstance(stage_id, str):
+        return False
+    steps = mission.get("steps")
+    if not isinstance(steps, list) or not steps:
+        return False
+    if status == "blocked" and not any(
+        isinstance(step, dict) and step.get("id") == stage_id for step in steps
+    ):
+        return False
+    final = steps[-1]
+    final_id = final.get("id") if isinstance(final, dict) else None
+    return not (
+        checkpoint.get("current_stage_phase") == "completed"
+        and stage_id == final_id
+    )

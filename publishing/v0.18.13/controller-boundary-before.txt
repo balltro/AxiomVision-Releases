@@ -1,0 +1,18 @@
+def checkpoint_is_resumable(
+    mission: dict[str, Any],
+    checkpoint: dict[str, Any],
+) -> bool:
+    if checkpoint.get("status") != "active":
+        return False
+    stage_id = checkpoint.get("current_stage_id")
+    if not isinstance(stage_id, str):
+        return False
+    steps = mission.get("steps")
+    if not isinstance(steps, list) or not steps:
+        return False
+    final = steps[-1]
+    final_id = final.get("id") if isinstance(final, dict) else None
+    return not (
+        checkpoint.get("current_stage_phase") == "completed"
+        and stage_id == final_id
+    )
