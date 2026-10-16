@@ -1,0 +1,57 @@
+{
+  "version": "0.18.14",
+  "unit_tests": {
+    "total": 1105,
+    "passed": 1088,
+    "skipped": 17,
+    "failed": 0
+  },
+  "upgrades": [
+    {
+      "from": "0.18.11",
+      "to": "0.18.14",
+      "package_members_verified": 127,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.12",
+      "to": "0.18.14",
+      "package_members_verified": 127,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.13",
+      "to": "0.18.14",
+      "package_members_verified": 127,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "native_windows_ldplayer_tested": false,
+  "diagnostic_derived_clean_reward_route_verified": true,
+  "send_log_transport_byte_identical_to": "0.18.13",
+  "universal_mission_byte_identical_to": "0.18.13"
+}

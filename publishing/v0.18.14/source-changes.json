@@ -1,0 +1,911 @@
+[
+  {
+    "path": "RUN-SETUP-WINDOWS.bat",
+    "before_sha256": "7e1a6f2e2aff9d094fd51a5f8e666a7c722da5f345ba337de53ce17170c7f4f5",
+    "after_sha256": "e72e7501d45a73e67337fddd671a8ba05242aa71a7f62958148312af0e12ea5c",
+    "edits": [
+      {
+        "start": 12,
+        "end": 13,
+        "before": "echo Axiom Vision v0.18.13 Setup\n",
+        "after": "echo Axiom Vision v0.18.14 Setup\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/.codex-plugin/plugin.json",
+    "before_sha256": "a8e8d99057bb7ad557aace277c5afa0a2a1e0d25ea88de61046030986eecfafc",
+    "after_sha256": "a97e6ad9265203ac511451e5cfc017e590e42e7cf6a763f68bcc1be3eb6b2912",
+    "edits": [
+      {
+        "start": 2,
+        "end": 3,
+        "before": "  \"version\": \"0.18.13+codex.20261008.recovery-resume\",\n",
+        "after": "  \"version\": \"0.18.14+codex.20261016.recovery-core\",\n"
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "before": "    \"longDescription\": \"Axiom Vision v0.18.13 retains Resume, mutual exclusion, and archive-before-Start authority for stopped blocked Universal checkpoints. Existing recovery, native input guards, Reward Archive, single-file Send Log, Universal Revision 9 and Heart Revision 13 are preserved.\",\n",
+        "after": "    \"longDescription\": \"Axiom Vision v0.18.14 removes runtime reward-item image reading and catalog UI, preserves Mystery Box collection and durable run totals, and improves guarded recovery with focused Confirm OCR, one persisted Local restore, validated metadata and same-process undispatched intent proof. Human Verification and all never-replay guards remain enforced.\",\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/AGENTS.md",
+    "before_sha256": "431a3bb63e9a86fb8a3a9b3c1721aebcac99b008e6acf453a891162eeecca199",
+    "after_sha256": "f4126a06fad877f7fccc2364d7a4779aa2523938cb89507768b7dd92f295e07a",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.14 reward reading removal and recovery core\n\nRuntime reward-item image capture, item/catalog UI and background archive OCR\nare removed. Existing archive files remain historical data. Mystery Box\ncollection, authoritative counts, Coins/EXP and exact fresh scene OCR remain.\nThe old archive-reading statements below are historical and superseded.\n\nA missed reward Confirm label may be read only from the calibrated control\non the same exact captured frame, with its reward header, cyan pixels and\nfull-frame exclusions intact. One extra fresh observation before a first\nConfirm grants no replay rights, intent clearing or extra action budget.\nOnly a clean, compiled-Plan-bound reward checkpoint may receive one persisted\nLocal recovery before Codex; pending/committed actions retain successor-only\nrecovery. Respect Stop, Pause, Human Verification and completed targets.\n\nRecovery explanation accepts note or its explicit reason alias; conflicting\nor invalid metadata is a typed error before Session access. Do not count an\nobserve unlock as recovered progress. A proven before-dispatch age abort\nrequires private same-process witness authority and restores only its original\nreplay lock; never reconstruct that authority from a checkpoint or old log.\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/README_TH.md",
+    "before_sha256": "1cef4cc216b30b7e42824d827e7c6ad127d430a094c5ed2c770970ce4385f647",
+    "after_sha256": "837cde1325e2f2264013fc488eef41a61ff3c187d0ebc4e2a34df9a5ed2001e7",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# Axiom Vision v0.18.14 — Recovery Core\n\nตัดระบบอ่านชื่อวัตถุดิบ/สมบัติ ภาพบันทึกของรางวัล และ OCR รายการของรางวัล\nเบื้องหลังออก หน้า Run Summary แสดงเฉพาะรอบ กล่อง Coins และ EXP\nข้อมูลรางวัลเก่าคงอยู่ แต่ระบบจะไม่อ่านหรือวิเคราะห์เพิ่ม\n\nแก้ Recovery ที่กลับมาหน้า Confirm แล้วติดการอ่านปุ่ม: อ่านเฉพาะปุ่มจาก\nภาพเดียวกัน และสังเกตภาพใหม่ได้อีกหนึ่งครั้งก่อนกดครั้งแรก\ncheckpoint รางวัลที่สะอาดลอง Local หนึ่งครั้งก่อนส่งให้ Codex พร้อมจำ\nคิวและ backoff ข้ามการเปิด Controller ใหม่ ไม่กดซ้ำเมื่อ intent ไม่ทราบผล\nรับ note/reason ถูกต้อง และไม่นับเห็นหน้าเดิมซ้ำเป็นกู้สำเร็จ\n\nใช้ Settings → CHECK UPDATE รอ worker หยุดแล้วปิด Controller\nเก็บ state/checkpoint/stats/session/reward เดิม ไม่ต้อง Reset Batch\nรายละเอียด: RELEASE_v0.18.14_TH.md\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/RELEASE_v0.18.14_TH.md",
+    "before_sha256": null,
+    "after_sha256": "ace0bf251f99964f92db8fc4edb1196a1d70571e67f1cb3b35063dab6bb23015",
+    "content": "# Axiom Vision v0.18.14 — Recovery Core\n\nตัดระบบอ่านรายการวัตถุดิบ/สมบัติ\n- ไม่บันทึกภาพ Confirm เพื่ออ่านรายชื่อของ ไม่เปิด OCR archive เบื้องหลัง\n- หน้า Run Summary เหลือรอบ กล่อง Coins และ EXP; Telegram ไม่อ่านรายการของเก่า\n- เก็บประวัติรางวัลเดิม และยังเปิดกล่อง/Confirm ด้วย scene OCR และ input guards\n\nแก้ Auto Recovery จาก diagnostic v0.18.13 วันที่ 16 ตุลาคม\n- เหตุการณ์ก่อนส่ง diagnostic: กลับหน้า Confirm ได้ แต่ scene OCR ปฏิเสธก่อน\n  คลิก และอีกครั้ง reason แทน note ทำให้ KeyError; snapshot ตอนส่งเป็นรอบใหม่\n  ที่กำลัง passive-running จึงไม่อ้างว่ารอบใหม่ค้าง\n- อ่านเฉพาะปุ่ม Confirm จากภาพเดียวกันเมื่อ OCR ทั้งภาพพลาด ต้องมีหัวข้อ\n  Mystery Box/Reward Box, โครงสร้างปุ่ม cyan, ตำแหน่งและความมั่นใจที่กำหนด\n  full-frame Human/overlay exclusions คงเดิม ไม่ใช้ชื่อของเป็นสิทธิ์คลิก\n- สังเกตใหม่ได้หนึ่งครั้งก่อน first Confirm เฉพาะ ledger ที่สะอาด ภาพใหม่\n  กับ OCR ต้องคู่กัน ไม่เพิ่มจำนวนคลิก/attempt และไม่อนุญาต pending/committed replay\n- checkpoint รางวัลที่ยังไม่ทำ action และผูก Plan/Result/route/anchor ครบ\n  ลอง Local หนึ่งครั้งก่อน Codex เก็บโหมด คิว และ backoff ข้าม Controller reopen\n  ความผิดพลาด Local เดิมกลับไป Codex ไม่วน Local ไม่สิ้นสุด\n- รับ note/reason เป็น alias ที่ตรวจชนิด/ความยาว/ความขัดแย้งก่อนอ่าน Session\n- Recovered เพิ่มเมื่อมี Stage progress จริง ไม่เพิ่มจาก observe unlock ซ้ำ\n- แก้ age-only abort ก่อน native dispatch ที่ล็อก safe replay ผิด ต้องมี private\n  same-process witness เดิม ไม่สร้างสิทธิ์จาก checkpoint/log และไม่คืน attempt budget\n- terminal disposition ที่ห้าม Supervisor ไม่วนเปิด Codex ซ้ำ\n\nStop/Pause/Human Verification, window/geometry/freshness, watchdog/runtime limits,\nUniversal Revision 9, Heart Revision 13 และ never-replay guards คงเดิม\nSend Log transport และ dependency pins คงเดิม\n\nติดตั้งด้วย Settings → CHECK UPDATE รอ worker หยุด แล้วปิด Controller\nstate/checkpoint/stats/session/reward เดิมคงอยู่ ไม่ต้อง Reset Batch\nactive checkpoint จะเลื่อนการติดตั้งตามกฎ updater เดิม\n\nการยืนยันรอบนี้ใช้ diagnostic จาก Windows และรันทดสอบจำลองบน Linux\nยังไม่ได้รัน native Windows/LDPlayer ด้วยรุ่นนี้ และยังไม่รับรอง loop ≤200 วินาที\n"
+  },
+  {
+    "path": "visionstudio/scripts/setup-windows.ps1",
+    "before_sha256": "e65570f74569e0265a0df226168f105a5a96889d8accbec0d6c7f240523fb12d",
+    "after_sha256": "0e293c546ace618d155d3b5641fc784a9bcde2cdc6e30b294d87518b43482868",
+    "edits": [
+      {
+        "start": 90,
+        "end": 91,
+        "before": "Write-Host \"Axiom Vision v0.18.13 Signed Auto Update + Heart 300 is ready.\" -ForegroundColor Green\n",
+        "after": "Write-Host \"Axiom Vision v0.18.14 Signed Auto Update + Heart 300 is ready.\" -ForegroundColor Green\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/verify_runtime_version.py",
+    "before_sha256": "cc07863789f52a8801ff0197ce034cac06e09a46bd671a1b19dc238ea2fb73a0",
+    "after_sha256": "222ddd39a898b9802cc30caf45c019ab9b44c6dfe83024cd49af07f4c7340e6b",
+    "edits": [
+      {
+        "start": 9,
+        "end": 12,
+        "before": "EXPECTED_VERSION = \"0.18.13\"\nEXPECTED_PLUGIN_VERSION = \"0.18.13+codex.20261008.recovery-resume\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.13-recovery-resume-300\"\n",
+        "after": "EXPECTED_VERSION = \"0.18.14\"\nEXPECTED_PLUGIN_VERSION = \"0.18.14+codex.20261016.recovery-core\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.14-recovery-core-300\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_bridge.py",
+    "before_sha256": "6170dfa31de4fed5c8e2a5635180307779e32473ef7c6a4e648791688c5c702e",
+    "after_sha256": "7a9d2ecd0a8de2dfe145075d0ad6a1c7eaf57c6df7e6ada12acfdc1310a819fa",
+    "edits": [
+      {
+        "start": 41,
+        "end": 42,
+        "before": "import visionstudio_reward_archive as reward_archive\n",
+        "after": ""
+      },
+      {
+        "start": 73,
+        "end": 75,
+        "before": "SERVER_VERSION = \"0.18.13-recovery-resume-300\"\nPRODUCT_VERSION = \"0.18.13\"\n",
+        "after": "SERVER_VERSION = \"0.18.14-recovery-core-300\"\nPRODUCT_VERSION = \"0.18.14\"\n"
+      },
+      {
+        "start": 243,
+        "end": 243,
+        "before": "",
+        "after": "class RecoveryMetadataError(BridgeError):\n    \"\"\"Invalid recovery explanation; no Session authority has been consulted.\"\"\"\n\n    code = \"invalid_arguments\"\n\n\n_RECOVERY_METADATA_UNSET = object()\n\n\ndef normalize_resume_metadata(\n    note: Any = _RECOVERY_METADATA_UNSET,\n    reason: Any = _RECOVERY_METADATA_UNSET,\n) -> str:\n    \"\"\"Accept the published explanation alias before any recovery mutation.\"\"\"\n    guidance = (\n        \"visionstudio_confirm_resume_stage requires arguments \"\n        \"{session_id: <current session_id>, stage_id: <current stage_id>, \"\n        \"matched_state: observe|success, note: <non-blank string, 1..500 characters>}. \"\n        \"The published reason alias may replace note; if both are supplied \"\n        \"their trimmed text must match. No recovery state was changed.\"\n    )\n    values = []\n    for value in (note, reason):\n        if value is _RECOVERY_METADATA_UNSET:\n            continue\n        if not isinstance(value, str) or not value.strip() or len(value) > 500:\n            raise RecoveryMetadataError(guidance)\n        values.append(value.strip())\n    if not values or any(value != values[0] for value in values[1:]):\n        raise RecoveryMetadataError(guidance)\n    return values[0]\n\n\n"
+      },
+      {
+        "start": 3680,
+        "end": 3680,
+        "before": "",
+        "after": "        # Same-process Local Atomic evidence only. Never serialize this token\n        # or reconstruct pre-dispatch authority from a persisted intent.\n        self._local_atomic_abort_authority: dict[str, Any] | None = None\n"
+      },
+      {
+        "start": 4020,
+        "end": 4020,
+        "before": "",
+        "after": "        _local_atomic_witness: object | None = None,\n"
+      },
+      {
+        "start": 4076,
+        "end": 4076,
+        "before": "",
+        "after": "        replay_blocked_before_intent = self.stage_action_replay_blocked\n        self._local_atomic_abort_authority = None\n"
+      },
+      {
+        "start": 4079,
+        "end": 4079,
+        "before": "",
+        "after": "        if _local_atomic_witness is not None:\n            self._local_atomic_abort_authority = {\n                \"intent\": intent,\n                \"witness\": _local_atomic_witness,\n                \"replay_blocked_before_intent\": replay_blocked_before_intent,\n                \"stage_id\": self.current_stage_id,\n                \"stage_phase\": self.current_stage_phase,\n                \"actions\": self.actions,\n                \"committed_stage_ids\": list(self.committed_stage_ids),\n                \"stage_action_attempts\": dict(self.stage_action_attempts),\n                \"stage_verified_action_attempts\": dict(self.stage_verified_action_attempts),\n            }\n"
+      },
+      {
+        "start": 4082,
+        "end": 4083,
+        "before": "    def abort_undispatched_action_intent(self, intent: dict[str, Any], reason: str) -> None:\n",
+        "after": "    def abort_undispatched_action_intent(\n        self,\n        intent: dict[str, Any],\n        reason: str,\n        *,\n        _local_atomic_witness: object | None = None,\n    ) -> None:\n"
+      },
+      {
+        "start": 4092,
+        "end": 4092,
+        "before": "",
+        "after": "        authority = self._local_atomic_abort_authority\n        if not (\n            isinstance(authority, dict)\n            and _local_atomic_witness is not None\n            and authority.get(\"witness\") is _local_atomic_witness\n            and authority.get(\"intent\") is intent\n            and reason == \"local-atomic-witness-age-expired-before-dispatch\"\n            and authority.get(\"stage_id\") == self.current_stage_id\n            and authority.get(\"stage_phase\") == self.current_stage_phase\n            and authority.get(\"actions\") == self.actions\n            and authority.get(\"committed_stage_ids\") == self.committed_stage_ids\n            and authority.get(\"stage_action_attempts\") == self.stage_action_attempts\n            and authority.get(\"stage_verified_action_attempts\") == self.stage_verified_action_attempts\n        ):\n            raise BridgeError(\n                \"Pre-dispatch abort requires the unchanged same-process Local \"\n                \"Atomic witness; the unresolved intent and replay lock are preserved\"\n            )\n        _index, step = self.stage_by_id(str(self.current_stage_id))\n        committed_never_replay = bool(\n            self.current_stage_id in self.committed_stage_ids\n            and (step.get(\"resume\") or {}).get(\"action_replay\") == \"never\"\n        )\n        replay_blocked_before_intent = bool(\n            authority[\"replay_blocked_before_intent\"]\n        )\n        # Consume ephemeral proof before the durable write. Write rollback may\n        # restore a pending intent, but it can never recreate abort authority.\n        self._local_atomic_abort_authority = None\n"
+      },
+      {
+        "start": 4098,
+        "end": 4099,
+        "before": "        self.stage_action_replay_blocked = self.current_stage_id in self.committed_stage_ids\n",
+        "after": "        self.stage_action_replay_blocked = (\n            replay_blocked_before_intent or committed_never_replay\n        )\n"
+      },
+      {
+        "start": 4123,
+        "end": 4123,
+        "before": "",
+        "after": "        self._local_atomic_abort_authority = None\n"
+      },
+      {
+        "start": 9088,
+        "end": 9089,
+        "before": "        \"\"\"Increment the current batch Recovery metric without touching history.\"\"\"\n",
+        "after": "        \"\"\"Credit verified durable recovery progress, never an observe unlock.\"\"\"\n"
+      },
+      {
+        "start": 9123,
+        "end": 9124,
+        "before": "        note: str,\n",
+        "after": "        note: Any = _RECOVERY_METADATA_UNSET,\n        *,\n        reason: Any = _RECOVERY_METADATA_UNSET,\n"
+      },
+      {
+        "start": 9126,
+        "end": 9126,
+        "before": "",
+        "after": "        note = normalize_resume_metadata(note, reason)\n"
+      },
+      {
+        "start": 9418,
+        "end": 9419,
+        "before": "            self._record_batch_recovery(session)\n",
+        "after": ""
+      },
+      {
+        "start": 9470,
+        "end": 9470,
+        "before": "",
+        "after": "        newly_completed_recovery_stage = bool(\n            matched_state == \"success\"\n            and stage_id not in session.completed_stage_ids\n        )\n"
+      },
+      {
+        "start": 9534,
+        "end": 9535,
+        "before": "        self._record_batch_recovery(session)\n",
+        "after": "        if newly_completed_recovery_stage:\n            self._record_batch_recovery(session)\n"
+      },
+      {
+        "start": 9764,
+        "end": 9765,
+        "before": "            session.abort_undispatched_action_intent(prepared_intent, \"local-atomic-witness-age-expired-before-dispatch\")\n",
+        "after": "            session.abort_undispatched_action_intent(\n                prepared_intent,\n                \"local-atomic-witness-age-expired-before-dispatch\",\n                _local_atomic_witness=witness,\n            )\n"
+      },
+      {
+        "start": 10412,
+        "end": 10412,
+        "before": "",
+        "after": "            _local_atomic_witness=_local_atomic_witness,\n"
+      },
+      {
+        "start": 10664,
+        "end": 10664,
+        "before": "",
+        "after": "            # Once native dispatch begins its outcome may be uncertain even\n            # when the backend raises. No later age error may abort this intent.\n            session._local_atomic_abort_authority = None\n"
+      },
+      {
+        "start": 12057,
+        "end": 12064,
+        "before": "        )\n\n        _observed, image = self.observe(session_id)\n        session = self._session(session_id)\n        snapshot = self._get_local_ocr().inspect(image)\n\n        reward_capture_id: str | None = None\n",
+        "after": "            normalize_ocr_text,\n        )\n\n        # An animation or an OCR miss before the first Confirm may be observed\n        # once more. This does not retry an input, spend an action attempt, or\n        # rearm a pending/committed Confirm. Each snapshot belongs to its new\n        # exact frame, and the last passing frame alone supplies the witness.\n        baseline_stage = session.current_stage_id\n        baseline_actions = session.actions\n        baseline_attempts = copy.deepcopy(session.stage_action_attempts)\n        baseline_committed = tuple(session.committed_stage_ids)\n        observations_used = 0\n        for sample in range(2 if reward_confirm else 1):\n            _observed, image = self.observe(session_id)\n            session = self._session(session_id)\n            snapshot = self._get_local_ocr().inspect(image)\n            observations_used += 1\n            if not reward_confirm or is_exact_reward_confirmation_screen(snapshot):\n                break\n            mission_module.append_event(session.journal_path, {\n                \"event\": \"semantic_reward_scene_rejected\",\n                \"timestamp\": mission_module.utc_now(), \"session_id\": session.id,\n                \"stage_id\": str(session.current_stage_id),\n                \"observation_number\": int(session.observations),\n                \"frame_sha256\": sha256_bytes(image), \"sample\": observations_used,\n                \"reward_header_visible\": bool(snapshot.contains(\"mystery box\") or snapshot.contains(\"reward box\")),\n                \"visual_flags\": sorted(snapshot.visual_flags),\n                \"control_labels\": [line.text for line in snapshot.regions\n                                   if .25 <= line.center_x <= .75 and .80 <= line.center_y <= .98\n                                   and normalize_ocr_text(line.text) in {\"confirm\", \"continue\", \"conirm\"}],\n                \"gui_input_sent\": False,\n            })\n            clean_first_confirm = bool(\n                session.current_stage_id == baseline_stage\n                and session.current_stage_phase == \"entered\"\n                and session.actions == baseline_actions\n                and session.stage_action_attempts == baseline_attempts\n                and tuple(session.committed_stage_ids) == baseline_committed\n                and session.stage_action_attempts.get(baseline_stage, 0) == 0\n                and baseline_stage not in session.committed_stage_ids\n                and session.pending_action_intent is None\n                and session.local_recovery_pending_intent is None\n                and not session.stage_action_replay_blocked\n                and not session.paused_for_human\n            )\n            if sample or not clean_first_confirm:\n                break\n            self._validated_durable_mystery_box_preopen(session)\n            self._interruptible_delay(session, .2)\n\n"
+      },
+      {
+        "start": 12092,
+        "end": 12110,
+        "before": "            # Save this already-captured exact reward scene before the one\n            # Confirm input. Delayed item OCR never participates in authority.\n            # A disk telemetry failure cannot strand an otherwise safe click.\n            try:\n                state = self._controller_state(session)\n                plan = state.get(\"batch_plan\") if isinstance(state, dict) else None\n                run_id = (\n                    plan.get(\"batch_id\")\n                    if isinstance(plan, dict)\n                    and (plan.get(\"universal_plan\") or {}).get(\"sha256\")\n                    == session.mission_contract_sha256\n                    else None\n                )\n                reward_capture_id = reward_archive.capture_confirm_frame(\n                    session, image, run_id=run_id,\n                )\n            except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):\n                reward_capture_id = None\n",
+        "after": "            # Item-name/treasure archiving is disabled. This fresh OCR remains\n            # solely the exact scene/input guard for the existing Confirm.\n"
+      },
+      {
+        "start": 12129,
+        "end": 12138,
+        "before": "        if reward_capture_id is not None:\n            try:\n                reward_archive.mark_confirm_committed(\n                    self._session(session_id), reward_capture_id,\n                )\n            except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):\n                # The Bridge action ledger remains authoritative. The captured\n                # frame stays unclaimed until its own marker can be repaired.\n                pass\n",
+        "after": ""
+      },
+      {
+        "start": 12144,
+        "end": 12144,
+        "before": "",
+        "after": "            \"semantic_observations\": observations_used,\n"
+      },
+      {
+        "start": 12150,
+        "end": 12151,
+        "before": "            \"reward_snapshot_saved\": reward_capture_id is not None,\n",
+        "after": "            \"reward_snapshot_saved\": False,\n"
+      },
+      {
+        "start": 17664,
+        "end": 17665,
+        "before": "        \"description\": \"Confirm that the latest recovery frame matches one mission stage's observe or success cues, then unlock safe continuation. A committed non-replayable action remains blocked.\",\n",
+        "after": "        \"description\": \"Confirm that the latest recovery frame matches one mission stage's observe or success cues, then unlock safe continuation. Supply note (or its published reason alias), a non-blank explanation of at most 500 characters. A committed non-replayable action remains blocked.\",\n"
+      },
+      {
+        "start": 17674,
+        "end": 17675,
+        "before": "                \"note\": {\"type\": \"string\", \"minLength\": 1, \"maxLength\": 500},\n",
+        "after": "                \"note\": {\"type\": \"string\", \"minLength\": 1, \"maxLength\": 500, \"pattern\": \"\\\\S\"},\n                \"reason\": {\n                    \"type\": \"string\", \"minLength\": 1, \"maxLength\": 500,\n                    \"pattern\": \"\\\\S\",\n                    \"description\": \"Compatibility alias for note. If both are supplied, their trimmed text must match.\",\n                },\n"
+      },
+      {
+        "start": 17676,
+        "end": 17677,
+        "before": "            \"required\": [\"session_id\", \"stage_id\", \"matched_state\", \"note\"],\n",
+        "after": "            \"required\": [\"session_id\", \"stage_id\", \"matched_state\"],\n            \"anyOf\": [{\"required\": [\"note\"]}, {\"required\": [\"reason\"]}],\n"
+      },
+      {
+        "start": 18530,
+        "end": 18530,
+        "before": "",
+        "after": "        metadata = normalize_resume_metadata(\n            arguments.get(\"note\", _RECOVERY_METADATA_UNSET),\n            arguments.get(\"reason\", _RECOVERY_METADATA_UNSET),\n        )\n"
+      },
+      {
+        "start": 18535,
+        "end": 18536,
+        "before": "                arguments[\"note\"],\n",
+        "after": "                metadata,\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_controller.py",
+    "before_sha256": "30d6b2b2653a8dabd5568878ed8e237ebdf83ce9bc474a0597337dcf3e184809",
+    "after_sha256": "38e36dbfdfb1da066d59ed9daf5d4620559c0db29746a6812eda68988f9adce1",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Axiom Vision v0.18.13 Universal Mission and Utility Controller.\n",
+        "after": "\"\"\"Axiom Vision v0.18.14 Universal Mission and Utility Controller.\n"
+      },
+      {
+        "start": 57,
+        "end": 59,
+        "before": "from visionstudio_reward_model import reward_sections\nfrom visionstudio_reward_view import RewardLedger\n",
+        "after": ""
+      },
+      {
+        "start": 142,
+        "end": 143,
+        "before": "CONTROLLER_VERSION = \"0.18.13\"\n",
+        "after": "CONTROLLER_VERSION = \"0.18.14\"\n"
+      },
+      {
+        "start": 149,
+        "end": 150,
+        "before": "    (\"summary\", \"SUMMARY & REWARDS\"),\n",
+        "after": "    (\"summary\", \"RUN SUMMARY\"),\n"
+      },
+      {
+        "start": 3555,
+        "end": 3556,
+        "before": "    stats: dict[str, Any], observations: dict[str, Any],\n",
+        "after": "    stats: dict[str, Any], observations: dict[str, Any] | None = None,\n"
+      },
+      {
+        "start": 3557,
+        "end": 3558,
+        "before": "    \"\"\"Read-only active-run totals; never mistake the ten-loop cadence for a run.\"\"\"\n",
+        "after": "    \"\"\"Read-only run totals, without reading or surfacing archived item OCR.\n\n    The optional legacy argument is ignored so older summary callers cannot\n    reintroduce item names or alter authoritative Result/box totals.\n    \"\"\"\n"
+      },
+      {
+        "start": 3576,
+        "end": 3578,
+        "before": "        \"observations\": observations,\n        \"reward_sections\": reward_sections(observations),\n",
+        "after": ""
+      },
+      {
+        "start": 3609,
+        "end": 3642,
+        "before": "    rewards = summary.get(\"reward_observations\")\n    rewards = rewards if isinstance(rewards, dict) else {}\n    reward_lines = \"\"\n    if int(rewards.get(\"captured\", 0) or 0):\n        names = rewards.get(\"name_matched\")\n        names = names if isinstance(names, dict) else {}\n        reward_lines = (\n            \"\\nReward image observations (separate from box totals)\\n\"\n            f\"Captured: {int(rewards.get('captured', 0) or 0)} | \"\n            f\"Analyzed: {int(rewards.get('analyzed', 0) or 0)} | \"\n            f\"Pending: {int(rewards.get('pending', 0) or 0)}\\n\"\n        )\n        if names:\n            reward_lines += \"Observed cards with recognized names: \" + \", \".join(\n                f\"{name} ({count})\" for name, count in sorted(names.items())[:12]\n            ) + \"\\n\"\n        coin_labels = rewards.get(\"coin_labels_total\")\n        if _plain_int(coin_labels) and coin_labels > 0:\n            reward_lines += (\n                f\"Coin labels on captured screens: {coin_labels} \"\n                \"(not added to earnings)\\n\"\n            )\n        unknown = rewards.get(\"unverified_labels\")\n        if isinstance(unknown, list) and unknown:\n            candidates = [\n                str(name)[:45] for name in unknown[:5]\n                if isinstance(name, str) and name\n            ]\n            reward_lines += (\n                \"Unverified OCR labels: \" + \", \".join(candidates)\n                + (f\" (+{len(unknown) - 5} more)\" if len(unknown) > 5 else \"\")\n                + \"\\n\"\n            )\n",
+        "after": ""
+      },
+      {
+        "start": 3681,
+        "end": 3682,
+        "before": "        f\"{reward_lines}\\n{timing}\"\n",
+        "after": "        f\"{timing}\"\n"
+      },
+      {
+        "start": 4211,
+        "end": 4213,
+        "before": "        self._reward_analysis_thread: threading.Thread | None = None\n        self._next_reward_analysis_monotonic = 0.0\n",
+        "after": ""
+      },
+      {
+        "start": 4579,
+        "end": 4586,
+        "before": "            \"batch_summary\": {\n                **current_batch_summary_payload(stats),\n                \"reward_observations\": reward_archive.cached_reward_summary(\n                    self.data_root,\n                    run_id=(active_run.get(\"run_id\") if active_run else None),\n                ),\n            },\n",
+        "after": "            \"batch_summary\": current_batch_summary_payload(stats),\n"
+      },
+      {
+        "start": 5244,
+        "end": 5246,
+        "before": "            page, \"Run Summary & Rewards\",\n            \"Mystery Boxes collected and rewards opened · current run\",\n",
+        "after": "            page, \"Run Summary\",\n            \"Coins, EXP and collected Mystery Boxes · current run\",\n"
+      },
+      {
+        "start": 5254,
+        "end": 5255,
+        "before": "            (\"captures\", \"SAVED REWARD IMAGES\", GREEN),\n",
+        "after": "            (\"exp\", \"EXP EARNED\", GREEN),\n"
+      },
+      {
+        "start": 5283,
+        "end": 5293,
+        "before": "        self.summary_ledger = RewardLedger(\n            page, data_root=self.data_root,\n            colors={\"bg\": BG, \"panel\": PANEL, \"alt\": PANEL_ALT,\n                    \"border\": BORDER, \"text\": TEXT, \"muted\": MUTED,\n                    \"gold\": GOLD, \"amber\": AMBER, \"selected\": \"#554324\"},\n            request_analysis=self._request_reward_analysis,\n            scope_changed=lambda: self._refresh_summary_page(self._summary_stats),\n        )\n        self.summary_ledger.pack(fill=BOTH, expand=True)\n\n",
+        "after": ""
+      },
+      {
+        "start": 5295,
+        "end": 5302,
+        "before": "        active = stats.get(\"active_run\")\n        active = active if isinstance(active, dict) else {}\n        run_id = active.get(\"run_id\")\n        observations = reward_archive.cached_reward_summary(\n            self.data_root, run_id=run_id if isinstance(run_id, str) else \"\",\n        )\n        report = reward_dashboard_payload(stats, observations)\n",
+        "after": "        report = reward_dashboard_payload(stats)\n"
+      },
+      {
+        "start": 5307,
+        "end": 5310,
+        "before": "        self.summary_cards[\"captures\"].value.set(\n            str(observations[\"captured\"]) if observations.get(\"cache_ready\") else \"—\"\n        )\n",
+        "after": "        self.summary_cards[\"exp\"].value.set(format_number(report[\"exp_earned\"]))\n"
+      },
+      {
+        "start": 5319,
+        "end": 5327,
+        "before": "        self.summary_ledger.update_observations(\n            reward_archive.cached_reward_summary(self.data_root)\n            if self.summary_ledger.scope.get() == \"All saved runs\" else observations\n        )\n\n    def _request_reward_analysis(self) -> None:\n        self._next_reward_analysis_monotonic = 0.0\n        self._maybe_process_reward_images(str(read_state(self.control_path).get(\"desired_state\", \"idle\")))\n",
+        "after": ""
+      },
+      {
+        "start": 7176,
+        "end": 7177,
+        "before": "            resumed = supervision.schedule_universal(self.control_path, checkpoint)\n",
+        "after": "            resumed = supervision.schedule_universal(\n                self.control_path, checkpoint, preferred_mode=\"local\",\n            )\n"
+      },
+      {
+        "start": 7178,
+        "end": 7179,
+        "before": "                self.next_worker_mode = \"codex\"\n",
+        "after": "                self.next_worker_mode = (resumed.get(\"worker\") or {}).get(\"mode\", \"codex\")\n"
+      },
+      {
+        "start": 9413,
+        "end": 9413,
+        "before": "",
+        "after": "            terminal = controller_terminal_disposition(local_state, local_checkpoint)\n            if terminal is not None:\n                supervision.patch_running(\n                    self.control_path,\n                    desired_state=\"blocked\",\n                    last_event=terminal_disposition_detail(terminal),\n                    worker={\n                        \"status\": \"blocked\", \"pid\": None, \"exit_code\": exit_code,\n                        \"finished_at\": datetime.now(timezone.utc).isoformat(),\n                        \"terminal_disposition\": terminal,\n                        \"review_context\": terminal_review_context(terminal, local_checkpoint),\n                        \"message\": terminal_disposition_detail(terminal),\n                    },\n                )\n                return\n            if (supervision.enabled(local_state)\n                    and supervision.clean_reward_local_resume_candidate(local_state, local_checkpoint)):\n                # A fresh clean reward Stage is an existing Local restore\n                # capability. Give it one durable, delayed turn before the\n                # semantic Supervisor; the scheduler remembers that attempt\n                # so an unchanged Local failure falls back to Codex.\n                supervision.patch_running(\n                    self.control_path,\n                    desired_state=\"blocked\",\n                    worker={\n                        \"status\": \"blocked\", \"pid\": None, \"exit_code\": exit_code,\n                        \"finished_at\": datetime.now(timezone.utc).isoformat(),\n                        \"review_context\": review_context,\n                    },\n                )\n                resumed = supervision.schedule_universal(\n                    self.control_path, local_checkpoint, preferred_mode=\"local\",\n                )\n                if resumed.get(\"desired_state\") == \"running\":\n                    self.next_worker_mode = resumed[\"worker\"][\"mode\"]\n                    self.worker_continuation_queue.put((True, None))\n                    self._enqueue_worker_ui_log(resumed[\"last_event\"])\n                return\n"
+      },
+      {
+        "start": 9472,
+        "end": 9473,
+        "before": "        terminal_disposition = checkpoint_terminal_disposition(checkpoint)\n",
+        "after": "        terminal_disposition = controller_terminal_disposition(state, checkpoint)\n"
+      },
+      {
+        "start": 10022,
+        "end": 10023,
+        "before": "            self.next_worker_mode = \"codex\"\n",
+        "after": "            self.next_worker_mode = worker.get(\"mode\", \"codex\")\n"
+      },
+      {
+        "start": 10046,
+        "end": 10046,
+        "before": "",
+        "after": "            # Durable mode wins over an old in-memory continuation, including\n            # after reopening Controller during the backoff interval.\n            requested_mode = state[\"worker\"][\"mode\"]\n"
+      },
+      {
+        "start": 10495,
+        "end": 10556,
+        "before": "        \"\"\"Analyze archived reward images only while Universal and Heart are idle.\"\"\"\n        if desired not in {\"idle\", \"paused\", \"stopped\", \"completed\", \"blocked\"}:\n            return\n        if self._worker_active() or self._heart_worker_active():\n            return\n        if getattr(self, \"_refresh_closed\", False) or not hasattr(self, \"data_root\"):\n            return\n        previous = getattr(self, \"_reward_analysis_thread\", None)\n        if previous is not None and previous.is_alive():\n            return\n        if time.monotonic() < getattr(\n            self, \"_next_reward_analysis_monotonic\", 0.0,\n        ):\n            return\n        self._next_reward_analysis_monotonic = time.monotonic() + 20.0\n        root = self.data_root / reward_archive.ARCHIVE_FOLDER / \"captures\"\n        if not root.is_dir() or not self._reward_analysis_allowed():\n            return\n        heart_root = self.heart_root\n\n        def analyze() -> None:\n            process = None\n            try:\n                if not self._reward_analysis_allowed():\n                    return\n                environment = dict(os.environ)\n                environment.update({key: \"1\" for key in (\n                    \"OMP_NUM_THREADS\", \"OPENBLAS_NUM_THREADS\", \"MKL_NUM_THREADS\",\n                    \"NUMEXPR_NUM_THREADS\", \"VECLIB_MAXIMUM_THREADS\",\n                )})\n                flags = (getattr(subprocess, \"CREATE_NO_WINDOW\", 0)\n                         | getattr(subprocess, \"BELOW_NORMAL_PRIORITY_CLASS\", 0)) if os.name == \"nt\" else 0\n                process = subprocess.Popen(\n                    [sys.executable, str(ROOT / \"scripts\" / \"visionstudio_reward_archive.py\"),\n                     \"--data-root\", str(self.data_root), \"--heart-data-root\", str(heart_root),\n                     \"--max-captures\", \"4\", \"--low-priority\"],\n                    stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,\n                    stderr=subprocess.DEVNULL, env=environment, creationflags=flags,\n                )\n                self._reward_analysis_process = process\n                process.wait(timeout=120)\n            except (OSError, RuntimeError, ValueError, TypeError, subprocess.TimeoutExpired) as exc:\n                if process is not None:\n                    process.kill()\n                    process.wait(timeout=5)\n                # Deferred telemetry is visible and retries on the next tick;\n                # this never pauses a mission or consumes a recovery budget.\n                try:\n                    reward_archive.atomic_write_json(\n                        self.data_root / reward_archive.ARCHIVE_FOLDER / \"analysis-job.json\",\n                        {\"status\": \"deferred\", \"error_type\": type(exc).__name__}, lock=False,\n                    )\n                except OSError:\n                    pass\n            finally:\n                self._reward_analysis_process = None\n\n        self._reward_analysis_thread = threading.Thread(\n            target=analyze, name=\"AxiomRewardAnalysis\", daemon=True,\n        )\n        self._reward_analysis_thread.start()\n",
+        "after": "        \"\"\"Legacy callback: runtime item/treasure image analysis is disabled.\n\n        Keep existing archive bytes intact and never spawn an analyzer, even\n        when an older callback or a deferred refresh requests it.\n        \"\"\"\n        return\n"
+      },
+      {
+        "start": 10558,
+        "end": 10563,
+        "before": "        \"\"\"Read-only policy, including independently configured Heart roots.\"\"\"\n        return (not self._worker_active() and not self._heart_worker_active()\n                and reward_archive.runtime_is_idle(self.data_root)\n                and (self.heart_root == self.data_root or\n                     reward_archive.runtime_is_idle(self.heart_root)))\n",
+        "after": "        \"\"\"Runtime reward-item OCR cannot be reenabled by idle state.\"\"\"\n        return False\n"
+      },
+      {
+        "start": 10618,
+        "end": 10621,
+        "before": "        reward_thread = self._reward_analysis_thread\n        if reward_thread is not None and reward_thread.is_alive():\n            return\n",
+        "after": ""
+      },
+      {
+        "start": 10669,
+        "end": 10670,
+        "before": "        self._maybe_process_reward_images(desired)\n",
+        "after": ""
+      },
+      {
+        "start": 11044,
+        "end": 11050,
+        "before": "        analysis = getattr(self, \"_reward_analysis_process\", None)\n        if analysis is not None:\n            try:\n                analysis.terminate()\n            except OSError:\n                pass\n",
+        "after": ""
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_heart_contract.py",
+    "before_sha256": "e82eae7a0e9360a08ba5f43942e34f14095aa3379f2ecd35e483438e4c58976a",
+    "after_sha256": "05a10cfbe4db70cf2a2e70df6d17a9a3927b7220f3c25ab2cbacfb4d19a30d3d",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.13.\"\"\"\n",
+        "after": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.14.\"\"\"\n"
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "before": "HEART_RUNNER_VERSION = \"0.18.13\"\n",
+        "after": "HEART_RUNNER_VERSION = \"0.18.14\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_local_runner.py",
+    "before_sha256": "15766fdd526d17da3d3ae79cace8e9600280d09f67a5ba06ab8cfba533bbed0b",
+    "after_sha256": "72284940e66c3838a2e383f785f46cec4627fc903a09e3928c5174cabee7cf09",
+    "edits": [
+      {
+        "start": 39,
+        "end": 40,
+        "before": "LOCAL_RUNNER_VERSION = \"0.18.13\"\n",
+        "after": "LOCAL_RUNNER_VERSION = \"0.18.14\"\n"
+      },
+      {
+        "start": 2116,
+        "end": 2117,
+        "before": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.13\"\n",
+        "after": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.14\"\n"
+      },
+      {
+        "start": 2142,
+        "end": 2142,
+        "before": "",
+        "after": "            snapshot = self._inspect_reward_confirm_control(png, snapshot)\n"
+      },
+      {
+        "start": 2148,
+        "end": 2148,
+        "before": "",
+        "after": "\n    def _inspect_reward_confirm_control(\n        self, png: bytes, snapshot: OcrSnapshot,\n    ) -> OcrSnapshot:\n        \"\"\"Supplement a missed button label from these same exact pixels.\n\n        This reads only the calibrated control, never the item cards. Full-frame\n        Human/overlay exclusions remain in the ordinary scene classifier, and\n        the Bridge still owns route, geometry and the final input witnesses.\n        \"\"\"\n        if (\n            is_exact_reward_confirmation_screen(snapshot)\n            or \"reward-cyan-control\" not in snapshot.visual_flags\n            or not (snapshot.contains(\"mystery box\") or snapshot.contains(\"reward box\"))\n        ):\n            return snapshot\n        import numpy as np\n\n        started = time.perf_counter()\n        self.focused_calls += 1\n        try:\n            with Image.open(io.BytesIO(png)) as source:\n                image = source.convert(\"RGB\")\n            width, height = image.size\n            bounds = (int(width * .37), int(height * .83),\n                      int(width * .60), int(height * .97))\n            crop = image.crop(bounds)\n            if crop.width < 2 or crop.height < 2:\n                return snapshot\n            scaled = crop.resize((crop.width * 3, crop.height * 3), Image.Resampling.LANCZOS)\n            variants = (scaled, ImageOps.autocontrast(scaled.convert(\"L\")).convert(\"RGB\"))\n            for variant in variants:\n                found: list[OcrLine] = []\n                for raw_box, text, score in _ocr_result_items(self._load()(np.asarray(variant))):\n                    # No fuzzy or substring match can create a Confirm control.\n                    if normalize_ocr_text(text) not in {\"confirm\", \"continue\"}:\n                        continue\n                    if not math.isfinite(score) or score < .85:\n                        continue\n                    normalized = _normalized_bounds(raw_box, variant.width, variant.height)\n                    if normalized is None:\n                        continue\n                    line = OcrLine(text, score,\n                        (bounds[0] + normalized[0] * crop.width) / width,\n                        (bounds[1] + normalized[1] * crop.height) / height,\n                        (bounds[0] + normalized[2] * crop.width) / width,\n                        (bounds[1] + normalized[3] * crop.height) / height)\n                    if .40 <= line.center_x <= .57 and .85 <= line.center_y <= .95:\n                        found.append(line)\n                if not found:\n                    continue\n                combined = OcrSnapshot(\n                    text=normalize_ocr_text(\" \".join((snapshot.text, *(line.text for line in found)))),\n                    confidence=snapshot.confidence,\n                    lines=snapshot.lines + tuple(line.text for line in found),\n                    regions=snapshot.regions + tuple(found),\n                    visual_flags=snapshot.visual_flags | {\"reward-confirm-focused-control\"},\n                )\n                if is_exact_reward_confirmation_screen(combined):\n                    return combined\n            return snapshot\n        finally:\n            self.focused_seconds += time.perf_counter() - started\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_supervision.py",
+    "before_sha256": "cae787ee2a990fe2761bdc59ebe2c7e1006618c6faa10732212037acddc5d6b6",
+    "after_sha256": "b8806bfa7336d5f8fdbf7ff983b6e4a43c33ce0233e54496a71dd52a6a1c98fa",
+    "edits": [
+      {
+        "start": 7,
+        "end": 7,
+        "before": "",
+        "after": "from types import SimpleNamespace\n"
+      },
+      {
+        "start": 63,
+        "end": 64,
+        "before": "def schedule_universal(path: Path, checkpoint: dict) -> dict:\n",
+        "after": "def terminal_latched(state: dict, checkpoint: dict) -> bool:\n    \"\"\"Honor the Bridge's typed terminal boundary and its Controller mirror.\"\"\"\n    worker = state.get(\"worker\") or {}\n    for disposition in (checkpoint.get(\"terminal_disposition\"),\n                        worker.get(\"terminal_disposition\")):\n        if (isinstance(disposition, dict)\n                and disposition.get(\"code\") == \"archive_reset_required\"\n                and disposition.get(\"reason\") == \"missing_loop_start_anchor\"\n                and disposition.get(\"retry_supervisor\") is False):\n            return True\n    return False\n\n\ndef clean_reward_local_resume_candidate(state: dict, checkpoint: dict) -> bool:\n    \"\"\"Select Local for one clean reward restore, without granting GUI input.\n\n    This gate only selects a worker. Local must restore through the existing\n    exact-source/route/result checks and the Bridge's fresh-frame transaction.\n    Pending or committed clicks remain on their existing no-replay path.\n    \"\"\"\n    if not isinstance(checkpoint, dict) or not isinstance(state, dict):\n        return False\n    stage = checkpoint.get(\"current_stage_id\")\n    batch = state.get(\"batch_plan\")\n    attempts = checkpoint.get(\"stage_action_attempts\")\n    lockout = checkpoint.get(\"gui_input_lockout\")\n    resume_attempts = checkpoint.get(\"resume_attempts\", 0)\n    if not (\n        state.get(\"desired_state\") in {\"running\", \"blocked\", \"paused\", \"stopped\"}\n        and not state.get(\"_schema_write_blocked\")\n        and isinstance(batch, dict) and batch.get(\"status\") == \"active\"\n        and checkpoint.get(\"status\") in {\"active\", \"blocked\"}\n        and checkpoint.get(\"mission_source\") == \"universal-code\"\n        and isinstance(stage, str)\n        and stage in {\"wait-for-rewards\", \"confirm-rewards\", \"dismiss-level-up\"}\n        and checkpoint.get(\"current_stage_phase\") == \"entered\"\n        and checkpoint.get(\"pending_action_intent\") is None\n        and checkpoint.get(\"local_recovery_pending_intent\") is None\n        and checkpoint.get(\"stage_action_replay_blocked\") is False\n        and isinstance(attempts, dict)\n        and type(attempts.get(stage, 0)) is int and attempts.get(stage, 0) == 0\n        and isinstance(checkpoint.get(\"committed_stage_ids\"), list)\n        and stage not in checkpoint[\"committed_stage_ids\"]\n        and isinstance(lockout, dict) and lockout.get(\"active\") is False\n        and lockout.get(\"fresh_observation_required\") is False\n        and type(resume_attempts) is int and resume_attempts >= 0\n        and not human_latched(state, checkpoint)\n        and not terminal_latched(state, checkpoint)\n    ):\n        return False\n    # Import only the pure contract checks. No Bridge server or desktop session\n    # is constructed by the Controller's scheduling decision.\n    from visionstudio_universal_mission import (\n        UNIVERSAL_MISSION_ID, UNIVERSAL_MISSION_REVISION,\n        compile_universal_mission, normalize_universal_config,\n    )\n    from visionstudio_bridge import (\n        exact_universal_stage_prefix_matches,\n        exact_universal_post_result_route_matches_context,\n        universal_loop_start_anchor_matches_session,\n    )\n    frozen = batch.get(\"universal_config\")\n    if not isinstance(frozen, dict):\n        return False\n    try:\n        normalized = normalize_universal_config(frozen)\n        compiled = compile_universal_mission(normalized)\n    except (TypeError, ValueError):\n        return False\n    identity = {\"mission_id\": UNIVERSAL_MISSION_ID,\n                \"revision\": UNIVERSAL_MISSION_REVISION, \"sha256\": compiled.plan_hash}\n    if not (\n        normalized == frozen\n        and batch.get(\"universal_plan\") == identity\n        and batch.get(\"requested_loops\") == normalized[\"requested_loops\"]\n        and state.get(\"universal_config\") == normalized\n        and state.get(\"universal_plan\") == identity\n        and checkpoint.get(\"universal_config\") == normalized\n        and checkpoint.get(\"mission_contract_sha256\") == compiled.plan_hash\n    ):\n        return False\n    geometry = state.get(\"fixed_geometry\")\n    bounds = geometry.get(\"bounds\") if isinstance(geometry, dict) else None\n    if not (isinstance(bounds, list) and len(bounds) == 4\n            and all(type(value) is int for value in bounds)\n            and bounds[2] >= 2 and bounds[3] >= 2):\n        return False\n    retained = checkpoint.get(\"retained_result_values\")\n    if not (isinstance(retained, dict)\n            and all(type(retained.get(key)) is int and retained[key] >= 0\n                    for key in (\"coins_earned\", \"exp_earned\"))\n            and retained.get(\"mission_sha256\") == compiled.plan_hash\n            and retained.get(\"fixed_geometry_bounds\") == bounds):\n        return False\n    context = checkpoint.get(\"loop_recovery_context\")\n    if not isinstance(context, dict):\n        return False\n    session = SimpleNamespace(**{**checkpoint, \"mission\": compiled.mission,\n                                 \"fixed_geometry_bounds\": bounds})\n    outcome = context.get(\"post_result_outcome\")\n    if stage in {\"wait-for-rewards\", \"confirm-rewards\"} and outcome != \"mystery-box\":\n        return False\n    try:\n        return bool(\n            exact_universal_stage_prefix_matches(session, stage)\n            and universal_loop_start_anchor_matches_session(session)\n            and exact_universal_post_result_route_matches_context(session, context, outcome)\n            and (outcome != \"mystery-box\"\n                 or isinstance(context.get(\"mystery_box_preopen_evidence\"), dict))\n        )\n    except (TypeError, ValueError):\n        return False\n\n\ndef schedule_universal(path: Path, checkpoint: dict, *, preferred_mode: str = \"codex\") -> dict:\n"
+      },
+      {
+        "start": 83,
+        "end": 83,
+        "before": "",
+        "after": "        if terminal_latched(state, checkpoint):\n            return state\n"
+      },
+      {
+        "start": 88,
+        "end": 88,
+        "before": "",
+        "after": "        local_key = worker.get(\"clean_reward_recovery_key\")\n        local_attempts = worker.get(\"clean_reward_recovery_attempts\", 0)\n        if local_key != retry[\"recovery_key\"]:\n            local_attempts = 0\n        mode = \"local\" if (\n            preferred_mode == \"local\"\n            and type(local_attempts) is int and local_attempts == 0\n            and clean_reward_local_resume_candidate(state, checkpoint)\n        ) else \"codex\"\n        if mode == \"local\":\n            worker.update(clean_reward_recovery_key=retry[\"recovery_key\"],\n                          clean_reward_recovery_attempts=1)\n"
+      },
+      {
+        "start": 89,
+        "end": 90,
+        "before": "        worker.update(status=\"starting\", pid=None, mode=\"codex\", thread_id=None,\n",
+        "after": "        worker.update(status=\"starting\", pid=None, mode=mode, thread_id=None,\n"
+      },
+      {
+        "start": 92,
+        "end": 93,
+        "before": "                      message=f\"Codex will assess the preserved checkpoint in {retry['recovery_delay']}s\")\n",
+        "after": "                      message=(f\"Local will validate the clean reward checkpoint in {retry['recovery_delay']}s\"\n                               if mode == \"local\" else\n                               f\"Codex will assess the preserved checkpoint in {retry['recovery_delay']}s\"))\n"
+      },
+      {
+        "start": 114,
+        "end": 115,
+        "before": "                and worker.get(\"status\") == \"starting\" and worker.get(\"mode\") == \"codex\"\n",
+        "after": "                and worker.get(\"status\") == \"starting\" and worker.get(\"mode\") in {\"local\", \"codex\"}\n"
+      },
+      {
+        "start": 118,
+        "end": 119,
+        "before": "                and not human_latched(state, checkpoint))\n",
+        "after": "                and (state.get(\"batch_plan\") or {}).get(\"status\") != \"completed\"\n                and not human_latched(state, checkpoint)\n                and not terminal_latched(state, checkpoint)\n                and (worker.get(\"mode\") != \"local\" or (\n                    worker.get(\"clean_reward_recovery_key\") == worker.get(\"recovery_key\")\n                    and type(worker.get(\"clean_reward_recovery_attempts\")) is int\n                    and worker.get(\"clean_reward_recovery_attempts\") == 1\n                    and clean_reward_local_resume_candidate(state, checkpoint))))\n"
+      },
+      {
+        "start": 129,
+        "end": 130,
+        "before": "                or not universal_checkpoint_resumable(checkpoint)):\n",
+        "after": "                or not universal_checkpoint_resumable(checkpoint)\n                or terminal_latched(state, checkpoint)\n                or (state.get(\"batch_plan\") or {}).get(\"status\") == \"completed\"):\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_bridge.py",
+    "before_sha256": "50804be68b92c545153f351729d1cfea50b966f993f5379e7bca3335cbff111f",
+    "after_sha256": "425a4e9df950cbed04e75a20410b8734936dd1ea5b782be62f4fceec365ffcfd",
+    "edits": [
+      {
+        "start": 3085,
+        "end": 3086,
+        "before": "            \"0.18.13-recovery-resume-300\",\n",
+        "after": "            \"0.18.14-recovery-core-300\",\n"
+      },
+      {
+        "start": 10848,
+        "end": 10849,
+        "before": "                \"Axiom Vision v0.18.13 — Telegram test\\n\"\n",
+        "after": "                \"Axiom Vision v0.18.14 — Telegram test\\n\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_clean_reward_recovery_route.py",
+    "before_sha256": null,
+    "after_sha256": "9ce311027f03f8bc208357c58d2b9674953ed6ea5072ce455065f9fffbf99bea",
+    "content": "\"\"\"Clean reward recovery routing with durable scheduling and reader handoffs.\"\"\"\nfrom __future__ import annotations\n\nimport copy\nimport io\nimport json\nimport queue\nimport sys\nimport tempfile\nimport unittest\nfrom datetime import datetime, timedelta, timezone\nfrom pathlib import Path\nfrom types import SimpleNamespace\nfrom unittest import mock\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport visionstudio_controller as controller\nimport visionstudio_controller_state as control\nimport visionstudio_supervision as policy\nimport test_recovery_field_regression as field\n\n\nTERMINAL = {\"code\": \"archive_reset_required\", \"reason\": \"missing_loop_start_anchor\",\n            \"retry_supervisor\": False}\n\n\nclass CleanRewardRecoveryRouteTests(unittest.TestCase):\n    def fixture(self, root: Path, *, stage: str = \"confirm-rewards\", desired: str = \"blocked\"):\n        fixture = field.RecoveryFieldRegressionTests()\n        server, session, desktop = fixture.field_scene(root)\n        self.addCleanup(server.close)\n        session.pending_action_intent = None\n        session.stage_action_replay_blocked = False\n        session.loop_recovery_context[\"mystery_box_preopen_evidence\"] = {\"schema_version\": 1}\n        if stage != \"confirm-rewards\":\n            active = [step[\"id\"] for step in session.mission[\"steps\"]\n                      if not step.get(\"run_when\")\n                      or session.universal_config[\"random_boost\"][\"mode\"] in step[\"run_when\"][\"random_mode\"]]\n            session.current_stage_id = stage\n            session.completed_stage_ids = active[:active.index(stage)]\n            session.committed_stage_ids = [s for s in session.committed_stage_ids\n                                           if s in session.completed_stage_ids]\n            session.stage_action_attempts = {s: 1 for s in session.committed_stage_ids}\n        checkpoint = session.checkpoint_payload(status=\"blocked\")\n        identity = {\"mission_id\": controller.UNIVERSAL_MISSION_ID,\n                    \"revision\": controller.UNIVERSAL_MISSION_REVISION,\n                    \"sha256\": session.mission_contract_sha256}\n        app = object.__new__(controller.VisionStudioController)\n        app.mission_var = SimpleNamespace(get=lambda: str(root / \"mission.json\"))\n        app.worker = None\n        app.heart_worker = None\n        app.worker_reader_thread = None\n        app.heart_worker_reader_thread = None\n        app.worker_continuation_queue = queue.Queue()\n        app.next_worker_mode = None\n        app._add_activity = mock.Mock()\n        app._enqueue_worker_ui_log = mock.Mock()\n        app._enqueue_worker_disk_log = mock.Mock()\n        app._stats = mock.Mock(return_value=({}, checkpoint))\n        app.worker_generation = 1\n        app.last_worker_heartbeat_write = 0.0\n        app.worker_reader_error = None\n        app._launch_worker = mock.Mock()\n        state = control.patch_state(\n            app.control_path, desired_state=desired,\n            universal_config=session.universal_config, universal_plan=identity,\n            requested_loops=None, telegram_enabled=False,\n            fixed_geometry={\"bounds\": list(session.fixed_geometry_bounds), \"source\": \"test\"},\n            batch_plan={\"batch_id\": \"same-batch\", \"status\": \"active\", \"requested_loops\": None,\n                        \"completed_loops\": 0, \"created_at\": datetime.now(timezone.utc).isoformat(),\n                        \"universal_config\": session.universal_config, \"universal_plan\": identity},\n            worker={\"pid\": None, \"status\": \"blocked\", \"mode\": \"codex\"},\n        )\n        return app, state, checkpoint, desktop\n\n    def make_due(self, app):\n        control.patch_state(app.control_path, worker={\"recovery_next_at\":\n            (datetime.now(timezone.utc) - timedelta(seconds=1)).isoformat()})\n\n    def read_local_handoff(self, app, checkpoint, *, before_exit=None):\n        worker = mock.Mock()\n        worker.stdout = io.StringIO(json.dumps({\n            \"type\": \"axiom.local_runner\", \"event\": \"supervisor_required\",\n            \"stage_id\": checkpoint[\"current_stage_id\"], \"incident_code\": \"reward_scene_unconfirmed\",\n            \"reason\": \"exact reward scene needs a restore\", \"safety_context\": {},\n        }) + \"\\n\")\n        def wait():\n            if before_exit is not None:\n                before_exit()\n            return controller.LOCAL_SUPERVISOR_REQUIRED_EXIT\n        worker.wait.side_effect = wait\n        with mock.patch.object(controller, \"load_runtime_stats\", return_value=({}, checkpoint)):\n            app._read_worker_output(worker, app.worker_generation, (), None, \"local\")\n\n    def test_all_clean_reward_stages_select_local_without_checkpoint_or_input_changes(self):\n        for stage in (\"wait-for-rewards\", \"confirm-rewards\", \"dismiss-level-up\"):\n            with self.subTest(stage=stage), tempfile.TemporaryDirectory() as tmp:\n                app, state, cp, desktop = self.fixture(Path(tmp), stage=stage)\n                original = copy.deepcopy(cp)\n                self.assertTrue(policy.clean_reward_local_resume_candidate(state, cp))\n                resumed = app._register_blocked_review(state, {}, cp)\n                self.assertEqual(resumed[\"desired_state\"], \"running\")\n                self.assertEqual(resumed[\"worker\"][\"mode\"], \"local\")\n                self.assertEqual(resumed[\"worker\"][\"clean_reward_recovery_attempts\"], 1)\n                self.assertEqual(resumed[\"worker\"][\"recovery_delay\"], 2)\n                self.assertEqual(cp, original)\n                self.assertEqual(desktop.clicks, [])\n\n    def test_uncertain_committed_locked_human_and_malformed_contexts_never_select_clean_local(self):\n        mutations = {\n            \"pending\": lambda s, c: c.update(pending_action_intent={\"intent_id\": \"unknown\", \"action_replay\": \"never\"}),\n            \"local_pending\": lambda s, c: c.update(local_recovery_pending_intent={\"intent_id\": \"unknown\"}),\n            \"attempt\": lambda s, c: c[\"stage_action_attempts\"].update({\"confirm-rewards\": 1}),\n            \"bool_attempt\": lambda s, c: c[\"stage_action_attempts\"].update({\"confirm-rewards\": False}),\n            \"committed\": lambda s, c: c[\"committed_stage_ids\"].append(\"confirm-rewards\"),\n            \"replay_lock\": lambda s, c: c.update(stage_action_replay_blocked=True),\n            \"lockout\": lambda s, c: c[\"gui_input_lockout\"].update(active=True),\n            \"fresh_frame\": lambda s, c: c[\"gui_input_lockout\"].update(fresh_observation_required=True),\n            \"human\": lambda s, c: c.update(paused_for_human=True),\n            \"terminal\": lambda s, c: c.update(terminal_disposition=TERMINAL),\n            \"worker_terminal\": lambda s, c: s[\"worker\"].update(terminal_disposition=TERMINAL),\n            \"foreign_plan\": lambda s, c: c.update(mission_contract_sha256=\"f\" * 64),\n            \"top_plan\": lambda s, c: s[\"universal_plan\"].update(sha256=\"f\" * 64),\n            \"frozen_config\": lambda s, c: s[\"batch_plan\"][\"universal_config\"][\"random_boost\"].update(mode=\"any\"),\n            \"legacy\": lambda s, c: c.update(mission_source=\"file\"),\n            \"prefix\": lambda s, c: c[\"completed_stage_ids\"].reverse(),\n            \"route\": lambda s, c: c[\"universal_route_history\"][-1].update(outcome=\"lobby\"),\n            \"anchor\": lambda s, c: c[\"loop_recovery_context\"].pop(\"loop_start_plan_hash\"),\n            \"result\": lambda s, c: c[\"retained_result_values\"].update(coins_earned=True),\n            \"preopen\": lambda s, c: c[\"loop_recovery_context\"].pop(\"mystery_box_preopen_evidence\"),\n        }\n        with tempfile.TemporaryDirectory() as tmp:\n            _app, state, cp, _desktop = self.fixture(Path(tmp))\n            for name, mutate in mutations.items():\n                with self.subTest(name=name):\n                    changed_state, changed_cp = copy.deepcopy(state), copy.deepcopy(cp)\n                    mutate(changed_state, changed_cp)\n                    self.assertFalse(policy.clean_reward_local_resume_candidate(changed_state, changed_cp))\n\n    def test_reopen_preserves_local_mode_backoff_and_reader_exclusion(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            app, state, cp, _desktop = self.fixture(Path(tmp))\n            app._register_blocked_review(state, {}, cp)\n            app.worker_continuation_queue = queue.Queue()  # A reopened Controller has no in-memory queue.\n            app.next_worker_mode = None\n            app._drain_worker_continuations()\n            app._launch_worker.assert_not_called()\n            self.make_due(app)\n            app.worker_reader_thread = SimpleNamespace(is_alive=lambda: True)\n            app._drain_worker_continuations()\n            app._launch_worker.assert_not_called()\n            app.worker_reader_thread = None\n            def launched(**_kwargs):\n                control.patch_state(app.control_path, worker={\"pid\": 123, \"recovery_next_at\": None})\n            app._launch_worker.side_effect = launched\n            app._drain_worker_continuations()\n            app._drain_worker_continuations()\n            app._launch_worker.assert_called_once_with(resume=True, thread_id=None, worker_mode=\"local\")\n\n    def test_local_reader_uses_one_persisted_local_restore_then_codex_after_failure(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            app, _state, cp, desktop = self.fixture(Path(tmp), desired=\"running\")\n            original = copy.deepcopy(cp)\n            self.read_local_handoff(app, cp)\n            first = control.read_state(app.control_path)\n            self.assertEqual(first[\"worker\"][\"mode\"], \"local\")\n            self.assertEqual(first[\"worker\"][\"clean_reward_recovery_attempts\"], 1)\n            # Observe/restore never resets the durable resume/action ledgers.\n            cp[\"resume_attempts\"] = 1\n            cp[\"observations\"] += 2\n            control.patch_state(app.control_path, worker={\"pid\": None, \"recovery_next_at\": None})\n            self.read_local_handoff(app, cp)\n            second = control.read_state(app.control_path)\n            self.assertEqual(second[\"worker\"][\"mode\"], \"codex\")\n            self.assertEqual(second[\"worker\"][\"clean_reward_recovery_attempts\"], 1)\n            self.assertEqual(second[\"worker\"][\"recovery_delay\"], 5)\n            self.assertEqual(cp[\"stage_action_attempts\"], original[\"stage_action_attempts\"])\n            self.assertEqual(cp[\"resume_attempts\"], 1)\n            self.assertEqual(desktop.clicks, [])\n\n    def test_codex_no_progress_exit_returns_through_blocked_state_to_local(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            app, _state, cp, desktop = self.fixture(Path(tmp), desired=\"running\")\n            original = copy.deepcopy(cp)\n            worker = mock.Mock(stdout=io.StringIO(\"\"))\n            worker.wait.return_value = 1\n            before = controller.runtime_progress_signature({}, cp)\n            with mock.patch.object(controller, \"load_runtime_stats\", return_value=({}, cp)):\n                app._read_worker_output(worker, app.worker_generation, before, None, \"codex\")\n            blocked = control.read_state(app.control_path)\n            self.assertEqual(blocked[\"desired_state\"], \"blocked\")\n            resumed = app._register_blocked_review(blocked, {}, cp)\n            self.assertEqual(resumed[\"worker\"][\"mode\"], \"local\")\n            self.make_due(app)\n            app._drain_worker_continuations()\n            app._launch_worker.assert_called_once_with(resume=True, thread_id=None, worker_mode=\"local\")\n            self.assertEqual(cp, original)\n            self.assertEqual(desktop.clicks, [])\n\n    def test_pending_or_committed_current_action_stays_on_existing_codex_route(self):\n        for mutation in (\"pending\", \"committed\"):\n            with self.subTest(mutation=mutation), tempfile.TemporaryDirectory() as tmp:\n                app, state, cp, desktop = self.fixture(Path(tmp))\n                if mutation == \"pending\":\n                    cp[\"pending_action_intent\"] = {\"intent_id\": \"uncertain\", \"action_replay\": \"never\"}\n                else:\n                    cp[\"current_stage_phase\"] = \"action_committed\"\n                    cp[\"stage_action_attempts\"][\"confirm-rewards\"] = 1\n                    cp[\"committed_stage_ids\"].append(\"confirm-rewards\")\n                cp[\"stage_action_replay_blocked\"] = True\n                original = copy.deepcopy(cp)\n                resumed = app._register_blocked_review(state, {}, cp)\n                self.assertEqual(resumed[\"worker\"][\"mode\"], \"codex\")\n                self.assertEqual(cp, original)\n                self.assertEqual(desktop.clicks, [])\n\n    def test_local_reader_cannot_overwrite_stop_pause_human_or_completion(self):\n        for desired in (\"stop_requested\", \"stopped\", \"pause_after_stage\", \"paused\", \"human_verification\", \"completed\"):\n            with self.subTest(desired=desired), tempfile.TemporaryDirectory() as tmp:\n                app, _state, cp, _desktop = self.fixture(Path(tmp), desired=\"running\")\n                self.read_local_handoff(app, cp, before_exit=lambda: control.patch_state(\n                    app.control_path, desired_state=desired))\n                self.assertEqual(control.read_state(app.control_path)[\"desired_state\"], desired)\n                self.assertTrue(app.worker_continuation_queue.empty())\n\n    def test_terminal_checkpoint_or_worker_mirror_never_relaunches_codex(self):\n        for source in (\"checkpoint\", \"worker\"):\n            with self.subTest(source=source), tempfile.TemporaryDirectory() as tmp:\n                app, state, cp, _desktop = self.fixture(Path(tmp))\n                if source == \"checkpoint\":\n                    cp[\"terminal_disposition\"] = TERMINAL\n                else:\n                    state = control.patch_state(app.control_path, worker={\"terminal_disposition\": TERMINAL})\n                result = app._register_blocked_review(state, {}, cp)\n                self.assertEqual(result[\"desired_state\"], \"blocked\")\n                self.assertTrue(app.worker_continuation_queue.empty())\n                control.patch_state(app.control_path, desired_state=\"running\", worker={\n                    \"status\": \"starting\", \"mode\": \"codex\", \"recovery_key\": policy.checkpoint_key(cp),\n                    \"recovery_next_at\": datetime.now(timezone.utc).isoformat(),\n                })\n                app._drain_worker_continuations()\n                app._launch_worker.assert_not_called()\n\n    def test_scheduled_local_cannot_continue_after_safety_or_heart_boundary_changes(self):\n        for boundary in (\"stop_requested\", \"paused\", \"human_verification\", \"completed\", \"heart\", \"changed_checkpoint\"):\n            with self.subTest(boundary=boundary), tempfile.TemporaryDirectory() as tmp:\n                app, state, cp, _desktop = self.fixture(Path(tmp))\n                app._register_blocked_review(state, {}, cp)\n                self.make_due(app)\n                if boundary == \"heart\":\n                    app._heart_worker_active = lambda: True\n                elif boundary == \"changed_checkpoint\":\n                    cp[\"pending_action_intent\"] = {\"intent_id\": \"new-uncertain-intent\"}\n                else:\n                    control.patch_state(app.control_path, desired_state=boundary)\n                app._drain_worker_continuations()\n                app._launch_worker.assert_not_called()\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_controller_state.py",
+    "before_sha256": "9ef8d1f8c2a30dd8e63f71cba91d59424f4a0909eda264d28b6d1ca306013171",
+    "after_sha256": "73a28c3ab178b52b5e34d4e035f1fc3cd87048f72b909f98bbe9844b25d560d1",
+    "edits": [
+      {
+        "start": 2469,
+        "end": 2470,
+        "before": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.13\")\n",
+        "after": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.14\")\n"
+      },
+      {
+        "start": 5841,
+        "end": 5842,
+        "before": "            self.assertEqual(report[\"product_version\"], \"0.18.13\")\n",
+        "after": "            self.assertEqual(report[\"product_version\"], \"0.18.14\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_heart_runner.py",
+    "before_sha256": "290ecefc63b9a1cfb2f7b7770b22cab6520cdb278623980b7d04740dd52c9d06",
+    "after_sha256": "7bc4ce3b9f875bced2ef4344b7b8bc0b9e58ea6d4532bea7047a4b2405c9c18e",
+    "edits": [
+      {
+        "start": 536,
+        "end": 537,
+        "before": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.13\")\n",
+        "after": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.14\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_local_atomic_abort_authority.py",
+    "before_sha256": null,
+    "after_sha256": "f3d4ebe2effff164a6b7474f795dfdbce5cf32af1b3bfcc11e5759902d3830f6",
+    "content": "\"\"\"A proven undispatched abort preserves the pre-intent replay authority.\"\"\"\nfrom __future__ import annotations\n\nimport copy\nimport io\nimport json\nimport sys\nimport tempfile\nimport unittest\nfrom pathlib import Path\nfrom unittest import mock\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport test_bridge\n\nbridge = test_bridge.bridge\nAGE_ABORT = \"local-atomic-witness-age-expired-before-dispatch\"\n\n\nclass LocalAtomicAbortAuthorityTests(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        test_bridge.VisionStudioBridgeTests.setUpClass()\n\n    def session(self, tmp, *, replay=\"safe\", committed=False, locked=False):\n        session = test_bridge.VisionStudioBridgeTests().make_session(tmp, observed=True)\n        step = next(s for s in session.mission[\"steps\"] if s[\"id\"] == \"press-two\")\n        step[\"resume\"] = {\"eligible\": True, \"action_replay\": replay, \"instructions\": \"test\"}\n        session.enter_stage(\"press-two\")\n        if committed:\n            session.record_action(\"click\", \"existing committed Stage action\")\n        session.stage_action_replay_blocked = locked\n        session.write_checkpoint(\"fixture_authority\")\n        return session\n\n    def prepare(self, session):\n        witness = object()\n        intent = session.prepare_action_intent(\n            \"click\", \"new Local Atomic attempt\", _local_atomic_witness=witness,\n        )\n        return intent, witness\n\n    def ledger(self, session):\n        return copy.deepcopy((\n            session.actions, session.committed_stage_ids,\n            session.stage_action_attempts, session.stage_verified_action_attempts,\n            session.resume_attempts,\n        ))\n\n    def abort(self, session, intent, witness):\n        session.abort_undispatched_action_intent(\n            intent, AGE_ABORT, _local_atomic_witness=witness,\n        )\n\n    def test_committed_safe_stage_abort_preserves_permitted_retry_and_all_budgets(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            session = self.session(tmp, committed=True)\n            before = self.ledger(session)\n            intent, witness = self.prepare(session)\n            self.abort(session, intent, witness)\n            self.assertIsNone(session.pending_action_intent)\n            self.assertFalse(session.stage_action_replay_blocked)\n            self.assertEqual(self.ledger(session), before)\n            self.assertTrue(session.needs_observation)\n            session.needs_observation = False  # a new observation remains required\n            session.ensure_action_ready(\"click\", \"reversible\", False)\n\n    def test_committed_never_stage_abort_keeps_its_replay_lock(self):\n        # A pre-existing lock, including a conservative safe-stage lock, must\n        # survive; a committed never Stage is locked even if an old flag is bad.\n        for replay, locked in ((\"never\", True), (\"never\", False), (\"safe\", True)):\n            with self.subTest(replay=replay, locked=locked), tempfile.TemporaryDirectory() as tmp:\n                session = self.session(tmp, replay=replay, committed=True, locked=locked)\n                before = self.ledger(session)\n                intent, witness = self.prepare(session)\n                self.abort(session, intent, witness)\n                self.assertTrue(session.stage_action_replay_blocked)\n                self.assertEqual(self.ledger(session), before)\n                session.needs_observation = False\n                with self.assertRaisesRegex(bridge.BridgeError, \"already committed\"):\n                    session.ensure_action_ready(\"click\", \"reversible\", False)\n\n    def test_first_never_action_abort_releases_only_its_new_intent_lock(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            session = self.session(tmp, replay=\"never\")\n            before = self.ledger(session)\n            intent, witness = self.prepare(session)\n            self.assertTrue(session.stage_action_replay_blocked)\n            self.abort(session, intent, witness)\n            self.assertFalse(session.stage_action_replay_blocked)\n            self.assertEqual(self.ledger(session), before)\n            self.assertIsNone(session._local_atomic_abort_authority)\n            payload = json.loads(session.checkpoint_path.read_text())\n            self.assertNotIn(\"_local_atomic_abort_authority\", payload)\n            self.assertFalse(payload[\"last_aborted_action_intent\"][\"native_dispatch_started\"])\n\n    def test_reconstructed_intent_or_wrong_witness_has_no_abort_authority(self):\n        for change in (\"intent\", \"witness\", \"no-witness\", \"ledger\"):\n            with self.subTest(change=change), tempfile.TemporaryDirectory() as tmp:\n                session = self.session(tmp, replay=\"never\")\n                intent, witness = self.prepare(session)\n                if change == \"intent\":\n                    intent = copy.deepcopy(intent)\n                    session.pending_action_intent = intent\n                elif change == \"witness\":\n                    witness = object()\n                elif change == \"no-witness\":\n                    witness = None\n                else:\n                    session.stage_action_attempts[\"press-two\"] = 1\n                before = session.checkpoint_path.read_bytes()\n                with self.assertRaisesRegex(bridge.BridgeError, \"same-process\"):\n                    self.abort(session, intent, witness)\n                self.assertIs(session.pending_action_intent, intent)\n                self.assertTrue(session.stage_action_replay_blocked)\n                self.assertEqual(session.checkpoint_path.read_bytes(), before)\n\n    def test_restored_intent_never_reconstructs_abort_authority(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            original = self.session(tmp, replay=\"never\")\n            _intent, witness = self.prepare(original)\n            payload = original.checkpoint_payload()\n            restored = bridge.BridgeSession(\n                original.mission_path, copy.deepcopy(original.mission), Path(tmp) / \"restored.jsonl\",\n            )\n            restored.data_root = Path(tmp)\n            self.assertTrue(restored.restore_checkpoint(payload))\n            self.assertIsNone(restored._local_atomic_abort_authority)\n            pending = restored.pending_action_intent\n            with self.assertRaisesRegex(bridge.BridgeError, \"same-process\"):\n                self.abort(restored, pending, witness)\n            self.assertEqual(restored.pending_action_intent, payload[\"pending_action_intent\"])\n            self.assertTrue(restored.stage_action_replay_blocked)\n\n    def test_native_dispatch_exception_consumes_abort_authority_before_backend_call(self):\n        from PIL import Image\n        case = test_bridge.VisionStudioBridgeTests()\n        output = io.BytesIO()\n        Image.new(\"RGB\", (1279, 736), (180, 170, 155)).save(output, format=\"PNG\")\n        frame = output.getvalue()\n        clock = [100.0]\n        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(bridge.time, \"monotonic\", side_effect=lambda: clock[0]):\n            window = case.make_window(executable=\"dnplayer.exe\", title=\"Cookie Run\", width=1279, height=736)\n            desktop = test_bridge.CaptureSequenceDesktop(window, [frame])\n            server = bridge.BridgeServer(desktop)\n            self.addCleanup(server.close)\n            session = case.make_loop_session(tmp, full_scene_changed=False)\n            session.mission[\"target_apps\"] = [{\"name\": \"LDPlayer\", \"app_id\": \"dnplayer.exe\", \"window_title_contains\": \"Cookie Run\", \"required\": True}]\n            session.current_stage_id = \"select-double-coins\"\n            session.current_stage_phase = \"entered\"\n            session.last_window = window\n            session.last_image = frame\n            session.actions = 0\n            server.session = session\n            captured = {}\n            prepare = session.prepare_action_intent\n\n            def remember(*args, **kwargs):\n                captured[\"witness\"] = kwargs.get(\"_local_atomic_witness\")\n                return prepare(*args, **kwargs)\n\n            def uncertain(*args, **kwargs):\n                self.assertIsNone(session._local_atomic_abort_authority)\n                raise OSError(\"native backend outcome unknown\")\n\n            with mock.patch.object(session, \"prepare_action_intent\", side_effect=remember), mock.patch.object(desktop, \"click\", side_effect=uncertain):\n                with self.assertRaisesRegex(OSError, \"outcome unknown\"):\n                    server.execute_local_fixed_stage_target(session.id, \"double-coins-option\", \"reversible\", False, 0)\n            pending = session.pending_action_intent\n            self.assertIsNotNone(pending)\n            self.assertIsNotNone(captured[\"witness\"])\n            with self.assertRaisesRegex(bridge.BridgeError, \"same-process\"):\n                self.abort(session, pending, captured[\"witness\"])\n            self.assertIs(session.pending_action_intent, pending)\n            self.assertIsNone(session.last_aborted_action_intent)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_local_runner.py",
+    "before_sha256": "1adb6a2aee5fbc49f1b9c1e3a4b8c46a63e58fddd1164c871d60c4c57648e738",
+    "after_sha256": "a13c098a77be522e344b11497052139c1f32849a16a086dd3d1b3bde893b328c",
+    "edits": [
+      {
+        "start": 103,
+        "end": 104,
+        "before": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.13\")\n",
+        "after": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.14\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_mystery_box_rewards.py",
+    "before_sha256": "2cc0001751f5c205720c56cccab6bf7f2802a5184c4fee297ce0d974abe03f40",
+    "after_sha256": "68b238ca24b876ec034df4110f21317fa1057b587963bf18d605629164c00e2d",
+    "edits": [
+      {
+        "start": 165,
+        "end": 166,
+        "before": "    def test_controller_defers_active_worker_and_launches_isolated_ocr_while_idle(self):\n",
+        "after": "    def test_controller_never_starts_item_ocr_in_any_runtime_state(self):\n"
+      },
+      {
+        "start": 172,
+        "end": 192,
+        "before": "            app._reward_analysis_thread = None\n            process = Mock()\n            thread = Mock(is_alive=Mock(return_value=True))\n            def start(**kwargs):\n                thread.start.side_effect = kwargs[\"target\"]\n                return thread\n            with patch.object(controller.VisionStudioController, \"data_root\", new_callable=PropertyMock, return_value=root), \\\n                    patch.object(controller.threading, \"Thread\", side_effect=start), \\\n                    patch.object(controller.subprocess, \"Popen\", return_value=process) as launch:\n                app._maybe_process_reward_images(\"running\")\n                app._maybe_process_reward_images(\"running\")\n                launch.assert_not_called()\n                app._maybe_process_reward_images(\"idle\")\n                app._maybe_process_reward_images(\"idle\")\n            launch.assert_called_once()\n            args, kw = launch.call_args\n            self.assertIn(\"visionstudio_reward_archive.py\", args[0][1])\n            self.assertIn(\"--low-priority\", args[0])\n            self.assertEqual(kw[\"env\"][\"OMP_NUM_THREADS\"], \"1\")\n            process.wait.assert_called_once_with(timeout=120)\n",
+        "after": "            before = {path: path.read_bytes() for path in root.rglob(\"*\") if path.is_file()}\n            with patch.object(controller.threading, \"Thread\") as thread, \\\n                    patch.object(controller.subprocess, \"Popen\") as launch, \\\n                    patch.object(archive, \"process_pending\") as analyze:\n                for desired in (\"idle\", \"running\", \"paused\", \"stopped\", \"completed\", \"blocked\", \"auto_recovering\"):\n                    app._maybe_process_reward_images(desired)\n                    self.assertFalse(app._reward_analysis_allowed())\n            thread.assert_not_called()\n            launch.assert_not_called()\n            analyze.assert_not_called()\n            self.assertEqual({path: path.read_bytes() for path in root.rglob(\"*\") if path.is_file()}, before)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_recovery_field_regression.py",
+    "before_sha256": "1dd0c8fbeb42005f041463d44da091b6d0beae72f5e607d7127eec65992e8ad3",
+    "after_sha256": "997b7f23a255baf79fffd7faecc2a14a9a3c7e50d79f7d9d077fa53f3e01d5ef",
+    "edits": [
+      {
+        "start": 298,
+        "end": 299,
+        "before": "            _, session, _ = self.field_scene(Path(tmp)); intent = session.pending_action_intent\n",
+        "after": "            _, session, _ = self.field_scene(Path(tmp))\n            # A restored/manual intent grants no abort authority. Prepare a\n            # genuine first same-process intent for this persistence failure.\n            session.pending_action_intent = None\n            session.resume_required = False\n            session.resume_confirmation_pending = False\n            witness = object()\n            intent = session.prepare_action_intent(\n                \"click\", \"fresh Local Atomic intent\",\n                _local_atomic_witness=witness,\n            )\n"
+      },
+      {
+        "start": 302,
+        "end": 303,
+        "before": "                    session.abort_undispatched_action_intent(intent, \"fixture age expiry\")\n",
+        "after": "                    session.abort_undispatched_action_intent(\n                        intent, \"local-atomic-witness-age-expired-before-dispatch\",\n                        _local_atomic_witness=witness,\n                    )\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_recovery_metadata.py",
+    "before_sha256": null,
+    "after_sha256": "b04b0aaeaa4c3bb45c36d6f2e88eb544be990e48a4008ccfba745fede1a1b86b",
+    "content": "\"\"\"Field recovery metadata and progress credit regressions; never native input.\"\"\"\nfrom __future__ import annotations\n\nimport copy\nimport json\nimport sys\nimport tempfile\nimport unittest\nfrom pathlib import Path\nfrom unittest import mock\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport test_bridge\nimport test_recovery_field_regression as field_regression\n\nbridge = test_bridge.bridge\n\n\nclass RecoveryMetadataTests(unittest.TestCase):\n    def scene(self, root: str):\n        fixture = test_bridge.VisionStudioBridgeTests()\n        server, session, desktop = fixture.make_universal_scene(\n            root, stage_id=\"confirm-rewards\"\n        )\n        self.addCleanup(server.close)\n        fixture.set_checkpoint_recovery_witness(session)\n        session.write_checkpoint(\"recovery_metadata_fixture\")\n        stats_path = server._loop_stats_path(session)\n        stats_path.parent.mkdir(parents=True, exist_ok=True)\n        stats_path.write_text(json.dumps({\n            \"active_run\": {\"status\": \"active\", \"totals\": {\"recovered\": 0}},\n            \"loop_history\": [{\"session_id\": \"previous\", \"coins_earned\": 123}],\n        }), encoding=\"utf-8\")\n        return fixture, server, session, desktop, stats_path\n\n    @staticmethod\n    def arguments(session, **metadata):\n        return dict(session_id=session.id, stage_id=\"confirm-rewards\",\n                    matched_state=\"observe\", **metadata)\n\n    def test_invalid_metadata_is_typed_before_session_access_or_mutation(self):\n        invalid = (\n            {}, {\"note\": None}, {\"reason\": None}, {\"note\": \"\"},\n            {\"reason\": \" \\n\\t \"}, {\"note\": 17}, {\"reason\": False},\n            {\"note\": [\"visible\"]}, {\"reason\": {\"text\": \"visible\"}},\n            {\"note\": \"x\" * 501}, {\"reason\": \"x\" * 501},\n            {\"note\": \"same\", \"reason\": \"different\"},\n            {\"note\": \"valid\", \"reason\": \"\"},\n            {\"note\": None, \"reason\": \"valid\"},\n        )\n        with tempfile.TemporaryDirectory() as root:\n            _, server, session, desktop, stats_path = self.scene(root)\n            before = session.checkpoint_path.read_bytes()\n            authority_fields = (\n                \"resume_required\", \"resume_confirmation_pending\", \"pending_action_intent\",\n                \"local_recovery_pending_intent\", \"current_stage_id\", \"current_stage_phase\",\n                \"actions\", \"stage_action_attempts\", \"committed_stage_ids\", \"completed_stage_ids\",\n                \"recovery_observation_witness\", \"last_resume_confirmation\",\n            )\n            state_before = {key: copy.deepcopy(getattr(session, key)) for key in authority_fields}\n            stats_before = stats_path.read_bytes()\n            for metadata in invalid:\n                with self.subTest(metadata=metadata), mock.patch.object(\n                    server, \"_recovery_session\", wraps=server._recovery_session\n                ) as access:\n                    response = bridge.handle_request(server, {\n                        \"id\": 1, \"method\": \"tools/call\", \"params\": {\n                            \"name\": \"visionstudio_confirm_resume_stage\",\n                            \"arguments\": self.arguments(session, **metadata),\n                        },\n                    })\n                    result = response[\"result\"]\n                    self.assertTrue(result[\"isError\"])\n                    self.assertEqual(result[\"structuredContent\"][\"error_code\"],\n                                     \"invalid_arguments\")\n                    self.assertIn(\"matched_state: observe|success\", result[\"content\"][0][\"text\"])\n                    self.assertIn(\"note:\", result[\"content\"][0][\"text\"])\n                    access.assert_not_called()\n                    self.assertEqual(session.checkpoint_path.read_bytes(), before)\n                    self.assertEqual({key: getattr(session, key) for key in authority_fields}, state_before)\n                    self.assertEqual(stats_path.read_bytes(), stats_before)\n                    self.assertFalse(desktop.clicks)\n\n    def test_direct_method_rejects_missing_metadata_before_authority_lookup(self):\n        server = bridge.BridgeServer()\n        self.addCleanup(server.close)\n        with mock.patch.object(server, \"_recovery_session\") as access:\n            with self.assertRaises(bridge.RecoveryMetadataError):\n                server.confirm_resume_stage(\"unknown\", \"confirm-rewards\", \"observe\")\n            access.assert_not_called()\n\n    def test_published_reason_alias_and_identical_aliases_unlock_only_observation(self):\n        for metadata in ({\"reason\": \"The exact panel is visible.\"},\n                         {\"note\": \"  Same frame  \", \"reason\": \"Same frame\"},\n                         {\"reason\": \"x\" * 500}):\n            with self.subTest(metadata=metadata), tempfile.TemporaryDirectory() as root:\n                _, server, session, desktop, stats_path = self.scene(root)\n                result = bridge.call_tool(server, \"visionstudio_confirm_resume_stage\",\n                                          self.arguments(session, **metadata))\n                payload = json.loads(result[\"content\"][0][\"text\"])\n                self.assertTrue(payload[\"action_replay_allowed\"])\n                self.assertFalse(session.resume_required)\n                self.assertEqual(session.current_stage_id, \"confirm-rewards\")\n                self.assertEqual(session.actions, 0)\n                self.assertEqual(json.loads(stats_path.read_text())[\"active_run\"][\"totals\"][\"recovered\"], 0)\n                self.assertFalse(desktop.clicks)\n\n    def test_valid_reason_preserves_pending_intent_and_missing_witness_gates(self):\n        for boundary in (\"pending-intent\", \"missing-witness\", \"wrong-session\"):\n            with self.subTest(boundary=boundary), tempfile.TemporaryDirectory() as root:\n                _, server, session, desktop, stats_path = self.scene(root)\n                arguments = self.arguments(session, reason=\"The panel is visible.\")\n                if boundary == \"pending-intent\":\n                    session.pending_action_intent = {\n                        \"intent_id\": \"uncertain\", \"action_replay\": \"never\",\n                        \"stage_id\": \"confirm-rewards\", \"target_id\": \"reward-confirm\",\n                    }\n                elif boundary == \"missing-witness\":\n                    session.recovery_observation_witness = None\n                else:\n                    arguments[\"session_id\"] = \"wrong\"\n                session.write_checkpoint(\"authority_fixture\")\n                before = session.checkpoint_path.read_bytes()\n                pending = copy.deepcopy(session.pending_action_intent)\n                with self.assertRaises(bridge.BridgeError):\n                    bridge.call_tool(server, \"visionstudio_confirm_resume_stage\", arguments)\n                self.assertEqual(session.checkpoint_path.read_bytes(), before)\n                self.assertEqual(session.pending_action_intent, pending)\n                self.assertEqual(json.loads(stats_path.read_text())[\"active_run\"][\"totals\"][\"recovered\"], 0)\n                self.assertFalse(desktop.clicks)\n\n    def test_schema_explicitly_publishes_both_metadata_names(self):\n        schema = next(tool[\"inputSchema\"] for tool in bridge.TOOLS\n                      if tool[\"name\"] == \"visionstudio_confirm_resume_stage\")\n        self.assertEqual(schema[\"required\"], [\"session_id\", \"stage_id\", \"matched_state\"])\n        self.assertEqual(schema[\"anyOf\"], [{\"required\": [\"note\"]}, {\"required\": [\"reason\"]}])\n        for name in (\"note\", \"reason\"):\n            self.assertEqual(schema[\"properties\"][name][\"maxLength\"], 500)\n            self.assertEqual(schema[\"properties\"][name][\"pattern\"], r\"\\S\")\n\n    def test_repeated_same_stage_observe_does_not_claim_recovered_progress(self):\n        with tempfile.TemporaryDirectory() as root:\n            fixture, server, session, desktop, stats_path = self.scene(root)\n            before = json.loads(stats_path.read_text())\n            for _ in range(4):\n                fixture.set_checkpoint_recovery_witness(session)\n                server.confirm_resume_stage(session.id, \"confirm-rewards\", \"observe\",\n                                            reason=\"The same reward panel remains.\")\n            self.assertEqual(json.loads(stats_path.read_text()), before)\n            self.assertEqual(session.actions, 0)\n            self.assertEqual(session.completed_stage_ids, [])\n            self.assertFalse(desktop.clicks)\n\n    def test_actual_success_credits_once_after_checkpoint_progress(self):\n        with tempfile.TemporaryDirectory() as root:\n            _, server, session, desktop, stats_path = self.scene(root)\n            result = server.confirm_resume_stage(\n                session.id, \"confirm-rewards\", \"success\", reason=\"A declared successor is visible.\"\n            )\n            self.assertEqual(result[\"resume_stage_id\"], \"dismiss-level-up\")\n            durable = json.loads(session.checkpoint_path.read_text())\n            self.assertIn(\"confirm-rewards\", durable[\"completed_stage_ids\"])\n            stats = json.loads(stats_path.read_text())\n            self.assertEqual(stats[\"active_run\"][\"totals\"][\"recovered\"], 1)\n            self.assertEqual(stats[\"loop_history\"], [{\"session_id\": \"previous\", \"coins_earned\": 123}])\n            with self.assertRaises(bridge.BridgeError):\n                server.confirm_resume_stage(session.id, \"confirm-rewards\", \"success\",\n                                            reason=\"Duplicate success.\")\n            self.assertEqual(json.loads(stats_path.read_text())[\"active_run\"][\"totals\"][\"recovered\"], 1)\n            self.assertFalse(desktop.clicks)\n\n    def test_failed_success_checkpoint_write_does_not_credit_recovery(self):\n        with tempfile.TemporaryDirectory() as root:\n            _, server, session, desktop, stats_path = self.scene(root)\n            before = stats_path.read_bytes()\n            with mock.patch.object(session, \"write_checkpoint\", side_effect=OSError(\"disk unavailable\")):\n                with self.assertRaises(OSError):\n                    server.confirm_resume_stage(session.id, \"confirm-rewards\", \"success\",\n                                                reason=\"Declared successor.\")\n            self.assertEqual(stats_path.read_bytes(), before)\n            self.assertFalse(desktop.clicks)\n\n    def test_pending_confirm_successor_keeps_existing_durable_progress_credit(self):\n        from types import SimpleNamespace\n\n        with tempfile.TemporaryDirectory() as root:\n            fixture = field_regression.RecoveryFieldRegressionTests()\n            server, session, desktop = fixture.field_scene(Path(root))\n            self.addCleanup(fixture.doCleanups)\n            stats_path = server._loop_stats_path(session)\n            stats_path.parent.mkdir(parents=True, exist_ok=True)\n            stats_path.write_text(json.dumps({\n                \"active_run\": {\"status\": \"active\", \"totals\": {\"recovered\": 0}},\n            }), encoding=\"utf-8\")\n            counters = (session.actions, copy.deepcopy(session.stage_action_attempts))\n            server.recover_stage(session.id)\n            with mock.patch.object(server, \"_get_local_ocr\", return_value=SimpleNamespace(\n                inspect=lambda _: field_regression.lobby_snapshot()\n            )):\n                result = server.confirm_resume_stage(\n                    session.id, \"confirm-rewards\", \"success\", reason=\"Two exact Lobby successors.\"\n                )\n            self.assertTrue(result[\"pending_intent_resolved\"])\n            self.assertEqual(session.current_stage_id, \"dismiss-level-up\")\n            self.assertEqual((session.actions, session.stage_action_attempts), counters)\n            self.assertEqual(json.loads(stats_path.read_text())[\"active_run\"][\"totals\"][\"recovered\"], 1)\n            self.assertFalse(desktop.clicks)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_reward_archive.py",
+    "before_sha256": "480381ef8b01e0372ea981b18c39fcff4308514fa49fc89ae0eaa55936e5cc93",
+    "after_sha256": "d5b4b9628b913cd54a2a1c4353edb040357d956ba3b9572b91e02189a783bd6c",
+    "edits": [
+      {
+        "start": 0,
+        "end": 1,
+        "before": "\"\"\"Reward capture is pre-input, durable, and analyzed off the control path.\"\"\"\n",
+        "after": "\"\"\"Offline archive compatibility and runtime capture removal.\"\"\"\n"
+      },
+      {
+        "start": 129,
+        "end": 133,
+        "before": "    def test_bridge_saves_exact_frame_before_confirm_click(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            root = Path(tmp)\n            s = session(root)\n",
+        "after": "    def test_bridge_confirms_without_archiving_item_frame(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            root = Path(tmp)\n            s = session(root)\n            s.stage_action_attempts = {}\n            s.committed_stage_ids = []\n            s.current_stage_phase = \"entered\"\n"
+      },
+      {
+        "start": 140,
+        "end": 142,
+        "before": "            server._controller_state = lambda _s: {\"batch_plan\": {\n                \"batch_id\": \"batch\", \"universal_plan\": {\"sha256\": \"plan\"}}}\n",
+        "after": ""
+      },
+      {
+        "start": 145,
+        "end": 148,
+        "before": "                meta = json.loads(next(root_path.glob(\"*.json\")).read_text())\n                observed.append(meta[\"status\"])\n                self.assertTrue(next(root_path.glob(\"*.png\")).is_file())\n",
+        "after": "                self.assertFalse(root_path.exists())\n                observed.append(kwargs[\"_local_semantic_witness\"])\n"
+      },
+      {
+        "start": 153,
+        "end": 154,
+        "before": "            with patch.object(local, \"is_exact_reward_confirmation_screen\", return_value=True):\n",
+        "after": "            with patch.object(local, \"is_exact_reward_confirmation_screen\", return_value=True), \\\n                    patch.object(archive, \"capture_confirm_frame\", side_effect=AssertionError(\"item capture disabled\")), \\\n                    patch.object(archive, \"mark_confirm_committed\", side_effect=AssertionError(\"item archive disabled\")):\n"
+      },
+      {
+        "start": 157,
+        "end": 158,
+        "before": "            self.assertEqual(observed, [\"captured\"])\n",
+        "after": "            self.assertEqual(len(observed), 1)\n            self.assertEqual(observed[0][\"scene\"], \"reward-confirm\")\n            self.assertEqual(observed[0][\"frame_sha256\"], bridge.sha256_bytes(image))\n"
+      },
+      {
+        "start": 159,
+        "end": 161,
+        "before": "            self.assertTrue(payload[\"semantic_reward_transaction\"][\"reward_snapshot_saved\"])\n            self.assertEqual(archive.reward_summary(root, run_id=\"batch\")[\"captured\"], 1)\n",
+        "after": "            self.assertFalse(payload[\"semantic_reward_transaction\"][\"reward_snapshot_saved\"])\n            self.assertFalse((root / \"reward-archive\").exists())\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_reward_candidate.py",
+    "before_sha256": "1e4b5959b5edd3977f95d30a51453828afc8426632b78cff0caf4dc446203c93",
+    "after_sha256": "fb67f7ab7b8ba9a2804b81bdc4f170390827cc6dfecb91ca99fd4e9844e46653",
+    "edits": [
+      {
+        "start": 441,
+        "end": 443,
+        "before": "            self.assertEqual(len(report[\"reward_sections\"][\"materials\"]), 1)\n            self.assertEqual(len(report[\"reward_sections\"][\"treasures\"]), 1)\n",
+        "after": "            self.assertNotIn(\"reward_sections\", report)\n            self.assertNotIn(\"observations\", report)\n"
+      },
+      {
+        "start": 447,
+        "end": 448,
+        "before": "    def test_native_summary_retains_categories_and_marks_every_reading_verify_ocr(self):\n",
+        "after": "    def test_native_summary_uses_result_totals_without_reading_item_archive(self):\n"
+      },
+      {
+        "start": 453,
+        "end": 454,
+        "before": "        app.summary_cards = {key: SimpleNamespace(value=Mock()) for key in (\"loops\", \"coins\", \"boxes\", \"captures\")}\n",
+        "after": "        app.summary_cards = {key: SimpleNamespace(value=Mock()) for key in (\"loops\", \"coins\", \"boxes\", \"exp\")}\n"
+      },
+      {
+        "start": 456,
+        "end": 458,
+        "before": "        app.summary_ledger = Mock()\n        app.summary_ledger.scope.get.return_value = \"Current run\"\n",
+        "after": ""
+      },
+      {
+        "start": 459,
+        "end": 465,
+        "before": "        controller.VisionStudioController._refresh_summary_page(app, {\"active_run\": {\"run_id\": \"run-a\"}})\n        observations = app.summary_ledger.update_observations.call_args.args[0]\n        from visionstudio_reward_view import reading_caption\n        for key, name in ((\"material_rows\", \"Timber Board\"), (\"treasure_rows\", \"Golden Relic\"), (\"unknown_rows\", \"Unknown Widget\")):\n            row = next(x for x in observations[key] if x[\"name\"] == name)\n            self.assertIn(\"VERIFY OCR\", reading_caption(row))\n",
+        "after": "        with patch.object(archive, \"cached_reward_summary\", side_effect=AssertionError(\"runtime archive read disabled\")):\n            controller.VisionStudioController._refresh_summary_page(app, {\n                \"active_run\": {\"run_id\": \"run-a\", \"completed_loops\": 1,\n                               \"totals\": {\"coins_earned\": 1200, \"exp_earned\": 300,\n                                          \"boxes\": {\"brown\": 1, \"silver\": 0,\n                                                    \"gold\": 0, \"rainbow\": 0,\n                                                    \"unknown\": 0}}}})\n        app.summary_cards[\"coins\"].value.set.assert_called_once_with(\"1,200\")\n        app.summary_cards[\"exp\"].value.set.assert_called_once_with(\"300\")\n        app.summary_cards[\"boxes\"].value.set.assert_called_once_with(\"1\")\n        self.assertFalse(hasattr(app, \"summary_ledger\"))\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_reward_runtime_disabled.py",
+    "before_sha256": null,
+    "after_sha256": "313f97b414c89f596904b224f881f44535d8961145ba776ca4078274fb203657",
+    "content": "\"\"\"Runtime no longer archives/reads item rewards; gameplay evidence stays fresh.\"\"\"\nfrom __future__ import annotations\n\nimport copy\nimport sys\nimport tempfile\nimport unittest\nfrom pathlib import Path\nfrom types import SimpleNamespace\nfrom unittest.mock import Mock, patch\n\nsys.path.insert(0, str(Path(__file__).resolve().parents[1] / \"scripts\"))\nimport visionstudio_bridge as bridge\nimport visionstudio_controller as controller\nimport visionstudio_local_runner as local\n\n\nclass RuntimeItemReadingRemovalTests(unittest.TestCase):\n    def test_legacy_item_observations_do_not_enter_telegram_or_change_totals(self):\n        stats = {\"active_run\": {\n            \"run_id\": \"batch-a\", \"completed_loops\": 1, \"requested_loops\": 5,\n            \"totals\": {\"coins_earned\": 1234, \"exp_earned\": 222,\n                       \"boxes\": {\"brown\": 1, \"silver\": 0, \"gold\": 0,\n                                 \"rainbow\": 0, \"unknown\": 0},\n                       \"box_count_unavailable_loops\": 0}}}\n        before = copy.deepcopy(stats)\n        legacy = {\"captured\": 100, \"analyzed\": 100, \"pending\": 0,\n                  \"name_matched\": {\"private-old-item\": 100},\n                  \"coin_labels_total\": 999999, \"unverified_labels\": [\"legacy-name\"]}\n        report = controller.reward_dashboard_payload(stats, legacy)\n        self.assertEqual((report[\"coins_earned\"], report[\"exp_earned\"], report[\"box_count\"]),\n                         (1234, 222, 1))\n        self.assertNotIn(\"observations\", report)\n        self.assertNotIn(\"reward_sections\", report)\n        summary = {\"loop_count\": 1, \"run_completed_loops\": 1,\n                   \"run_requested_loops\": 5, \"coins_earned\": 1234,\n                   \"exp_earned\": 222, \"box_count\": 1, \"boxes\": report[\"boxes\"],\n                   \"reward_observations\": legacy}\n        caption = controller.current_batch_summary_caption(summary)\n        self.assertIn(\"Coins earned: 1,234\", caption)\n        self.assertIn(\"EXP earned: 222\", caption)\n        self.assertIn(\"Total collected: 1\", caption)\n        for removed in (\"private-old-item\", \"legacy-name\", \"999999\", \"Reward image observations\"):\n            self.assertNotIn(removed, caption)\n        self.assertEqual(stats, before)\n\n    def test_disabled_item_reader_preserves_fresh_confirm_scene_guard(self):\n        for source in (\"local\", \"supervisor\"):\n            with self.subTest(source=source), tempfile.TemporaryDirectory() as tmp:\n                root = Path(tmp)\n                history = root / \"reward-archive/captures/old-user-data.json\"\n                history.parent.mkdir(parents=True)\n                history.write_bytes(b'{\"historical\":\"keep exact bytes\"}')\n                before = {path: path.read_bytes() for path in root.rglob(\"*\") if path.is_file()}\n                session = SimpleNamespace(\n                    id=\"session\", actions=0, stage_action_attempts={},\n                    committed_stage_ids=[], current_stage_phase=\"entered\",\n                    pending_action_intent=None, local_recovery_pending_intent=None,\n                    stage_action_replay_blocked=False, paused_for_human=False,\n                    journal_path=root / \"semantic-events.jsonl\",\n                    mission_source=\"universal-code\", current_stage_id=\"confirm-rewards\",\n                    observations=10, fixed_geometry_bounds=(0, 0, 100, 60))\n                server = object.__new__(bridge.BridgeServer)\n                server._session = Mock(return_value=session)\n                server.observe = Mock(return_value=({}, b\"fresh-current-frame\"))\n                engine = Mock(inspect=Mock(return_value=local.OcrSnapshot(\"unknown\", .9, (\"Unknown\",))))\n                server._get_local_ocr = Mock(return_value=engine)\n                server.execute_local_fixed_stage_target = Mock()\n                server._validated_durable_mystery_box_preopen = Mock()\n                server._interruptible_delay = Mock()\n                with patch.object(local, \"is_exact_reward_confirmation_screen\", return_value=False):\n                    with self.assertRaises(bridge.SemanticRewardSceneUnavailable):\n                        server._execute_fresh_semantic_reward_stage_target(\n                            \"session\", \"reward-confirm\", \"reversible\", False, 0,\n                            transaction_source=source)\n                self.assertEqual(server.observe.call_count, 2)\n                self.assertEqual(engine.inspect.call_count, 2)\n                server.execute_local_fixed_stage_target.assert_not_called()\n                server._validated_durable_mystery_box_preopen.assert_called_once_with(session)\n                self.assertTrue(all(path.read_bytes() == data for path, data in before.items()))\n                self.assertEqual(list((root / \"reward-archive\").rglob(\"*json\")), [history])\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_reward_scene_recovery.py",
+    "before_sha256": null,
+    "after_sha256": "2a8b0e0afe325d43616477d1ce5ab60deb2a6481c06f79acaf2c4f441106e302",
+    "content": "\"\"\"Reward recovery uses exact same-frame controls, never item-name authority.\"\"\"\nfrom __future__ import annotations\n\nimport io\nimport sys\nimport tempfile\nimport unittest\nfrom pathlib import Path\nfrom types import SimpleNamespace\nfrom unittest import mock\n\nfrom PIL import Image, ImageDraw\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport visionstudio_local_runner as runner\nimport test_bridge\n\nbridge = test_bridge.bridge\n\n\ndef reward_image(cyan=True):\n    image = Image.new(\"RGB\", (1000, 600), (20, 20, 20))\n    if cyan:\n        ImageDraw.Draw(image).rectangle((390, 510, 574, 564), fill=(10, 190, 210))\n    out = io.BytesIO()\n    image.save(out, \"PNG\")\n    return out.getvalue()\n\n\ndef text_result(text, score=.99, box=None):\n    return [(box or [[100, 80], [600, 80], [600, 180], [100, 180]], text, score)]\n\n\nclass FocusedRewardControlTests(unittest.TestCase):\n    def engine(self, label=\"Confirm\", score=.99, header=\"Mystery Box\", box=None):\n        calls = []\n        def read(rgb):\n            calls.append(rgb.shape)\n            if rgb.shape[:2] == (600, 1000):\n                return text_result(header, box=[[300, 30], [700, 30], [700, 100], [300, 100]])\n            return text_result(label, score, box)\n        return read, calls\n\n    def test_header_and_focused_exact_button_suffice_without_item_names(self):\n        ocr = runner.LocalOcr()\n        ocr._engine, calls = self.engine()\n        pixels = reward_image()\n        snapshot = ocr.inspect(pixels)\n        self.assertTrue(runner.is_exact_reward_confirmation_screen(snapshot))\n        self.assertIn(\"reward-confirm-focused-control\", snapshot.visual_flags)\n        self.assertEqual(snapshot.lines, (\"Mystery Box\", \"Confirm\"))\n        self.assertEqual(len(calls), 2)\n        self.assertIs(ocr.inspect(pixels), snapshot)\n        self.assertEqual(len(calls), 2)\n        self.assertEqual(ocr.cache_hits, 1)\n        self.assertEqual(ocr.focused_calls, 1)\n\n    def test_full_frame_exclusions_still_block_focused_confirm(self):\n        for cue in (\"Connection lost\", \"Result\", \"Level Up\", \"Surprise\", \"Tries left\", \"Unknown overlay\", \"Warning\"):\n            with self.subTest(cue=cue):\n                ocr = runner.LocalOcr()\n                ocr._engine, _ = self.engine(header=\"Mystery Box \" + cue)\n                self.assertFalse(runner.is_exact_reward_confirmation_screen(ocr.inspect(reward_image())))\n\n    def test_missing_panel_or_cyan_control_never_creates_authority(self):\n        for header, cyan in ((\"Confirm\", True), (\"Ingredient\", True), (\"Mystery Box\", False)):\n            with self.subTest(header=header, cyan=cyan):\n                ocr = runner.LocalOcr()\n                ocr._engine, calls = self.engine(header=header)\n                self.assertFalse(runner.is_exact_reward_confirmation_screen(ocr.inspect(reward_image(cyan))))\n                self.assertEqual(len(calls), 1)\n\n    def test_label_must_be_exact_confident_and_inside_calibrated_control(self):\n        for label, score, box in (\n            (\"Confirm payment\", .99, None), (\"Confrm\", .99, None), (\"Confirm\", .84, None),\n            (\"Confirm\", .99, [[0, 0], [20, 0], [20, 20], [0, 20]]),\n        ):\n            with self.subTest(label=label, score=score, box=box):\n                ocr = runner.LocalOcr()\n                ocr._engine, _ = self.engine(label, score, box=box)\n                self.assertFalse(runner.is_exact_reward_confirmation_screen(ocr.inspect(reward_image())))\n\n    def test_focused_engine_error_cannot_leave_a_cached_positive_scene(self):\n        ocr = runner.LocalOcr()\n        def read(rgb):\n            if rgb.shape[:2] == (600, 1000):\n                return text_result(\"Mystery Box\", box=[[300, 30], [700, 30], [700, 100], [300, 100]])\n            raise RuntimeError(\"focused engine failed\")\n        ocr._engine = read\n        with self.assertRaisesRegex(RuntimeError, \"focused engine failed\"):\n            ocr.inspect(reward_image())\n        self.assertIsNone(ocr._cached_image)\n        self.assertIsNone(ocr._cached_snapshot)\n\n\nclass FreshSemanticRewardRetryTests(unittest.TestCase):\n    def scene(self, tmp):\n        case = test_bridge.VisionStudioBridgeTests()\n        server, session, _ = case.make_universal_scene(tmp, stage_id=\"open-all-boxes\")\n        self.addCleanup(server.close)\n        case.retain_test_mystery_box_preopen(server, session)\n        case.set_exact_universal_stage_prefix(session, \"confirm-rewards\")\n        first, final = case.make_png((90, 90, 90)), case.make_png((15, 145, 225))\n        desktop = test_bridge.CaptureSequenceDesktop(session.last_window, [first] + [final] * 12)\n        server.desktop = desktop\n        return server, session, desktop, first, final\n\n    def unknown(self):\n        return runner.OcrSnapshot(\"animation\", .9, (\"Animation\",))\n\n    def exact(self):\n        return runner.OcrSnapshot(\"mystery box confirm\", .99, (\"Mystery Box\", \"Confirm\"),\n                                  visual_flags=frozenset({\"bottom-center-green-control\"}))\n\n    def test_transient_miss_gets_one_fresh_sample_then_one_first_confirm(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            server, session, desktop, first, final = self.scene(tmp)\n            server._supervisor_reward_ocr = SimpleNamespace(inspect=mock.Mock(side_effect=[self.unknown(), self.exact()]))\n            before = session.actions\n            with mock.patch.object(server, \"_interruptible_delay\"):\n                payload, _ = server.execute_supervisor_fixed_stage_target(session.id, \"reward-confirm\", \"reversible\", False, 0)\n            transaction = payload[\"semantic_reward_transaction\"]\n            self.assertEqual(transaction[\"semantic_observations\"], 2)\n            self.assertEqual(transaction[\"fresh_frame_sha256\"], bridge.sha256_bytes(final))\n            self.assertNotEqual(transaction[\"fresh_frame_sha256\"], bridge.sha256_bytes(first))\n            self.assertEqual(session.actions, before + 1)\n            self.assertEqual(session.stage_action_attempts[\"confirm-rewards\"], 1)\n            self.assertEqual(len(desktop.clicks), 1)\n            self.assertIsNone(session.pending_action_intent)\n\n    def test_unknown_samples_consume_no_action_intent_or_attempt(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            server, session, desktop, _, _ = self.scene(tmp)\n            read = mock.Mock(return_value=self.unknown())\n            server._supervisor_reward_ocr = SimpleNamespace(inspect=read)\n            before = session.actions\n            with mock.patch.object(server, \"_interruptible_delay\"), self.assertRaises(bridge.SemanticRewardSceneUnavailable):\n                server.execute_supervisor_fixed_stage_target(session.id, \"reward-confirm\", \"reversible\", False, 0)\n            self.assertEqual(read.call_count, 2)\n            self.assertEqual(session.actions, before)\n            self.assertEqual(session.stage_action_attempts.get(\"confirm-rewards\", 0), 0)\n            self.assertIsNone(session.pending_action_intent)\n            self.assertFalse(desktop.clicks)\n\n    def test_committed_confirm_never_gets_a_semantic_retry_or_second_click(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            server, session, desktop, _, _ = self.scene(tmp)\n            reader = mock.Mock(side_effect=[self.unknown(), self.exact()])\n            server._supervisor_reward_ocr = SimpleNamespace(inspect=reader)\n            with mock.patch.object(server, \"_interruptible_delay\"):\n                server.execute_supervisor_fixed_stage_target(session.id, \"reward-confirm\", \"reversible\", False, 0)\n            reader.reset_mock(return_value=True, side_effect=True)\n            reader.return_value = self.unknown()\n            with mock.patch.object(server, \"_interruptible_delay\"), self.assertRaises(bridge.BridgeError):\n                server.execute_supervisor_fixed_stage_target(session.id, \"reward-confirm\", \"reversible\", False, 0)\n            self.assertLessEqual(reader.call_count, 1)\n            self.assertEqual(len(desktop.clicks), 1)\n            self.assertEqual(session.stage_action_attempts[\"confirm-rewards\"], 1)\n\n    def test_changed_authority_between_samples_never_clicks_the_second_exact_frame(self):\n        for mutation in (\"pending\", \"human\", \"stage\", \"phase\"):\n            with self.subTest(mutation=mutation), tempfile.TemporaryDirectory() as tmp:\n                server, session, desktop, _, _ = self.scene(tmp)\n                reader = mock.Mock(side_effect=[self.unknown(), self.exact()])\n                server._supervisor_reward_ocr = SimpleNamespace(inspect=reader)\n                before = session.actions\n                def changed(*_args, **_kwargs):\n                    if mutation == \"pending\":\n                        session.pending_action_intent = {\"intent_id\": \"uncertain\", \"action_replay\": \"never\"}\n                    elif mutation == \"human\":\n                        session.paused_for_human = True\n                    elif mutation == \"stage\":\n                        session.current_stage_id = \"dismiss-level-up\"\n                    else:\n                        session.current_stage_phase = \"action_committed\"\n                        session.stage_action_replay_blocked = True\n                with mock.patch.object(server, \"_interruptible_delay\", side_effect=changed), self.assertRaises(bridge.BridgeError):\n                    server.execute_supervisor_fixed_stage_target(session.id, \"reward-confirm\", \"reversible\", False, 0)\n                self.assertEqual(session.actions, before)\n                self.assertFalse(desktop.clicks)\n                if mutation == \"pending\":\n                    self.assertEqual(session.pending_action_intent[\"intent_id\"], \"uncertain\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_runtime_version.py",
+    "before_sha256": "216f71e6cda2faf2bbd942f1c4be0e16365eee3f4bf62e025d3198d864494974",
+    "after_sha256": "b1d27a9b3f43aaf7e9d2af4ee4c4a25b842d1ae4c9632dfa910db47fdcd486c6",
+    "edits": [
+      {
+        "start": 22,
+        "end": 25,
+        "before": "    plugin_version: str = \"0.18.13+codex.20261008.recovery-resume\",\n    controller_version: str = \"0.18.13\",\n    bridge_server_version: str = \"0.18.13-recovery-resume-300\",\n",
+        "after": "    plugin_version: str = \"0.18.14+codex.20261016.recovery-core\",\n    controller_version: str = \"0.18.14\",\n    bridge_server_version: str = \"0.18.14-recovery-core-300\",\n"
+      },
+      {
+        "start": 40,
+        "end": 41,
+        "before": "            'PRODUCT_VERSION = \"0.18.13\"\\n'\n",
+        "after": "            'PRODUCT_VERSION = \"0.18.14\"\\n'\n"
+      },
+      {
+        "start": 43,
+        "end": 44,
+        "before": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.13\"\\n',\n",
+        "after": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.14\"\\n',\n"
+      },
+      {
+        "start": 48,
+        "end": 49,
+        "before": "            'HEART_RUNNER_VERSION = \"0.18.13\"\\n'\n",
+        "after": "            'HEART_RUNNER_VERSION = \"0.18.14\"\\n'\n"
+      },
+      {
+        "start": 70,
+        "end": 71,
+        "before": "            \"0.18.13+codex.20261008.recovery-resume\",\n",
+        "after": "            \"0.18.14+codex.20261016.recovery-core\",\n"
+      },
+      {
+        "start": 78,
+        "end": 79,
+        "before": "                \"plugin\": \"0.18.13\",\n",
+        "after": "                \"plugin\": \"0.18.14\",\n"
+      },
+      {
+        "start": 80,
+        "end": 81,
+        "before": "                    \"0.18.13+codex.20261008.recovery-resume\"\n",
+        "after": "                    \"0.18.14+codex.20261016.recovery-core\"\n"
+      },
+      {
+        "start": 82,
+        "end": 86,
+        "before": "                \"controller\": \"0.18.13\",\n                \"bridge\": \"0.18.13\",\n                \"bridge_server\": \"0.18.13-recovery-resume-300\",\n                \"local_runner\": \"0.18.13\",\n",
+        "after": "                \"controller\": \"0.18.14\",\n                \"bridge\": \"0.18.14\",\n                \"bridge_server\": \"0.18.14-recovery-core-300\",\n                \"local_runner\": \"0.18.14\",\n"
+      },
+      {
+        "start": 87,
+        "end": 88,
+        "before": "                \"heart_sender\": \"0.18.13\",\n",
+        "after": "                \"heart_sender\": \"0.18.14\",\n"
+      },
+      {
+        "start": 101,
+        "end": 102,
+        "before": "            [\"controller=0.10.27 (expected 0.18.13)\"],\n",
+        "after": "            [\"controller=0.10.27 (expected 0.18.14)\"],\n"
+      },
+      {
+        "start": 111,
+        "end": 112,
+        "before": "                plugin_version=\"0.18.13+codex.wrong-build\",\n",
+        "after": "                plugin_version=\"0.18.14+codex.wrong-build\",\n"
+      },
+      {
+        "start": 122,
+        "end": 124,
+        "before": "                \"plugin_manifest=0.18.13+codex.wrong-build \"\n                \"(expected 0.18.13+codex.20261008.recovery-resume)\",\n",
+        "after": "                \"plugin_manifest=0.18.14+codex.wrong-build \"\n                \"(expected 0.18.14+codex.20261016.recovery-core)\",\n"
+      },
+      {
+        "start": 125,
+        "end": 126,
+        "before": "                \"(expected 0.18.13-recovery-resume-300)\",\n",
+        "after": "                \"(expected 0.18.14-recovery-core-300)\",\n"
+      },
+      {
+        "start": 150,
+        "end": 151,
+        "before": "        self.assertIn(\"Axiom Vision v0.18.13 Setup\", text)\n",
+        "after": "        self.assertIn(\"Axiom Vision v0.18.14 Setup\", text)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/update-package-files.json",
+    "before_sha256": "075a55d2c4121b3acab24c170dc580063241417935069b7565e5f5e680f43230",
+    "after_sha256": "7a87f2ed4053f995d3f9ef57860888a9d28d5e85353866f8e9605ef6122346c9",
+    "edits": [
+      {
+        "start": 18,
+        "end": 18,
+        "before": "",
+        "after": "  \"visionstudio/RELEASE_v0.18.14_TH.md\",\n"
+      },
+      {
+        "start": 87,
+        "end": 87,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_clean_reward_recovery_route.py\",\n"
+      },
+      {
+        "start": 98,
+        "end": 98,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_local_atomic_abort_authority.py\",\n"
+      },
+      {
+        "start": 109,
+        "end": 109,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_recovery_metadata.py\",\n"
+      },
+      {
+        "start": 114,
+        "end": 114,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_reward_runtime_disabled.py\",\n  \"visionstudio/tests/test_reward_scene_recovery.py\",\n"
+      }
+    ]
+  }
+]
