@@ -2,17 +2,19 @@
 
 Public Windows release assets and Ed25519-signed update feed for Axiom Vision.
 
-## Latest: v0.18.13 — Recovery Resume
+## Latest: v0.18.14 — Recovery Core
 
-[Download v0.18.13](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.13).
+[Download v0.18.14](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.14).
 
-Existing installations: open **Settings → CHECK UPDATE**, wait for workers to stop, then close the Controller. The signed updater preserves runtime state, checkpoints, statistics, sessions and reward history. An active checkpoint defers installation; do not Reset a batch merely to install this update.
+Existing installations: open **Settings → CHECK UPDATE**, wait for workers to stop, then close the Controller. The signed updater preserves runtime state, checkpoints, statistics, sessions and historical reward files. An active checkpoint defers installation; do not Reset a batch merely to install this update.
 
-This release keeps Resume available after Stop during blocked Universal recovery, and preserves Heart exclusion and archive-before-new-Start authority. Reward Archive and Send Log code remains unchanged from v0.18.12.
+Runtime item/treasure image capture, background item OCR and the item catalog UI are removed. Run Summary retains authoritative Mystery Box counts, Coins and EXP; box collection and fresh scene/input guards remain active.
 
-Validation: 1,053 tests passed, 17 skipped; signed upgrades from v0.18.11 and v0.18.12 preserved nine runtime files each byte-for-byte. Native Windows/LDPlayer validation remains pending.
+Recovery now supplements missed Confirm text from the same exact frame, allows one fresh observation before a first Confirm, and persists one guarded Local restore for a clean reward checkpoint before Codex. Validated note/reason metadata and private same-process abort proof preserve never-replay authority. Repeated observation does not inflate Recovered.
 
-ZIP SHA-256: `5fedaf38b5e8608c9f60e62c758b9ea27082e8ec8101728a99e29418b956211f`.
+Validation: 1,088 tests passed, 17 skipped; signed upgrades from v0.18.11, v0.18.12 and v0.18.13 preserved nine runtime files each byte-for-byte. Send Log transport and the Universal Mission code are unchanged. Native Windows/LDPlayer validation remains pending.
+
+ZIP SHA-256: `86f7f539c5702455c4cf13cf75ac816f4c3f0e708f5aba161d300a2a646ec9de`.
 
 ## v0.18.0 (initial release)
 
