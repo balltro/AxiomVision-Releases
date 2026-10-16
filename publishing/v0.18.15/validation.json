@@ -1,0 +1,58 @@
+{
+  "version": "0.18.15",
+  "tests": {
+    "total": 1135,
+    "passed": 1118,
+    "skipped": 17,
+    "log_sha256": "0c0eddbfadc1c50c084bbd46dff58a130d3476ff94a40d5f7693fe53af9954ad"
+  },
+  "package_files": 132,
+  "package_sha256": "2c5429aa1ed68ab55f5b03f4d36b50fab0ba73689d0c6e8e7f453cd318b2a198",
+  "package_bytes": 9339212,
+  "upgrades": [
+    {
+      "from": "0.18.12",
+      "to": "0.18.15",
+      "package_members_verified": 132,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.13",
+      "to": "0.18.15",
+      "package_members_verified": 132,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.14",
+      "to": "0.18.15",
+      "package_members_verified": 132,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "native_windows_ldplayer_tested": false,
+  "diagnostic_limit": "The supplied v14 excerpt shows successful loops, not a current recovery failure. Latent recovery defects were reproduced in source and mocked process tests."
+}
