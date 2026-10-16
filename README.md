@@ -2,19 +2,19 @@
 
 Public Windows release assets and Ed25519-signed update feed for Axiom Vision.
 
-## Latest: v0.18.14 — Recovery Core
+## Latest: v0.18.15 — Recovery Watchdog
 
-[Download v0.18.14](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.14).
+[Download v0.18.15](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.15).
 
-Existing installations: open **Settings → CHECK UPDATE**, wait for workers to stop, then close the Controller. The signed updater preserves runtime state, checkpoints, statistics, sessions and historical reward files. An active checkpoint defers installation; do not Reset a batch merely to install this update.
+Existing installations: open **Settings → CHECK UPDATE**, stop workers, then close the Controller. The signed updater preserves runtime state, checkpoints, statistics, sessions and historical reward files. An active checkpoint defers installation; do not Reset a batch merely to install this update.
 
-Runtime item/treasure image capture, background item OCR and the item catalog UI are removed. Run Summary retains authoritative Mystery Box counts, Coins and EXP; box collection and fresh scene/input guards remain active.
+A verified frozen Universal worker can now enter guarded checkpoint recovery before `resume_required` was set. Input locks before confirmed process-tree termination, and the durable recovery queue preserves Stop/Pause/Human, Plan, geometry, pending intent and never-replay protections. A fresh-frame warning no longer hides an unresponsive worker. Unscheduled or terminal blocks display their actual status.
 
-Recovery now supplements missed Confirm text from the same exact frame, allows one fresh observation before a first Confirm, and persists one guarded Local restore for a clean reward checkpoint before Codex. Validated note/reason metadata and private same-process abort proof preserve never-replay authority. Repeated observation does not inflate Recovered.
+Send Log retains compact failure/recovery history separately from normal tails and prioritizes the current mission's preview. Coverage is bounded and explicit; previews never grant input authority. Runtime item/treasure image reading and catalog UI remain disabled.
 
-Validation: 1,088 tests passed, 17 skipped; signed upgrades from v0.18.11, v0.18.12 and v0.18.13 preserved nine runtime files each byte-for-byte. Send Log transport and the Universal Mission code are unchanged. Native Windows/LDPlayer validation remains pending.
+Validation: 1,118 tests passed, 17 skipped (1,135 total). Signed upgrades from v0.18.12, v0.18.13 and v0.18.14 preserve nine runtime files byte-for-byte per installation. Universal Revision 9, Heart Revision 13 and dependency pins remain unchanged. Windows process termination is covered by simulation; native Windows/LDPlayer validation remains pending.
 
-ZIP SHA-256: `86f7f539c5702455c4cf13cf75ac816f4c3f0e708f5aba161d300a2a646ec9de`.
+ZIP SHA-256: `2c5429aa1ed68ab55f5b03f4d36b50fab0ba73689d0c6e8e7f453cd318b2a198`.
 
 ## v0.18.0 (initial release)
 
