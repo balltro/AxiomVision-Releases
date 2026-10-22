@@ -1,0 +1,63 @@
+{
+  "version": "0.18.16",
+  "tests": {
+    "total": 1183,
+    "passed": 1166,
+    "skipped": 17,
+    "log_sha256": "85b0c6d8ba935c5f426578d398c409afd4431769b84161a05c6073dcac063084"
+  },
+  "package_files": 140,
+  "package_sha256": "95451ad73e0d78f9a0c1ea83743c9ba4851c15b7237696df4528b4a2fab11242",
+  "package_bytes": 9465022,
+  "upgrades": [
+    {
+      "from": "0.18.13",
+      "to": "0.18.16",
+      "package_members_verified": 140,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.14",
+      "to": "0.18.16",
+      "package_members_verified": 140,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.15",
+      "to": "0.18.16",
+      "package_members_verified": 140,
+      "runtime_files_byte_preserved": 9,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "legacy_off_plan_unchanged": true,
+  "relay_on_revision": "10",
+  "relay_off_revision": "9",
+  "real_source_image_recognizer_validated": true,
+  "native_windows_ldplayer_tested": false,
+  "ui_review": "ship narrow extension at1440x1000,1280x820,1280x900 (Linux Tk with isolated state)",
+  "timing_limit": "150ms is the pause between checks; capture and processing add latency. Native two-second timing and game acceptance remain unverified."
+}
