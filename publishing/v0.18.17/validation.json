@@ -1,0 +1,97 @@
+{
+  "version": "0.18.17",
+  "tests": {
+    "version": "0.18.17",
+    "total": 1215,
+    "passed": 1198,
+    "skipped": 17,
+    "seconds": 57.734,
+    "log_sha256": "f7ed0e869c54e0033420a99fb38823651c3a347bf698f461903c5be98496822c",
+    "source_controller_sha256": "4458adcfa0a0b4e8431fb206c5e261881cfd04f54b3169071488b2547e7bae1d"
+  },
+  "package_files": 146,
+  "package_sha256": "61aaa7b253669a10ed021a18bdae8dd2c5ef136a7b58f4e90d69b26509e83e5a",
+  "package_bytes": 9535334,
+  "upgrades": [
+    {
+      "from": "0.18.13",
+      "to": "0.18.17",
+      "package_members_verified": 146,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.14",
+      "to": "0.18.17",
+      "package_members_verified": 146,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.15",
+      "to": "0.18.17",
+      "package_members_verified": 146,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.16",
+      "to": "0.18.17",
+      "package_members_verified": 146,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "plan_compatibility": {
+    "baseline": "0.18.16",
+    "candidate": "0.18.17",
+    "configurations_verified": 63,
+    "off_configs": 36,
+    "on_configs": 27,
+    "compiled_config_and_plan_identical": true
+  },
+  "unchanged_runtime_components": [
+    "scripts/visionstudio_updater.py",
+    "scripts/visionstudio_heart_input.py",
+    "scripts/visionstudio_heart_runner.py",
+    "requirements-windows.txt",
+    "scripts/visionstudio_universal_mission.py",
+    "scripts/visionstudio_cookie_relay.py",
+    "scripts/data/cookie-relay-signatures.json"
+  ],
+  "ui_review": "ship at timing-preset extension scope on real Linux Tk captures, 1280x820, 1440x1000 and1280x900",
+  "native_windows_ldplayer_tested": false,
+  "limitations": "Thai names persist but host lacks Thai fonts; Windows rendering and native two-second Relay timing/game acceptance not exercised."
+}

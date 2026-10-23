@@ -1,0 +1,577 @@
+[
+  {
+    "path": "RUN-SETUP-WINDOWS.bat",
+    "before_sha256": "f9041f29c04476dd8a8c68f1a304960da82b3bf6e9b6365907f3242b8b17828b",
+    "after_sha256": "64f2f116d7b457a42fb99023ba79f03c283d938f2020b27a56311ba71d9895cd",
+    "edits": [
+      {
+        "start": 12,
+        "end": 13,
+        "before": "echo Axiom Vision v0.18.16 Setup\n",
+        "after": "echo Axiom Vision v0.18.17 Setup\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/.codex-plugin/plugin.json",
+    "before_sha256": "4f81004c1051fc3261e8f265e481e0ef27e64dc251e37c37706252c3a35479db",
+    "after_sha256": "1a0ae0bc21ccf2a032f300aa63705da3b027f9ea06af8d1f20d54801eec3041f",
+    "edits": [
+      {
+        "start": 2,
+        "end": 3,
+        "before": "  \"version\": \"0.18.16+codex.20261023.cookie-relay\",\n",
+        "after": "  \"version\": \"0.18.17+codex.20261023.run-profile-presets\",\n"
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "before": "    \"longDescription\": \"Axiom Vision v0.18.16 adds optional Cookie Relay below Random Boost. Short, Normal and Custom profiles schedule fast local visual watch for one guarded second-runner activation. AUTO disables Relay. Frozen plans, durable never-replay Relay intent, Human Verification and input guards remain enforced. Runtime item/treasure reading remains disabled.\",\n",
+        "after": "    \"longDescription\": \"Axiom Vision v0.18.17 adds optional Cookie Relay below Random Boost. Short, Normal and Custom profiles schedule fast local visual watch for one guarded second-runner activation. AUTO disables Relay. Frozen plans, durable never-replay Relay intent, Human Verification and input guards remain enforced. Runtime item/treasure reading remains disabled.\",\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/AGENTS.md",
+    "before_sha256": "5b20d215c298ba4a3a9e029c60b8a743a0312db6c2c6372ced82445336a532c7",
+    "after_sha256": "8b47a5b57f3750c9c9a9a436b91529ff33fe1a3f810506f335fcc7ee73837da1",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.17 named Run Profile timing presets\n\nSaved timing presets are Controller preferences only: a bounded library of\nnames and seconds outside the Universal configuration and compiled Plan.\nApplying one selects the existing Custom Run Profile. Never bind runtime\nauthority to a mutable preset name/id or resolve a saved preset during Resume.\nStart freezes the actual normalized seconds in its existing Plan; preset edits,\nselection or deletion must not change an active/resumable batch. Preserve the\nlibrary across reset and atomic state updates. AUTO still disables Relay.\n\nFor a new Telegram RUN after a completed batch, confirmation binds the actual\neditable draft configuration and compiled hash that Start will use. Active or\nresumable batches continue binding their frozen Plan. Never confirm old timing\nwhile executing a different draft, or use library metadata as runtime authority.\n\nThe Relay final native-input guard must recheck Controller/Plan and watchdog\nauthority after the final window/Geometry validation, then check witness age,\nunder the same runtime mutex. A deadline that wins during validation prevents\ninput without clearing the pending intent or replenishing any budget.\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/README_TH.md",
+    "before_sha256": "4ee5ae59a744b4581faebbe4ca5bff8d16f1d8dde973d7f57540eeebf9fb7810",
+    "after_sha256": "e6b7c1c41da4eeef4754a673cb055db983a801a0a7a53217778207ce8c0471ac",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.17 — Run Profile Presets\n\nเพิ่มรายการ PRESET ใต้ RUN PROFILE สำหรับบันทึกชื่อและเวลาแต่ละการฟาร์ม\nเลือกใช้ แก้ไข หรือลบได้ บันทึกทันทีและจำไว้หลังเปิดโปรแกรมใหม่\nPreset เปลี่ยนเฉพาะเวลา ไม่เปลี่ยน Boost / Relay / จำนวนรอบ\nแบตช์ที่กำลังทำงานและ Resume ใช้แผนที่ตรึงไว้ตามเดิม\nแก้ watchdog ที่อาจหมดเวลาระหว่างตรวจหน้าต่างรอบสุดท้ายก่อนคลิก Relay\nรายละเอียด: RELEASE_v0.18.17_TH.md\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/RELEASE_v0.18.17_TH.md",
+    "before_sha256": null,
+    "after_sha256": "455c770839416b472c8f6454353a367120440e4c5bb87dc7324365a9c7124071",
+    "content": "# Axiom Vision v0.18.17 — Run Profile Presets\n\nบันทึกชื่อและเวลาของ Run Profile สำหรับแต่ละการฟาร์มได้\nรายการ PRESET อยู่ใต้ RUN PROFILE และก่อน RANDOM BOOST\n\n- SAVE AS สร้าง Preset โดยตั้งชื่อและเวลา 30–1,800 วินาที\n- เลือก Preset เพื่อใช้เวลาที่บันทึกไว้เป็น Custom\n- EDIT แก้ชื่อหรือเวลา และ DELETE ลบรายการที่เลือก\n- รองรับชื่อภาษาไทยและเก็บไว้หลังปิดโปรแกรมหรือ Reset Batch\n- บันทึกทันที ไม่ต้องเริ่มแบตช์ก่อน และไม่เปลี่ยน Random Boost, Relay หรือจำนวนรอบ\n- ระหว่างที่แบตช์ยังแก้การตั้งค่าไม่ได้ ปุ่ม Preset จะถูกล็อกด้วย\n  Resume ใช้แผนและเวลาที่ตรึงไว้ตอนเริ่ม ไม่อ่านค่าจาก Preset ที่อาจแก้ภายหลัง\n\nAUTO / SHORT / NORMAL / CUSTOM ยังใช้ได้ตามเดิม\nAUTO ใช้ Cookie Relay ไม่ได้ เมื่อเปิด Relay เวลาของ Preset คือเวลาประมาณของ\nCookie ตัวแรก ระบบใช้เวลานี้ช่วยเริ่มเฝ้าภาพ ไม่ใช้เวลาเป็นหลักฐานว่าปุ่มปรากฏ\nหรือว่าวิ่งจบแล้ว ต้องยืนยันปุ่ม Relay จากภาพสดก่อนส่งคลิก\n\nแก้การตรวจสิทธิ์ Relay รอบสุดท้าย: ถ้า watchdog หมดเวลาระหว่างตรวจหน้าต่าง\nจะไม่ส่งคลิก และยังเก็บ intent ไว้ตามกฎไม่กดซ้ำ\n\nแก้ข้อความยืนยัน RUN ทาง Telegram หลังแบตช์เดิมจบ ให้แสดง Run Profile\nและผูกกับค่าที่เลือกสำหรับงานใหม่ การเปลี่ยนเวลาทำให้คำยืนยันเก่าใช้ไม่ได้\nส่วน Resume ยังผูกกับแผนเดิมที่ตรึงไว้\nช่อง Custom ปฏิเสธค่าที่ไม่ใช่จำนวนเต็มหรืออยู่นอกช่วง แทนการแปลงเป็น AUTO เงียบ ๆ\n\nStop / Pause / Human Verification และกฎภาพสด หน้าต่าง Geometry และ replay\nยังทำงานตามเดิม ไม่เปลี่ยนสิทธิ์ Heart Sender และระบบอ่านสมบัติยังปิดอยู่\nUniversal Mission ใช้ revision 9 เมื่อ Relay OFF และ revision 10 เมื่อ Relay ON\n\nอัปเดตที่ Settings → CHECK UPDATE รอช่วงที่ updater ติดตั้งได้\nไฟล์ state / checkpoint / stats / session เดิมคงอยู่ ไม่ต้อง Reset Batch เพื่ออัปเดต\n\nตรวจ UI และเส้นทางจำลองบน Linux การกด Relay ทันหน้าต่าง 2 วินาที\nและผลในเกมยังไม่ได้ยืนยันบน Windows / LDPlayer จริง\n"
+  },
+  {
+    "path": "visionstudio/docs/run-profile-presets/.impeccable/design.json",
+    "before_sha256": null,
+    "after_sha256": "1f44c3f88b81204513badd6bac12a74d083e620b083a2193ccc031311a1a9d91",
+    "content": "{\n  \"schemaVersion\": 2,\n  \"generatedAt\": \"2026-10-23T00:00:00Z\",\n  \"title\": \"Design System: Run Profile Time Presets\",\n  \"extensions\": {\n    \"colorMeta\": {\n      \"gold\": {\"role\": \"primary\", \"displayName\": \"Controller Gold\"},\n      \"panel\": {\"role\": \"neutral\", \"displayName\": \"Controller Panel\"}\n    },\n    \"typographyMeta\": {\n      \"action\": {\"displayName\": \"Native action\", \"purpose\": \"Declared Tk font, in points; host fallback may differ.\"}\n    }\n  },\n  \"components\": [\n    {\n      \"name\": \"Preset Action\",\n      \"kind\": \"button\",\n      \"refersTo\": \"preset-action\",\n      \"description\": \"SAVE AS; HTML illustration of square Tk Canvas geometry.\",\n      \"html\": \"<button class=\\\"ds-preset-action\\\">SAVE AS</button>\",\n      \"css\": \".ds-preset-action{width:76px;height:30px;background:#1a2026;color:#f5f2eb;border:1px solid #d9ad52;border-radius:0;font:9pt 'Segoe UI Semibold';cursor:pointer}.ds-preset-action:hover{background:#232b32}.ds-preset-action:focus-visible{outline:none;border-width:2px}.ds-preset-action:disabled{background:#20262c;color:#66717b;border-color:#1e252c;cursor:default}\"\n    },\n    {\n      \"name\": \"Delete Action\",\n      \"kind\": \"button\",\n      \"description\": \"Muted outline for the confirmation-backed delete action.\",\n      \"html\": \"<button class=\\\"ds-preset-delete\\\">DELETE</button>\",\n      \"css\": \".ds-preset-delete{width:68px;height:30px;background:#1a2026;color:#f5f2eb;border:1px solid #98a2ab;border-radius:0;font:9pt 'Segoe UI Semibold';cursor:pointer}.ds-preset-delete:hover{background:#232b32}.ds-preset-delete:focus-visible{outline:none;border-width:2px}.ds-preset-delete:disabled{background:#20262c;color:#66717b;border-color:#1e252c;cursor:default}\"\n    },\n    {\n      \"name\": \"Dialog Save\",\n      \"kind\": \"button\",\n      \"refersTo\": \"dialog-primary\",\n      \"description\": \"Filled gold SAVE PRESET action.\",\n      \"html\": \"<button class=\\\"ds-preset-save\\\">SAVE PRESET</button>\",\n      \"css\": \".ds-preset-save{width:118px;height:34px;background:#d9ad52;color:#080a0c;border:1px solid #d9ad52;border-radius:0;font:9pt 'Segoe UI Semibold';cursor:pointer}.ds-preset-save:hover{background:#e5bd6d}.ds-preset-save:focus-visible{outline:none;border-width:2px}.ds-preset-save:disabled{background:#20262c;color:#66717b;border-color:#1e252c;cursor:default}\"\n    },\n    {\n      \"name\": \"Dialog Field\",\n      \"kind\": \"input\",\n      \"refersTo\": \"dialog-field\",\n      \"description\": \"Name and seconds use the same flat field; native width is 32 characters.\",\n      \"html\": \"<input class=\\\"ds-preset-field\\\" aria-label=\\\"Name\\\" value=\\\"EXP Farm\\\" size=\\\"32\\\">\",\n      \"css\": \".ds-preset-field{background:#151a20;color:#f5f2eb;border:1px solid #283039;border-radius:0;padding:7px 2px;font:10pt 'Segoe UI';caret-color:#d9ad52}.ds-preset-field:focus-visible{outline:none;border-color:#d9ad52}\"\n    },\n    {\n      \"name\": \"Preset Menu\",\n      \"kind\": \"input\",\n      \"description\": \"Native OptionMenu translated as select. 207px is measured Linux capture width; native source uses 27 characters. Platform menus differ.\",\n      \"html\": \"<select class=\\\"ds-preset-menu\\\" aria-label=\\\"Saved time\\\"><option>EXP Farm · 165s</option></select>\",\n      \"css\": \".ds-preset-menu{width:207px;height:27px;background:#151a20;color:#f5f2eb;border:1px solid #283039;border-radius:0;font:8pt 'Segoe UI'}.ds-preset-menu:hover{background:#1a2026;color:#d9ad52}.ds-preset-menu:disabled{color:#66717b}.ds-preset-menu option{background:#151a20;color:#f5f2eb;font:9pt 'Segoe UI'}\"\n    }\n  ],\n  \"narrative\": {\n    \"overview\": \"Only the Command Center timing extension is covered. The incumbent black/gold Operate world is preserved. Authority: `scripts/visionstudio_controller.py`. The scoped sidecar illustrates Tk controls in HTML; it is not the native implementation.\",\n    \"dos\": [\"Do retain native controls, compact alignment and gold selection language.\", \"Do keep this document scoped to timing presets.\"],\n    \"donts\": [\"Don't treat a preset name as Mission or active Plan authority.\", \"Don't infer Windows rendering from Linux evidence. Four Tk captures cover empty, dialog, selected/reopened and active/locked at 1280×820, 1280×900 and 1440×1000. Thai persistence was checked; the host lacked a Thai font, so Thai glyph rendering was not verified. Windows/LDPlayer were not exercised.\"]\n  }\n}\n"
+  },
+  {
+    "path": "visionstudio/docs/run-profile-presets/DESIGN.md",
+    "before_sha256": null,
+    "after_sha256": "04ae0696133832978aee47484d6eae5b10f89baf208ee5235136e10abd561328",
+    "content": "---\nname: Axiom Vision Run Profile Time Presets\ndescription: Shipped native Tk timing extension.\ncolors:\n  bg: \"#080a0c\"\n  panel: \"#101419\"\n  alt: \"#151a20\"\n  raised: \"#1a2026\"\n  border: \"#283039\"\n  border-soft: \"#1e252c\"\n  gold: \"#d9ad52\"\n  gold-hover: \"#e5bd6d\"\n  gold-soft: \"#9f7e3f\"\n  text: \"#f5f2eb\"\n  muted: \"#98a2ab\"\n  disabled: \"#20262c\"\n  disabled-text: \"#66717b\"\n  error: \"#f06f72\"\n  action-hover: \"#232b32\"\ntypography:\n  title: {fontFamily: Segoe UI Semibold, fontSize: 13pt}\n  action: {fontFamily: Segoe UI Semibold, fontSize: 9pt}\n  label: {fontFamily: Segoe UI Semibold, fontSize: 8pt}\n  body: {fontFamily: Segoe UI, fontSize: 9pt}\n  compact: {fontFamily: Segoe UI, fontSize: 8pt}\n  field: {fontFamily: Segoe UI, fontSize: 10pt}\nrounded: {control: 0px}\nspacing: {preset-top: 6px, row-top: 8px, action-gap: 5px, menu-gap: 7px}\ncomponents:\n  preset-action: {backgroundColor: \"{colors.raised}\", textColor: \"{colors.text}\", typography: \"{typography.action}\", height: 30px, rounded: \"{rounded.control}\"}\n  dialog-primary: {backgroundColor: \"{colors.gold}\", textColor: \"{colors.bg}\", typography: \"{typography.action}\", height: 34px}\n  dialog-field: {backgroundColor: \"{colors.alt}\", textColor: \"{colors.text}\", typography: \"{typography.field}\"}\n---\n\n# Design System: Run Profile Time Presets\n\n## Overview\n\nOnly the Command Center timing extension is covered. The incumbent black/gold Operate world is preserved. Authority: `scripts/visionstudio_controller.py`. The scoped sidecar illustrates Tk controls in HTML; it is not the native implementation.\n\n## Colors\n\nGold identifies selection, action outlines, focus and the dialog save action. Muted text labels rows/instructions; raised/alternate surfaces separate controls. Errors are red. Disabled controls are subdued; selected locked profile chips retain gold text and an outline.\n\n## Typography\n\nDeclared families are Segoe UI and Segoe UI Semibold. Positive Tk font sizes are points; Canvas dimensions/spacing are pixels. Entry/OptionMenu widths are character units. Host font substitution changes geometry.\n\n## Layout\n\nOrder: Batch Target → Run Profile → **Time Preset** → Random Boost → Cookie Relay → Telegram Summary → geometry → actions. Presets follow Run Profile by 6px. Label width 11, trailing gap 9px; menu width 27, trailing gap 7px. SAVE AS / EDIT / DELETE: 76/58/68px wide, 30px high, 5px gaps. Existing AUTO / SHORT / NORMAL / CUSTOM chips: 56/60/68/70px wide, 34px high.\n\nThe non-resizable transient dialog centers over its parent, with 22px horizontal/20px vertical padding. Fields: width 32, inner vertical padding 7px. CANCEL / SAVE PRESET: 88/118px wide, 34px high, 8px gap. No mobile layout is established.\n\n## Elevation & Depth\n\nFlat tonal layering and one-pixel outlines; no added shadows or animation. The dialog uses a native Toplevel window.\n\n## Shapes\n\nRectangular controls/panels. RoundedButton draws square rectangles. Focused actions use a two-pixel outline. Fields use flat relief and a one-pixel highlight, gold on focus.\n\n## Components\n\n- **Menu:** entries show name, separator and seconds suffixed `s`. Empty: “No saved times — use SAVE AS”; menu, EDIT and DELETE disable. SAVE AS remains available for editable configuration.\n- **Selection:** choosing a saved time selects CUSTOM and fills seconds. SAVE AS creates; EDIT updates the selected entry. Saves and selection persist immediately in Controller preferences and survive reopen/reset. Manual profile/time changes clear the saved association. DELETE confirms, removes the entry and leaves the current timing unchanged.\n- **Dialog:** name plus 30–1,800 whole seconds. Errors stay inline in red; success closes. Enter saves, Escape cancels; name receives focus. Names: 1–48 characters, normalized and unique ignoring case; maximum 50 presets.\n- **Authority:** preset actions lock with active configuration; delayed actions recheck authority. Resume retains the frozen Plan. A saved name labels the profile only when its Custom duration matches. Timing selection does not choose Boost, Relay or loop count; AUTO forces Relay OFF.\n\n## Do's and Don'ts\n\n- **Do** retain native controls, compact alignment and gold selection language.\n- **Do** keep this document scoped to timing presets.\n- **Don't** treat a preset name as Mission or active Plan authority.\n- **Don't** infer Windows rendering from Linux evidence. Four Tk captures cover empty, dialog, selected/reopened and active/locked at 1280×820, 1280×900 and 1440×1000. Thai persistence was checked; the host lacked a Thai font, so Thai glyph rendering was not verified. Windows/LDPlayer were not exercised.\n"
+  },
+  {
+    "path": "visionstudio/scripts/setup-windows.ps1",
+    "before_sha256": "036661311d1c62e9378393bed2a951f7272cb7218bb1b9e05ffccf6318c7b3e2",
+    "after_sha256": "ca688e7b0583f9e0cdb50c1837de80604dd1dcbb5986a70a4e4652612f8a7e19",
+    "edits": [
+      {
+        "start": 90,
+        "end": 91,
+        "before": "Write-Host \"Axiom Vision v0.18.16 Signed Auto Update + Heart 300 is ready.\" -ForegroundColor Green\n",
+        "after": "Write-Host \"Axiom Vision v0.18.17 Run Profile Presets is ready.\" -ForegroundColor Green\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/verify_runtime_version.py",
+    "before_sha256": "92891d8f63502738714ea259e7c521f55a48a5e84e117aa42ebe064726290242",
+    "after_sha256": "81e29805541fa15d0da588151bdbd9a5050f25c48f6bc49b0fcb745c81401d3d",
+    "edits": [
+      {
+        "start": 9,
+        "end": 12,
+        "before": "EXPECTED_VERSION = \"0.18.16\"\nEXPECTED_PLUGIN_VERSION = \"0.18.16+codex.20261023.cookie-relay\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.16-cookie-relay-302\"\n",
+        "after": "EXPECTED_VERSION = \"0.18.17\"\nEXPECTED_PLUGIN_VERSION = \"0.18.17+codex.20261023.run-profile-presets\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.17-run-profile-presets-303\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_bridge.py",
+    "before_sha256": "3c38d63ce086876f166962ed36a48219eb8e5d09137042963f858b98b771eb89",
+    "after_sha256": "96c09a576c0e35bdcc7530ca68d0275658c1619f4bca41e4cfc4908f4c6dc29d",
+    "edits": [
+      {
+        "start": 72,
+        "end": 74,
+        "before": "SERVER_VERSION = \"0.18.16-cookie-relay-302\"\nPRODUCT_VERSION = \"0.18.16\"\n",
+        "after": "SERVER_VERSION = \"0.18.17-run-profile-presets-303\"\nPRODUCT_VERSION = \"0.18.17\"\n"
+      },
+      {
+        "start": 13459,
+        "end": 13461,
+        "before": "                if not self._cookie_relay_authority(session, pending_id=intent_id):\n                    return rejected(\"controller_or_stage_boundary\")\n",
+        "after": ""
+      },
+      {
+        "start": 13466,
+        "end": 13466,
+        "before": "",
+        "after": "                # Window acquisition can block across a Stage deadline or a\n                # Controller Stop/Pause. Recheck authority after that final\n                # blocking guard, under the same dispatch/watchdog mutex.\n                if not self._cookie_relay_authority(session, pending_id=intent_id):\n                    return rejected(\"controller_or_stage_boundary\")\n                # Controller reads and contract compilation above can also\n                # cross a deadline. Keep this final budget check after every\n                # blocking guard; only cheap point checks remain before input.\n                session.ensure_live()\n                session.ensure_not_terminal()\n                session.check_stage_watchdog()\n                if session.resume_required:\n                    return rejected(\"dispatch_watchdog_boundary\")\n                if time.monotonic() - dispatch_at > LOCAL_ATOMIC_WITNESS_MAX_AGE_SECONDS:\n                    return rejected(\"dispatch_authority_expired\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_controller.py",
+    "before_sha256": "3bf9b29767a7d4f9ceed26ff5faebaf6c2d32e1af3b403a8fe72fab29ebd29ee",
+    "after_sha256": "4458adcfa0a0b4e8431fb206c5e261881cfd04f54b3169071488b2547e7bae1d",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Axiom Vision v0.18.16 Universal Mission and Utility Controller.\n",
+        "after": "\"\"\"Axiom Vision v0.18.17 Universal Mission and Utility Controller.\n"
+      },
+      {
+        "start": 70,
+        "end": 70,
+        "before": "",
+        "after": "    normalize_run_profile_presets,\n"
+      },
+      {
+        "start": 81,
+        "end": 81,
+        "before": "",
+        "after": "    save_run_profile_preset,\n    delete_run_profile_preset,\n    select_run_profile_preset,\n"
+      },
+      {
+        "start": 141,
+        "end": 142,
+        "before": "CONTROLLER_VERSION = \"0.18.16\"\n",
+        "after": "CONTROLLER_VERSION = \"0.18.17\"\n"
+      },
+      {
+        "start": 338,
+        "end": 338,
+        "before": "",
+        "after": "\n\ndef parse_custom_run_seconds(value: Any) -> int:\n    \"\"\"Parse an editable timing value without Tk's float-to-int truncation.\"\"\"\n    if isinstance(value, bool):\n        raise ValueError(\"Enter a whole number from 30 to 1,800 seconds\")\n    if isinstance(value, int):\n        seconds = value\n    elif isinstance(value, str) and len(value.strip()) <= 16 and re.fullmatch(r\"[0-9]+\", value.strip()):\n        seconds = int(value.strip())\n    else:\n        raise ValueError(\"Enter a whole number from 30 to 1,800 seconds\")\n    if not 30 <= seconds <= 1_800:\n        raise ValueError(\"Run time must be between 30 and 1,800 seconds\")\n    return seconds\n"
+      },
+      {
+        "start": 4358,
+        "end": 4359,
+        "before": "        self.custom_run_seconds = IntVar(\n",
+        "after": "        self.custom_run_seconds = StringVar(\n"
+      },
+      {
+        "start": 4366,
+        "end": 4366,
+        "before": "",
+        "after": "        self.run_profile_presets = normalize_run_profile_presets(\n            initial_control.get(\"run_profile_presets\")\n        )\n        self.selected_run_profile_preset_id = initial_control.get(\n            \"selected_run_profile_preset_id\"\n        )\n        self.run_profile_preset_choice = StringVar(value=\"Choose a saved time\")\n        self._applying_run_profile_preset = False\n        self._run_profile_preset_dialog: Toplevel | None = None\n"
+      },
+      {
+        "start": 4399,
+        "end": 4399,
+        "before": "",
+        "after": "        self._restore_run_profile_preset_selection(initial_control)\n        self.custom_run_seconds.trace_add(\n            \"write\", lambda *_args: self._custom_run_seconds_changed()\n        )\n"
+      },
+      {
+        "start": 4471,
+        "end": 4477,
+        "before": "        selected_config = self._universal_config()\n        selected_compiled = compile_universal_mission(selected_config)\n        active_config = (\n            plan.get(\"universal_config\")\n            if plan and isinstance(plan.get(\"universal_config\"), dict)\n            else selected_compiled.normalized_config\n",
+        "after": "        checkpoint_resumable = checkpoint_is_resumable(mission, checkpoint)\n        availability = action_availability(\n            str(state.get(\"desired_state\") or \"blocked\"),\n            worker_active=self._worker_active(),\n            persisted_worker_status=str(worker.get(\"status\") or \"idle\"),\n            checkpoint_resumable=checkpoint_resumable,\n            terminal_disposition=controller_terminal_disposition(state, checkpoint),\n"
+      },
+      {
+        "start": 4478,
+        "end": 4478,
+        "before": "",
+        "after": "        # A new RUN executes the current UI draft. Bind that exact draft even\n        # when the previous completed batch still has a retained frozen Plan.\n        # Active/Resume snapshots continue to use their immutable batch Plan.\n        use_selected = availability.start and not checkpoint_resumable\n        if plan and isinstance(plan.get(\"universal_config\"), dict) and not use_selected:\n            active_config = plan[\"universal_config\"]\n            active_plan = normalize_universal_plan(plan.get(\"universal_plan\"))\n        else:\n            selected_compiled = compile_universal_mission(self._universal_config())\n            active_config = selected_compiled.normalized_config\n            active_plan = {\n                \"mission_id\": UNIVERSAL_MISSION_ID,\n                \"revision\": universal_mission_revision(selected_compiled.normalized_config),\n                \"sha256\": selected_compiled.plan_hash,\n            }\n"
+      },
+      {
+        "start": 4484,
+        "end": 4493,
+        "before": "        active_plan = (\n            normalize_universal_plan(plan.get(\"universal_plan\"))\n            if plan\n            else {\n                \"mission_id\": UNIVERSAL_MISSION_ID,\n                \"revision\": universal_mission_revision(selected_compiled.normalized_config),\n                \"sha256\": selected_compiled.plan_hash,\n            }\n        )\n",
+        "after": ""
+      },
+      {
+        "start": 4501,
+        "end": 4512,
+        "before": "        checkpoint_resumable = checkpoint_is_resumable(mission, checkpoint)\n        availability = action_availability(\n            str(state.get(\"desired_state\") or \"blocked\"),\n            worker_active=self._worker_active(),\n            persisted_worker_status=str(worker.get(\"status\") or \"idle\"),\n            checkpoint_resumable=checkpoint_resumable,\n            terminal_disposition=controller_terminal_disposition(\n                state,\n                checkpoint,\n            ),\n        )\n",
+        "after": ""
+      },
+      {
+        "start": 4817,
+        "end": 4817,
+        "before": "",
+        "after": "        profile_copy = str(run_profile.get(\"mode\") or \"unknown\")\n        if run_profile.get(\"expected_seconds\") is not None:\n            profile_copy += f\" ~{run_profile['expected_seconds']}s\"\n"
+      },
+      {
+        "start": 4828,
+        "end": 4829,
+        "before": "            f\"Run Profile: {run_profile.get('mode') or 'unknown'}\\n\"\n",
+        "after": "            f\"Run Profile: {profile_copy}\\n\"\n"
+      },
+      {
+        "start": 4845,
+        "end": 4845,
+        "before": "",
+        "after": "        profile = preset.get(\"run_profile\") or {}\n        profile_copy = str(profile.get(\"mode\") or \"unknown\")\n        if profile.get(\"expected_seconds\") is not None:\n            profile_copy += f\" ~{profile['expected_seconds']}s\"\n"
+      },
+      {
+        "start": 4852,
+        "end": 4854,
+        "before": "                f\"Run Profile: \"\n                f\"{(preset.get('run_profile') or {}).get('mode')}\\n\"\n",
+        "after": "                f\"Run Profile: {profile_copy}\\n\"\n"
+      },
+      {
+        "start": 6274,
+        "end": 6275,
+        "before": "                command=self._sync_run_profile_controls,\n",
+        "after": "                command=self._manual_run_profile_changed,\n"
+      },
+      {
+        "start": 6304,
+        "end": 6304,
+        "before": "",
+        "after": "\n        # Timing presets extend the incumbent profile controls; their names\n        # are Controller preferences, never part of the compiled Mission.\n        preset_group = Frame(panel, bg=PANEL)\n        preset_group.pack(fill=\"x\", pady=(6, 0))\n        Label(\n            preset_group, text=\"TIME PRESET\", bg=PANEL, fg=MUTED,\n            font=(\"Segoe UI Semibold\", 8), width=11, anchor=\"w\",\n        ).pack(side=LEFT, padx=(0, 9))\n        self.run_profile_preset_menu = OptionMenu(\n            preset_group, self.run_profile_preset_choice, \"Choose a saved time\",\n        )\n        self.run_profile_preset_menu.configure(\n            width=27, bg=PANEL_ALT, fg=TEXT, activebackground=PANEL_RAISED,\n            activeforeground=GOLD, disabledforeground=DISABLED_TEXT,\n            relief=\"flat\", highlightthickness=1, highlightbackground=BORDER,\n            font=(\"Segoe UI\", 8), anchor=\"w\",\n        )\n        self.run_profile_preset_menu[\"menu\"].configure(\n            bg=PANEL_ALT, fg=TEXT, activebackground=GOLD,\n            activeforeground=BG, font=(\"Segoe UI\", 9),\n        )\n        self.run_profile_preset_menu.pack(side=LEFT, padx=(0, 7))\n        self.run_profile_preset_save_button = RoundedButton(\n            preset_group, \"SAVE AS\", self._new_run_profile_preset,\n            width=76, height=30,\n        )\n        self.run_profile_preset_save_button.pack(side=LEFT, padx=(0, 5))\n        self.run_profile_preset_edit_button = RoundedButton(\n            preset_group, \"EDIT\", self._edit_run_profile_preset,\n            width=58, height=30,\n        )\n        self.run_profile_preset_edit_button.pack(side=LEFT, padx=(0, 5))\n        self.run_profile_preset_delete_button = RoundedButton(\n            preset_group, \"DELETE\", self._delete_selected_run_profile_preset,\n            width=68, height=30, accent=MUTED,\n        )\n        self.run_profile_preset_delete_button.pack(side=LEFT)\n        self._refresh_run_profile_preset_menu()\n"
+      },
+      {
+        "start": 7631,
+        "end": 7636,
+        "before": "            expected_seconds = int(seconds_var.get() if seconds_var is not None else 240)\n            if not 30 <= expected_seconds <= 1_800:\n                raise ValueError(\n                    \"Custom run profile must be between 30 and 1,800 seconds\"\n                )\n",
+        "after": "            expected_seconds = parse_custom_run_seconds(\n                seconds_var.get() if seconds_var is not None else \"240\"\n            )\n"
+      },
+      {
+        "start": 7642,
+        "end": 7642,
+        "before": "",
+        "after": "\n    def _run_profile_presets_editable(self, state: dict[str, Any] | None = None) -> bool:\n        \"\"\"Recheck configuration authority when a delayed dialog/menu fires.\"\"\"\n        current = state if state is not None else read_state(self.control_path)\n        worker = current.get(\"worker\") or {}\n        _stats, checkpoint = self._stats()\n        if not isinstance(checkpoint, dict):\n            return False\n        resumable = checkpoint_is_resumable(\n            runtime_mission(self.mission_path, controller_state=current), checkpoint,\n        )\n        terminal = controller_terminal_disposition(current, checkpoint)\n        available = action_availability(\n            str(current.get(\"desired_state\") or \"blocked\"),\n            worker_active=self._worker_active(),\n            persisted_worker_status=str(worker.get(\"status\") or \"idle\"),\n            checkpoint_resumable=resumable,\n            terminal_disposition=terminal,\n        )\n        return available.start and self._heart_conflict_for_universal() is None\n\n    def _selected_run_profile_preset(self) -> dict[str, Any] | None:\n        selected = getattr(self, \"selected_run_profile_preset_id\", None)\n        return next((\n            item for item in getattr(self, \"run_profile_presets\", [])\n            if item[\"id\"] == selected\n        ), None)\n\n    def _refresh_run_profile_preset_menu(self, state: dict[str, Any] | None = None) -> None:\n        if state is not None:\n            self.run_profile_presets = normalize_run_profile_presets(\n                state.get(\"run_profile_presets\")\n            )\n            self.selected_run_profile_preset_id = state.get(\"selected_run_profile_preset_id\")\n        choice = getattr(self, \"run_profile_preset_choice\", None)\n        if choice is None:\n            return\n        if state is not None:\n            self._run_profile_preset_authority_enabled = self._run_profile_presets_editable(state)\n        selected = self._selected_run_profile_preset()\n        try:\n            profile = self._run_profile()\n        except ValueError:\n            profile = None\n        # A saved preference must never label a different frozen active Plan.\n        matches = (\n            selected is not None and profile is not None\n            and profile[\"mode\"] == \"custom\"\n            and profile[\"expected_seconds\"] == selected[\"expected_seconds\"]\n        )\n        choice.set(\n            f\"{selected['name']} · {selected['expected_seconds']}s\" if matches\n            else \"Choose a saved time\" if self.run_profile_presets\n            else \"No saved times — use SAVE AS\"\n        )\n        menu_widget = getattr(self, \"run_profile_preset_menu\", None)\n        if menu_widget is not None:\n            signature = tuple((x[\"id\"], x[\"name\"], x[\"expected_seconds\"]) for x in self.run_profile_presets)\n            if signature != getattr(self, \"_run_profile_preset_menu_signature\", None):\n                menu = menu_widget[\"menu\"]\n                menu.delete(0, END)\n                for item in self.run_profile_presets:\n                    menu.add_command(\n                        label=f\"{item['name']} · {item['expected_seconds']}s\",\n                        command=lambda preset_id=item[\"id\"]: self._choose_run_profile_preset(preset_id),\n                    )\n                self._run_profile_preset_menu_signature = signature\n        self._sync_run_profile_preset_controls()\n\n    def _sync_run_profile_preset_controls(self) -> None:\n        enabled = (\n            getattr(self, \"configuration_enabled\", True)\n            and getattr(self, \"_run_profile_preset_authority_enabled\", True)\n        )\n        selected = self._selected_run_profile_preset() is not None\n        menu = getattr(self, \"run_profile_preset_menu\", None)\n        if menu is not None:\n            menu.configure(state=\"normal\" if enabled and self.run_profile_presets else \"disabled\")\n        for name, available in (\n            (\"run_profile_preset_save_button\", enabled),\n            (\"run_profile_preset_edit_button\", enabled and selected),\n            (\"run_profile_preset_delete_button\", enabled and selected),\n        ):\n            button = getattr(self, name, None)\n            if button is not None:\n                button.set_enabled(available)\n\n    def _apply_run_profile_preset(self, item: dict[str, Any]) -> None:\n        self._applying_run_profile_preset = True\n        try:\n            self.run_profile_mode.set(\"custom\")\n            self.custom_run_seconds.set(str(item[\"expected_seconds\"]))\n        finally:\n            self._applying_run_profile_preset = False\n        self._sync_run_profile_controls()\n        self._refresh_run_profile_preset_menu()\n\n    def _restore_run_profile_preset_selection(self, state: dict[str, Any]) -> None:\n        \"\"\"Restore an idle draft only; Resume always keeps its frozen Plan.\"\"\"\n        self._refresh_run_profile_preset_menu(state)\n        item = self._selected_run_profile_preset()\n        if item is None or not self._run_profile_presets_editable(state):\n            return\n        _stats, checkpoint = self._stats()\n        if checkpoint_is_resumable(\n            runtime_mission(self.mission_path, controller_state=state), checkpoint,\n        ):\n            return\n        self._apply_run_profile_preset(item)\n\n    def _choose_run_profile_preset(self, preset_id: str) -> ControllerCommandResult:\n        try:\n            if not self._run_profile_presets_editable():\n                return ControllerCommandResult(False, \"configuration_locked\", \"Stop or finish the current job before changing run times.\")\n            state = select_run_profile_preset(self.control_path, preset_id)\n            self._refresh_run_profile_preset_menu(state)\n            item = self._selected_run_profile_preset()\n            if item is None:\n                raise ValueError(\"This saved time no longer exists. Select another preset.\")\n            self._apply_run_profile_preset(item)\n            return ControllerCommandResult(True, \"preset_selected\", f\"{item['name']} · {item['expected_seconds']} seconds\")\n        except (OSError, RuntimeError, TypeError, ValueError) as exc:\n            messagebox.showerror(\"Run time preset\", str(exc))\n            return ControllerCommandResult(False, \"preset_unavailable\", str(exc))\n\n    def _save_run_profile_preset_values(\n        self, *, name: str, seconds: Any, preset_id: str | None = None,\n    ) -> ControllerCommandResult:\n        try:\n            if not self._run_profile_presets_editable():\n                return ControllerCommandResult(False, \"configuration_locked\", \"Stop or finish the current job before saving run times.\")\n            state = save_run_profile_preset(\n                self.control_path, name=name,\n                expected_seconds=parse_custom_run_seconds(seconds), preset_id=preset_id,\n            )\n            self._refresh_run_profile_preset_menu(state)\n            item = self._selected_run_profile_preset()\n            if item is None:\n                raise ValueError(\"The saved preset is unavailable. Reopen the preset list.\")\n            self._apply_run_profile_preset(item)\n            return ControllerCommandResult(True, \"preset_saved\", f\"Saved {item['name']} · {item['expected_seconds']} seconds\")\n        except (OSError, RuntimeError, TypeError, ValueError) as exc:\n            return ControllerCommandResult(False, \"invalid_preset\", str(exc))\n\n    def _clear_run_profile_preset_selection(self) -> None:\n        if not getattr(self, \"selected_run_profile_preset_id\", None):\n            return\n        try:\n            if self._run_profile_presets_editable():\n                state = select_run_profile_preset(self.control_path, None)\n                self._refresh_run_profile_preset_menu(state)\n        except (OSError, RuntimeError, TypeError, ValueError) as exc:\n            messagebox.showerror(\"Run time preference was not saved\", str(exc))\n\n    def _manual_run_profile_changed(self) -> None:\n        self._clear_run_profile_preset_selection()\n        self._sync_run_profile_controls()\n\n    def _custom_run_seconds_changed(self) -> None:\n        if getattr(self, \"_applying_run_profile_preset\", False):\n            return\n        self._clear_run_profile_preset_selection()\n        self._sync_run_profile_controls()\n\n    def _new_run_profile_preset(self) -> None:\n        self._open_run_profile_preset_dialog()\n\n    def _edit_run_profile_preset(self) -> None:\n        item = self._selected_run_profile_preset()\n        if item is not None:\n            self._open_run_profile_preset_dialog(item)\n\n    def _delete_selected_run_profile_preset(self) -> None:\n        try:\n            if not self._run_profile_presets_editable():\n                return\n            item = self._selected_run_profile_preset()\n            if item is None or not messagebox.askyesno(\n                \"Delete saved run time\", f\"Delete “{item['name']}”?\\n\\nThe current run time will stay unchanged.\",\n            ):\n                return\n            # The confirmation can outlive a worker transition.\n            if not self._run_profile_presets_editable():\n                return\n            state = delete_run_profile_preset(self.control_path, item[\"id\"])\n            self._refresh_run_profile_preset_menu(state)\n        except (OSError, RuntimeError, TypeError, ValueError) as exc:\n            messagebox.showerror(\"Run time preset\", str(exc))\n\n    def _open_run_profile_preset_dialog(self, item: dict[str, Any] | None = None) -> None:\n        if not self._run_profile_presets_editable():\n            return\n        existing = getattr(self, \"_run_profile_preset_dialog\", None)\n        if existing is not None and existing.winfo_exists():\n            existing.lift()\n            return\n        expected = (\n            self.custom_run_seconds.get() if self.run_profile_mode.get() == \"custom\"\n            else self._run_profile().get(\"expected_seconds\") or 240\n        )\n        dialog = Toplevel(self.root)\n        self._run_profile_preset_dialog = dialog\n        dialog.title(\"Edit run time preset\" if item else \"Save run time preset\")\n        dialog.configure(bg=PANEL)\n        dialog.resizable(False, False)\n        dialog.transient(self.root)\n        body = Frame(dialog, bg=PANEL, padx=22, pady=20)\n        body.pack(fill=BOTH, expand=True)\n        Label(body, text=\"EDIT RUN TIME\" if item else \"SAVE RUN TIME\", bg=PANEL,\n              fg=TEXT, font=(\"Segoe UI Semibold\", 13)).grid(row=0, column=0, columnspan=2, sticky=\"w\")\n        Label(body, text=\"Save a name and duration for each farming setup.\", bg=PANEL,\n              fg=MUTED, font=(\"Segoe UI\", 9)).grid(row=1, column=0, columnspan=2, sticky=\"w\", pady=(6, 18))\n        name_value = StringVar(value=item[\"name\"] if item else \"\")\n        seconds_value = StringVar(value=str(item[\"expected_seconds\"] if item else expected))\n        entries = []\n        for row, label, variable in ((2, \"Name\", name_value), (3, \"Time · seconds\", seconds_value)):\n            Label(body, text=label, bg=PANEL, fg=MUTED, font=(\"Segoe UI\", 9)).grid(row=row, column=0, sticky=\"w\", padx=(0, 18), pady=(0, 12))\n            entry = Entry(body, textvariable=variable, width=32, bg=PANEL_ALT, fg=TEXT,\n                          insertbackground=GOLD, relief=\"flat\", highlightthickness=1,\n                          highlightbackground=BORDER, highlightcolor=GOLD, font=(\"Segoe UI\", 10))\n            entry.grid(row=row, column=1, sticky=\"ew\", ipady=7, pady=(0, 12))\n            entries.append(entry)\n        Label(body, text=\"30–1,800 whole seconds. Relay uses the first runner’s time.\",\n              bg=PANEL, fg=MUTED, font=(\"Segoe UI\", 8)).grid(row=4, column=0, columnspan=2, sticky=\"w\")\n        error = StringVar(value=\"\")\n        Label(body, textvariable=error, bg=PANEL, fg=RED, font=(\"Segoe UI\", 9),\n              wraplength=425, justify=\"left\").grid(row=5, column=0, columnspan=2, sticky=\"w\", pady=(10, 0))\n        actions = Frame(body, bg=PANEL)\n        actions.grid(row=6, column=0, columnspan=2, sticky=\"e\", pady=(16, 0))\n\n        def close() -> None:\n            self._run_profile_preset_dialog = None\n            dialog.destroy()\n\n        def save() -> None:\n            result = self._save_run_profile_preset_values(\n                name=name_value.get(), seconds=seconds_value.get(),\n                preset_id=item[\"id\"] if item else None,\n            )\n            if result.ok:\n                self._add_activity(result.detail)\n                close()\n            else:\n                error.set(result.detail)\n\n        RoundedButton(actions, \"CANCEL\", close, width=88, height=34, accent=MUTED).pack(side=LEFT, padx=(0, 8))\n        RoundedButton(actions, \"SAVE PRESET\", save, width=118, height=34, filled=True).pack(side=LEFT)\n        dialog.protocol(\"WM_DELETE_WINDOW\", close)\n        dialog.bind(\"<Escape>\", lambda _event: close())\n\n        def save_on_return(_event: Any) -> str:\n            save()\n            return \"break\"\n\n        for entry in entries:\n            entry.bind(\"<Return>\", save_on_return)\n        dialog.update_idletasks()\n        x = self.root.winfo_rootx() + max(0, (self.root.winfo_width() - dialog.winfo_reqwidth()) // 2)\n        y = self.root.winfo_rooty() + max(0, (self.root.winfo_height() - dialog.winfo_reqheight()) // 2)\n        dialog.geometry(f\"+{x}+{y}\")\n        entries[0].focus_set()\n        entries[0].selection_range(0, END)\n"
+      },
+      {
+        "start": 7665,
+        "end": 7666,
+        "before": "        profile = self._run_profile()\n",
+        "after": "        try:\n            profile = self._run_profile()\n        except ValueError:\n            for chip in getattr(self, \"cookie_relay_chips\", []):\n                chip.set_enabled(False)\n            hint = getattr(self, \"cookie_relay_hint\", None)\n            if hint is not None:\n                hint.set(\"Enter a valid run time to use Relay\")\n            if hasattr(self, \"profile_summary\"):\n                self.profile_summary.set(\"Enter 30–1,800 whole seconds\")\n            return\n"
+      },
+      {
+        "start": 7690,
+        "end": 7698,
+        "before": "            state=\"normal\" if custom else \"disabled\"\n        )\n        profile = self._run_profile()\n        expected = profile.get(\"expected_seconds\")\n        self.profile_summary.set(\n            \"Auto timing\"\n            if expected is None\n            else f\"Expected ~{int(expected)}s · visual finish only\"\n",
+        "after": "            state=\"normal\" if custom and getattr(self, \"configuration_enabled\", True) else \"disabled\"\n"
+      },
+      {
+        "start": 7700,
+        "end": 7702,
+        "before": "        if hasattr(self, \"stage_list\"):\n            self._load_mission_steps()\n",
+        "after": "        self._refresh_run_profile_preset_menu()\n"
+      },
+      {
+        "start": 11055,
+        "end": 11055,
+        "before": "",
+        "after": "        self._refresh_run_profile_preset_menu(state)\n"
+      },
+      {
+        "start": 11111,
+        "end": 11112,
+        "before": "                if normalize_batch_plan(state.get(\"batch_plan\"))\n",
+        "after": "                if normalize_batch_plan(state.get(\"batch_plan\")) and not (\n                    availability.start and not checkpoint_is_resumable(\n                        runtime_mission(self.mission_path, controller_state=state), checkpoint,\n                    )\n                )\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_controller_state.py",
+    "before_sha256": "a89d6a905cdb9da14b6281bc6eb06847e197949ad040acda2f008e0d5965335e",
+    "after_sha256": "e3f830a8ce57461d3f2505b24e92e3b2fc8ff39d3af4a5b853405f370e52f431",
+    "edits": [
+      {
+        "start": 14,
+        "end": 14,
+        "before": "",
+        "after": "import unicodedata\n"
+      },
+      {
+        "start": 41,
+        "end": 41,
+        "before": "",
+        "after": "RUN_PROFILE_PRESET_MAX_COUNT = 50\nRUN_PROFILE_PRESET_NAME_MAX_LENGTH = 48\n"
+      },
+      {
+        "start": 117,
+        "end": 117,
+        "before": "",
+        "after": "        # Named timings are editable Controller preferences. They never become\n        # part of the compiled/frozen Universal contract or replay authority.\n        \"run_profile_presets\": [],\n        \"selected_run_profile_preset_id\": None,\n"
+      },
+      {
+        "start": 248,
+        "end": 248,
+        "before": "",
+        "after": "    state[\"run_profile_presets\"] = normalize_run_profile_presets(\n        raw.get(\"run_profile_presets\")\n    )\n    state[\"selected_run_profile_preset_id\"] = normalize_selected_run_profile_preset_id(\n        raw.get(\"selected_run_profile_preset_id\"), state[\"run_profile_presets\"]\n    )\n"
+      },
+      {
+        "start": 518,
+        "end": 518,
+        "before": "",
+        "after": "\n\ndef _run_profile_preset_name(value: Any) -> str:\n    if not isinstance(value, str):\n        raise ValueError(\"Preset name must be text\")\n    value = unicodedata.normalize(\"NFC\", value)\n    if any(unicodedata.category(character).startswith(\"C\") for character in value):\n        raise ValueError(\"Preset name cannot contain control characters\")\n    name = \" \".join(value.split())\n    if not name or len(name) > RUN_PROFILE_PRESET_NAME_MAX_LENGTH:\n        raise ValueError(\n            f\"Preset name must contain 1–{RUN_PROFILE_PRESET_NAME_MAX_LENGTH} characters\"\n        )\n    return name\n\n\ndef _run_profile_preset_seconds(value: Any) -> int:\n    if isinstance(value, bool) or not isinstance(value, int) or not 30 <= value <= 1_800:\n        raise ValueError(\"Preset time must be a whole number from 30 to 1800 seconds\")\n    return value\n\n\ndef _run_profile_preset_id(value: Any) -> str:\n    if (\n        not isinstance(value, str)\n        or len(value) != 32\n        or any(character not in \"0123456789abcdef\" for character in value)\n    ):\n        raise ValueError(\"Unknown Run Profile preset\")\n    return value\n\n\ndef normalize_run_profile_presets(value: Any) -> list[dict[str, Any]]:\n    \"\"\"Read only bounded valid preference rows, without changing a live Plan.\n\n    A damaged optional preset does not invalidate an otherwise valid running\n    Controller. It is omitted rather than converted into an AUTO profile or a\n    replacement duration. Duplicate names/ids retain the first valid row.\n    \"\"\"\n    if not isinstance(value, list):\n        return []\n    presets: list[dict[str, Any]] = []\n    seen_ids: set[str] = set()\n    seen_names: set[str] = set()\n    for row in value:\n        if not isinstance(row, dict):\n            continue\n        try:\n            preset_id = _run_profile_preset_id(row.get(\"id\"))\n            name = _run_profile_preset_name(row.get(\"name\"))\n            seconds = _run_profile_preset_seconds(row.get(\"expected_seconds\"))\n        except ValueError:\n            continue\n        if preset_id in seen_ids or name.casefold() in seen_names:\n            continue\n        presets.append({\"id\": preset_id, \"name\": name, \"expected_seconds\": seconds})\n        seen_ids.add(preset_id)\n        seen_names.add(name.casefold())\n        if len(presets) == RUN_PROFILE_PRESET_MAX_COUNT:\n            break\n    return presets\n\n\ndef normalize_selected_run_profile_preset_id(\n    value: Any, presets: list[dict[str, Any]]\n) -> str | None:\n    \"\"\"A missing/deleted preference never selects another row implicitly.\"\"\"\n    return value if isinstance(value, str) and any(row[\"id\"] == value for row in presets) else None\n\n\ndef save_run_profile_preset(\n    path: Path,\n    *,\n    name: str,\n    expected_seconds: int,\n    preset_id: str | None = None,\n) -> dict[str, Any]:\n    \"\"\"Atomically save and select a named timing, without editing run authority.\n\n    The Controller applies this timing to its editable UI as an ordinary Custom\n    Run Profile. The stored library and selected id are preferences only; the\n    Bridge never dereferences them while starting/resuming a frozen Batch.\n    \"\"\"\n    name = _run_profile_preset_name(name)\n    seconds = _run_profile_preset_seconds(expected_seconds)\n    if preset_id is not None:\n        preset_id = _run_profile_preset_id(preset_id)\n    with state_write_lock(path):\n        state = _read_state_unlocked(path, require_existing=False)\n        presets = normalize_run_profile_presets(state.get(\"run_profile_presets\"))\n        matching = next((index for index, row in enumerate(presets) if row[\"id\"] == preset_id), None)\n        if preset_id is not None and matching is None:\n            raise ValueError(\"Unknown Run Profile preset\")\n        if any(row[\"name\"].casefold() == name.casefold() and row[\"id\"] != preset_id for row in presets):\n            raise ValueError(\"A preset with this name already exists\")\n        if matching is None and len(presets) >= RUN_PROFILE_PRESET_MAX_COUNT:\n            raise ValueError(f\"You can save up to {RUN_PROFILE_PRESET_MAX_COUNT} presets\")\n        saved_id = preset_id or uuid.uuid4().hex\n        row = {\"id\": saved_id, \"name\": name, \"expected_seconds\": seconds}\n        if matching is None:\n            presets.append(row)\n        else:\n            presets[matching] = row\n        if presets == state.get(\"run_profile_presets\") and state.get(\"selected_run_profile_preset_id\") == saved_id:\n            return state\n        state[\"run_profile_presets\"] = presets\n        state[\"selected_run_profile_preset_id\"] = saved_id\n        return _write_state_unlocked(path, state)\n\n\ndef delete_run_profile_preset(path: Path, preset_id: str) -> dict[str, Any]:\n    \"\"\"Delete one preference; deleting a selection never chooses a fallback.\"\"\"\n    preset_id = _run_profile_preset_id(preset_id)\n    with state_write_lock(path):\n        state = _read_state_unlocked(path, require_existing=False)\n        presets = normalize_run_profile_presets(state.get(\"run_profile_presets\"))\n        remaining = [row for row in presets if row[\"id\"] != preset_id]\n        if len(remaining) == len(presets):\n            raise ValueError(\"Unknown Run Profile preset\")\n        state[\"run_profile_presets\"] = remaining\n        state[\"selected_run_profile_preset_id\"] = normalize_selected_run_profile_preset_id(\n            state.get(\"selected_run_profile_preset_id\"), remaining\n        )\n        return _write_state_unlocked(path, state)\n\n\ndef select_run_profile_preset(path: Path, preset_id: str | None) -> dict[str, Any]:\n    \"\"\"Persist only the selection preference, keeping the frozen Plan exact.\"\"\"\n    if preset_id is not None:\n        preset_id = _run_profile_preset_id(preset_id)\n    with state_write_lock(path):\n        state = _read_state_unlocked(path, require_existing=False)\n        presets = normalize_run_profile_presets(state.get(\"run_profile_presets\"))\n        if preset_id is not None and not any(row[\"id\"] == preset_id for row in presets):\n            raise ValueError(\"Unknown Run Profile preset\")\n        if state.get(\"selected_run_profile_preset_id\") == preset_id:\n            return state\n        state[\"selected_run_profile_preset_id\"] = preset_id\n        return _write_state_unlocked(path, state)\n"
+      },
+      {
+        "start": 853,
+        "end": 853,
+        "before": "",
+        "after": "        state[\"run_profile_presets\"] = normalize_run_profile_presets(\n            previous.get(\"run_profile_presets\")\n        )\n        state[\"selected_run_profile_preset_id\"] = normalize_selected_run_profile_preset_id(\n            previous.get(\"selected_run_profile_preset_id\"), state[\"run_profile_presets\"]\n        )\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_heart_contract.py",
+    "before_sha256": "8e8e171254081c1c7acec21f07fbedd0017fa0cec6e9f1f5cf93cd406cdc99a9",
+    "after_sha256": "ad3a50f45240787f2143c6c96874bc99c8594c1b41b771bdd009cc85aebde3b8",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.16.\"\"\"\n",
+        "after": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.17.\"\"\"\n"
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "before": "HEART_RUNNER_VERSION = \"0.18.16\"\n",
+        "after": "HEART_RUNNER_VERSION = \"0.18.17\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_local_runner.py",
+    "before_sha256": "771a4d1b08e405de964650c17769b4def76b333459559a535a2bde2ddc87c1c1",
+    "after_sha256": "04b9297e91001c39af3eed77116c393226e255b81c05b8c2000ffef842e9bc55",
+    "edits": [
+      {
+        "start": 40,
+        "end": 41,
+        "before": "LOCAL_RUNNER_VERSION = \"0.18.16\"\n",
+        "after": "LOCAL_RUNNER_VERSION = \"0.18.17\"\n"
+      },
+      {
+        "start": 2117,
+        "end": 2118,
+        "before": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.16\"\n",
+        "after": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.17\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_bridge.py",
+    "before_sha256": "76147f209b4178f79bd669989a3177b204f6eaa30d54384afdcffdbf34436c45",
+    "after_sha256": "a8516d9f12fb1292975368dbe2412ef49c58c273649ead6f44813a22e67c4307",
+    "edits": [
+      {
+        "start": 3085,
+        "end": 3086,
+        "before": "            \"0.18.16-cookie-relay-302\",\n",
+        "after": "            \"0.18.17-run-profile-presets-303\",\n"
+      },
+      {
+        "start": 10848,
+        "end": 10849,
+        "before": "                \"Axiom Vision v0.18.16 — Telegram test\\n\"\n",
+        "after": "                \"Axiom Vision v0.18.17 — Telegram test\\n\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_controller_run_profile_presets.py",
+    "before_sha256": null,
+    "after_sha256": "5a9d0dc9ecc71f8ed24a124eb527f7e411285a2612f059d17a1377c9493d5e9a",
+    "content": "from __future__ import annotations\n\nimport copy\nfrom pathlib import Path\nimport sys\nimport tempfile\nimport unittest\nfrom unittest import mock\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport visionstudio_controller as ui\nimport visionstudio_controller_state as state\nimport visionstudio_universal_mission as universal\n\n\nclass Variable:\n    def __init__(self, value): self.value = value\n    def get(self): return self.value\n    def set(self, value): self.value = value\n\n\nclass HeadlessController(ui.VisionStudioController):\n    @property\n    def control_path(self): return self.test_control_path\n\n\nclass ControllerRunProfilePresetTests(unittest.TestCase):\n    def setUp(self):\n        self.directory = tempfile.TemporaryDirectory()\n        self.addCleanup(self.directory.cleanup)\n        self.path = Path(self.directory.name) / \"controller\" / \"state.json\"\n        self.app = self.make_app()\n\n    def make_app(self):\n        app = object.__new__(HeadlessController)\n        app.test_control_path = self.path\n        app.mission_var = Variable(str(universal.UNIVERSAL_MISSION_IDENTITY_PATH))\n        app.run_profile_mode = Variable(\"auto\")\n        app.custom_run_seconds = Variable(\"240\")\n        app.cookie_relay_mode = Variable(\"off\")\n        app.cookie_relay_chips = [mock.Mock(), mock.Mock()]\n        app.cookie_relay_hint = Variable(\"\")\n        app.profile_summary = Variable(\"\")\n        app.random_boost_mode = Variable(\"targeted\")\n        app.random_boost_target = Variable(\"Double Coins\")\n        app.telegram_enabled = Variable(True)\n        app.custom_run_seconds_entry = mock.Mock()\n        app.run_profile_preset_menu = mock.MagicMock()\n        app.run_profile_preset_choice = Variable(\"\")\n        app.run_profile_preset_save_button = mock.Mock()\n        app.run_profile_preset_edit_button = mock.Mock()\n        app.run_profile_preset_delete_button = mock.Mock()\n        app.run_profile_presets = []\n        app.selected_run_profile_preset_id = None\n        app._applying_run_profile_preset = False\n        app.configuration_enabled = True\n        app._stats = lambda: ({}, {})\n        app._worker_active = lambda: False\n        app._heart_conflict_for_universal = lambda: None\n        app._latest_frame_path = lambda: None\n        app._requested_loops = lambda: 10\n        app._validate_ready = lambda: universal.compile_universal_mission(app._universal_config()).mission\n        app._launch_worker = mock.Mock()\n        app._retire_open_review_verification = mock.Mock()\n        return app\n\n    def save(self, name=\"ฟาร์ม EXP\", seconds=\"150\"):\n        result = self.app._save_run_profile_preset_values(name=name, seconds=seconds)\n        self.assertTrue(result.ok, result.detail)\n        return self.app.selected_run_profile_preset_id\n\n    def start(self, profile=\"short\"):\n        return state.request_start(\n            self.path, mission_path=universal.UNIVERSAL_MISSION_IDENTITY_PATH,\n            requested_loops=10, run_until=None, telegram_enabled=True,\n            run_profile={\"mode\": profile, \"expected_seconds\": 150 if profile == \"custom\" else None},\n        )\n\n    def test_saved_time_is_immediate_and_reopen_restores_custom_draft(self):\n        preset_id = self.save()\n        restored = state.read_state(self.path)\n        self.assertEqual(restored[\"selected_run_profile_preset_id\"], preset_id)\n        self.assertEqual(restored[\"run_profile\"], {\"mode\": \"auto\", \"expected_seconds\": None})\n        self.assertIsNone(restored[\"batch_plan\"])\n        reopened = self.make_app()\n        reopened._restore_run_profile_preset_selection(restored)\n        self.assertEqual(reopened._run_profile(), {\"mode\": \"custom\", \"expected_seconds\": 150})\n        self.assertIn(\"ฟาร์ม EXP\", reopened.run_profile_preset_choice.get())\n\n    def test_selecting_time_preserves_boost_relay_and_loop_preferences(self):\n        first = self.save()\n        self.save(\"ฟาร์มเหรียญ\", \"270\")\n        self.app.cookie_relay_mode.set(\"on\")\n        self.app.random_boost_mode.set(\"off\")\n        result = self.app._choose_run_profile_preset(first)\n        self.assertTrue(result.ok)\n        config = self.app._universal_config()\n        self.assertEqual(config[\"run_profile\"][\"expected_seconds\"], 150)\n        self.assertEqual(config[\"random_boost\"][\"mode\"], \"off\")\n        self.assertEqual(config[\"cookie_relay\"], {\"enabled\": True})\n        self.assertEqual(config[\"requested_loops\"], 10)\n\n    def test_manual_profile_or_time_change_clears_saved_selection(self):\n        for change in (\"chip\", \"time\"):\n            with self.subTest(change=change):\n                if change == \"chip\":\n                    self.save(\"EXP chip\")\n                    self.app.cookie_relay_mode.set(\"on\")\n                    self.app.run_profile_mode.set(\"auto\")\n                    self.app._manual_run_profile_changed()\n                    self.assertEqual(self.app.cookie_relay_mode.get(), \"off\")\n                else:\n                    self.save(\"EXP time\")\n                    self.app.custom_run_seconds.set(\"165\")\n                    self.app._custom_run_seconds_changed()\n                self.assertIsNone(state.read_state(self.path)[\"selected_run_profile_preset_id\"])\n                self.assertEqual(self.app.run_profile_preset_choice.get(), \"Choose a saved time\")\n\n    def test_delete_selected_keeps_current_seconds_and_reopen_does_not_resurrect_it(self):\n        self.save()\n        with mock.patch.object(ui.messagebox, \"askyesno\", return_value=True):\n            self.app._delete_selected_run_profile_preset()\n        self.assertEqual(self.app._run_profile()[\"expected_seconds\"], 150)\n        document = state.read_state(self.path)\n        self.assertEqual(document[\"run_profile_presets\"], [])\n        self.assertIsNone(document[\"selected_run_profile_preset_id\"])\n        reopened = self.make_app()\n        reopened._restore_run_profile_preset_selection(document)\n        self.assertEqual(reopened.run_profile_mode.get(), \"auto\")\n\n    def test_deleted_menu_id_is_rejected_without_applying_old_time(self):\n        preset_id = self.save()\n        state.delete_run_profile_preset(self.path, preset_id)\n        self.app.custom_run_seconds.set(\"165\")\n        with mock.patch.object(ui.messagebox, \"showerror\") as error:\n            result = self.app._choose_run_profile_preset(preset_id)\n        self.assertFalse(result.ok)\n        self.assertEqual(self.app.custom_run_seconds.get(), \"165\")\n        error.assert_called_once()\n\n    def test_duplicate_name_and_invalid_time_return_recoverable_errors(self):\n        self.save(\"Farm EXP\")\n        before = self.path.read_bytes()\n        duplicate = self.app._save_run_profile_preset_values(name=\" farm exp \", seconds=\"165\")\n        self.assertFalse(duplicate.ok)\n        for bad in (\"\", \"150.9\", \"NaN\", \"29\", \"1801\", True, 150.5, \"9\" * 5000):\n            with self.subTest(seconds=str(bad)[:20]):\n                result = self.app._save_run_profile_preset_values(name=\"Other\", seconds=bad)\n                self.assertFalse(result.ok)\n        self.assertEqual(self.path.read_bytes(), before)\n\n    def test_active_state_rechecks_delayed_save_select_and_delete_callbacks(self):\n        preset_id = self.save()\n        started = self.start()\n        frozen = copy.deepcopy(started[\"batch_plan\"])\n        before = self.path.read_bytes()\n        self.assertFalse(self.app._save_run_profile_preset_values(name=\"Too late\", seconds=\"165\").ok)\n        self.assertFalse(self.app._choose_run_profile_preset(preset_id).ok)\n        with mock.patch.object(ui.messagebox, \"askyesno\") as ask:\n            self.app._delete_selected_run_profile_preset()\n        ask.assert_not_called()\n        self.assertEqual(self.path.read_bytes(), before)\n        self.assertEqual(state.read_state(self.path)[\"batch_plan\"], frozen)\n\n    def test_delete_confirmation_rechecks_worker_transition(self):\n        self.save()\n        def start_during_confirmation(*_args, **_kwargs):\n            self.start()\n            return True\n        with mock.patch.object(ui.messagebox, \"askyesno\", side_effect=start_during_confirmation):\n            self.app._delete_selected_run_profile_preset()\n        self.assertEqual(len(state.read_state(self.path)[\"run_profile_presets\"]), 1)\n\n    def test_active_or_resumable_restore_keeps_frozen_ui_and_plan(self):\n        self.save()\n        started = self.start()\n        for desired, resumable in ((\"running\", False), (\"stopped\", True)):\n            with self.subTest(desired=desired):\n                document = state.patch_state(self.path, desired_state=desired, worker={\"status\": \"idle\"})\n                app = self.make_app()\n                app.run_profile_mode.set(\"short\")\n                with mock.patch.object(ui, \"checkpoint_is_resumable\", return_value=resumable):\n                    app._restore_run_profile_preset_selection(document)\n                self.assertEqual(app.run_profile_mode.get(), \"short\")\n                self.assertEqual(state.read_state(self.path)[\"batch_plan\"], started[\"batch_plan\"])\n\n    def test_stopped_resumable_draft_selection_does_not_mutate_resume_plan(self):\n        preset_id = self.save()\n        started = self.start()\n        state.patch_state(self.path, desired_state=\"stopped\", worker={\"status\": \"stopped\"})\n        with mock.patch.object(ui, \"checkpoint_is_resumable\", return_value=True):\n            selected = self.app._choose_run_profile_preset(preset_id)\n            snapshot = self.app.telegram_control_snapshot()\n        self.assertTrue(selected.ok)\n        self.assertFalse(snapshot[\"actions\"][\"run\"])\n        self.assertTrue(snapshot[\"actions\"][\"resume\"])\n        self.assertEqual(snapshot[\"preset\"][\"run_profile\"], {\"mode\": \"short\", \"expected_seconds\": 180})\n        self.assertEqual(state.read_state(self.path)[\"batch_plan\"], started[\"batch_plan\"])\n\n    def test_invalid_custom_text_keeps_ui_live_and_blocks_start_without_truncation(self):\n        self.app.run_profile_mode.set(\"custom\")\n        self.app.cookie_relay_mode.set(\"on\")\n        for value in (\"\", \"150.9\", \"abc\", \"29\", \"1801\"):\n            with self.subTest(value=value):\n                self.app.custom_run_seconds.set(value)\n                self.app._sync_run_profile_controls()\n                self.assertIn(\"whole seconds\", self.app.profile_summary.get())\n                self.app.cookie_relay_chips[1].set_enabled.assert_called_with(False)\n                result = self.app._execute_start_run(archive_resumable_checkpoint=False)\n                self.assertFalse(result.ok)\n                self.assertEqual(result.code, \"invalid_start\")\n        self.app._launch_worker.assert_not_called()\n        self.assertFalse(self.path.exists())\n\n    def test_locking_row_disables_all_preset_controls(self):\n        self.save()\n        self.app.configuration_enabled = False\n        self.app._sync_run_profile_preset_controls()\n        self.app.run_profile_preset_menu.configure.assert_called_with(state=\"disabled\")\n        for button in (self.app.run_profile_preset_save_button, self.app.run_profile_preset_edit_button, self.app.run_profile_preset_delete_button):\n            button.set_enabled.assert_called_with(False)\n\n    def test_completed_batch_remote_run_binds_current_timing_and_changes_with_ui(self):\n        started = self.start()\n        batch = dict(started[\"batch_plan\"], status=\"completed\", completed_loops=10)\n        state.patch_state(self.path, desired_state=\"completed\", worker={\"status\": \"completed\"}, batch_plan=batch)\n        self.app.run_profile_mode.set(\"custom\")\n        self.app.custom_run_seconds.set(\"150\")\n        first = self.app.telegram_control_snapshot()\n        self.assertTrue(first[\"actions\"][\"run\"])\n        self.assertEqual(first[\"preset\"][\"run_profile\"], {\"mode\": \"custom\", \"expected_seconds\": 150})\n        self.assertIn(\"custom ~150s\", self.app._telegram_confirmation_prompt(\"run\", first))\n        self.assertIn(\"custom ~150s\", self.app._telegram_status_text(first))\n        self.app.custom_run_seconds.set(\"240\")\n        second = self.app.telegram_control_snapshot()\n        self.assertNotEqual(first[\"binding_id\"], second[\"binding_id\"])\n        self.assertNotEqual(first[\"mission\"][\"plan_sha256\"], second[\"mission\"][\"plan_sha256\"])\n        self.assertEqual(second[\"preset\"][\"run_profile\"][\"expected_seconds\"], 240)\n        self.assertEqual(state.read_state(self.path)[\"batch_plan\"], batch)\n\n    def test_active_remote_snapshot_ignores_edited_or_invalid_ui_draft(self):\n        started = self.start()\n        first = self.app.telegram_control_snapshot()\n        self.app.run_profile_mode.set(\"custom\")\n        self.app.custom_run_seconds.set(\"invalid\")\n        second = self.app.telegram_control_snapshot()\n        self.assertEqual(second[\"binding_id\"], first[\"binding_id\"])\n        self.assertEqual(second[\"preset\"][\"universal_config\"], started[\"universal_config\"])\n        self.assertFalse(second[\"actions\"][\"run\"])\n\n\nif __name__ == \"__main__\": unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_controller_state.py",
+    "before_sha256": "2f4593d4190543078852fd77d5028d72c6f6a3b81c3327c3d9ecd5c5378612ac",
+    "after_sha256": "fc4968e432041328f617896b9692767e19eef032f375df95e327b4cae9bd6b1e",
+    "edits": [
+      {
+        "start": 2446,
+        "end": 2447,
+        "before": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.16\")\n",
+        "after": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.17\")\n"
+      },
+      {
+        "start": 5818,
+        "end": 5819,
+        "before": "            self.assertEqual(report[\"product_version\"], \"0.18.16\")\n",
+        "after": "            self.assertEqual(report[\"product_version\"], \"0.18.17\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_guard_edges.py",
+    "before_sha256": null,
+    "after_sha256": "a8f12f6c8c55cfe919e2665b9f00715afd5d6f67d10deb89c6f378d2773f3b85",
+    "content": "\"\"\"Regression coverage for private Relay input deadline boundaries.\"\"\"\nfrom pathlib import Path\nimport tempfile\nimport unittest\nfrom unittest import mock\n\nimport test_cookie_relay_runtime as relay_tests\n\n\nclass CookieRelayFinalGuardTests(unittest.TestCase):\n    def test_stage_deadline_during_final_controller_read_blocks_dispatch(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            server, session, desktop, window, image, _proof, state = (\n                relay_tests.CookieRelayRuntimeTests.fixture(self, Path(temporary))\n            )\n            now = [1000.9]\n            session.current_stage_started_monotonic = 1000.0\n            session.current_stage_timeout_seconds = 1\n            reads = [0]\n\n            def controller_read(_session):\n                reads[0] += 1\n                if reads[0] == 3:\n                    now[0] = 1001.1\n                return state\n\n            server._controller_gate.side_effect = controller_read\n            with mock.patch.object(relay_tests.bridge.time, \"monotonic\", side_effect=lambda: now[0]):\n                self.assertFalse(server._try_cookie_relay(session, window, image, now[0]))\n            self.assertEqual(reads[0], 3)\n            self.assertFalse(desktop.clicks)\n            self.assertTrue(session.resume_required)\n            self.assertEqual(session.cookie_relay_state[\"status\"], \"pending\")\n            self.assertEqual(session.cookie_relay_state[\"attempts\"], 1)\n\n    def test_stage_deadline_during_last_window_check_blocks_dispatch(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            server, session, desktop, window, image, _proof, _state = (\n                relay_tests.CookieRelayRuntimeTests.fixture(self, Path(temporary))\n            )\n            now = [1000.9]\n            session.current_stage_started_monotonic = 1000.0\n            session.current_stage_timeout_seconds = 1\n            checks = [0]\n\n            def window_check(_session):\n                checks[0] += 1\n                if checks[0] == 3:\n                    # Foreground acquisition can cross the Stage deadline even\n                    # while the final image is under its 0.5-second age budget.\n                    now[0] = 1001.1\n                return window\n\n            server._verified_action_window.side_effect = window_check\n            with mock.patch.object(relay_tests.bridge.time, \"monotonic\", side_effect=lambda: now[0]):\n                self.assertFalse(server._try_cookie_relay(session, window, image, now[0]))\n            self.assertEqual(checks[0], 3)\n            self.assertFalse(desktop.clicks)\n            self.assertTrue(session.resume_required)\n            self.assertEqual(session.cookie_relay_state[\"status\"], \"pending\")\n            self.assertEqual(session.cookie_relay_state[\"attempts\"], 1)\n\n    def test_controller_stop_or_pause_during_last_window_check_blocks_dispatch(self):\n        for desired_state in (\"stopped\", \"paused\"):\n            with self.subTest(desired_state=desired_state), tempfile.TemporaryDirectory() as temporary:\n                server, session, desktop, window, image, _proof, state = (\n                    relay_tests.CookieRelayRuntimeTests.fixture(self, Path(temporary))\n                )\n                checks = [0]\n\n                def window_check(_session):\n                    checks[0] += 1\n                    if checks[0] == 3:\n                        state[\"desired_state\"] = desired_state\n                    return window\n\n                server._verified_action_window.side_effect = window_check\n                self.assertFalse(server._try_cookie_relay(session, window, image, relay_tests.time.monotonic()))\n                self.assertEqual(checks[0], 3)\n                self.assertFalse(desktop.clicks)\n                self.assertEqual(session.cookie_relay_state[\"status\"], \"pending\")\n                self.assertEqual(session.cookie_relay_state[\"attempts\"], 1)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_heart_runner.py",
+    "before_sha256": "96a2ca6850dbf44ec95f1beb2f0477354b785f0e8848e34acf302098e81ba48d",
+    "after_sha256": "8f8ff01625bfa4274966dece1cc2ccaa86f97eaf5ea3bb2d488092733306115f",
+    "edits": [
+      {
+        "start": 536,
+        "end": 537,
+        "before": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.16\")\n",
+        "after": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.17\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_local_runner.py",
+    "before_sha256": "398731587ba466677cb74729ba376e80a4deda6e823a52663b8006b9b422cdf3",
+    "after_sha256": "bf991db990bbb34f0ce35ec42c056f487179d49626434459d824999deea4d45c",
+    "edits": [
+      {
+        "start": 103,
+        "end": 104,
+        "before": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.16\")\n",
+        "after": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.17\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_run_profile_presets.py",
+    "before_sha256": null,
+    "after_sha256": "591d8549083932a277e55e801857078409692032b578a71de0a4f78dd2216923",
+    "content": "from __future__ import annotations\n\nimport copy\nimport json\nimport sys\nimport tempfile\nimport unittest\nfrom concurrent.futures import ThreadPoolExecutor\nfrom pathlib import Path\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport visionstudio_controller_state as controller\n\n\nclass RunProfilePresetTests(unittest.TestCase):\n    def setUp(self) -> None:\n        self.temporary = tempfile.TemporaryDirectory()\n        self.addCleanup(self.temporary.cleanup)\n        self.path = Path(self.temporary.name) / \"controller\" / \"state.json\"\n\n    def save(self, name: str = \"ฟาร์ม EXP\", seconds: int = 150, **kwargs: object) -> dict:\n        return controller.save_run_profile_preset(\n            self.path, name=name, expected_seconds=seconds, **kwargs\n        )\n\n    def test_legacy_state_without_presets_keeps_the_existing_plan(self) -> None:\n        state = controller.default_state()\n        state.pop(\"run_profile_presets\")\n        state.pop(\"selected_run_profile_preset_id\")\n        config, plan = controller.compile_universal_plan(state[\"universal_config\"])\n        state.update(universal_config=config, universal_plan=plan)\n        controller.write_state(self.path, state)\n        loaded = controller.read_state(self.path)\n        self.assertEqual(loaded[\"run_profile_presets\"], [])\n        self.assertIsNone(loaded[\"selected_run_profile_preset_id\"])\n        self.assertEqual(loaded[\"universal_plan\"], plan)\n        self.assertEqual(loaded[\"universal_config\"], config)\n\n    def test_named_timing_is_durable_before_start_and_edit_keeps_its_id(self) -> None:\n        saved = self.save(\"  ฟาร์ม   EXP  \", 150)\n        preset_id = saved[\"selected_run_profile_preset_id\"]\n        self.assertEqual(saved[\"desired_state\"], \"idle\")\n        self.assertEqual(saved[\"run_profile\"], {\"mode\": \"auto\", \"expected_seconds\": None})\n        self.assertEqual(controller.read_state(self.path)[\"run_profile_presets\"], [\n            {\"id\": preset_id, \"name\": \"ฟาร์ม EXP\", \"expected_seconds\": 150}\n        ])\n        edited = self.save(\"เก็บเหรียญ\", 240, preset_id=preset_id)\n        self.assertEqual(edited[\"selected_run_profile_preset_id\"], preset_id)\n        self.assertEqual(edited[\"run_profile_presets\"], [\n            {\"id\": preset_id, \"name\": \"เก็บเหรียญ\", \"expected_seconds\": 240}\n        ])\n        self.assertEqual(controller.read_state(self.path)[\"run_profile_presets\"], edited[\"run_profile_presets\"])\n\n    def test_duplicate_normalized_name_is_rejected_without_overwriting(self) -> None:\n        self.save(\"Farm EXP\")\n        original = self.path.read_bytes()\n        with self.assertRaisesRegex(ValueError, \"already exists\"):\n            self.save(\"  fArM  exp  \", 270)\n        self.assertEqual(self.path.read_bytes(), original)\n\n    def test_unicode_equivalent_names_cannot_create_duplicate_rows(self) -> None:\n        self.save(\"Café\", 150)\n        with self.assertRaisesRegex(ValueError, \"already exists\"):\n            self.save(\"Cafe\\u0301\", 270)\n\n    def test_invalid_names_and_times_leave_durable_state_unchanged(self) -> None:\n        self.save()\n        original = self.path.read_bytes()\n        for name in (\"\", \"   \", \"x\" * 49, \"Farm\\nEXP\", \"Farm\\tEXP\", \"Farm\\x00EXP\", \"Farm\\u202eEXP\", 123, None):\n            with self.subTest(name=repr(name)), self.assertRaises(ValueError):\n                self.save(name)\n            self.assertEqual(self.path.read_bytes(), original)\n        for seconds in (True, False, 0, 29, 1801, 150.0, 150.5, float(\"nan\"), float(\"inf\"), \"150\", None):\n            with self.subTest(seconds=repr(seconds)), self.assertRaises(ValueError):\n                self.save(\"Other\", seconds)\n            self.assertEqual(self.path.read_bytes(), original)\n\n    def test_boundary_times_remain_existing_custom_profile_values(self) -> None:\n        for seconds in (30, 1800):\n            saved = self.save(f\"Time {seconds}\", seconds)\n            row = saved[\"run_profile_presets\"][-1]\n            self.assertEqual(\n                controller.normalize_run_profile({\"mode\": \"custom\", \"expected_seconds\": row[\"expected_seconds\"]}),\n                {\"mode\": \"custom\", \"expected_seconds\": seconds},\n            )\n\n    def test_unknown_edit_delete_and_select_do_not_create_or_replace_a_row(self) -> None:\n        self.save()\n        original = self.path.read_bytes()\n        for operation in (\n            lambda: self.save(\"Unknown\", 240, preset_id=\"0\" * 32),\n            lambda: controller.delete_run_profile_preset(self.path, \"0\" * 32),\n            lambda: controller.select_run_profile_preset(self.path, \"0\" * 32),\n            lambda: controller.select_run_profile_preset(self.path, \"../../state.json\"),\n        ):\n            with self.subTest(operation=operation), self.assertRaises(ValueError):\n                operation()\n            self.assertEqual(self.path.read_bytes(), original)\n\n    def test_deleting_selected_preset_preserves_time_and_does_not_pick_another(self) -> None:\n        first = self.save(\"EXP\", 150)[\"selected_run_profile_preset_id\"]\n        second = self.save(\"Coins\", 240)[\"selected_run_profile_preset_id\"]\n        controller.select_run_profile_preset(self.path, first)\n        state = controller.delete_run_profile_preset(self.path, first)\n        self.assertIsNone(state[\"selected_run_profile_preset_id\"])\n        self.assertEqual([row[\"id\"] for row in state[\"run_profile_presets\"]], [second])\n        self.assertEqual(state[\"run_profile\"], {\"mode\": \"auto\", \"expected_seconds\": None})\n        controller.select_run_profile_preset(self.path, second)\n        self.assertIsNone(controller.select_run_profile_preset(self.path, None)[\"selected_run_profile_preset_id\"])\n\n    def test_repeated_selection_and_identical_save_do_not_invalidate_confirmations(self) -> None:\n        state = self.save()\n        original = self.path.read_bytes()\n        controller.select_run_profile_preset(self.path, state[\"selected_run_profile_preset_id\"])\n        self.save(preset_id=state[\"selected_run_profile_preset_id\"])\n        self.assertEqual(self.path.read_bytes(), original)\n\n    def test_damaged_optional_library_does_not_modify_active_run_authority(self) -> None:\n        state = controller.request_start(\n            self.path, mission_path=ROOT / \"universal-loop\", requested_loops=10,\n            run_until=None, telegram_enabled=True,\n            universal_config={\"run_profile\": {\"mode\": \"custom\", \"expected_seconds\": 150}, \"cookie_relay\": {\"enabled\": True}},\n        )\n        frozen = copy.deepcopy({key: state[key] for key in (\"run_profile\", \"universal_config\", \"universal_plan\", \"batch_plan\", \"worker\")})\n        state[\"run_profile_presets\"] = [\n            {\"id\": \"a\" * 32, \"name\": \"EXP\", \"expected_seconds\": 150},\n            {\"id\": \"b\" * 32, \"name\": \"exp\", \"expected_seconds\": 240},\n            {\"id\": \"a\" * 32, \"name\": \"Duplicate id\", \"expected_seconds\": 180},\n            {\"id\": \"c\" * 32, \"name\": \"Broken time\", \"expected_seconds\": True},\n            {\"id\": \"d\" * 32, \"name\": \"Broken\\nname\", \"expected_seconds\": 180},\n            None,\n        ]\n        state[\"selected_run_profile_preset_id\"] = \"c\" * 32\n        controller.write_state(self.path, state)\n        loaded = controller.read_state(self.path)\n        self.assertEqual(loaded[\"run_profile_presets\"], [{\"id\": \"a\" * 32, \"name\": \"EXP\", \"expected_seconds\": 150}])\n        self.assertIsNone(loaded[\"selected_run_profile_preset_id\"])\n        self.assertEqual({key: loaded[key] for key in frozen}, frozen)\n        self.assertEqual(loaded[\"desired_state\"], \"running\")\n\n    def test_saving_library_does_not_change_live_batch_or_recovery_fields(self) -> None:\n        started = controller.request_start(\n            self.path, mission_path=ROOT / \"universal-loop\", requested_loops=None,\n            run_until=None, telegram_enabled=False,\n            universal_config={\"run_profile\": {\"mode\": \"short\", \"expected_seconds\": 180}, \"cookie_relay\": {\"enabled\": True}},\n        )\n        keys = (\"desired_state\", \"run_profile\", \"universal_config\", \"universal_plan\", \"batch_plan\", \"worker\", \"last_event\")\n        frozen = copy.deepcopy({key: started[key] for key in keys})\n        saved = self.save(\"Next farming\", 300)\n        self.assertEqual({key: saved[key] for key in keys}, frozen)\n        self.assertEqual(saved[\"universal_plan\"][\"revision\"], \"10\")\n\n    def test_library_survives_start_pause_resume_and_reset(self) -> None:\n        saved = self.save()\n        presets = saved[\"run_profile_presets\"]\n        selected = saved[\"selected_run_profile_preset_id\"]\n        controller.request_start(\n            self.path, mission_path=ROOT / \"universal-loop\", requested_loops=10,\n            run_until=None, telegram_enabled=True,\n            run_profile={\"mode\": \"custom\", \"expected_seconds\": 150},\n        )\n        controller.request_pause_after_stage(self.path)\n        controller.mark_paused(self.path, \"passive-running\")\n        controller.request_resume(self.path)\n        controller.mark_stopped(self.path, \"stop preserves preset preferences\")\n        state = controller.reset_state(self.path)\n        self.assertEqual(state[\"run_profile_presets\"], presets)\n        self.assertEqual(state[\"selected_run_profile_preset_id\"], selected)\n        self.assertIsNone(state[\"batch_plan\"])\n        self.assertEqual(state[\"desired_state\"], \"idle\")\n        self.assertEqual(controller.read_state(self.path)[\"run_profile_presets\"], presets)\n\n    def test_future_state_schema_cannot_be_overwritten_by_preset_save(self) -> None:\n        self.path.parent.mkdir(parents=True)\n        raw = json.dumps({\"schema_version\": controller.SCHEMA_VERSION + 1, \"private_future_field\": \"preserve\"}).encode()\n        self.path.write_bytes(raw)\n        with self.assertRaisesRegex(ValueError, \"future\"):\n            self.save()\n        self.assertEqual(self.path.read_bytes(), raw)\n\n    def test_library_limit_allows_existing_edit_but_rejects_new_preset(self) -> None:\n        for index in range(controller.RUN_PROFILE_PRESET_MAX_COUNT):\n            self.save(f\"Farm {index}\")\n        before = self.path.read_bytes()\n        with self.assertRaisesRegex(ValueError, \"up to 50\"):\n            self.save(\"Too many\")\n        self.assertEqual(self.path.read_bytes(), before)\n        first = controller.read_state(self.path)[\"run_profile_presets\"][0][\"id\"]\n        edited = self.save(\"Updated\", 240, preset_id=first)\n        self.assertEqual(len(edited[\"run_profile_presets\"]), controller.RUN_PROFILE_PRESET_MAX_COUNT)\n        self.assertEqual(edited[\"run_profile_presets\"][0][\"name\"], \"Updated\")\n\n    def test_concurrent_heartbeat_and_saves_keep_both_sets_of_changes(self) -> None:\n        controller.write_state(self.path, controller.default_state())\n\n        def heartbeat() -> None:\n            for index in range(25):\n                controller.patch_state(self.path, worker={\"message\": f\"heartbeat {index}\"})\n\n        def preferences() -> None:\n            for index in range(25):\n                self.save(f\"Farm {index}\", 100 + index)\n\n        with ThreadPoolExecutor(max_workers=2) as pool:\n            futures = [pool.submit(heartbeat), pool.submit(preferences)]\n            for future in futures:\n                future.result()\n        state = controller.read_state(self.path)\n        self.assertEqual(state[\"worker\"][\"message\"], \"heartbeat 24\")\n        self.assertEqual(len(state[\"run_profile_presets\"]), 25)\n        self.assertEqual(state[\"revision\"], 51)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_runtime_version.py",
+    "before_sha256": "e1e6df2e816320f8147ab068e563ed0b9f9256eebdf0d4f3ee27a0ba10777b9a",
+    "after_sha256": "b897d2900d755fc3e5cc39e00149b37a677f7871a7b694a5fd49dcf017d9c875",
+    "edits": [
+      {
+        "start": 22,
+        "end": 25,
+        "before": "    plugin_version: str = \"0.18.16+codex.20261023.cookie-relay\",\n    controller_version: str = \"0.18.16\",\n    bridge_server_version: str = \"0.18.16-cookie-relay-302\",\n",
+        "after": "    plugin_version: str = \"0.18.17+codex.20261023.run-profile-presets\",\n    controller_version: str = \"0.18.17\",\n    bridge_server_version: str = \"0.18.17-run-profile-presets-303\",\n"
+      },
+      {
+        "start": 40,
+        "end": 41,
+        "before": "            'PRODUCT_VERSION = \"0.18.16\"\\n'\n",
+        "after": "            'PRODUCT_VERSION = \"0.18.17\"\\n'\n"
+      },
+      {
+        "start": 43,
+        "end": 44,
+        "before": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.16\"\\n',\n",
+        "after": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.17\"\\n',\n"
+      },
+      {
+        "start": 49,
+        "end": 50,
+        "before": "            'HEART_RUNNER_VERSION = \"0.18.16\"\\n'\n",
+        "after": "            'HEART_RUNNER_VERSION = \"0.18.17\"\\n'\n"
+      },
+      {
+        "start": 75,
+        "end": 76,
+        "before": "            \"0.18.16+codex.20261023.cookie-relay\",\n",
+        "after": "            \"0.18.17+codex.20261023.run-profile-presets\",\n"
+      },
+      {
+        "start": 83,
+        "end": 84,
+        "before": "                \"plugin\": \"0.18.16\",\n",
+        "after": "                \"plugin\": \"0.18.17\",\n"
+      },
+      {
+        "start": 85,
+        "end": 86,
+        "before": "                    \"0.18.16+codex.20261023.cookie-relay\"\n",
+        "after": "                    \"0.18.17+codex.20261023.run-profile-presets\"\n"
+      },
+      {
+        "start": 87,
+        "end": 91,
+        "before": "                \"controller\": \"0.18.16\",\n                \"bridge\": \"0.18.16\",\n                \"bridge_server\": \"0.18.16-cookie-relay-302\",\n                \"local_runner\": \"0.18.16\",\n",
+        "after": "                \"controller\": \"0.18.17\",\n                \"bridge\": \"0.18.17\",\n                \"bridge_server\": \"0.18.17-run-profile-presets-303\",\n                \"local_runner\": \"0.18.17\",\n"
+      },
+      {
+        "start": 93,
+        "end": 94,
+        "before": "                \"heart_sender\": \"0.18.16\",\n",
+        "after": "                \"heart_sender\": \"0.18.17\",\n"
+      },
+      {
+        "start": 107,
+        "end": 108,
+        "before": "            [\"controller=0.10.27 (expected 0.18.16)\"],\n",
+        "after": "            [\"controller=0.10.27 (expected 0.18.17)\"],\n"
+      },
+      {
+        "start": 117,
+        "end": 118,
+        "before": "                plugin_version=\"0.18.16+codex.wrong-build\",\n",
+        "after": "                plugin_version=\"0.18.17+codex.wrong-build\",\n"
+      },
+      {
+        "start": 128,
+        "end": 130,
+        "before": "                \"plugin_manifest=0.18.16+codex.wrong-build \"\n                \"(expected 0.18.16+codex.20261023.cookie-relay)\",\n",
+        "after": "                \"plugin_manifest=0.18.17+codex.wrong-build \"\n                \"(expected 0.18.17+codex.20261023.run-profile-presets)\",\n"
+      },
+      {
+        "start": 131,
+        "end": 132,
+        "before": "                \"(expected 0.18.16-cookie-relay-302)\",\n",
+        "after": "                \"(expected 0.18.17-run-profile-presets-303)\",\n"
+      },
+      {
+        "start": 171,
+        "end": 172,
+        "before": "        self.assertIn(\"Axiom Vision v0.18.16 Setup\", text)\n",
+        "after": "        self.assertIn(\"Axiom Vision v0.18.17 Setup\", text)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/update-package-files.json",
+    "before_sha256": "624f55aa607789942969ce2d17ad5b4324c1d80ad8c62b57a28deb33f3164296",
+    "after_sha256": "19907fe069942fbcc85e7b907193a11eb519c80906e8b538d14749da43af8c67",
+    "edits": [
+      {
+        "start": 21,
+        "end": 21,
+        "before": "",
+        "after": "  \"visionstudio/RELEASE_v0.18.17_TH.md\",\n"
+      },
+      {
+        "start": 36,
+        "end": 36,
+        "before": "",
+        "after": "  \"visionstudio/docs/run-profile-presets/.impeccable/design.json\",\n  \"visionstudio/docs/run-profile-presets/DESIGN.md\",\n"
+      },
+      {
+        "start": 96,
+        "end": 96,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_controller_run_profile_presets.py\",\n"
+      },
+      {
+        "start": 98,
+        "end": 98,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_cookie_relay_guard_edges.py\",\n"
+      },
+      {
+        "start": 133,
+        "end": 133,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_run_profile_presets.py\",\n"
+      }
+    ]
+  }
+]
