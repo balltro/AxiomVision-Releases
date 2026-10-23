@@ -2,21 +2,23 @@
 
 Public Windows release assets and Ed25519-signed update feed for Axiom Vision.
 
-## Latest: v0.18.16 — Cookie Relay
+## Latest: v0.18.17 — Run Profile Presets
 
-[Download v0.18.16](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.16).
+[Download v0.18.17](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.17).
 
-**COOKIE RELAY** now appears directly after Random Boost. It defaults to OFF. Select Short, Normal or Custom before enabling it; AUTO clears and disables Relay. With Relay ON, the profile duration means the approximate first-runner duration. The profile schedules rapid local visual checks; only a fresh recognized Relay prompt, card and Running controls permit the guarded input.
+**TIME PRESET** sits below Run Profile. Use **SAVE AS** to name and save a duration (30–1,800 whole seconds), select it to apply Custom timing, or use **EDIT / DELETE**. Thai names and saved times persist immediately, across reopening and Reset Batch. Presets change timing only; Boost, Relay and loop count keep their selected values.
 
-One stable preflight and a fresh dispatch witness protect the short button window. A separate durable never-replay intent/commit ledger prevents duplicate input across restart. Result retention, routing and loop statistics continue through the existing path. Native input commitment is logged separately from game acceptance.
+Active batches lock the preset controls. Start freezes the actual duration; Resume retains its frozen Plan independently of later library edits. AUTO still disables Cookie Relay. With Relay ON, the profile predicts the first runner’s duration; only fresh visual proof authorizes Relay input.
 
-Existing Relay-OFF plans retain exact revision9 hashes; Relay ON uses revision10 bound to its configuration, private guard and detector calibration. Stop/Pause/Human Verification, geometry, freshness, foreground and watchdog guards remain. Runtime item/treasure reading stays disabled.
+Fixed Custom fractional-value truncation/invalid-entry errors, completed-batch Telegram RUN confirmation using the previous profile, and Relay watchdog/Stop/Pause races during final blocking dispatch guards. Telegram STATUS and RUN confirmation show seconds. Pending Relay intents keep their never-replay lock.
 
-Validation: 1,166 tests passed,17 skipped (1,183 total); source-image replay, timing/stop/restart simulations and actual Linux Tk UI captures passed. Signed upgrades from v0.18.13,v0.18.14,v0.18.15 preserve nine runtime files each byte-for-byte. Native Windows/LDPlayer timing and game acceptance remain unverified.
+Validation: **1,198 passed / 17 skipped (1,215 total)**. Real Linux Tk Save/Select/Edit/Delete/Reopen and locked-state checks passed. Signed upgrades from v0.18.13–v0.18.16 preserve nine runtime files each byte-for-byte, including saved timing presets. All 146 package hashes match the reviewed source. The 63 compiled profile/Boost/loop/Relay configurations retain exact v0.18.16 config and Plan identities.
+
+Windows fonts, native Windows/LDPlayer input timing and game acceptance remain unverified. Human Verification, foreground, geometry, freshness and replay protections remain; Heart Sender input and runtime treasure/item reading policy are unchanged.
 
 Existing installations: open **Settings → CHECK UPDATE**, stop workers, then close the Controller when installation is eligible. Active checkpoints defer installation; do not Reset a batch merely to install this update. Runtime state, statistics, sessions and historical rewards are retained.
 
-ZIP SHA-256: `95451ad73e0d78f9a0c1ea83743c9ba4851c15b7237696df4528b4a2fab11242`.
+ZIP SHA-256: `61aaa7b253669a10ed021a18bdae8dd2c5ef136a7b58f4e90d69b26509e83e5a`.
 
 ## v0.18.0 (initial release)
 
