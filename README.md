@@ -2,23 +2,23 @@
 
 Public Windows release assets and Ed25519-signed update feed for Axiom Vision.
 
-## Latest: v0.18.17 — Run Profile Presets
+## Latest: v0.18.18 — Relay Response
 
-[Download v0.18.17](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.17).
+[Download v0.18.18](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.18).
 
-**TIME PRESET** sits below Run Profile. Use **SAVE AS** to name and save a duration (30–1,800 whole seconds), select it to apply Custom timing, or use **EDIT / DELETE**. Thai names and saved times persist immediately, across reopening and Reset Batch. Presets change timing only; Boost, Relay and loop count keep their selected values.
+Fixes a Cookie Relay input block for asymmetric LDPlayer chrome. Replaying the supplied Relay image in the diagnostic’s 1642×941 layout puts the valid card at x714 while the old allowed region starts at x722. Detection succeeds but the old guard rejects before intent. Five retained diagnostic Running intervals show Relay enabled and scheduled, with no prepared input. The missed live pixels were not retained, so this is a reproduced code/layout defect consistent with the log.
 
-Active batches lock the preset controls. Start freezes the actual duration; Resume retains its frozen Plan independently of later library edits. AUTO still disables Cookie Relay. With Relay ON, the profile predicts the first runner’s duration; only fresh visual proof authorizes Relay input.
+Relay ON now uses **revision 11 / visual-2**. Its corrected left envelope still requires the complete fresh prompt, all yellow/green edges and both Running controls. One-pixel border sampling is more robust. The private path checks Human Verification once per immutable frame, measures only the proven Relay ROI with the same freshness thresholds, and retains the **0.5-second capture-start witness limit** and durable never-replay ledger. One monitor-end summary reports negative scans and pre-intent rejection reasons without logging every fast sample.
 
-Fixed Custom fractional-value truncation/invalid-entry errors, completed-batch Telegram RUN confirmation using the previous profile, and Relay watchdog/Stop/Pause races during final blocking dispatch guards. Telegram STATUS and RUN confirmation show seconds. Pending Relay intents keep their never-replay lock.
+**Existing unfinished Relay revision 10 batch:** Stop, then **Reset Batch** to archive it before starting the new plan. Start/Resume/automatic recovery cannot silently reinterpret or overwrite old authority. Saved timing presets remain. Relay OFF keeps exact revision 9 Plan identities.
 
-Validation: **1,198 passed / 17 skipped (1,215 total)**. Real Linux Tk Save/Select/Edit/Delete/Reopen and locked-state checks passed. Signed upgrades from v0.18.13–v0.18.16 preserve nine runtime files each byte-for-byte, including saved timing presets. All 146 package hashes match the reviewed source. The 63 compiled profile/Boost/loop/Relay configurations retain exact v0.18.16 config and Plan identities.
+Validation: **1,224 passed / 17 skipped (1,241 total)**. All 42 actual-image chrome phases and 15 visual negatives pass. Fourteen modeled two-second button windows pass with actual detectors, Controller/Plan checks, ROI freshness and durable I/O; capture/input adapters and phase clocks are simulated. Native Windows/LDPlayer timing and game acceptance remain unverified. Independent card-size animation is not calibrated.
 
-Windows fonts, native Windows/LDPlayer input timing and game acceptance remain unverified. Human Verification, foreground, geometry, freshness and replay protections remain; Heart Sender input and runtime treasure/item reading policy are unchanged.
+Signed upgrades from v0.18.13–v0.18.17 preserve nine runtime files each byte-for-byte, including readable saved timing presets. All 152 package hashes match the frozen source. Heart Sender input, native mouse backend and dependency pins are unchanged. Stop/Pause/Human, foreground, geometry, watchdog and replay protections remain.
 
-Existing installations: open **Settings → CHECK UPDATE**, stop workers, then close the Controller when installation is eligible. Active checkpoints defer installation; do not Reset a batch merely to install this update. Runtime state, statistics, sessions and historical rewards are retained.
+Existing installations: use **Settings → CHECK UPDATE**, stop workers, then close the Controller when installation is eligible. If an active checkpoint defers this Relay plan upgrade, Stop and Reset Batch first. Runtime archives, statistics, sessions and saved timing presets are retained.
 
-ZIP SHA-256: `61aaa7b253669a10ed021a18bdae8dd2c5ef136a7b58f4e90d69b26509e83e5a`.
+ZIP SHA-256: `1aef624093ed45ed3fea0ccb21deeb7c919a5869147432c78e26ca88b2c93934`.
 
 ## v0.18.0 (initial release)
 
@@ -26,6 +26,4 @@ ZIP SHA-256: `61aaa7b253669a10ed021a18bdae8dd2c5ef136a7b58f4e90d69b26509e83e5a`.
 2. Close the Controller and game workers. Back up the existing installation, extract the ZIP over the same folder without deleting runtime state, and run `RUN-SETUP-WINDOWS.bat` once.
 3. Download `ENABLE-AXIOM-AUTO-UPDATE-WINDOWS.bat` from this repository. Place it beside `RUN-SETUP-WINDOWS.bat` and run it once to configure the signed feed.
 
-The updater checks the feed in the background and installs only when both Universal and Heart have no active worker or checkpoint. A running continuous batch is never paused or reset for an update. A failed package swap restores backed-up code files.
-
-The signing private key is not stored in this repository or any release asset. `updates.json` is signed; release archive and every included file must match its signed hashes.
+The updater installs only when both Universal and Heart are idle and no active checkpoint remains. A failed package swap restores backed-up code files. The signing private key is not stored in this repository or a release asset; the archive and every included file must match the signed hashes in `updates.json`.
