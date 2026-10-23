@@ -1,0 +1,146 @@
+{
+  "version": "0.18.18",
+  "tests": {
+    "version": "0.18.18",
+    "total": 1241,
+    "passed": 1224,
+    "skipped": 17,
+    "seconds": 85.28,
+    "log_sha256": "0b04b6f2a4b8100bd8c42038bfe416dd0056a54404ac1a38d471ba778058f16a"
+  },
+  "package_files": 152,
+  "package_bytes": 9590883,
+  "package_sha256": "1aef624093ed45ed3fea0ccb21deeb7c919a5869147432c78e26ca88b2c93934",
+  "upgrades": [
+    {
+      "from": "0.18.13",
+      "to": "0.18.18",
+      "package_members_verified": 152,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.14",
+      "to": "0.18.18",
+      "package_members_verified": 152,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.15",
+      "to": "0.18.18",
+      "package_members_verified": 152,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.16",
+      "to": "0.18.18",
+      "package_members_verified": 152,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.17",
+      "to": "0.18.18",
+      "package_members_verified": 152,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "plan_compatibility": {
+    "baseline": "0.18.17",
+    "candidate": "0.18.18",
+    "off_configs_exact": 36,
+    "on_configs_changed_and_versioned": 27,
+    "on_from": "10",
+    "on_to": "11",
+    "normalized_user_config_unchanged": true,
+    "old_on_checkpoint_migration": "none; explicit Stop/Reset archive then fresh batch required"
+  },
+  "diagnostic_findings": {
+    "runtime_version": "0.18.16",
+    "relay_on": true,
+    "profile_seconds": 120,
+    "retained_running_intervals": 5,
+    "relay_intents_or_commits_in_covered_intervals": 0,
+    "capture_size": [
+      1642,
+      941
+    ],
+    "reconstructed_game_surface": [
+      0,
+      41,
+      1600,
+      900
+    ],
+    "replayed_relay_bounds": [
+      714,
+      368,
+      203,
+      207
+    ],
+    "old_pointer_minimum_x": 722,
+    "missed_live_pixels_retained": false
+  },
+  "real_image_phase_checks": 42,
+  "negative_visual_cases_rejected": 15,
+  "modeled_two_second_window_replays": {
+    "cases": 14,
+    "median_ms": 1469,
+    "max_ms": 1842,
+    "capture_input_and_phase_clocks_simulated": true,
+    "real_detectors_controller_freshness_durable_io": true
+  },
+  "final_independent_reviews": {
+    "runtime_guard": "clear",
+    "vision": "clear",
+    "legacy_plan_upgrade": "clear"
+  },
+  "native_windows_ldplayer_tested": false,
+  "limitations": [
+    "The missed live Relay pixels were not retained in the diagnostic.",
+    "Replay input and phase clocks are simulated; native game acceptance remains unverified.",
+    "Independent card-only animation scale changes are not calibrated."
+  ]
+}

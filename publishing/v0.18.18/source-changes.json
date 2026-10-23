@@ -1,0 +1,805 @@
+[
+  {
+    "path": "RUN-SETUP-WINDOWS.bat",
+    "before_sha256": "64f2f116d7b457a42fb99023ba79f03c283d938f2020b27a56311ba71d9895cd",
+    "after_sha256": "a6d6988167f3939fa3bf0c65638b5db3e7a8b8af2e86f62347050b618de146da",
+    "edits": [
+      {
+        "start": 12,
+        "end": 13,
+        "before": "echo Axiom Vision v0.18.17 Setup\n",
+        "after": "echo Axiom Vision v0.18.18 Setup\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/.codex-plugin/plugin.json",
+    "before_sha256": "1a0ae0bc21ccf2a032f300aa63705da3b027f9ea06af8d1f20d54801eec3041f",
+    "after_sha256": "2d7ec83447872470f6700a156772c2703130184f154c03e543828c7b177d2788",
+    "edits": [
+      {
+        "start": 2,
+        "end": 3,
+        "before": "  \"version\": \"0.18.17+codex.20261023.run-profile-presets\",\n",
+        "after": "  \"version\": \"0.18.18+codex.20261023.relay-response\",\n"
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "before": "    \"longDescription\": \"Axiom Vision v0.18.17 adds optional Cookie Relay below Random Boost. Short, Normal and Custom profiles schedule fast local visual watch for one guarded second-runner activation. AUTO disables Relay. Frozen plans, durable never-replay Relay intent, Human Verification and input guards remain enforced. Runtime item/treasure reading remains disabled.\",\n",
+        "after": "    \"longDescription\": \"Axiom Vision v0.18.18 adds optional Cookie Relay below Random Boost. Short, Normal and Custom profiles schedule fast local visual watch for one guarded second-runner activation. AUTO disables Relay. Frozen plans, durable never-replay Relay intent, Human Verification and input guards remain enforced. Runtime item/treasure reading remains disabled.\",\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/AGENTS.md",
+    "before_sha256": "8b47a5b57f3750c9c9a9a436b91529ff33fe1a3f810506f335fcc7ee73837da1",
+    "after_sha256": "86568f5bda9ebae9aab951eca9e19bef59cfa229286fbef2f328d562c6a0a079",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.18 Relay capture geometry and response\n\nRelay ON now binds revision 11 and visual-2. The allowed left edge accounts\nfor asymmetric LDPlayer chrome; this is a new compiled Plan, never a runtime\noverride of an old pointer guard. An unfinished legacy Relay Plan requires\nexplicit Stop/Reset and a new batch. Preserve its checkpoint, pending intent,\nattempt count and archive evidence; never migrate or clear them to send input.\nOFF retains exact revision 9 authority and timing presets remain preferences.\n\nThe calibrated closed-card detector accepts bounded one-pixel rasterization\nonly with all four original green edges, all four continuous yellow edges,\nthe complete prompt and both Running controls. No timing, artwork, HP estimate\nor partial word establishes Relay proof. All input still uses a fresh stable\npreflight, durable intent and a separate fresh dispatch witness.\n\nHuman Guard runs once per immutable private frame, including expired frames;\neach new preflight/dispatch frame is checked independently. ROI freshness uses\nthe existing exact pixel metrics and thresholds. The 0.5-second witness limit,\nStop/Pause/Human, window/geometry, watchdog mutex and never-replay ledger remain.\nBounded watch counters and one end summary are telemetry only; negative scans\nmust not add per-frame durable writes or publish old frames as new input proof.\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/README_TH.md",
+    "before_sha256": "e6b7c1c41da4eeef4754a673cb055db983a801a0a7a53217778207ce8c0471ac",
+    "after_sha256": "85bb64cf5f511114939bd0906edc7678759ee3f22ee93852f049362276772a9a",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.18 — Relay Response\n\nแก้กรอบอนุญาต Relay ที่ปฏิเสธปุ่มเมื่อ LDPlayer มีแถบเครื่องมือด้านขวา\nแก้ขอบสีหนึ่งพิกเซลหลังย่อภาพ ลดการตรวจภาพเดิมซ้ำ และเพิ่มสรุปเหตุที่ไม่คลิก\nRelay ON ใช้ revision 11; แบตช์ Relay เดิมให้ Stop แล้ว Reset Batch ก่อนเริ่มแผนใหม่\nPreset ที่บันทึกไว้ยังอยู่ และ Relay OFF คง Plan revision 9 เดิม\nรายละเอียด: RELEASE_v0.18.18_TH.md\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/RELEASE_v0.18.18_TH.md",
+    "before_sha256": null,
+    "after_sha256": "ef86a056ae32a60fca9ac21c4505eeda2c72a5e36945a5c15c7f9b5ac07d0d16",
+    "content": "# Axiom Vision v0.18.18 — Relay Response\n\nแก้ Cookie Relay ที่ตรวจพบปุ่มแล้วแต่ไม่ถึงขั้นเตรียมคลิก\n\nนำภาพ Relay ที่ผู้ใช้ให้มาจำลองในกรอบ LDPlayer ตามขนาดใน diagnostic\n1642×941 พิกเซล โดยมีแถบบน 41 พิกเซลและแถบเครื่องมือขวา 42 พิกเซล\nตัวตรวจภาพพบปุ่มที่ขอบซ้าย x714 แต่กรอบอนุญาตเดิมเริ่มที่ x722 จึงปฏิเสธ\nก่อนเตรียม intent ปัญหานี้สอดคล้องกับ Log ห้ารอบที่เริ่มเฝ้าแล้วแต่ attempts ยังเป็น 0\nภาพสดในจังหวะที่พลาดไม่ได้อยู่ใน diagnostic จึงยังไม่ใช่การยืนยันพิกเซลของเหตุการณ์จริง\n\n- แก้ขอบซ้ายของกรอบ Relay สำหรับหน้าต่างที่มีแถบเครื่องมือด้านเดียว\n  ต้องผ่านข้อความ Relay กรอบสี และ Jump/Slide จากภาพสดตามเดิม\n- แก้การอ่านขอบสีที่เหลือหนึ่งพิกเซลหลังย่อภาพ โดยยังตรวจครบทั้งสี่ด้าน\n- ตรวจ Human Verification หนึ่งครั้งต่อภาพเดิม รวมภาพที่ช้าจนหมดอายุ\n  ภาพใหม่ก่อนส่งคลิกยังต้องตรวจ Human และเงื่อนไข input ทุกครั้ง\n- วัดความเปลี่ยนแปลงเฉพาะปุ่มในเส้น Relay ด้วยวิธีและเกณฑ์เดิม\n  ลดงานคำนวณภาพพื้นหลังที่กำลังเคลื่อนไหว อายุภาพสูงสุดยัง 0.5 วินาที\n- เพิ่มสรุปจำนวนภาพที่ตรวจและเหตุที่ไม่คลิกตอนจบช่วงเฝ้า\n  ไม่เขียน Log ทุกภาพลบ และไม่ใช้ข้อมูลสรุปเป็นสิทธิ์ส่ง input\n\nRelay ON ใช้ Mission revision 11 และตัวตรวจภาพ visual-2\nRelay OFF ใช้ revision 9 และ Plan เดิม Preset ที่ตั้งชื่อไว้ยังอยู่\n\nถ้าแบตช์เก่ายังเป็น Relay revision 10 ให้ Stop แล้ว Reset Batch ก่อนเริ่มแบตช์ใหม่\nReset เก็บประวัติเดิมตามระบบ Archive โปรแกรมไม่ล้าง checkpoint หรือ intent ให้อัตโนมัติ\nResume แผนเก่าจะถูกบล็อกพร้อมข้อความให้เริ่มแผนใหม่ เพื่อไม่เปลี่ยนสิทธิ์กลางแบตช์\n\nอัปเดตที่ Settings → CHECK UPDATE รอ worker หยุดและปิด Controller เพื่อติดตั้ง\nถ้า updater ยังรอ active checkpoint ให้ Stop และ Reset Batch ก่อน\nไม่เปลี่ยน Heart Sender, การอ่านสมบัติ, Random Boost หรือกฎ Stop/Pause/Human\n\nการทดสอบใช้ภาพต้นฉบับ การจำลองกรอบหน้าต่าง เวลา และ input พร้อมเส้นตรวจจริง\nยังไม่ได้ยืนยันการกดทันสองวินาทีและการรับคลิกใน Windows/LDPlayer จริง\n"
+  },
+  {
+    "path": "visionstudio/scripts/data/cookie-relay-signatures.json",
+    "before_sha256": "1fb3c79f6af7a91f4df44bcd5180a1a0114b5a65e6080b824f67094dc9edc688",
+    "after_sha256": "36033e58a1d2ffbe48edc15df289096c4d86fbd60ebb162068baac3144bc680f",
+    "edits": [
+      {
+        "start": 2,
+        "end": 3,
+        "before": "  \"detector_version\": \"cookie-relay-visual-1\",\n",
+        "after": "  \"detector_version\": \"cookie-relay-visual-2\",\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/setup-windows.ps1",
+    "before_sha256": "ca688e7b0583f9e0cdb50c1837de80604dd1dcbb5986a70a4e4652612f8a7e19",
+    "after_sha256": "ddae5a41fd1b846a745d03e4b0cfeb9ba1ba1e010e2cbef5d08137e2a0cfe24d",
+    "edits": [
+      {
+        "start": 90,
+        "end": 91,
+        "before": "Write-Host \"Axiom Vision v0.18.17 Run Profile Presets is ready.\" -ForegroundColor Green\n",
+        "after": "Write-Host \"Axiom Vision v0.18.18 Relay Response is ready.\" -ForegroundColor Green\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/verify_runtime_version.py",
+    "before_sha256": "81e29805541fa15d0da588151bdbd9a5050f25c48f6bc49b0fcb745c81401d3d",
+    "after_sha256": "e08b298e19ffd29ffff53659cc39e1b48f7562db8803fdaef014cb0e14fc747c",
+    "edits": [
+      {
+        "start": 9,
+        "end": 12,
+        "before": "EXPECTED_VERSION = \"0.18.17\"\nEXPECTED_PLUGIN_VERSION = \"0.18.17+codex.20261023.run-profile-presets\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.17-run-profile-presets-303\"\n",
+        "after": "EXPECTED_VERSION = \"0.18.18\"\nEXPECTED_PLUGIN_VERSION = \"0.18.18+codex.20261023.relay-response\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.18-relay-response-304\"\n"
+      },
+      {
+        "start": 13,
+        "end": 15,
+        "before": "EXPECTED_RELAY_MISSION_REVISION = \"10\"\nREQUIRED_COOKIE_RELAY_FILES = (\"visionstudio_cookie_relay.py\", \"data/cookie-relay-signatures.json\")\n",
+        "after": "EXPECTED_RELAY_MISSION_REVISION = \"11\"\nEXPECTED_COOKIE_RELAY_DETECTOR_VERSION = \"cookie-relay-visual-2\"\nREQUIRED_COOKIE_RELAY_FILES = (\n    \"visionstudio_cookie_relay.py\",\n    \"visionstudio_cookie_relay_freshness.py\",\n    \"data/cookie-relay-signatures.json\",\n)\n"
+      },
+      {
+        "start": 119,
+        "end": 120,
+        "before": "            if not (detector and signature.get(\"schema_version\") == 1 and signature.get(\"detector_version\") == detector):\n",
+        "after": "            if not (detector == EXPECTED_COOKIE_RELAY_DETECTOR_VERSION\n                    and signature.get(\"schema_version\") == 1\n                    and signature.get(\"detector_version\") == detector):\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_bridge.py",
+    "before_sha256": "96c09a576c0e35bdcc7530ca68d0275658c1619f4bca41e4cfc4908f4c6dc29d",
+    "after_sha256": "178de080a6eeac3dbf2f7ad3c7dcfa9d803855fd09fa3508028b5fa9bad50372",
+    "edits": [
+      {
+        "start": 72,
+        "end": 74,
+        "before": "SERVER_VERSION = \"0.18.17-run-profile-presets-303\"\nPRODUCT_VERSION = \"0.18.17\"\n",
+        "after": "SERVER_VERSION = \"0.18.18-relay-response-304\"\nPRODUCT_VERSION = \"0.18.18\"\n"
+      },
+      {
+        "start": 13312,
+        "end": 13313,
+        "before": "                and str(identity.get(\"revision\")) == \"10\"\n",
+        "after": "                and str(identity.get(\"revision\")) == universal_mission_module.UNIVERSAL_RELAY_MISSION_REVISION\n"
+      },
+      {
+        "start": 13367,
+        "end": 13367,
+        "before": "",
+        "after": "    @staticmethod\n    def _cookie_relay_metrics(session: BridgeSession) -> dict[str, Any]:\n        \"\"\"Bounded per-monitor diagnostics; never input or recovery authority.\"\"\"\n        metrics = getattr(session, \"_cookie_relay_watch_metrics\", None)\n        if metrics is None:\n            metrics = {\"samples\": 0, \"visual_matches\": 0, \"no_visual_match\": 0,\n                \"pre_intent_rejections\": {}, \"max_capture_ms\": 0.0,\n                \"max_frame_age_ms\": 0.0, \"max_dispatch_frame_age_ms\": 0.0, \"attempts_reserved\": 0,\n                \"native_dispatch_calls\": 0, \"inputs_committed\": 0}\n            session._cookie_relay_watch_metrics = metrics\n        return metrics\n\n    @staticmethod\n    def _cookie_relay_pre_intent_rejected(session: BridgeSession, reason: str,\n                                          captured_at: float) -> bool:\n        metrics = BridgeServer._cookie_relay_metrics(session)\n        counts = metrics[\"pre_intent_rejections\"]\n        counts[reason] = counts.get(reason, 0) + 1\n        metrics[\"max_frame_age_ms\"] = max(metrics[\"max_frame_age_ms\"],\n            round(max(0.0, time.monotonic() - captured_at) * 1000, 3))\n        return False\n\n"
+      },
+      {
+        "start": 13370,
+        "end": 13370,
+        "before": "",
+        "after": "        # Check every fast sample for Human Verification, including a capture\n        # that took too long for input. This exact immutable PNG needs only one\n        # Human check: preflight and dispatch each check their own fresh frame.\n        if self._cookie_relay_human_guard(session, window, image):\n            return self._cookie_relay_pre_intent_rejected(session, \"human_verification\", captured_at)\n        metrics = self._cookie_relay_metrics(session)\n        metrics[\"max_frame_age_ms\"] = max(metrics[\"max_frame_age_ms\"],\n            round(max(0.0, time.monotonic() - captured_at) * 1000, 3))\n"
+      },
+      {
+        "start": 13371,
+        "end": 13372,
+        "before": "            return False\n",
+        "after": "            return self._cookie_relay_pre_intent_rejected(session, \"frame_expired_before_detection\", captured_at)\n"
+      },
+      {
+        "start": 13374,
+        "end": 13374,
+        "before": "",
+        "after": "            metrics[\"no_visual_match\"] += 1\n"
+      },
+      {
+        "start": 13375,
+        "end": 13375,
+        "before": "",
+        "after": "        metrics[\"visual_matches\"] += 1\n"
+      },
+      {
+        "start": 13383,
+        "end": 13385,
+        "before": "            if self._cookie_relay_human_guard(session, window, image):\n                return False\n",
+        "after": ""
+      },
+      {
+        "start": 13386,
+        "end": 13387,
+        "before": "                return False\n",
+        "after": "                return self._cookie_relay_pre_intent_rejected(session, \"controller_or_stage_boundary\", captured_at)\n"
+      },
+      {
+        "start": 13388,
+        "end": 13389,
+        "before": "                return False\n",
+        "after": "                return self._cookie_relay_pre_intent_rejected(session, \"frame_expired_after_authority\", captured_at)\n"
+      },
+      {
+        "start": 13391,
+        "end": 13392,
+        "before": "                return False\n",
+        "after": "                return self._cookie_relay_pre_intent_rejected(session, \"geometry_or_frame_binding\", captured_at)\n"
+      },
+      {
+        "start": 13393,
+        "end": 13394,
+        "before": "                return False\n",
+        "after": "                return self._cookie_relay_pre_intent_rejected(session, \"target_outside_guard\", captured_at)\n"
+      },
+      {
+        "start": 13402,
+        "end": 13403,
+        "before": "                return False\n",
+        "after": "                return self._cookie_relay_pre_intent_rejected(session, \"preflight_capture_or_human\", preflight_at)\n"
+      },
+      {
+        "start": 13412,
+        "end": 13413,
+        "before": "                return False\n",
+        "after": "                return self._cookie_relay_pre_intent_rejected(session, \"preflight_not_stable_or_fresh\", preflight_at)\n"
+      },
+      {
+        "start": 13423,
+        "end": 13423,
+        "before": "",
+        "after": "            metrics[\"attempts_reserved\"] += 1\n"
+      },
+      {
+        "start": 13424,
+        "end": 13424,
+        "before": "",
+        "after": "            dispatch_at = None\n"
+      },
+      {
+        "start": 13425,
+        "end": 13425,
+        "before": "",
+        "after": "                if dispatch_at is not None:\n                    metrics[\"max_dispatch_frame_age_ms\"] = max(metrics[\"max_dispatch_frame_age_ms\"],\n                        round(max(0.0, time.monotonic() - dispatch_at) * 1000, 3))\n"
+      },
+      {
+        "start": 13450,
+        "end": 13451,
+        "before": "                freshness = compare_frame_freshness(image, dispatch_image, tuple(final.target_bounds))\n",
+        "after": "                from visionstudio_cookie_relay_freshness import compare_cookie_relay_freshness\n                freshness = compare_cookie_relay_freshness(image, dispatch_image, tuple(final.target_bounds),\n                    thumbnail_size=FRESHNESS_THUMBNAIL_SIZE, pixel_delta=FRESHNESS_PIXEL_DELTA)\n"
+      },
+      {
+        "start": 13477,
+        "end": 13477,
+        "before": "",
+        "after": "                metrics[\"max_dispatch_frame_age_ms\"] = max(metrics[\"max_dispatch_frame_age_ms\"],\n                    round(max(0.0, time.monotonic() - dispatch_at) * 1000, 3))\n"
+      },
+      {
+        "start": 13486,
+        "end": 13486,
+        "before": "",
+        "after": "                metrics[\"native_dispatch_calls\"] += 1\n"
+      },
+      {
+        "start": 13495,
+        "end": 13495,
+        "before": "",
+        "after": "                metrics[\"inputs_committed\"] += 1\n"
+      },
+      {
+        "start": 13543,
+        "end": 13543,
+        "before": "",
+        "after": "        metrics = self._cookie_relay_metrics(session)\n        metrics[\"samples\"] += 1\n        metrics[\"max_capture_ms\"] = max(metrics[\"max_capture_ms\"],\n            round(max(0.0, time.monotonic() - captured_at) * 1000, 3))\n"
+      },
+      {
+        "start": 13549,
+        "end": 13550,
+        "before": "        if health.get(\"confirmed_black\") or self._cookie_relay_human_guard(session, window, image):\n",
+        "after": "        if health.get(\"confirmed_black\"):\n            self._cookie_relay_pre_intent_rejected(session, \"black_frame\", captured_at)\n"
+      },
+      {
+        "start": 13559,
+        "end": 13559,
+        "before": "",
+        "after": "        session._cookie_relay_watch_metrics = None\n        self._cookie_relay_metrics(session)\n"
+      },
+      {
+        "start": 13769,
+        "end": 13769,
+        "before": "",
+        "after": "            metrics = getattr(session, \"_cookie_relay_watch_metrics\", None)\n            if isinstance(metrics, dict):\n                # One compact summary when this monitor generation ends. Fast\n                # negative samples never perform journal writes of their own.\n                try:\n                    mission_module.append_event(session.journal_path, {\n                        \"event\": \"cookie_relay_watch_summary\", \"timestamp\": mission_module.utc_now(),\n                        \"session_id\": session.id, \"stage_id\": \"passive-running\",\n                        \"monitor_state\": session.running_monitor_state,\n                        \"ledger_status\": (session.cookie_relay_state or {}).get(\"status\"),\n                        \"metrics\": copy.deepcopy(metrics), \"game_effect_confirmed\": False,\n                    })\n                except OSError:\n                    pass\n                session._cookie_relay_watch_metrics = None\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_controller.py",
+    "before_sha256": "4458adcfa0a0b4e8431fb206c5e261881cfd04f54b3169071488b2547e7bae1d",
+    "after_sha256": "1445beed8783f5b26534147947b7f8a0d6b88bb6e01ea4581d4ab94d5c130ed1",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Axiom Vision v0.18.17 Universal Mission and Utility Controller.\n",
+        "after": "\"\"\"Axiom Vision v0.18.18 Universal Mission and Utility Controller.\n"
+      },
+      {
+        "start": 145,
+        "end": 146,
+        "before": "CONTROLLER_VERSION = \"0.18.17\"\n",
+        "after": "CONTROLLER_VERSION = \"0.18.18\"\nRELAY_PLAN_UPGRADE_DETAIL = (\n    \"Cookie Relay has an updated run plan. Stop the worker, then use Reset Batch \"\n    \"before starting a new run. The existing checkpoint and pending clicks are \"\n    \"preserved; Resume cannot replace their frozen plan.\"\n)\n"
+      },
+      {
+        "start": 637,
+        "end": 637,
+        "before": "",
+        "after": "\n\ndef relay_plan_upgrade_required(\n    state: dict[str, Any], checkpoint: dict[str, Any],\n) -> bool:\n    \"\"\"Recognize old Relay authority without migrating or granting input.\n\n    Revision 10 used the narrow pre-toolbar pointer envelope. A stopped old\n    blocked checkpoint is not resumable under the corrected contract, but it\n    still owns its batch and any never-replay intent until explicit Reset.\n    \"\"\"\n    if (not isinstance(checkpoint, dict)\n            or checkpoint.get(\"status\") in {None, \"reset\", \"archived\", \"completed\"}\n            or checkpoint.get(\"mission_source\") != \"universal-code\"):\n        return False\n    batch = normalize_batch_plan(state.get(\"batch_plan\"))\n    if batch is None or batch.get(\"status\") == \"completed\":\n        return False\n    plan = batch.get(\"universal_plan\") or {}\n    config = batch.get(\"universal_config\") or {}\n    if not (plan.get(\"mission_id\") == UNIVERSAL_MISSION_ID\n            and plan.get(\"revision\") == \"10\"\n            and config.get(\"cookie_relay\", {}).get(\"enabled\") is True\n            and checkpoint.get(\"universal_config\") == config\n            and checkpoint.get(\"mission_contract_sha256\") == plan.get(\"sha256\")):\n        return False\n    return universal_mission_revision(config) != plan[\"revision\"]\n"
+      },
+      {
+        "start": 1390,
+        "end": 1390,
+        "before": "",
+        "after": "    if relay_plan_upgrade_required(state, checkpoint):\n        return \"RESET REQUIRED\", RELAY_PLAN_UPGRADE_DETAIL\n"
+      },
+      {
+        "start": 1624,
+        "end": 1624,
+        "before": "",
+        "after": "    if relay_plan_upgrade_required(state, checkpoint):\n        return False\n"
+      },
+      {
+        "start": 4475,
+        "end": 4475,
+        "before": "",
+        "after": "            if relay_plan_upgrade_required(state, checkpoint):\n                return RELAY_PLAN_UPGRADE_DETAIL\n"
+      },
+      {
+        "start": 4511,
+        "end": 4511,
+        "before": "",
+        "after": "        relay_upgrade = relay_plan_upgrade_required(state, checkpoint)\n        if relay_upgrade:\n            availability = availability._replace(start=False, resume=False)\n"
+      },
+      {
+        "start": 4601,
+        "end": 4601,
+        "before": "",
+        "after": "        if relay_upgrade:\n            binding[\"relay_plan_upgrade_required\"] = True\n"
+      },
+      {
+        "start": 4647,
+        "end": 4648,
+        "before": "                \"last_event\": state.get(\"last_event\"),\n",
+        "after": "                \"last_event\": RELAY_PLAN_UPGRADE_DETAIL if relay_upgrade else state.get(\"last_event\"),\n"
+      },
+      {
+        "start": 7297,
+        "end": 7297,
+        "before": "",
+        "after": "        if relay_plan_upgrade_required(state, checkpoint):\n            # This checkpoint owns its old Plan until explicit Reset. Do not\n            # turn an incompatible batch into a phantom automatic recovery.\n            return state\n"
+      },
+      {
+        "start": 7732,
+        "end": 7733,
+        "before": "        return available.start and self._heart_conflict_for_universal() is None\n",
+        "after": "        return (available.start and not relay_plan_upgrade_required(current, checkpoint)\n                and self._heart_conflict_for_universal() is None)\n"
+      },
+      {
+        "start": 8147,
+        "end": 8147,
+        "before": "",
+        "after": "        if relay_plan_upgrade_required(state, checkpoint):\n            return ControllerCommandResult(\n                False, \"relay_plan_upgrade_required\", RELAY_PLAN_UPGRADE_DETAIL,\n            )\n"
+      },
+      {
+        "start": 8343,
+        "end": 8343,
+        "before": "",
+        "after": "        _stats, checkpoint = self._stats()\n        if relay_plan_upgrade_required(state, checkpoint):\n            return ControllerCommandResult(\n                False, \"relay_plan_upgrade_required\", RELAY_PLAN_UPGRADE_DETAIL,\n            )\n"
+      },
+      {
+        "start": 8357,
+        "end": 8358,
+        "before": "        _stats, checkpoint = self._stats()\n",
+        "after": ""
+      },
+      {
+        "start": 9437,
+        "end": 9437,
+        "before": "",
+        "after": "        state = read_state(self.control_path)\n        _stats, checkpoint = self._stats()\n        if relay_plan_upgrade_required(state, checkpoint):\n            return\n"
+      },
+      {
+        "start": 10435,
+        "end": 10435,
+        "before": "",
+        "after": "        _stats, checkpoint = self._stats()\n        if relay_plan_upgrade_required(state, checkpoint):\n            return\n"
+      },
+      {
+        "start": 10532,
+        "end": 10532,
+        "before": "",
+        "after": "        state = read_state(self.control_path)\n        worker = state.get(\"worker\") or {}\n        if requested is None and not worker.get(\"recovery_next_at\"):\n            return\n        _stats, checkpoint = self._stats()\n        if relay_plan_upgrade_required(state, checkpoint):\n            self.next_worker_mode = None\n            return\n"
+      },
+      {
+        "start": 10533,
+        "end": 10538,
+        "before": "            state = read_state(self.control_path)\n            worker = state.get(\"worker\") or {}\n            if not worker.get(\"recovery_next_at\"):\n                return\n            _stats, checkpoint = self._stats()\n",
+        "after": ""
+      },
+      {
+        "start": 11127,
+        "end": 11127,
+        "before": "",
+        "after": "        relay_upgrade = relay_plan_upgrade_required(state, checkpoint)\n"
+      },
+      {
+        "start": 11252,
+        "end": 11253,
+        "before": "        if startup_timed_out:\n",
+        "after": "        if startup_timed_out and not relay_upgrade:\n"
+      },
+      {
+        "start": 11326,
+        "end": 11326,
+        "before": "",
+        "after": "        if relay_upgrade and desired not in {\"human_verification\", \"stop_requested\"}:\n            status, detail = \"RESET REQUIRED\", RELAY_PLAN_UPGRADE_DETAIL\n"
+      },
+      {
+        "start": 11381,
+        "end": 11382,
+        "before": "        if heart_conflict is not None:\n",
+        "after": "        if heart_conflict is not None or relay_upgrade:\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_cookie_relay.py",
+    "before_sha256": "4e8b6abec7a20f7d85da9f1bf42fe0ed3f788515f9a72269301d4f48a113bb05",
+    "after_sha256": "b1274250fd7aaebb1bcffc3cb185cd765867884eaec8788179b346a9caa245d6",
+    "edits": [
+      {
+        "start": 20,
+        "end": 21,
+        "before": "DETECTOR_VERSION = \"cookie-relay-visual-1\"\n",
+        "after": "DETECTOR_VERSION = \"cookie-relay-visual-2\"\n"
+      },
+      {
+        "start": 152,
+        "end": 156,
+        "before": "    return bool(\n        all(_fraction(image, _transformed_box(edge, card), _yellow) >= .43 for edge in yellow_edges)\n        and all(_fraction(image, _transformed_box(edge, card), _green) >= .58 for edge in green_edges)\n    )\n",
+        "after": "    if not all(_fraction(image, _transformed_box(edge, card), _green) >= .58 for edge in green_edges):\n        return False\n    projected_yellow = tuple(_transformed_box(edge, card) for edge in yellow_edges)\n    if all(_fraction(image, edge, _yellow) >= .43 for edge in projected_yellow):\n        return True\n    # At an otherwise identical emulator offset, resampling can project the\n    # narrow yellow border into one pixel rather than two. Keep the same four\n    # calibrated bands and require a continuous long yellow scanline in each;\n    # never enlarge the card or accept a missing edge. The inner green frame,\n    # complete prompt and both Running controls still have to match.\n    return all(_yellow_edge_line_fraction(image, edge, horizontal=index < 2) >= .85\n               for index, edge in enumerate(projected_yellow))\n\n\ndef _yellow_edge_line_fraction(image: Image.Image, box: tuple[int, int, int, int],\n                               *, horizontal: bool) -> float:\n    part = image.crop(box)\n    if part.width < 1 or part.height < 1:\n        return 0.0\n    pixels = part.load()\n    if horizontal:\n        return max(sum(_yellow(pixels[x, y]) for x in range(part.width)) / part.width\n                   for y in range(part.height))\n    return max(sum(_yellow(pixels[x, y]) for y in range(part.height)) / part.height\n               for x in range(part.width))\n"
+      },
+      {
+        "start": 180,
+        "end": 182,
+        "before": "    Known calibration covers a 16:9 game surface plus modest emulator chrome\n    (up to about 35 px vertical at 900 px game height). UI language must match\n",
+        "after": "    Known calibration includes a 1600x900 game in a 1642x941 capture with\n    41 px top chrome and a 42 px right toolbar. UI language must match\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_cookie_relay_freshness.py",
+    "before_sha256": null,
+    "after_sha256": "0ecb7d5a37c6e8db8c3037065b15884112b37a17f105c80688f98caa30b17ee7",
+    "content": "\"\"\"Measure only the already-proved Relay control's fresh-frame pixel delta.\n\nThis is a metrics helper, not input authority. The Bridge still owns semantic\nproof, Human Guard, region bounds, thresholds, witness age and dispatch guards.\nThe resize and histogram calculation match the ordinary freshness guard; the\nanimated full scene is neither converted nor measured on this private path.\n\"\"\"\nfrom __future__ import annotations\n\nimport io\nfrom typing import Any\n\n\ndef compare_cookie_relay_freshness(\n    reference_png: bytes,\n    current_png: bytes,\n    region: tuple[int, int, int, int],\n    *,\n    thumbnail_size: tuple[int, int],\n    pixel_delta: int,\n) -> dict[str, Any]:\n    \"\"\"Return the same ROI metrics used by the existing Bridge thresholds.\"\"\"\n    unavailable = {\n        \"reason\": \"frame_comparison_unavailable\",\n        \"dimensions_match\": None,\n        \"region_mean_delta\": None,\n        \"region_changed_ratio\": None,\n    }\n    if (not isinstance(region, tuple) or len(region) != 4\n            or any(type(value) is not int for value in region)\n            or region[0] < 0 or region[1] < 0 or region[2] <= 0 or region[3] <= 0):\n        return {**unavailable, \"reason\": \"target_region_invalid\"}\n    try:\n        from PIL import Image, ImageChops\n    except ImportError:\n        return unavailable\n    try:\n        with (Image.open(io.BytesIO(reference_png)) as reference_source,\n              Image.open(io.BytesIO(current_png)) as current_source):\n            if reference_source.size != current_source.size:\n                return {\n                    **unavailable,\n                    \"reason\": \"image_dimensions_changed\",\n                    \"dimensions_match\": False,\n                    \"reference_size\": list(reference_source.size),\n                    \"current_size\": list(current_source.size),\n                }\n            x, y, width, height = region\n            if x + width > reference_source.width or y + height > reference_source.height:\n                return {**unavailable, \"reason\": \"target_region_invalid\"}\n            if reference_png == current_png:\n                return {\n                    \"reason\": \"identical_bytes\",\n                    \"dimensions_match\": True,\n                    \"region_mean_delta\": 0.0,\n                    \"region_changed_ratio\": 0.0,\n                }\n            reference_source.load()\n            current_source.load()\n            box = (x, y, x + width, y + height)\n            # Cropping before RGB conversion preserves the exact ROI pixels\n            # while avoiding two full-scene RGB copies and thumbnail resizes.\n            first = reference_source.crop(box).convert(\"RGB\").resize(thumbnail_size)\n            second = current_source.crop(box).convert(\"RGB\").resize(thumbnail_size)\n            histogram = ImageChops.difference(first, second).convert(\"L\").histogram()\n            total = sum(histogram)\n            mean_delta = (\n                sum(level * count for level, count in enumerate(histogram))\n                / (255.0 * total) if total > 0 else 0.0\n            )\n            changed_ratio = sum(histogram[pixel_delta + 1:]) / total if total > 0 else 0.0\n            return {\n                \"reason\": \"target_region_measured\",\n                \"dimensions_match\": True,\n                \"region_mean_delta\": round(mean_delta, 6),\n                \"region_changed_ratio\": round(changed_ratio, 6),\n            }\n    except (OSError, ValueError, TypeError, Image.DecompressionBombError):\n        return unavailable\n"
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_heart_contract.py",
+    "before_sha256": "ad3a50f45240787f2143c6c96874bc99c8594c1b41b771bdd009cc85aebde3b8",
+    "after_sha256": "12bc297a0c5c123a125f172f51a60fbf9e9459e3212de8468acf2f9bcf06bdd1",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.17.\"\"\"\n",
+        "after": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.18.\"\"\"\n"
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "before": "HEART_RUNNER_VERSION = \"0.18.17\"\n",
+        "after": "HEART_RUNNER_VERSION = \"0.18.18\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_local_runner.py",
+    "before_sha256": "04b9297e91001c39af3eed77116c393226e255b81c05b8c2000ffef842e9bc55",
+    "after_sha256": "c882eee4a7445c26a510e025ec9d2b02fc44d17a3216378ea8ad3b4976a423d3",
+    "edits": [
+      {
+        "start": 40,
+        "end": 41,
+        "before": "LOCAL_RUNNER_VERSION = \"0.18.17\"\n",
+        "after": "LOCAL_RUNNER_VERSION = \"0.18.18\"\n"
+      },
+      {
+        "start": 2117,
+        "end": 2118,
+        "before": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.17\"\n",
+        "after": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.18\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_universal_mission.py",
+    "before_sha256": "0ba4394d3893b5155ea8e322de272f2a815cc38ff4ed3bb661d8eef298ad4971",
+    "after_sha256": "c05842ed01902d231a9a12a6b56712307a801ac098723adee0e4f1faa3f0f664",
+    "edits": [
+      {
+        "start": 31,
+        "end": 32,
+        "before": "UNIVERSAL_RELAY_MISSION_REVISION = \"10\"\n",
+        "after": "UNIVERSAL_RELAY_MISSION_REVISION = \"11\"\n"
+      },
+      {
+        "start": 221,
+        "end": 222,
+        "before": "    \"\"\"Enabled Relay binds revision 10; unchanged OFF plans retain revision 9.\"\"\"\n",
+        "after": "    \"\"\"Corrected Relay geometry binds revision 11; OFF retains revision 9.\"\"\"\n"
+      },
+      {
+        "start": 808,
+        "end": 809,
+        "before": "                \"cookie-relay\", (440, 355, 140, 275), (448, 366, 126, 227), (145, 250),\n",
+        "after": "                \"cookie-relay\", (430, 355, 150, 275), (448, 366, 126, 227), (145, 250),\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_bridge.py",
+    "before_sha256": "a8516d9f12fb1292975368dbe2412ef49c58c273649ead6f44813a22e67c4307",
+    "after_sha256": "b443b0b1ee36202eb2054668b6de47e6df2d9447ed58cad28eb0d6ea63f89426",
+    "edits": [
+      {
+        "start": 3085,
+        "end": 3086,
+        "before": "            \"0.18.17-run-profile-presets-303\",\n",
+        "after": "            \"0.18.18-relay-response-304\",\n"
+      },
+      {
+        "start": 10848,
+        "end": 10849,
+        "before": "                \"Axiom Vision v0.18.17 — Telegram test\\n\"\n",
+        "after": "                \"Axiom Vision v0.18.18 — Telegram test\\n\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_controller_state.py",
+    "before_sha256": "fc4968e432041328f617896b9692767e19eef032f375df95e327b4cae9bd6b1e",
+    "after_sha256": "c19fa8f40f17e465ff8c471cadb24d20b6c6633b4bcfdfab632b19b484054ea5",
+    "edits": [
+      {
+        "start": 2446,
+        "end": 2447,
+        "before": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.17\")\n",
+        "after": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.18\")\n"
+      },
+      {
+        "start": 5818,
+        "end": 5819,
+        "before": "            self.assertEqual(report[\"product_version\"], \"0.18.17\")\n",
+        "after": "            self.assertEqual(report[\"product_version\"], \"0.18.18\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_capture_variants.py",
+    "before_sha256": null,
+    "after_sha256": "4f22da586800f86f03a87e4deedce98131334114e6c1df783c48cf9bda5a4352",
+    "content": "\"\"\"Relay frame evidence across real emulator-chrome raster phases.\"\"\"\nfrom __future__ import annotations\n\nfrom pathlib import Path\nimport sys\nimport unittest\n\nfrom PIL import Image, ImageDraw\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport visionstudio_cookie_relay as relay\nfrom test_cookie_relay_vision import png, relay_frame\n\n\nclass CookieRelayCaptureVariantTests(unittest.TestCase):\n    @staticmethod\n    def emulator_frame(top: int, left: int = 0) -> Image.Image:\n        image = Image.new(\"RGB\", (1642, 941), (30, 32, 38))\n        game = relay_frame().resize((1600, 900), Image.Resampling.LANCZOS)\n        image.paste(game, (left, top))\n        return image\n\n    def test_right_toolbar_and_each_native_top_chrome_raster_phase(self):\n        # LDPlayer captures include its right toolbar and top bar. Symmetric\n        # padding exercises a different resampling phase and missed this case.\n        for top in range(42):\n            with self.subTest(top=top):\n                proof = relay.detect_cookie_relay(png(self.emulator_frame(top)))\n                self.assertIsNotNone(proof)\n                self.assertAlmostEqual(proof.center[0], 816, delta=5)\n                self.assertAlmostEqual(proof.center[1], 430 + top, delta=5)\n\n    def test_raster_fallback_keeps_both_closed_frame_colors(self):\n        yellow_edges = ((365, 166, 451, 169), (365, 261, 451, 264),\n                        (358, 174, 361, 255), (455, 174, 458, 255))\n        green_edges = ((366, 172, 451, 175), (366, 256, 451, 259),\n                       (364, 177, 367, 254), (449, 177, 452, 254))\n        for color, edges in ((\"yellow\", yellow_edges), (\"green\", green_edges)):\n            for index, box in enumerate(edges):\n                with self.subTest(color=color, edge=index):\n                    game = relay_frame()\n                    ImageDraw.Draw(game).rectangle(box, fill=(75, 95, 65))\n                    image = Image.new(\"RGB\", (1642, 941), (30, 32, 38))\n                    image.paste(game.resize((1600, 900), Image.Resampling.LANCZOS), (0, 40))\n                    self.assertIsNone(relay.detect_cookie_relay(png(image)))\n\n    def test_full_prompt_and_both_running_controls_are_still_required(self):\n        boxes = {\n            \"relay_word\": (455, 140, 505, 160),\n            \"prompt\": (239, 136, 574, 161),\n            \"jump\": (65, 374, 144, 405),\n            \"slide\": (661, 374, 735, 405),\n            \"human_overlay\": (285, 130, 520, 325),\n        }\n        for name, box in boxes.items():\n            with self.subTest(missing=name):\n                game = relay_frame()\n                ImageDraw.Draw(game).rectangle(box, fill=(75, 95, 65))\n                image = Image.new(\"RGB\", (1642, 941), (30, 32, 38))\n                image.paste(game.resize((1600, 900), Image.Resampling.LANCZOS), (0, 40))\n                self.assertIsNone(relay.detect_cookie_relay(png(image)))\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_config_ui.py",
+    "before_sha256": "b03664e77d16181061125dd22d24e43648c9af17be90d7614bca6ec69b63690f",
+    "after_sha256": "40f55f3b4648935104f01da95d927c4c839575ef5752b148143673cf006a664c",
+    "edits": [
+      {
+        "start": 55,
+        "end": 56,
+        "before": "                self.assertEqual(on.mission['universal_plan']['plan_revision'], 10)\n",
+        "after": "                self.assertEqual(on.mission['universal_plan']['plan_revision'], 11)\n"
+      },
+      {
+        "start": 127,
+        "end": 128,
+        "before": "                self.assertEqual(document['universal_plan']['revision'], '10')\n",
+        "after": "                self.assertEqual(document['universal_plan']['revision'], '11')\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_freshness.py",
+    "before_sha256": null,
+    "after_sha256": "197ced16294e3dc2aece91ff74efd2eed73acefdf3b6ae98f75101166d04927b",
+    "content": "\"\"\"Equivalence and rejection tests for Relay's ROI-only freshness metrics.\"\"\"\nfrom __future__ import annotations\n\nimport io\nfrom pathlib import Path\nimport sys\nimport unittest\n\nfrom PIL import Image, ImageDraw\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport visionstudio_bridge as bridge\nfrom visionstudio_cookie_relay_freshness import compare_cookie_relay_freshness\n\n\ndef png(image: Image.Image, *, compression: int = 1) -> bytes:\n    output = io.BytesIO()\n    image.save(output, format=\"PNG\", compress_level=compression)\n    return output.getvalue()\n\n\nclass CookieRelayFreshnessTests(unittest.TestCase):\n    region = (550, 250, 180, 180)\n\n    def compare(self, before: bytes, after: bytes, region=None) -> dict:\n        return compare_cookie_relay_freshness(\n            before, after, self.region if region is None else region,\n            thumbnail_size=bridge.FRESHNESS_THUMBNAIL_SIZE,\n            pixel_delta=bridge.FRESHNESS_PIXEL_DELTA,\n        )\n\n    def assert_roi_equal(self, before: bytes, after: bytes) -> dict:\n        ordinary = bridge.compare_frame_freshness(before, after, self.region)\n        private = self.compare(before, after)\n        for key in (\"dimensions_match\", \"region_mean_delta\", \"region_changed_ratio\"):\n            self.assertEqual(private[key], ordinary[key], key)\n        return private\n\n    def frame(self, background: tuple[int, int, int]) -> Image.Image:\n        image = Image.new(\"RGB\", (1280, 720), background)\n        ImageDraw.Draw(image).rectangle((550, 250, 729, 429), fill=(120, 185, 60))\n        return image\n\n    def test_animated_background_does_not_change_identical_control_metrics(self):\n        before, after = png(self.frame((20, 30, 40))), png(self.frame((230, 200, 160)))\n        ordinary = bridge.compare_frame_freshness(before, after, self.region)\n        self.assertFalse(ordinary[\"passed\"])\n        private = self.assert_roi_equal(before, after)\n        self.assertEqual(private[\"region_mean_delta\"], 0)\n        self.assertEqual(private[\"region_changed_ratio\"], 0)\n\n    def test_control_change_retains_existing_rejection_metrics(self):\n        first = self.frame((20, 30, 40))\n        second = first.copy()\n        ImageDraw.Draw(second).rectangle((550, 250, 729, 429), fill=(250, 250, 250))\n        private = self.assert_roi_equal(png(first), png(second))\n        self.assertGreater(private[\"region_mean_delta\"], bridge.FRESHNESS_REGION_MEAN_DELTA_LIMIT)\n        self.assertGreater(private[\"region_changed_ratio\"], bridge.FRESHNESS_REGION_CHANGED_RATIO_LIMIT)\n\n    def test_partial_tone_changes_and_source_modes_have_exact_roi_equivalence(self):\n        first = self.frame((15, 80, 125))\n        second = first.copy()\n        draw = ImageDraw.Draw(second)\n        for offset in range(0, 180, 9):\n            draw.line((550, 250 + offset, 729, 250 + offset), fill=(150, 202, 90), width=3)\n        for mode in (\"RGB\", \"RGBA\", \"L\", \"P\"):\n            with self.subTest(mode=mode):\n                self.assert_roi_equal(png(first.convert(mode)), png(second.convert(mode)))\n\n    def test_identical_bytes_and_different_png_encodings_keep_zero_delta(self):\n        image = self.frame((15, 80, 125))\n        data = png(image)\n        self.assert_roi_equal(data, data)\n        self.assert_roi_equal(data, png(image, compression=6))\n\n    def test_dimension_change_and_invalid_png_cannot_prove_freshness(self):\n        data = png(self.frame((15, 80, 125)))\n        other_size = png(Image.new(\"RGB\", (1281, 720), (15, 80, 125)))\n        result = self.compare(data, other_size)\n        self.assertIs(result[\"dimensions_match\"], False)\n        self.assertIsNone(result[\"region_mean_delta\"])\n        for invalid in (b\"not a PNG\", b\"\", data[:50]):\n            with self.subTest(invalid=invalid[:10]):\n                result = self.compare(data, invalid)\n                self.assertIsNone(result[\"dimensions_match\"])\n                self.assertIsNone(result[\"region_mean_delta\"])\n        self.assertIsNone(self.compare(b\"not a PNG\", b\"not a PNG\")[\"dimensions_match\"])\n\n    def test_invalid_region_is_rejected_before_any_control_comparison(self):\n        image = self.frame((15, 80, 125))\n        data, reencoded = png(image), png(image, compression=6)\n        for region in ((-1, 0, 10, 10), (0, 0, 0, 10), (1200, 0, 100, 10),\n                       (0, 0, True, 10), (0, 0, 10), (0.0, 0, 10, 10)):\n            with self.subTest(region=region):\n                result = self.compare(data, reencoded, region)\n                self.assertIsNone(result[\"dimensions_match\"])\n                self.assertEqual(result[\"reason\"], \"target_region_invalid\")\n                self.assertIsNone(self.compare(data, data, region)[\"dimensions_match\"])\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_hot_path.py",
+    "before_sha256": null,
+    "after_sha256": "fb6b8bac5097be232b765a3976ebbfe5d6ca74c5d6c4c52487a00420fc52396c",
+    "content": "\"\"\"Real visual/Controller/ledger Relay path with a modeled loaded capture clock.\n\nWindows capture and input are adapters; recognition, Human Guard, frozen Plan\nchecks and durable intent/commit I/O are the actual production implementations.\nThe fake monotonic clock gives phase costs rather than asserting host speed.\n\"\"\"\nfrom __future__ import annotations\n\nimport copy\nimport io\nimport json\nfrom pathlib import Path\nimport tempfile\nimport threading\nimport unittest\nfrom unittest import mock\n\nfrom PIL import Image, ImageDraw\n\nimport test_cookie_relay_runtime as runtime\nfrom test_cookie_relay_vision import relay_frame\n\nbridge = runtime.bridge\n\n\ndef png(image):\n    output = io.BytesIO()\n    image.save(output, \"PNG\", compress_level=1)\n    return output.getvalue()\n\n\nclass Clock:\n    def __init__(self):\n        self.now = 1000.0\n\n    def advance(self, seconds):\n        self.now += seconds\n\n\nclass ClockEvent:\n    def __init__(self, clock):\n        self.clock = clock\n        self.stopped = False\n\n    def is_set(self):\n        return self.stopped\n\n    def set(self):\n        self.stopped = True\n\n    def wait(self, seconds):\n        self.clock.advance(max(0.0, seconds))\n        return self.stopped\n\n\nclass CookieRelayHotPathTests(unittest.TestCase):\n    def real_fixture(self, root, *, size=(1600, 900), image=None):\n        server, session, desktop, old_window, _, _, state = runtime.CookieRelayRuntimeTests.fixture(self, root)\n        window = runtime.test_bridge.VisionStudioBridgeTests().make_window(\n            executable=\"dnplayer.exe\", title=\"Cookie Run\", left=40, top=30,\n            width=size[0], height=size[1],\n        )\n        image = image or png(relay_frame().resize(size, Image.Resampling.LANCZOS))\n        desktop.window = window\n        desktop.capture_png = lambda _window: image\n        session.last_window, session.last_image = window, image\n        session.fixed_geometry_bounds = (40, 30, *size)\n        session.loop_recovery_context[\"loop_start_fixed_geometry_bounds\"] = list(session.fixed_geometry_bounds)\n        state[\"fixed_geometry\"][\"bounds\"] = list(session.fixed_geometry_bounds)\n        state[\"universal_plan\"][\"revision\"] = bridge.universal_mission_module.UNIVERSAL_RELAY_MISSION_REVISION\n        state[\"batch_plan\"][\"universal_plan\"] = copy.deepcopy(state[\"universal_plan\"])\n        state.update(mission_path=str(session.mission_path), worker={\"status\": \"running\"})\n        bridge.controller_module.write_state(session.controller_state_path, state)\n        # Undo the deliberately mocked guard adapters of the small ledger tests.\n        # This fixture exercises actual foreground/geometry checks, PNG health,\n        # full Human recognition, Controller-file reads and Plan recompilation.\n        for name in (\"_controller_gate\", \"_verified_window\", \"_verified_action_window\",\n                     \"_capture_reliable_png\", \"_cookie_relay_human_guard\", \"_detect_cookie_relay\"):\n            delattr(server, name)\n        return server, session, desktop, window, image\n\n    def test_asymmetric_native_toolbar_layout_reaches_one_guarded_input(self):\n        native = relay_frame().resize((1600, 900), Image.Resampling.LANCZOS)\n        image = Image.new(\"RGB\", (1642, 941), (35, 35, 40))\n        image.paste(native, (0, 41))\n        with tempfile.TemporaryDirectory() as tmp:\n            server, session, desktop, window, raw = self.real_fixture(Path(tmp), size=image.size, image=png(image))\n            proof = server._detect_cookie_relay(raw)\n            self.assertIsNotNone(proof)\n            contract = server._cookie_relay_contract(session)\n            old_contract = copy.deepcopy(contract)\n            old_contract[\"pointer_guard\"][\"allowed_grid_region\"].update(x=440, width=140)\n            self.assertFalse(server._cookie_relay_target_allowed(old_contract, proof))\n            self.assertTrue(server._cookie_relay_target_allowed(contract, proof))\n            server._capture_cookie_relay_sample(session)\n            self.assertEqual(len(desktop.clicks), 1)\n            self.assertEqual(session.cookie_relay_state[\"status\"], \"committed\")\n            self.assertEqual(session.cookie_relay_state[\"attempts\"], 1)\n\n    def test_duplicate_human_work_does_not_spend_budget_on_identical_frames(self):\n        # This isolates the duplicated initial Human check. Positive captures\n        # are byte-identical, so freshness has its real zero-work shortcut.\n        # Animated source-image phase tests separately charge ROI/window work.\n        clock = Clock()\n        with mock.patch.object(bridge.time, \"monotonic\", side_effect=lambda: clock.now), tempfile.TemporaryDirectory() as tmp:\n            server, session, desktop, window, relay = self.real_fixture(Path(tmp))\n            negative = png(Image.new(\"RGB\", (1600, 900), (75, 95, 65)))\n            starts, ends = 1000.3, 1002.3\n            captures = []\n            clicks = []\n            stop = ClockEvent(clock)\n            session.running_monitor_stop = stop\n            session.running_monitor_focus_seconds = 0\n            session.running_monitor_started_monotonic = clock.now\n            session.running_monitor_interval_seconds = 3\n            session.running_monitor_timeout_seconds = 4\n            session.running_monitor_thread = threading.current_thread()\n            original_capture = server._capture_reliable_png\n            original_human = server._cookie_relay_human_guard\n            original_detect = server._detect_cookie_relay\n            original_gate = server._controller_gate\n            original_write = session.write_checkpoint\n            native_click = desktop.click\n\n            def capture(_window):\n                # Diagnostic capture mean is 167–175ms including PNG health.\n                # This cost is modeled once; the actual PNG/health path runs.\n                selected = relay if starts <= clock.now < ends else negative\n                clock.advance(.175)\n                captures.append(clock.now)\n                desktop.capture_png = lambda __: selected\n                return original_capture(_window)\n\n            def human(*args):\n                result = original_human(*args)\n                clock.advance(.09)  # Loaded Human cost, twice measured Linux44ms.\n                return result\n\n            def detect(raw):\n                result = original_detect(raw)\n                clock.advance(.15)  # Loaded cost near measured137ms maximum.\n                return result\n\n            def gate(_session):\n                result = original_gate(_session)\n                clock.advance(.005)\n                return result\n\n            def write(*args, **kwargs):\n                result = original_write(*args, **kwargs)\n                clock.advance(.03)  # Real fsync executes; model Windows flush cost.\n                return result\n\n            def click(*args):\n                clicks.append(clock.now)\n                result = native_click(*args)\n                stop.set()\n                return result\n\n            server._capture_reliable_png = capture\n            server._cookie_relay_human_guard = human\n            server._detect_cookie_relay = detect\n            server._controller_gate = gate\n            session.write_checkpoint = write\n            desktop.click = click\n            before = copy.deepcopy((session.stage_action_attempts, session.completed_stage_ids,\n                                    session.committed_stage_ids, session.last_action_transition))\n            server._running_monitor_worker(session, stop)\n            self.assertEqual(len(clicks), 1, session.running_monitor_error)\n            self.assertLess(clicks[0], ends)\n            self.assertGreaterEqual(clicks[0], starts)\n            self.assertEqual(session.cookie_relay_state[\"status\"], \"committed\")\n            self.assertEqual(before, (session.stage_action_attempts, session.completed_stage_ids,\n                                      session.committed_stage_ids, session.last_action_transition))\n            ledger = json.loads(session.checkpoint_path.read_bytes())[\"cookie_relay_state\"]\n            self.assertEqual((ledger[\"status\"], ledger[\"attempts\"]), (\"committed\", 1))\n\n    def test_animated_roi_normal_and_overbudget_dispatch_keep_the_half_second_limit(self):\n        for human_cost, detector_cost, roi_cost, expected in ((.045, .09, .085, True), (.09, .15, .09, False)):\n            clock = Clock()\n            with mock.patch.object(bridge.time, \"monotonic\", side_effect=lambda: clock.now), tempfile.TemporaryDirectory() as tmp:\n                server, session, desktop, window, raw = self.real_fixture(Path(tmp))\n                original_capture = server._capture_reliable_png\n                original_human = server._cookie_relay_human_guard\n                original_detect = server._detect_cookie_relay\n                from visionstudio_cookie_relay_freshness import compare_cookie_relay_freshness\n                import visionstudio_cookie_relay_freshness as freshness_module\n                frame = Image.open(io.BytesIO(raw)).convert(\"RGB\")\n                count = [0]\n\n                def capture(which):\n                    count[0] += 1\n                    changed = frame.copy()\n                    ImageDraw.Draw(changed).rectangle((1, 1, 15, 15), fill=(count[0], 20, 30))\n                    encoded = png(changed)\n                    desktop.capture_png = lambda _window: encoded\n                    clock.advance(.175)\n                    return original_capture(which)\n\n                def human(*args):\n                    result = original_human(*args)\n                    clock.advance(human_cost)\n                    return result\n\n                def detect(image):\n                    result = original_detect(image)\n                    clock.advance(detector_cost)\n                    return result\n\n                def freshness(*args, **kwargs):\n                    result = compare_cookie_relay_freshness(*args, **kwargs)\n                    self.assertEqual(result[\"reason\"], \"target_region_measured\")\n                    clock.advance(roi_cost)\n                    return result\n\n                server._capture_reliable_png = capture\n                server._cookie_relay_human_guard = human\n                server._detect_cookie_relay = detect\n                with mock.patch.object(freshness_module, \"compare_cookie_relay_freshness\", side_effect=freshness):\n                    self.assertIs(server._try_cookie_relay(session, window, raw, clock.now), expected)\n                self.assertEqual(len(desktop.clicks), int(expected))\n                self.assertEqual(session.cookie_relay_state[\"status\"], \"committed\" if expected else \"pending\")\n                self.assertEqual(session.cookie_relay_state[\"attempts\"], 1)\n                self.assertFalse(server._try_cookie_relay(session, window, raw, clock.now))\n                self.assertEqual(len(desktop.clicks), int(expected))\n                self.assertEqual(session.cookie_relay_state[\"attempts\"], 1)\n\n    def test_expired_first_capture_still_checks_human_before_age_rejection(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            server, session, desktop, window, image = self.real_fixture(Path(tmp))\n            server._cookie_relay_human_guard = mock.Mock(return_value=False)\n            server._detect_cookie_relay = mock.Mock()\n            self.assertFalse(server._try_cookie_relay(session, window, image, bridge.time.monotonic() - 1))\n            server._cookie_relay_human_guard.assert_called_once_with(session, window, image)\n            server._detect_cookie_relay.assert_not_called()\n            self.assertFalse(desktop.clicks)\n            self.assertEqual(session.cookie_relay_state[\"attempts\"], 0)\n\n    def test_fast_negative_frames_write_only_one_bounded_end_summary(self):\n        clock = Clock()\n        with mock.patch.object(bridge.time, \"monotonic\", side_effect=lambda: clock.now), tempfile.TemporaryDirectory() as tmp:\n            raw = png(Image.new(\"RGB\", (1600, 900), (75, 95, 65)))\n            server, session, desktop, window, _ = self.real_fixture(Path(tmp), image=raw)\n            stop = ClockEvent(clock)\n            session.running_monitor_stop = stop\n            session.running_monitor_started_monotonic = clock.now\n            session.running_monitor_focus_seconds = 4\n            session.running_monitor_timeout_seconds = .75\n            session.running_monitor_thread = threading.current_thread()\n            before = len(session.journal_path.read_text().splitlines())\n            server._running_monitor_worker(session, stop)\n            rows = [json.loads(line) for line in session.journal_path.read_text().splitlines()[before:]]\n            self.assertEqual([row[\"event\"] for row in rows],\n                             [\"cookie_relay_watch_scheduled\", \"cookie_relay_watch_summary\"])\n            counts = rows[-1][\"metrics\"]\n            self.assertGreater(counts[\"samples\"], 1)\n            self.assertEqual(counts[\"samples\"], counts[\"no_visual_match\"])\n            self.assertEqual(counts[\"attempts_reserved\"], 0)\n            self.assertEqual(counts[\"native_dispatch_calls\"], 0)\n            self.assertFalse(desktop.clicks)\n            self.assertEqual(session.cookie_relay_state[\"attempts\"], 0)\n\n    def test_pre_intent_guard_reason_is_counted_without_reserving_an_attempt(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            server, session, desktop, window, raw = self.real_fixture(Path(tmp))\n            before = session.journal_path.read_bytes()\n            with mock.patch.object(server, \"_cookie_relay_target_allowed\", return_value=False):\n                server._capture_cookie_relay_sample(session)\n            self.assertEqual(session.journal_path.read_bytes(), before)\n            metrics = server._cookie_relay_metrics(session)\n            self.assertEqual(metrics[\"pre_intent_rejections\"], {\"target_outside_guard\": 1})\n            self.assertEqual(metrics[\"visual_matches\"], 1)\n            self.assertEqual(session.cookie_relay_state[\"attempts\"], 0)\n            self.assertFalse(desktop.clicks)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_plan_upgrade.py",
+    "before_sha256": null,
+    "after_sha256": "6516cdd0dde34fbd930c633a1dde9f4bb7ed055eba470b4dbbd2077e2f04ca66",
+    "content": "\"\"\"Old Relay authority survives the move to the corrected pointer contract.\"\"\"\nfrom __future__ import annotations\n\nimport copy\nimport json\nfrom pathlib import Path\nimport queue\nimport sys\nimport tempfile\nimport unittest\nfrom unittest import mock\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport visionstudio_controller as ui\nimport visionstudio_controller_state as controller\nimport visionstudio_universal_mission as universal\n\n\nclass Variable:\n    def __init__(self, value=None): self.value = value\n    def get(self): return self.value\n    def set(self, value): self.value = value\n\n\nclass HeadlessController(ui.VisionStudioController):\n    @property\n    def control_path(self): return self.test_control_path\n    @property\n    def data_root(self): return self.test_data_root\n\n\nclass CookieRelayPlanUpgradeTests(unittest.TestCase):\n    def setUp(self):\n        self.temporary = tempfile.TemporaryDirectory()\n        self.addCleanup(self.temporary.cleanup)\n        self.path = Path(self.temporary.name) / \"controller/state.json\"\n        self.checkpoint_path = (Path(self.temporary.name) / \"checkpoints\"\n                                / f\"{ui.runtime_mission_name(universal.UNIVERSAL_MISSION_IDENTITY_PATH)}-active.json\")\n        self.checkpoint_path.parent.mkdir(parents=True)\n        self.config = {\n            \"run_profile\": {\"mode\": \"custom\", \"expected_seconds\": 120},\n            \"cookie_relay\": {\"enabled\": True},\n        }\n        state = controller.request_start(\n            self.path, mission_path=universal.UNIVERSAL_MISSION_IDENTITY_PATH,\n            requested_loops=None, run_until=None, telegram_enabled=True,\n            universal_config=self.config,\n        )\n        self.config = copy.deepcopy(state[\"universal_config\"])\n        state[\"desired_state\"] = \"stopped\"\n        state[\"worker\"].update(status=\"stopped\", pid=None)\n        state[\"universal_plan\"].update(revision=\"10\", sha256=\"a\" * 64)\n        state[\"batch_plan\"][\"universal_plan\"] = copy.deepcopy(state[\"universal_plan\"])\n        controller.write_state(self.path, state)\n        self.checkpoint = {\n            \"status\": \"blocked\", \"mission_source\": \"universal-code\",\n            \"mission_contract_sha256\": \"a\" * 64,\n            \"universal_config\": copy.deepcopy(self.config),\n            \"current_stage_id\": \"passive-running\", \"current_stage_phase\": \"entered\",\n            \"pending_action_intent\": {\"id\": \"preserve-purchase\", \"replay_policy\": \"never\"},\n            \"cookie_relay_state\": {\n                \"status\": \"pending\", \"attempts\": 1, \"intent_id\": \"preserve-relay\",\n                \"mission_sha256\": \"a\" * 64,\n            },\n        }\n        self.checkpoint_path.write_text(json.dumps(self.checkpoint) + \"\\n\")\n        self.app = self.make_app()\n\n    def make_app(self):\n        app = object.__new__(HeadlessController)\n        app.test_control_path = self.path\n        app.test_data_root = Path(self.temporary.name)\n        app.mission_var = Variable(str(universal.UNIVERSAL_MISSION_IDENTITY_PATH))\n        app._stats = lambda: ({}, json.loads(self.checkpoint_path.read_text()))\n        app._validate_ready = lambda: universal.compile_universal_mission(self.config).mission\n        app._requested_loops = lambda: None\n        app._universal_config = lambda: copy.deepcopy(self.config)\n        app._run_profile = lambda: copy.deepcopy(self.config[\"run_profile\"])\n        app._boost_config = lambda: {\"random_mode\": \"targeted\", \"random_target\": \"Double Coins\"}\n        app.telegram_enabled = Variable(True)\n        app.geometry_status = Variable()\n        app.geometry_text = Variable()\n        app._heart_conflict_for_universal = lambda: None\n        app._worker_active = lambda: False\n        app._heart_worker_active = lambda: False\n        app._launch_worker = mock.Mock()\n        app._archive_runtime_batch = mock.Mock()\n        app._retire_open_review_verification = mock.Mock()\n        app._remember_operator_resume = mock.Mock()\n        app._latest_frame_path = lambda: None\n        app._add_activity = mock.Mock()\n        return app\n\n    def assert_preserved(self, state_bytes, checkpoint_bytes):\n        self.assertEqual(self.path.read_bytes(), state_bytes)\n        self.assertEqual(self.checkpoint_path.read_bytes(), checkpoint_bytes)\n        self.app._launch_worker.assert_not_called()\n        self.app._archive_runtime_batch.assert_not_called()\n\n    def test_old_blocked_relay_start_cannot_overwrite_even_with_archive_flag(self):\n        for archive in (False, True):\n            with self.subTest(archive=archive):\n                before, checkpoint = self.path.read_bytes(), self.checkpoint_path.read_bytes()\n                result = self.app._execute_start_run(\n                    archive_resumable_checkpoint=archive,\n                    verified_geometry={\"bounds\": [10, 20, 1642, 941], \"source\": \"test\"},\n                )\n                self.assertFalse(result.ok, \"An old Relay checkpoint must not be replaced by Start\")\n                self.assertEqual(result.code, \"relay_plan_upgrade_required\")\n                self.assertIn(\"Reset Batch\", result.detail)\n                self.assert_preserved(before, checkpoint)\n\n    def test_old_relay_resume_preserves_pending_clicks_without_launch(self):\n        for remote in (False, True):\n            with self.subTest(remote=remote):\n                before, checkpoint = self.path.read_bytes(), self.checkpoint_path.read_bytes()\n                result = self.app._execute_resume_run(remote_request=remote)\n                self.assertFalse(result.ok)\n                self.assertEqual(result.code, \"relay_plan_upgrade_required\")\n                self.assert_preserved(before, checkpoint)\n\n    def test_gate_is_read_only_and_recognizes_active_stopped_or_blocked_old_authority(self):\n        state = controller.read_state(self.path)\n        before = copy.deepcopy(state), copy.deepcopy(self.checkpoint)\n        for status in (\"active\", \"stopped\", \"blocked\"):\n            checkpoint = {**self.checkpoint, \"status\": status}\n            self.assertTrue(ui.relay_plan_upgrade_required(state, checkpoint))\n        self.assertEqual((state, self.checkpoint), before)\n\n    def test_off_current_completed_and_reset_authority_need_no_upgrade_gate(self):\n        state = controller.read_state(self.path)\n        current = copy.deepcopy(state)\n        config, plan = controller.compile_universal_plan(self.config)\n        current[\"universal_plan\"] = plan\n        current[\"batch_plan\"].update(universal_config=config, universal_plan=plan)\n        checkpoint = {**self.checkpoint, \"mission_contract_sha256\": plan[\"sha256\"]}\n        self.assertFalse(ui.relay_plan_upgrade_required(current, checkpoint))\n        off = copy.deepcopy(state)\n        config, plan = controller.compile_universal_plan({\"run_profile\": {\"mode\": \"short\"}})\n        off[\"batch_plan\"].update(universal_config=config, universal_plan=plan)\n        checkpoint = {**self.checkpoint, \"universal_config\": config, \"mission_contract_sha256\": plan[\"sha256\"]}\n        self.assertEqual(plan[\"revision\"], \"9\")\n        self.assertFalse(ui.relay_plan_upgrade_required(off, checkpoint))\n        completed = copy.deepcopy(state)\n        completed[\"batch_plan\"][\"status\"] = \"completed\"\n        self.assertFalse(ui.relay_plan_upgrade_required(completed, self.checkpoint))\n        for status in (\"reset\", \"archived\", \"completed\"):\n            self.assertFalse(ui.relay_plan_upgrade_required(state, {\"status\": status}))\n\n    def test_old_gate_requires_the_same_frozen_checkpoint_and_plan(self):\n        state = controller.read_state(self.path)\n        for patch in (\n            {\"mission_source\": \"other\"},\n            {\"mission_contract_sha256\": \"b\" * 64},\n            {\"universal_config\": {}},\n        ):\n            self.assertFalse(ui.relay_plan_upgrade_required(state, {**self.checkpoint, **patch}))\n\n    def test_automatic_launch_and_continuation_preserve_all_authority(self):\n        before, checkpoint = self.path.read_bytes(), self.checkpoint_path.read_bytes()\n        with mock.patch.object(ui.subprocess, \"Popen\") as popen:\n            ui.VisionStudioController._launch_worker(self.app, resume=True, worker_mode=\"local\")\n            self.app.worker_continuation_queue = queue.Queue()\n            self.app.worker_continuation_queue.put((True, None))\n            self.app.next_worker_mode = \"local\"\n            self.app._drain_worker_continuations()\n            self.app._begin_stalled_auto_recovery(controller.read_state(self.path))\n        popen.assert_not_called()\n        self.assertIsNone(self.app.next_worker_mode)\n        self.assert_preserved(before, checkpoint)\n\n    def test_blocked_registration_does_not_create_phantom_old_plan_recovery(self):\n        state = controller.patch_state(self.path, desired_state=\"blocked\", worker={\"status\": \"blocked\", \"pid\": None})\n        self.app.worker_continuation_queue = queue.Queue()\n        self.app._enqueue_worker_ui_log = mock.Mock()\n        before, checkpoint = self.path.read_bytes(), self.checkpoint_path.read_bytes()\n        registered = self.app._register_blocked_review(state, {}, self.checkpoint)\n        self.assertEqual(registered[\"desired_state\"], \"blocked\")\n        self.assertFalse(registered[\"worker\"].get(\"recovery_next_at\"))\n        self.assertTrue(self.app.worker_continuation_queue.empty())\n        self.app._enqueue_worker_ui_log.assert_not_called()\n        self.assert_preserved(before, checkpoint)\n\n    def test_telegram_disables_run_resume_but_keeps_stop_reset_and_reads(self):\n        before, checkpoint = self.path.read_bytes(), self.checkpoint_path.read_bytes()\n        snapshot = self.app.telegram_control_snapshot()\n        self.assertFalse(snapshot[\"actions\"][\"run\"])\n        self.assertFalse(snapshot[\"actions\"][\"resume\"])\n        self.assertTrue(snapshot[\"actions\"][\"reset\"])\n        for action in (\"status\", \"summary\", \"log\"):\n            self.assertTrue(snapshot[\"actions\"][action])\n        self.assertIn(\"Reset Batch\", snapshot[\"controller\"][\"last_event\"])\n        self.assertEqual(snapshot[\"binding\"][\"universal_plan\"][\"revision\"], \"10\")\n        self.assertTrue(snapshot[\"binding\"][\"relay_plan_upgrade_required\"])\n        self.assert_preserved(before, checkpoint)\n\n    def test_old_checkpoint_keeps_heart_exclusion_and_reset_guidance(self):\n        self.assertIn(\"Reset Batch\", self.app._universal_conflict_for_heart())\n        state = controller.read_state(self.path)\n        status, detail = ui.blocked_recovery_status(state, self.checkpoint)\n        self.assertEqual(status, \"RESET REQUIRED\")\n        self.assertIn(\"Reset Batch\", detail)\n        state[\"desired_state\"] = \"human_verification\"\n        status, _detail = ui.blocked_recovery_status(state, self.checkpoint)\n        self.assertEqual(status, \"HUMAN CHECK\")\n\n    def test_explicit_reset_archives_exact_pending_checkpoint_then_allows_new_plan(self):\n        saved = controller.save_run_profile_preset(self.path, name=\"ฟาร์ม EXP\", expected_seconds=120)\n        original = self.checkpoint_path.read_bytes()\n        self.app.worker_generation = 1\n        self.app.refresh = mock.Mock()\n        self.app._archive_runtime_batch = lambda: ui.VisionStudioController._archive_runtime_batch(self.app)\n        result = self.app._execute_reset_batch()\n        self.assertTrue(result.ok, result.detail)\n        archives = list((Path(self.temporary.name) / \"controller/archive\").glob(\"*-checkpoint-*.json\"))\n        self.assertEqual(len(archives), 1)\n        self.assertEqual(archives[0].read_bytes(), original)\n        tombstone = json.loads(self.checkpoint_path.read_text())\n        self.assertEqual(tombstone[\"status\"], \"reset\")\n        self.assertIsNone(tombstone.get(\"pending_action_intent\"))\n        reset = controller.read_state(self.path)\n        self.assertEqual(reset[\"run_profile_presets\"], saved[\"run_profile_presets\"])\n        self.assertIsNone(reset[\"batch_plan\"])\n        result = self.app._execute_start_run(\n            archive_resumable_checkpoint=False,\n            verified_geometry={\"bounds\": [10, 20, 1642, 941], \"source\": \"test\"},\n        )\n        self.assertTrue(result.ok, result.detail)\n        fresh = controller.read_state(self.path)\n        self.assertEqual(fresh[\"batch_plan\"][\"universal_plan\"][\"revision\"], \"11\")\n        self.assertEqual(archives[0].read_bytes(), original)\n        self.app._launch_worker.assert_called_once_with(resume=False)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_recovery_identity.py",
+    "before_sha256": "911691fb297498a78e9c9493be5f1b1e0c37cd55da7c7251259d017aee622171",
+    "after_sha256": "9095ea8de1e026409d41b94619c7b4d13a07fa968323946f02f7fb86802ff182",
+    "edits": [
+      {
+        "start": 24,
+        "end": 25,
+        "before": "    identity = {\"mission_id\": \"universal-loop\", \"revision\": \"10\", \"sha256\": compiled.plan_hash}\n",
+        "after": "    identity = {\"mission_id\": \"universal-loop\", \"revision\": \"11\", \"sha256\": compiled.plan_hash}\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_runtime.py",
+    "before_sha256": "1d55800c67f3cc7318a383afa72e3b839e8f1e8866a4b0643a39fce1b4000224",
+    "after_sha256": "ece49bfe23e60ea545bb5465b224d266198dcb0c7ffc64b65af4a700797f29dd",
+    "edits": [
+      {
+        "start": 67,
+        "end": 68,
+        "before": "        identity = dict(mission_id=\"universal-loop\", revision=\"10\" if enabled else \"9\", sha256=compiled.plan_hash)\n",
+        "after": "        identity = dict(mission_id=\"universal-loop\", revision=bridge.universal_mission_module.UNIVERSAL_RELAY_MISSION_REVISION if enabled else \"9\", sha256=compiled.plan_hash)\n"
+      },
+      {
+        "start": 390,
+        "end": 391,
+        "before": "            self.assertEqual(requested[\"batch_plan\"][\"universal_plan\"][\"revision\"],\"10\")\n",
+        "after": "            self.assertEqual(requested[\"batch_plan\"][\"universal_plan\"][\"revision\"],bridge.universal_mission_module.UNIVERSAL_RELAY_MISSION_REVISION)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_heart_runner.py",
+    "before_sha256": "8f8ff01625bfa4274966dece1cc2ccaa86f97eaf5ea3bb2d488092733306115f",
+    "after_sha256": "e4433e30bea5867b43eb494c7786c624e43450a2086c996f791894080342e163",
+    "edits": [
+      {
+        "start": 536,
+        "end": 537,
+        "before": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.17\")\n",
+        "after": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.18\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_local_runner.py",
+    "before_sha256": "bf991db990bbb34f0ce35ec42c056f487179d49626434459d824999deea4d45c",
+    "after_sha256": "f2cc719fc41d7043b065276754584811ccfdacef30d00893ce95cbdb357d5799",
+    "edits": [
+      {
+        "start": 103,
+        "end": 104,
+        "before": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.17\")\n",
+        "after": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.18\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_run_profile_presets.py",
+    "before_sha256": "591d8549083932a277e55e801857078409692032b578a71de0a4f78dd2216923",
+    "after_sha256": "fcdf6978c0e69aebb4a3c5452de863a15b3fb688281dacc68b22a0ba9ab667c0",
+    "edits": [
+      {
+        "start": 151,
+        "end": 152,
+        "before": "        self.assertEqual(saved[\"universal_plan\"][\"revision\"], \"10\")\n",
+        "after": "        self.assertEqual(saved[\"universal_plan\"][\"revision\"], \"11\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_runtime_version.py",
+    "before_sha256": "b897d2900d755fc3e5cc39e00149b37a677f7871a7b694a5fd49dcf017d9c875",
+    "after_sha256": "77ba8af8c55e6b105ff750470e1cca1651b337257438c8f0d664f5c347f87b26",
+    "edits": [
+      {
+        "start": 22,
+        "end": 25,
+        "before": "    plugin_version: str = \"0.18.17+codex.20261023.run-profile-presets\",\n    controller_version: str = \"0.18.17\",\n    bridge_server_version: str = \"0.18.17-run-profile-presets-303\",\n",
+        "after": "    plugin_version: str = \"0.18.18+codex.20261023.relay-response\",\n    controller_version: str = \"0.18.18\",\n    bridge_server_version: str = \"0.18.18-relay-response-304\",\n"
+      },
+      {
+        "start": 40,
+        "end": 41,
+        "before": "            'PRODUCT_VERSION = \"0.18.17\"\\n'\n",
+        "after": "            'PRODUCT_VERSION = \"0.18.18\"\\n'\n"
+      },
+      {
+        "start": 43,
+        "end": 44,
+        "before": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.17\"\\n',\n",
+        "after": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.18\"\\n',\n"
+      },
+      {
+        "start": 46,
+        "end": 47,
+        "before": "            'UNIVERSAL_RELAY_MISSION_REVISION = \"10\"\\n'\n",
+        "after": "            'UNIVERSAL_RELAY_MISSION_REVISION = \"11\"\\n'\n"
+      },
+      {
+        "start": 49,
+        "end": 50,
+        "before": "            'HEART_RUNNER_VERSION = \"0.18.17\"\\n'\n",
+        "after": "            'HEART_RUNNER_VERSION = \"0.18.18\"\\n'\n"
+      },
+      {
+        "start": 62,
+        "end": 64,
+        "before": "    (root / \"scripts/visionstudio_cookie_relay.py\").write_text('DETECTOR_VERSION = \"cookie-relay-visual-1\"\\n')\n    (root / \"scripts/data/cookie-relay-signatures.json\").write_text(json.dumps({\"schema_version\": 1, \"detector_version\": \"cookie-relay-visual-1\"}))\n",
+        "after": "    (root / \"scripts/visionstudio_cookie_relay.py\").write_text('DETECTOR_VERSION = \"cookie-relay-visual-2\"\\n')\n    (root / \"scripts/visionstudio_cookie_relay_freshness.py\").write_text('# required Relay runtime fixture\\n')\n    (root / \"scripts/data/cookie-relay-signatures.json\").write_text(json.dumps({\"schema_version\": 1, \"detector_version\": \"cookie-relay-visual-2\"}))\n"
+      },
+      {
+        "start": 75,
+        "end": 76,
+        "before": "            \"0.18.17+codex.20261023.run-profile-presets\",\n",
+        "after": "            \"0.18.18+codex.20261023.relay-response\",\n"
+      },
+      {
+        "start": 83,
+        "end": 84,
+        "before": "                \"plugin\": \"0.18.17\",\n",
+        "after": "                \"plugin\": \"0.18.18\",\n"
+      },
+      {
+        "start": 85,
+        "end": 86,
+        "before": "                    \"0.18.17+codex.20261023.run-profile-presets\"\n",
+        "after": "                    \"0.18.18+codex.20261023.relay-response\"\n"
+      },
+      {
+        "start": 87,
+        "end": 91,
+        "before": "                \"controller\": \"0.18.17\",\n                \"bridge\": \"0.18.17\",\n                \"bridge_server\": \"0.18.17-run-profile-presets-303\",\n                \"local_runner\": \"0.18.17\",\n",
+        "after": "                \"controller\": \"0.18.18\",\n                \"bridge\": \"0.18.18\",\n                \"bridge_server\": \"0.18.18-relay-response-304\",\n                \"local_runner\": \"0.18.18\",\n"
+      },
+      {
+        "start": 92,
+        "end": 94,
+        "before": "                \"relay_revision\": \"10\",\n                \"heart_sender\": \"0.18.17\",\n",
+        "after": "                \"relay_revision\": \"11\",\n                \"heart_sender\": \"0.18.18\",\n"
+      },
+      {
+        "start": 107,
+        "end": 108,
+        "before": "            [\"controller=0.10.27 (expected 0.18.17)\"],\n",
+        "after": "            [\"controller=0.10.27 (expected 0.18.18)\"],\n"
+      },
+      {
+        "start": 117,
+        "end": 118,
+        "before": "                plugin_version=\"0.18.17+codex.wrong-build\",\n",
+        "after": "                plugin_version=\"0.18.18+codex.wrong-build\",\n"
+      },
+      {
+        "start": 128,
+        "end": 130,
+        "before": "                \"plugin_manifest=0.18.17+codex.wrong-build \"\n                \"(expected 0.18.17+codex.20261023.run-profile-presets)\",\n",
+        "after": "                \"plugin_manifest=0.18.18+codex.wrong-build \"\n                \"(expected 0.18.18+codex.20261023.relay-response)\",\n"
+      },
+      {
+        "start": 131,
+        "end": 132,
+        "before": "                \"(expected 0.18.17-run-profile-presets-303)\",\n",
+        "after": "                \"(expected 0.18.18-relay-response-304)\",\n"
+      },
+      {
+        "start": 167,
+        "end": 167,
+        "before": "",
+        "after": "    def test_old_matching_detector_and_signature_pair_is_rejected(self):\n        with tempfile.TemporaryDirectory() as temp_dir:\n            root = Path(temp_dir)\n            write_runtime_fixture(root)\n            (root / \"scripts/visionstudio_cookie_relay.py\").write_text('DETECTOR_VERSION = \"cookie-relay-visual-1\"\\n')\n            (root / \"scripts/data/cookie-relay-signatures.json\").write_text(json.dumps({\"schema_version\": 1, \"detector_version\": \"cookie-relay-visual-1\"}))\n            self.assertEqual(versions.verify(root), [\"cookie_relay_signatures=invalid or mixed detector version\"])\n\n"
+      },
+      {
+        "start": 171,
+        "end": 172,
+        "before": "        self.assertIn(\"Axiom Vision v0.18.17 Setup\", text)\n",
+        "after": "        self.assertIn(\"Axiom Vision v0.18.18 Setup\", text)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/update-package-files.json",
+    "before_sha256": "19907fe069942fbcc85e7b907193a11eb519c80906e8b538d14749da43af8c67",
+    "after_sha256": "ada279f70f5f367610798b9ea5dc3ed451c937af2e4d284974e7e40d57bf59b7",
+    "edits": [
+      {
+        "start": 22,
+        "end": 22,
+        "before": "",
+        "after": "  \"visionstudio/RELEASE_v0.18.18_TH.md\",\n"
+      },
+      {
+        "start": 65,
+        "end": 65,
+        "before": "",
+        "after": "  \"visionstudio/scripts/visionstudio_cookie_relay_freshness.py\",\n"
+      },
+      {
+        "start": 101,
+        "end": 101,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_cookie_relay_capture_variants.py\",\n"
+      },
+      {
+        "start": 102,
+        "end": 102,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_cookie_relay_freshness.py\",\n"
+      },
+      {
+        "start": 103,
+        "end": 103,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_cookie_relay_hot_path.py\",\n  \"visionstudio/tests/test_cookie_relay_plan_upgrade.py\",\n"
+      }
+    ]
+  }
+]
