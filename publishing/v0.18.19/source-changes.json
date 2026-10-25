@@ -1,0 +1,613 @@
+[
+  {
+    "path": "RUN-SETUP-WINDOWS.bat",
+    "before_sha256": "a6d6988167f3939fa3bf0c65638b5db3e7a8b8af2e86f62347050b618de146da",
+    "after_sha256": "2871c08b92913e4373fabd330977ef9c08a3e7de89147bf0bcccf855b73deae3",
+    "edits": [
+      {
+        "start": 12,
+        "end": 13,
+        "before": "echo Axiom Vision v0.18.18 Setup\n",
+        "after": "echo Axiom Vision v0.18.19 Setup\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/.codex-plugin/plugin.json",
+    "before_sha256": "2d7ec83447872470f6700a156772c2703130184f154c03e543828c7b177d2788",
+    "after_sha256": "d1b50cf0688757ce2ed3113f35b528f1785f0199e41582e62c487c3c2fef1133",
+    "edits": [
+      {
+        "start": 2,
+        "end": 3,
+        "before": "  \"version\": \"0.18.18+codex.20261023.relay-response\",\n",
+        "after": "  \"version\": \"0.18.19+codex.20261025.relay-direct\",\n"
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "before": "    \"longDescription\": \"Axiom Vision v0.18.18 adds optional Cookie Relay below Random Boost. Short, Normal and Custom profiles schedule fast local visual watch for one guarded second-runner activation. AUTO disables Relay. Frozen plans, durable never-replay Relay intent, Human Verification and input guards remain enforced. Runtime item/treasure reading remains disabled.\",\n",
+        "after": "    \"longDescription\": \"Axiom Vision v0.18.19 adds optional Cookie Relay below Random Boost. Short, Normal and Custom profiles schedule fast local visual watch for one guarded second-runner activation. AUTO disables Relay. Frozen plans, durable never-replay Relay intent, Human Verification and input guards remain enforced. Runtime item/treasure reading remains disabled.\",\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/AGENTS.md",
+    "before_sha256": "86568f5bda9ebae9aab951eca9e19bef59cfa229286fbef2f328d562c6a0a079",
+    "after_sha256": "4943d7c344c703ab849533c63da1194e575467b4e91448f423e842686f1a0c81",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.19 direct local Relay pixel path\n\nThe private Relay path may consume immutable native RGB captures directly.\nThis optimizes representation and capture lifetime only. Mission source,\nvisual-2 calibration, thresholds, target regions and revisions 9/OFF and 11/ON\nremain exact. A profile time or keyboard guess never creates Relay authority.\nDo not silently enable OFF or rewrite a frozen batch when changing engines.\n\nRaw frames bind owned RGB bytes, size, capture-start monotonic time, HWND and\nexact bounds. Their domain-separated raw-rgb-v1 digest is not a PNG digest;\ntag ledger/journal hashes with their encoding. Never pass mutable PIL images\nor a caller-created frame through MCP as input authority. Human evidence may\nserialize an exact PNG for its durable pause; the click decision uses raw data.\n\nKeep stable candidate/preflight evidence, durable intent, a separate final\nfresh dispatch witness, once-only never-replay state, Stop/Pause/Human,\nController/Plan, foreground/geometry and watchdog/input-mutex ordering.\nThe 0.5-second witness limit starts before native capture and is unchanged.\nLegacy PNG pending/committed ledgers remain consumed after restore.\n\nOwn persistent MSS resources on the monitor thread and close them there in\nfinally. A present raw adapter that fails is a typed input block, never blind\ninput or silent stale-frame fallback. The PNG adapter remains for backends\nwithout raw capture; current Windows Relay prefers raw. Public stage samples\nremain PNG and negative raw scans do not publish new observation authority.\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/README_TH.md",
+    "before_sha256": "85bb64cf5f511114939bd0906edc7678759ee3f22ee93852f049362276772a9a",
+    "after_sha256": "9fef238b6b1a4c7e07761e50a2720e6707be79601f3621a42a6b9e50c49f850b",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.19 — Relay Direct\n\nเส้นกด Relay อ่าน RGB จากหน้าจอโดยตรง ลดการแปลง PNG และการอ่านภาพซ้ำ\nใช้ตัวตรวจปุ่ม Human Guard และเกณฑ์ภาพสดเดิม ไม่มี Codex/OCR ทั้งภาพในเส้นกด\nแผน v0.18.18 คงเดิม: Relay OFF revision 9, ON revision 11\nเลือก Preset เวลาแล้วต้องเปิด COOKIE RELAY → ON ก่อน Start แบตช์ใหม่\nรายละเอียด: RELEASE_v0.18.19_TH.md\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/RELEASE_v0.18.19_TH.md",
+    "before_sha256": null,
+    "after_sha256": "b8a4646dce1f9718cf7ed34b3f888c519c4ba5c7b0baae7764045c30b135493c",
+    "content": "# Axiom Vision v0.18.19 — Relay Direct\n\nเปลี่ยนเส้นกด Cookie Relay เป็นตัวตอบสนองในเครื่องที่อ่านพิกเซลจากหน้าจอโดยตรง\nไม่สร้าง PNG แล้วถอดภาพซ้ำในช่วงตัดสินใจกด ไม่รอ Codex หรือ OCR ทั้งภาพ\n\n- ใช้ MSS capture context เดิมตลอดช่วงเฝ้า และคืนทรัพยากรบน thread เจ้าของเมื่อจบ\n- เก็บ RGB เป็นข้อมูลที่เปลี่ยนไม่ได้ พร้อมเวลาเริ่มจับภาพ HWND และ Geometry\n- ใช้ตัวตรวจ Relay visual-2 และ Human Verification เดิมกับพิกเซลโดยตรง\n- ตรวจความสดเฉพาะปุ่มจาก RGB โดยใช้วิธีและเกณฑ์เดิม\n- ยังคงภาพเสถียรก่อน intent และภาพสดอีกชุดก่อนส่งคลิก\n  อายุภาพเริ่มนับก่อนจับภาพและต้องไม่เกิน 0.5 วินาที\n- เก็บชนิดข้อมูลและ hash ให้ชัดว่าเป็น raw RGB หรือ PNG และไม่กดซ้ำหลังผลไม่แน่ชัด\n\nเกณฑ์ภาพ ขอบเขตปุ่ม สิทธิ์ input และ Plan ไม่เปลี่ยนจาก v0.18.18\nRelay OFF ใช้ revision 9; Relay ON ใช้ revision 11 ตามเดิม\nแบตช์ Relay revision 10 ที่เก่ากว่ายังต้อง Stop และ Reset ตามกฎเดิม\nการอัปเดตไม่เปลี่ยนแบตช์ OFF ให้เป็น ON และไม่แก้แผนที่กำลังรัน\n\nวิธีเปิดใช้งาน\n\n1. ถ้าแบตช์ปัจจุบันเป็น Relay OFF ให้ Stop รอ worker หยุด แล้ว Reset Batch\n2. อัปเดตที่ Settings → CHECK UPDATE และเปิด Controller ใหม่หลังติดตั้ง\n3. เลือก Short / Normal / Custom หรือ Preset เวลา แล้วเลือก COOKIE RELAY → ON\n4. ตรวจข้อความ Relay: On ในแผนก่อนกด START BATCH\n\nAUTO ยังใช้ Relay ไม่ได้ Preset บันทึกเฉพาะเวลา ไม่เปิด Relay ให้อัตโนมัติ\nPreset และประวัติเดิมยังอยู่ ข้อความหน้า UI แยก OFF และ ON ให้ชัดขึ้น\n\nLog วันที่ 25 ตุลาคมที่ผู้ใช้ส่งเป็น Relay OFF จึงไม่มีข้อมูล latency ของ Relay ที่เปิดใช้งาน\nการทดสอบรุ่นนี้เทียบกับโค้ด v0.18.18 และภาพต้นฉบับ พร้อมเส้นตรวจจริงในเครื่องทดสอบ\nยังไม่ได้ยืนยัน native screen grab, การรับคลิก หรือเวลาจริงบน Windows/LDPlayer ของผู้ใช้\n"
+  },
+  {
+    "path": "visionstudio/scripts/setup-windows.ps1",
+    "before_sha256": "ddae5a41fd1b846a745d03e4b0cfeb9ba1ba1e010e2cbef5d08137e2a0cfe24d",
+    "after_sha256": "32aa17cc8b2ed6ee8ba925ad86148004c9bd0cd11697548ca0a246c9e63fcc17",
+    "edits": [
+      {
+        "start": 90,
+        "end": 91,
+        "before": "Write-Host \"Axiom Vision v0.18.18 Relay Response is ready.\" -ForegroundColor Green\n",
+        "after": "Write-Host \"Axiom Vision v0.18.19 Relay Direct is ready.\" -ForegroundColor Green\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/verify_runtime_version.py",
+    "before_sha256": "e08b298e19ffd29ffff53659cc39e1b48f7562db8803fdaef014cb0e14fc747c",
+    "after_sha256": "ecc152c98bb850b733aaa208186f0699dbd459cdd09fe1f7ff064b9f9901c2ff",
+    "edits": [
+      {
+        "start": 9,
+        "end": 12,
+        "before": "EXPECTED_VERSION = \"0.18.18\"\nEXPECTED_PLUGIN_VERSION = \"0.18.18+codex.20261023.relay-response\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.18-relay-response-304\"\n",
+        "after": "EXPECTED_VERSION = \"0.18.19\"\nEXPECTED_PLUGIN_VERSION = \"0.18.19+codex.20261025.relay-direct\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.19-relay-direct-305\"\n"
+      },
+      {
+        "start": 17,
+        "end": 17,
+        "before": "",
+        "after": "    \"visionstudio_cookie_relay_frame.py\",\n"
+      },
+      {
+        "start": 130,
+        "end": 130,
+        "before": "",
+        "after": "        raw_api = _source_constant(root / \"scripts/visionstudio_cookie_relay.py\", \"RAW_RELAY_API_VERSION\")\n        frame_api = _source_constant(root / \"scripts/visionstudio_cookie_relay_frame.py\", \"RAW_RELAY_FRAME_VERSION\")\n        if raw_api != \"1\" or frame_api != \"1\":\n            mismatches.append(\"cookie_relay_raw_api=missing or mixed raw frame API\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_bridge.py",
+    "before_sha256": "178de080a6eeac3dbf2f7ad3c7dcfa9d803855fd09fa3508028b5fa9bad50372",
+    "after_sha256": "e4b9b7265bade74d8bdc20084c22789b05e295e6225659e864537d42d1cb36f3",
+    "edits": [
+      {
+        "start": 72,
+        "end": 74,
+        "before": "SERVER_VERSION = \"0.18.18-relay-response-304\"\nPRODUCT_VERSION = \"0.18.18\"\n",
+        "after": "SERVER_VERSION = \"0.18.19-relay-direct-305\"\nPRODUCT_VERSION = \"0.18.19\"\n"
+      },
+      {
+        "start": 1928,
+        "end": 1930,
+        "before": "def detect_human_verification_frame(png: bytes) -> dict[str, Any]:\n    \"\"\"Detect the known jumping/sliding-card verification before any input.\"\"\"\n",
+        "after": "def _detect_human_verification_image(source: Any) -> dict[str, Any]:\n    \"\"\"Run the same Human signature against already-decoded exact pixels.\"\"\"\n"
+      },
+      {
+        "start": 1933,
+        "end": 1936,
+        "before": "        with Image.open(io.BytesIO(png)) as source:\n            source.load()\n            image = source.convert(\"RGB\")\n",
+        "after": "        image = source.convert(\"RGB\")\n"
+      },
+      {
+        "start": 1973,
+        "end": 1973,
+        "before": "",
+        "after": "\n\ndef detect_human_verification_frame(png: bytes) -> dict[str, Any]:\n    \"\"\"Detect the known jumping/sliding-card verification before any input.\"\"\"\n    try:\n        from PIL import Image\n\n        with Image.open(io.BytesIO(png)) as source:\n            source.load()\n            return _detect_human_verification_image(source)\n    except (ImportError, OSError, ValueError):\n        return {\"matched\": False, \"distance\": None,\n                \"match_limit\": HUMAN_VERIFICATION_MATCH_LIMIT,\n                \"detector\": \"known-card-verification-signature-v1\",\n                \"error\": \"verification detector unavailable\"}\n"
+      },
+      {
+        "start": 2393,
+        "end": 2393,
+        "before": "",
+        "after": "        self._relay_capture_local = threading.local()\n"
+      },
+      {
+        "start": 2689,
+        "end": 2689,
+        "before": "",
+        "after": "\n    def capture_relay_frame(self, window: WindowInfo) -> Any:\n        \"\"\"Capture exact RGB pixels without a PNG codec on the Relay thread.\"\"\"\n        try:\n            import mss\n            from visionstudio_cookie_relay_frame import RawRelayFrame\n\n            local = getattr(self, \"_relay_capture_local\", None)\n            if local is None:\n                local = threading.local()\n                self._relay_capture_local = local\n            capture = getattr(local, \"capture\", None)\n            if capture is None:\n                capture = mss.mss()\n                local.capture = capture\n            captured_at = time.monotonic()\n            image = capture.grab({\"left\": window.left, \"top\": window.top,\n                \"width\": window.width, \"height\": window.height})\n            return RawRelayFrame.from_bgra(image.size, image.bgra,\n                captured_at=captured_at, hwnd=window.hwnd,\n                bounds=(window.left, window.top, window.width, window.height))\n        except Exception as exc:\n            self.close_relay_capture()\n            raise BridgeError(f\"Direct Relay capture failed: {type(exc).__name__}\") from exc\n\n    def close_relay_capture(self) -> None:\n        \"\"\"Release only this thread's MSS handle after its monitor has stopped.\"\"\"\n        local = getattr(self, \"_relay_capture_local\", None)\n        capture = getattr(local, \"capture\", None) if local is not None else None\n        if capture is not None:\n            del local.capture\n            try:\n                capture.close()\n            except Exception:\n                pass\n"
+      },
+      {
+        "start": 13256,
+        "end": 13259,
+        "before": "    def _detect_cookie_relay(image: bytes) -> Any:\n        from visionstudio_cookie_relay import detect_cookie_relay\n        return detect_cookie_relay(image)\n",
+        "after": "    def _cookie_relay_raw_frame(image: Any) -> bool:\n        from visionstudio_cookie_relay_frame import RawRelayFrame\n        return isinstance(image, RawRelayFrame)\n"
+      },
+      {
+        "start": 13260,
+        "end": 13261,
+        "before": "    def _cookie_relay_human_guard(self, session: BridgeSession, window: WindowInfo, image: bytes) -> bool:\n",
+        "after": "    @staticmethod\n    def _cookie_relay_frame_hash(image: Any) -> str:\n        return image.frame_sha256 if BridgeServer._cookie_relay_raw_frame(image) else sha256_bytes(image)\n\n    @staticmethod\n    def _cookie_relay_frame_encoding(image: Any) -> str:\n        return image.encoding if BridgeServer._cookie_relay_raw_frame(image) else \"png\"\n\n    @staticmethod\n    def _detect_cookie_relay(image: Any) -> Any:\n        from visionstudio_cookie_relay import detect_cookie_relay, detect_cookie_relay_frame\n        return detect_cookie_relay_frame(image) if BridgeServer._cookie_relay_raw_frame(image) else detect_cookie_relay(image)\n\n    def _capture_cookie_relay_frame(self, window: WindowInfo) -> tuple[Any, dict[str, Any]]:\n        \"\"\"Prefer raw RGB; a present but failed raw adapter never falls back.\"\"\"\n        capture = getattr(self._desktop(), \"capture_relay_frame\", None)\n        if not callable(capture):\n            # Old adapters remain supported without changing their authority.\n            return self._capture_reliable_png(window)\n        from visionstudio_cookie_relay_frame import frame_is_near_black\n        try:\n            frame = capture(window)\n            if (not self._cookie_relay_raw_frame(frame)\n                    or frame.hwnd != window.hwnd\n                    or frame.bounds != (window.left, window.top, window.width, window.height)\n                    or frame.size != (window.width, window.height)\n                    or frame.captured_at > time.monotonic()):\n                raise BridgeError(\"Direct Relay capture does not match the pinned window\")\n            black = frame_is_near_black(frame, level=CAPTURE_NEAR_BLACK_LEVEL, ratio=CAPTURE_NEAR_BLACK_RATIO)\n            return frame, {\"status\": \"confirmed_black\" if black else \"healthy\",\n                \"method\": \"direct_raw_rgb\", \"capture_attempts\": 1,\n                \"black_frames\": int(black), \"confirmed_black\": black,\n                \"frame_encoding\": frame.encoding}\n        except BridgeError:\n            raise\n        except Exception as exc:\n            raise BridgeError(f\"Direct Relay capture is unavailable: {type(exc).__name__}\") from exc\n\n    @staticmethod\n    def _cookie_relay_capture_started(image: Any, default: float) -> float:\n        return image.captured_at if BridgeServer._cookie_relay_raw_frame(image) else default\n\n    @staticmethod\n    def _cookie_relay_freshness(reference: Any, current: Any, region: tuple[int, int, int, int]) -> dict[str, Any]:\n        if BridgeServer._cookie_relay_raw_frame(reference) and BridgeServer._cookie_relay_raw_frame(current):\n            from visionstudio_cookie_relay_frame import compare_raw_relay_freshness\n            return compare_raw_relay_freshness(reference, current, region,\n                thumbnail_size=FRESHNESS_THUMBNAIL_SIZE, pixel_delta=FRESHNESS_PIXEL_DELTA)\n        from visionstudio_cookie_relay_freshness import compare_cookie_relay_freshness\n        if BridgeServer._cookie_relay_raw_frame(reference) or BridgeServer._cookie_relay_raw_frame(current):\n            return {\"dimensions_match\": False, \"region_mean_delta\": None}\n        return compare_cookie_relay_freshness(reference, current, region,\n            thumbnail_size=FRESHNESS_THUMBNAIL_SIZE, pixel_delta=FRESHNESS_PIXEL_DELTA)\n\n    def _cookie_relay_human_guard(self, session: BridgeSession, window: WindowInfo, image: Any) -> bool:\n"
+      },
+      {
+        "start": 13269,
+        "end": 13270,
+        "before": "        detector = detect_human_verification_frame(image)\n",
+        "after": "        detector = (_detect_human_verification_image(image.image())\n                    if self._cookie_relay_raw_frame(image) else detect_human_verification_frame(image))\n"
+      },
+      {
+        "start": 13277,
+        "end": 13278,
+        "before": "            _cookie_relay_frame=image)\n",
+        "after": "            _cookie_relay_frame=image.to_png() if self._cookie_relay_raw_frame(image) else image)\n"
+      },
+      {
+        "start": 13390,
+        "end": 13391,
+        "before": "                          image: bytes, captured_at: float) -> bool:\n",
+        "after": "                          image: Any, captured_at: float) -> bool:\n"
+      },
+      {
+        "start": 13392,
+        "end": 13392,
+        "before": "",
+        "after": "        captured_at = self._cookie_relay_capture_started(image, captured_at)\n        if self._cookie_relay_raw_frame(image) and (\n                image.hwnd != window.hwnd\n                or image.bounds != (window.left, window.top, window.width, window.height)\n                or image.size != (window.width, window.height)\n                or captured_at > time.monotonic()):\n            return self._cookie_relay_pre_intent_rejected(session, \"raw_frame_binding\", captured_at)\n"
+      },
+      {
+        "start": 13420,
+        "end": 13421,
+        "before": "            if bounds != session.fixed_geometry_bounds or proof.frame_sha256 != sha256_bytes(image):\n",
+        "after": "            if bounds != session.fixed_geometry_bounds or proof.frame_sha256 != self._cookie_relay_frame_hash(image):\n"
+      },
+      {
+        "start": 13428,
+        "end": 13429,
+        "before": "            preflight_image, preflight_health = self._capture_reliable_png(preflight_window)\n",
+        "after": "            preflight_image, preflight_health = self._capture_cookie_relay_frame(preflight_window)\n            preflight_at = self._cookie_relay_capture_started(preflight_image, preflight_at)\n            preflight_human = self._cookie_relay_human_guard(session, preflight_window, preflight_image)\n"
+      },
+      {
+        "start": 13430,
+        "end": 13432,
+        "before": "                    or preflight_health.get(\"confirmed_black\")\n                    or self._cookie_relay_human_guard(session, preflight_window, preflight_image)):\n",
+        "after": "                    or preflight_health.get(\"confirmed_black\") or preflight_human):\n"
+      },
+      {
+        "start": 13435,
+        "end": 13436,
+        "before": "                    or preflight.frame_sha256 != sha256_bytes(preflight_image)\n",
+        "after": "                    or preflight.frame_sha256 != self._cookie_relay_frame_hash(preflight_image)\n"
+      },
+      {
+        "start": 13450,
+        "end": 13450,
+        "before": "",
+        "after": "                \"frame_encoding\": self._cookie_relay_frame_encoding(image),\n"
+      },
+      {
+        "start": 13472,
+        "end": 13473,
+        "before": "                dispatch_image, health = self._capture_reliable_png(dispatch_window)\n",
+        "after": "                dispatch_image, health = self._capture_cookie_relay_frame(dispatch_window)\n                dispatch_at = self._cookie_relay_capture_started(dispatch_image, dispatch_at)\n                dispatch_human = self._cookie_relay_human_guard(session, dispatch_window, dispatch_image)\n"
+      },
+      {
+        "start": 13475,
+        "end": 13476,
+        "before": "                if health.get(\"confirmed_black\") or self._cookie_relay_human_guard(session, dispatch_window, dispatch_image):\n",
+        "after": "                if health.get(\"confirmed_black\") or dispatch_human:\n"
+      },
+      {
+        "start": 13479,
+        "end": 13480,
+        "before": "                        or final.frame_sha256 != sha256_bytes(dispatch_image)\n",
+        "after": "                        or final.frame_sha256 != self._cookie_relay_frame_hash(dispatch_image)\n"
+      },
+      {
+        "start": 13485,
+        "end": 13488,
+        "before": "                from visionstudio_cookie_relay_freshness import compare_cookie_relay_freshness\n                freshness = compare_cookie_relay_freshness(image, dispatch_image, tuple(final.target_bounds),\n                    thumbnail_size=FRESHNESS_THUMBNAIL_SIZE, pixel_delta=FRESHNESS_PIXEL_DELTA)\n",
+        "after": "                freshness = self._cookie_relay_freshness(image, dispatch_image, tuple(final.target_bounds))\n"
+      },
+      {
+        "start": 13532,
+        "end": 13532,
+        "before": "",
+        "after": "                    \"dispatch_frame_encoding\": self._cookie_relay_frame_encoding(dispatch_image),\n"
+      },
+      {
+        "start": 13541,
+        "end": 13541,
+        "before": "",
+        "after": "                    \"before_frame_encoding\": self._cookie_relay_frame_encoding(image),\n                    \"dispatch_frame_encoding\": self._cookie_relay_frame_encoding(dispatch_image),\n"
+      },
+      {
+        "start": 13550,
+        "end": 13551,
+        "before": "                    post_image, post_health = self._capture_reliable_png(post_window)\n",
+        "after": "                    post_image, post_health = self._capture_cookie_relay_frame(post_window)\n"
+      },
+      {
+        "start": 13554,
+        "end": 13555,
+        "before": "                    post_hash = sha256_bytes(post_image)\n",
+        "after": "                    post_hash = self._cookie_relay_frame_hash(post_image)\n"
+      },
+      {
+        "start": 13557,
+        "end": 13557,
+        "before": "",
+        "after": "                        \"post_frame_encoding\": self._cookie_relay_frame_encoding(post_image),\n"
+      },
+      {
+        "start": 13562,
+        "end": 13562,
+        "before": "",
+        "after": "                        \"frame_encoding\": self._cookie_relay_frame_encoding(post_image),\n"
+      },
+      {
+        "start": 13583,
+        "end": 13584,
+        "before": "        image, health = self._capture_reliable_png(window)\n",
+        "after": "        image, health = self._capture_cookie_relay_frame(window)\n        captured_at = self._cookie_relay_capture_started(image, captured_at)\n"
+      },
+      {
+        "start": 13585,
+        "end": 13585,
+        "before": "",
+        "after": "        metrics[\"capture_method\"] = health.get(\"method\", \"png\")\n        metrics[\"frame_encoding\"] = self._cookie_relay_frame_encoding(image)\n"
+      },
+      {
+        "start": 13595,
+        "end": 13596,
+        "before": "            self._cookie_relay_pre_intent_rejected(session, \"black_frame\", captured_at)\n",
+        "after": "            human = self._cookie_relay_human_guard(session, window, image)\n            self._cookie_relay_pre_intent_rejected(session,\n                \"human_verification\" if human else \"black_frame\", captured_at)\n"
+      },
+      {
+        "start": 13817,
+        "end": 13817,
+        "before": "",
+        "after": "            close_capture = getattr(self.desktop, \"close_relay_capture\", None)\n            if callable(close_capture):\n                try:\n                    close_capture()\n                except Exception:\n                    pass\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_controller.py",
+    "before_sha256": "1445beed8783f5b26534147947b7f8a0d6b88bb6e01ea4581d4ab94d5c130ed1",
+    "after_sha256": "ef48a0d2baf5331ea1e8db6fea168394bb590fa0b2eca31be764335eb596f46d",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Axiom Vision v0.18.18 Universal Mission and Utility Controller.\n",
+        "after": "\"\"\"Axiom Vision v0.18.19 Universal Mission and Utility Controller.\n"
+      },
+      {
+        "start": 145,
+        "end": 146,
+        "before": "CONTROLLER_VERSION = \"0.18.18\"\n",
+        "after": "CONTROLLER_VERSION = \"0.18.19\"\n"
+      },
+      {
+        "start": 8065,
+        "end": 8066,
+        "before": "                     else \"Activate the second runner when Relay appears\")\n",
+        "after": "                     else \"Local auto-click when Relay appears\" if mode.get() == \"on\"\n                     else \"Relay is OFF — select ON to use it\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_cookie_relay.py",
+    "before_sha256": "b1274250fd7aaebb1bcffc3cb185cd765867884eaec8788179b346a9caa245d6",
+    "after_sha256": "d0a1ac3e28f1299b73346b37d2c4c4210105096c375869e9657a0cb6299f0daf",
+    "edits": [
+      {
+        "start": 21,
+        "end": 21,
+        "before": "",
+        "after": "RAW_RELAY_API_VERSION = \"1\"\n"
+      },
+      {
+        "start": 198,
+        "end": 207,
+        "before": "def detect_cookie_relay(png: bytes) -> CookieRelayProof | None:\n    \"\"\"Return one frame-bound match or None, with bounded work and no OCR.\n\n    Known calibration includes a 1600x900 game in a 1642x941 capture with\n    41 px top chrome and a 42 px right toolbar. UI language must match\n    the supplied English Relay prompt. Missing or ambiguous evidence fails closed.\n    \"\"\"\n    if not isinstance(png, bytes) or not png or len(png) > _MAX_IMAGE_BYTES:\n        return None\n",
+        "after": "def _detect_cookie_relay_image(source: Image.Image, frame_sha256: str) -> CookieRelayProof | None:\n    \"\"\"One unchanged calibrated matcher over already decoded RGB pixels.\"\"\"\n"
+      },
+      {
+        "start": 208,
+        "end": 215,
+        "before": "        with Image.open(io.BytesIO(png)) as source:\n            width, height = source.size\n            if (width < 640 or height < 360 or width * height > _MAX_IMAGE_PIXELS\n                    or not 1.65 <= width / height <= 1.9):\n                return None\n            source.load()\n            image = source.convert(\"RGB\").resize(_CANVAS, Image.Resampling.LANCZOS)\n",
+        "after": "        width, height = source.size\n        if (width < 640 or height < 360 or width * height > _MAX_IMAGE_PIXELS\n                or not 1.65 <= width / height <= 1.9):\n            return None\n        image = source.convert(\"RGB\").resize(_CANVAS, Image.Resampling.LANCZOS)\n"
+      },
+      {
+        "start": 234,
+        "end": 235,
+        "before": "            accepted.append(CookieRelayProof(hashlib.sha256(png).hexdigest(), (width, height), bounds,\n",
+        "after": "            accepted.append(CookieRelayProof(frame_sha256, (width, height), bounds,\n"
+      },
+      {
+        "start": 239,
+        "end": 239,
+        "before": "",
+        "after": "\n\ndef detect_cookie_relay(png: bytes) -> CookieRelayProof | None:\n    \"\"\"Return a PNG-bound match or None, retaining the existing public API.\n\n    Known calibration includes a 1600x900 game in a 1642x941 capture with\n    41 px top chrome and a 42 px right toolbar. UI language must match\n    the supplied English Relay prompt. Missing or ambiguous evidence fails closed.\n    \"\"\"\n    if not isinstance(png, bytes) or not png or len(png) > _MAX_IMAGE_BYTES:\n        return None\n    try:\n        with Image.open(io.BytesIO(png)) as source:\n            width, height = source.size\n            if (width < 640 or height < 360 or width * height > _MAX_IMAGE_PIXELS\n                    or not 1.65 <= width / height <= 1.9):\n                return None\n            source.load()\n            return _detect_cookie_relay_image(source, hashlib.sha256(png).hexdigest())\n    except (OSError, ValueError, TypeError, KeyError, IndexError, Image.DecompressionBombError):\n        return None\n\n\ndef detect_cookie_relay_frame(frame: Any) -> CookieRelayProof | None:\n    \"\"\"Use the exact same matcher on an immutable native RGB capture.\"\"\"\n    from visionstudio_cookie_relay_frame import RawRelayFrame\n    if not isinstance(frame, RawRelayFrame):\n        return None\n    return _detect_cookie_relay_image(frame.image(), frame.frame_sha256)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_cookie_relay_frame.py",
+    "before_sha256": null,
+    "after_sha256": "0956b91baa7a0b0f9a61e65232e88b7bf62ca0eb80299f5a0a1693941f66b6a1",
+    "content": "\"\"\"Immutable native pixels for the private Relay path; no input authority.\n\nMSS supplies BGRx bytes. Convert them once to immutable RGB pixels instead of\nencoding a PNG that every guard must decode again. Window identity, geometry,\nfreshness, Human Guard and durable input remain owned by the Bridge.\n\"\"\"\nfrom __future__ import annotations\n\nfrom dataclasses import dataclass, field\nimport hashlib\nimport io\nimport math\nimport struct\nfrom typing import Any, ClassVar\n\nfrom PIL import Image, ImageChops\n\n\nFRAME_FORMAT = \"raw-rgb-v1\"\nRAW_RELAY_FRAME_VERSION = \"1\"\n_MAX_PIXELS = 16_000_000\n_MAX_PNG_BYTES = 16_000_000\n\n\ndef _size(value: Any) -> tuple[int, int]:\n    if (not isinstance(value, tuple) or len(value) != 2\n            or any(type(item) is not int or item <= 0 for item in value)\n            or value[0] * value[1] > _MAX_PIXELS):\n        raise ValueError(\"Relay raw frame has invalid dimensions\")\n    return value\n\n\n@dataclass(frozen=True, slots=True)\nclass RawRelayFrame:\n    \"\"\"Pixels owned by one capture, with immutable metadata and pixel digest.\n\n    The digest is explicitly a domain-separated RGB digest, not a PNG digest.\n    ``image()`` returns an independent copy so a classifier cannot mutate the\n    bytes used by another guard while retaining the original frame identity.\n    \"\"\"\n\n    size: tuple[int, int]\n    rgb: bytes = field(repr=False)\n    captured_at: float\n    hwnd: int\n    bounds: tuple[int, int, int, int]\n    frame_sha256: str = field(init=False)\n    frame_format: ClassVar[str] = FRAME_FORMAT\n\n    def __post_init__(self) -> None:\n        width, height = _size(self.size)\n        if type(self.rgb) is not bytes or len(self.rgb) != width * height * 3:\n            raise ValueError(\"Relay raw frame has invalid RGB pixels\")\n        if (isinstance(self.captured_at, bool)\n                or not isinstance(self.captured_at, (int, float))\n                or not math.isfinite(self.captured_at) or self.captured_at < 0):\n            raise ValueError(\"Relay raw frame has invalid capture time\")\n        if type(self.hwnd) is not int or self.hwnd <= 0:\n            raise ValueError(\"Relay raw frame has invalid window identity\")\n        if (not isinstance(self.bounds, tuple) or len(self.bounds) != 4\n                or any(type(item) is not int for item in self.bounds)\n                or self.bounds[2:] != self.size):\n            raise ValueError(\"Relay raw frame bounds do not match its pixels\")\n        digest = hashlib.sha256()\n        digest.update(b\"axiom-cookie-relay/raw-rgb-v1\\0\")\n        digest.update(struct.pack(\">II\", width, height))\n        digest.update(self.rgb)\n        object.__setattr__(self, \"frame_sha256\", digest.hexdigest())\n\n    @property\n    def width(self) -> int:\n        return self.size[0]\n\n    @property\n    def height(self) -> int:\n        return self.size[1]\n\n    @property\n    def capture_size(self) -> tuple[int, int]:\n        return self.size\n\n    @property\n    def encoding(self) -> str:\n        return FRAME_FORMAT\n\n    @classmethod\n    def from_rgb(cls, size: tuple[int, int], rgb: Any, *, captured_at: float,\n                 hwnd: int, bounds: tuple[int, int, int, int]) -> RawRelayFrame:\n        _size(size)\n        if not isinstance(rgb, (bytes, bytearray, memoryview)):\n            raise ValueError(\"Relay capture did not supply RGB bytes\")\n        return cls(size, bytes(rgb), captured_at, hwnd, bounds)\n\n    @classmethod\n    def from_bgra(cls, size: tuple[int, int], bgra: Any, *, captured_at: float,\n                  hwnd: int, bounds: tuple[int, int, int, int]) -> RawRelayFrame:\n        width, height = _size(size)\n        if not isinstance(bgra, (bytes, bytearray, memoryview)):\n            raise ValueError(\"Relay capture did not supply BGRx bytes\")\n        # MSS 9/10 returns bytes; accepting a buffer also supports an immutable\n        # snapshot of newer MSS buffers. The unused alpha byte is not opacity.\n        owned = bytes(bgra)\n        if len(owned) != width * height * 4:\n            raise ValueError(\"Relay capture has an invalid BGRx buffer length\")\n        rgb = Image.frombytes(\"RGB\", size, owned, \"raw\", \"BGRX\").tobytes()\n        return cls(size, rgb, captured_at, hwnd, bounds)\n\n    @classmethod\n    def from_image(cls, image: Image.Image, *, captured_at: float, hwnd: int,\n                   bounds: tuple[int, int, int, int]) -> RawRelayFrame:\n        _size(image.size)\n        return cls(image.size, image.convert(\"RGB\").tobytes(), captured_at, hwnd, bounds)\n\n    @classmethod\n    def from_png(cls, png: bytes, *, captured_at: float, hwnd: int,\n                 bounds: tuple[int, int, int, int]) -> RawRelayFrame:\n        \"\"\"Compatibility adapter; native Relay captures do not use this path.\"\"\"\n        if type(png) is not bytes or not png or len(png) > _MAX_PNG_BYTES:\n            raise ValueError(\"Relay compatibility frame has invalid PNG bytes\")\n        with Image.open(io.BytesIO(png)) as image:\n            _size(image.size)\n            image.load()\n            return cls.from_image(image, captured_at=captured_at, hwnd=hwnd, bounds=bounds)\n\n    def image(self) -> Image.Image:\n        return Image.frombytes(\"RGB\", self.size, self.rgb)\n\n    def to_png(self) -> bytes:\n        \"\"\"Serialize evidence after input or for a Human pause, never to decide input.\"\"\"\n        output = io.BytesIO()\n        self.image().save(output, format=\"PNG\", compress_level=1)\n        return output.getvalue()\n\n\ndef frame_is_near_black(frame: RawRelayFrame, *, level: int, ratio: float) -> bool:\n    \"\"\"Same black-frame metric as the PNG capture guard, without decoding.\"\"\"\n    grayscale = frame.image().convert(\"L\")\n    grayscale.thumbnail((128, 128))\n    histogram = grayscale.histogram()\n    total = sum(histogram)\n    return bool(total > 0 and sum(histogram[:level + 1]) / total >= ratio)\n\n\ndef compare_raw_relay_freshness(\n    reference: RawRelayFrame,\n    current: RawRelayFrame,\n    region: tuple[int, int, int, int],\n    *,\n    thumbnail_size: tuple[int, int],\n    pixel_delta: int,\n) -> dict[str, Any]:\n    \"\"\"Exact Relay ROI metrics on owned pixels; this grants no input rights.\"\"\"\n    unavailable = {\"reason\": \"frame_comparison_unavailable\", \"dimensions_match\": None,\n                   \"region_mean_delta\": None, \"region_changed_ratio\": None}\n    if not isinstance(reference, RawRelayFrame) or not isinstance(current, RawRelayFrame):\n        return unavailable\n    if reference.size != current.size:\n        return {**unavailable, \"reason\": \"image_dimensions_changed\", \"dimensions_match\": False,\n                \"reference_size\": list(reference.size), \"current_size\": list(current.size)}\n    if (not isinstance(region, tuple) or len(region) != 4\n            or any(type(value) is not int for value in region)\n            or region[0] < 0 or region[1] < 0 or region[2] <= 0 or region[3] <= 0\n            or region[0] + region[2] > reference.width\n            or region[1] + region[3] > reference.height):\n        return {**unavailable, \"reason\": \"target_region_invalid\"}\n    if reference.frame_sha256 == current.frame_sha256:\n        return {\"reason\": \"identical_pixels\", \"dimensions_match\": True,\n                \"region_mean_delta\": 0.0, \"region_changed_ratio\": 0.0}\n    try:\n        x, y, width, height = region\n        box = (x, y, x + width, y + height)\n        first = reference.image().crop(box).resize(thumbnail_size)\n        second = current.image().crop(box).resize(thumbnail_size)\n        histogram = ImageChops.difference(first, second).convert(\"L\").histogram()\n        total = sum(histogram)\n        mean = sum(level * count for level, count in enumerate(histogram)) / (255.0 * total) if total else 0.0\n        changed = sum(histogram[pixel_delta + 1:]) / total if total else 0.0\n        return {\"reason\": \"target_region_measured\", \"dimensions_match\": True,\n                \"region_mean_delta\": round(mean, 6), \"region_changed_ratio\": round(changed, 6)}\n    except (OSError, TypeError, ValueError):\n        return unavailable\n"
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_heart_contract.py",
+    "before_sha256": "12bc297a0c5c123a125f172f51a60fbf9e9459e3212de8468acf2f9bcf06bdd1",
+    "after_sha256": "4e05bdd0273e63343455cb552a87dc5a86caf521408a596d1a62cbaddf46bfaf",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.18.\"\"\"\n",
+        "after": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.19.\"\"\"\n"
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "before": "HEART_RUNNER_VERSION = \"0.18.18\"\n",
+        "after": "HEART_RUNNER_VERSION = \"0.18.19\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_local_runner.py",
+    "before_sha256": "c882eee4a7445c26a510e025ec9d2b02fc44d17a3216378ea8ad3b4976a423d3",
+    "after_sha256": "8af9b73a8f1f53d8a35bcccd06d17b88be30fe9a8d037b6e5b5affcbbf37e3b4",
+    "edits": [
+      {
+        "start": 40,
+        "end": 41,
+        "before": "LOCAL_RUNNER_VERSION = \"0.18.18\"\n",
+        "after": "LOCAL_RUNNER_VERSION = \"0.18.19\"\n"
+      },
+      {
+        "start": 2117,
+        "end": 2118,
+        "before": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.18\"\n",
+        "after": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.19\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_bridge.py",
+    "before_sha256": "b443b0b1ee36202eb2054668b6de47e6df2d9447ed58cad28eb0d6ea63f89426",
+    "after_sha256": "256ffd9d38c842102f822cf00d8e8ba088b2b9651beae6fa51988491a8314027",
+    "edits": [
+      {
+        "start": 3085,
+        "end": 3086,
+        "before": "            \"0.18.18-relay-response-304\",\n",
+        "after": "            \"0.18.19-relay-direct-305\",\n"
+      },
+      {
+        "start": 10848,
+        "end": 10849,
+        "before": "                \"Axiom Vision v0.18.18 — Telegram test\\n\"\n",
+        "after": "                \"Axiom Vision v0.18.19 — Telegram test\\n\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_controller_state.py",
+    "before_sha256": "c19fa8f40f17e465ff8c471cadb24d20b6c6633b4bcfdfab632b19b484054ea5",
+    "after_sha256": "b36335e03c5ff1ed6f8374dbeb12a43c2e1072c41a9ec1f0d796ad57c7402940",
+    "edits": [
+      {
+        "start": 2446,
+        "end": 2447,
+        "before": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.18\")\n",
+        "after": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.19\")\n"
+      },
+      {
+        "start": 5818,
+        "end": 5819,
+        "before": "            self.assertEqual(report[\"product_version\"], \"0.18.18\")\n",
+        "after": "            self.assertEqual(report[\"product_version\"], \"0.18.19\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_direct_path.py",
+    "before_sha256": null,
+    "after_sha256": "8be2cb582456edea7ee48426e44dc8d1a8430ab29b08421a45ae209cc75ff273",
+    "content": "\"\"\"Direct RGB Relay transactions exercise the actual guards and durable files.\"\"\"\nfrom __future__ import annotations\n\nimport copy\nimport io\nimport json\nfrom pathlib import Path\nimport tempfile\nimport threading\nimport time\nfrom types import SimpleNamespace\nimport unittest\nfrom unittest import mock\n\nfrom PIL import Image\n\nimport test_cookie_relay_hot_path as hot\nfrom visionstudio_cookie_relay_frame import RawRelayFrame\n\nbridge = hot.bridge\n\n\nclass CookieRelayDirectPathTests(unittest.TestCase):\n    def fixture(self, directory):\n        server, session, desktop, window, png = hot.CookieRelayHotPathTests.real_fixture(self, Path(directory))\n        with Image.open(io.BytesIO(png)) as source:\n            rgb = source.convert(\"RGB\").tobytes()\n        frames = []\n\n        def capture(_window):\n            frame = RawRelayFrame.from_rgb((window.width, window.height), rgb,\n                captured_at=time.monotonic(), hwnd=window.hwnd,\n                bounds=(window.left, window.top, window.width, window.height))\n            frames.append(frame)\n            return frame\n\n        desktop.capture_relay_frame = capture\n        desktop.capture_png = mock.Mock(side_effect=AssertionError(\"Relay entered PNG capture\"))\n        return server, session, desktop, window, frames, capture\n\n    def test_direct_transaction_uses_no_png_codec_and_keeps_exact_input_guards(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            server, session, desktop, window, frames, _capture = self.fixture(temporary)\n            ordinary = copy.deepcopy((session.last_image, session.observations,\n                session.stage_action_attempts, session.committed_stage_ids, session.completed_stage_ids))\n            native = desktop.click\n\n            def click(*args):\n                ledger = json.loads(session.checkpoint_path.read_bytes())[\"cookie_relay_state\"]\n                self.assertEqual((ledger[\"status\"], ledger[\"replay\"]), (\"pending\", \"never\"))\n                self.assertEqual(ledger[\"frame_encoding\"], \"raw-rgb-v1\")\n                return native(*args)\n\n            desktop.click = click\n            with mock.patch(\"PIL.Image.open\", side_effect=AssertionError(\"Relay decoded PNG\")):\n                server._capture_cookie_relay_sample(session)\n            self.assertEqual(len(desktop.clicks), 1)\n            self.assertEqual(len(frames), 4)  # Initial, stable, dispatch, post.\n            self.assertEqual(session.cookie_relay_state[\"status\"], \"committed\")\n            self.assertEqual(session.cookie_relay_state[\"dispatch_frame_encoding\"], \"raw-rgb-v1\")\n            self.assertEqual(session.cookie_relay_state[\"post_frame_encoding\"], \"raw-rgb-v1\")\n            self.assertEqual(ordinary, (session.last_image, session.observations,\n                session.stage_action_attempts, session.committed_stage_ids, session.completed_stage_ids))\n            desktop.capture_png.assert_not_called()\n\n    def test_invalid_raw_capture_cannot_fall_back_to_png_or_prepare_intent(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            server, session, desktop, window, _frames, _capture = self.fixture(temporary)\n            desktop.capture_relay_frame = lambda _window: b\"not a raw frame\"\n            with self.assertRaises(bridge.BridgeError):\n                server._capture_cookie_relay_sample(session)\n            self.assertFalse(desktop.clicks)\n            self.assertEqual(session.cookie_relay_state[\"status\"], \"ready\")\n            desktop.capture_png.assert_not_called()\n\n    def test_wrong_raw_hwnd_or_geometry_cannot_prepare_intent(self):\n        for field in (\"hwnd\", \"bounds\"):\n            with self.subTest(field=field), tempfile.TemporaryDirectory() as temporary:\n                server, session, desktop, window, _frames, capture = self.fixture(temporary)\n                original = capture(window)\n                bounds = original.bounds if field == \"hwnd\" else (window.left+1, window.top, window.width, window.height)\n                desktop.capture_relay_frame = lambda _window: RawRelayFrame.from_rgb(original.size, original.rgb,\n                    captured_at=time.monotonic(), hwnd=window.hwnd+1 if field == \"hwnd\" else window.hwnd,\n                    bounds=bounds)\n                with self.assertRaises(bridge.BridgeError):\n                    server._capture_cookie_relay_sample(session)\n                self.assertFalse(desktop.clicks)\n                self.assertEqual(session.cookie_relay_state[\"attempts\"], 0)\n\n    def test_raw_capture_failure_after_intent_preserves_pending_never_replay(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            server, session, desktop, window, _frames, capture = self.fixture(temporary)\n            calls = [0]\n\n            def fail_dispatch(_window):\n                calls[0] += 1\n                if calls[0] == 3:\n                    raise RuntimeError(\"native raw capture unavailable\")\n                return capture(_window)\n\n            desktop.capture_relay_frame = fail_dispatch\n            with self.assertRaises(bridge.BridgeError):\n                server._capture_cookie_relay_sample(session)\n            self.assertFalse(desktop.clicks)\n            self.assertEqual(session.cookie_relay_state[\"status\"], \"pending\")\n            self.assertEqual(session.cookie_relay_state[\"attempts\"], 1)\n            self.assertEqual(session.cookie_relay_state[\"replay\"], \"never\")\n\n    def test_human_raw_frame_is_encoded_only_for_exact_pause_evidence(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            server, session, desktop, window, _frames, capture = self.fixture(temporary)\n            frame = capture(window)\n            server._latch_human_verification = mock.Mock(return_value={})\n            detected = {\"matched\": True, \"distance\": 0.0, \"detector\": \"known-card-verification-signature-v1\"}\n            with mock.patch.object(bridge, \"_detect_human_verification_image\", return_value=detected):\n                self.assertTrue(server._cookie_relay_human_guard(session, window, frame))\n            forwarded = server._latch_human_verification.call_args.kwargs[\"_cookie_relay_frame\"]\n            self.assertTrue(forwarded.startswith(b\"\\x89PNG\\r\\n\\x1a\\n\"))\n            with Image.open(io.BytesIO(forwarded)) as exact:\n                self.assertEqual(exact.convert(\"RGB\").tobytes(), frame.rgb)\n            self.assertFalse(desktop.clicks)\n\n    def test_native_mss_context_is_reused_and_closed_on_its_owner_thread(self):\n        desktop = object.__new__(bridge.WindowsDesktop)\n        window = SimpleNamespace(left=3, top=5, width=640, height=360, hwnd=77)\n        image = Image.new(\"RGB\", (640, 360), (30, 90, 50))\n        capture = mock.Mock()\n        capture.grab.return_value = SimpleNamespace(size=image.size, bgra=image.tobytes(\"raw\", \"BGRX\"))\n        module = SimpleNamespace(mss=mock.Mock(return_value=capture))\n        with mock.patch.dict(\"sys.modules\", {\"mss\": module}):\n            first = desktop.capture_relay_frame(window)\n            second = desktop.capture_relay_frame(window)\n            desktop.close_relay_capture()\n            desktop.close_relay_capture()\n        self.assertEqual(module.mss.call_count, 1)\n        self.assertEqual(capture.grab.call_count, 2)\n        capture.close.assert_called_once()\n        self.assertEqual(first.rgb, image.tobytes())\n        self.assertEqual(second.bounds, (3, 5, 640, 360))\n\n    def test_expired_raw_preflight_and_dispatch_still_check_their_human_pixels(self):\n        for expired_capture, expected_attempts in ((2, 0), (3, 1)):\n            with self.subTest(expired_capture=expired_capture), tempfile.TemporaryDirectory() as temporary:\n                server, session, desktop, window, _frames, capture = self.fixture(temporary)\n                calls = [0]\n                human = mock.Mock(wraps=server._cookie_relay_human_guard)\n                server._cookie_relay_human_guard = human\n\n                def slow_frame(_window):\n                    calls[0] += 1\n                    frame = capture(_window)\n                    if calls[0] == expired_capture:\n                        return RawRelayFrame.from_rgb(frame.size, frame.rgb,\n                            captured_at=time.monotonic()-1, hwnd=frame.hwnd, bounds=frame.bounds)\n                    return frame\n\n                desktop.capture_relay_frame = slow_frame\n                server._capture_cookie_relay_sample(session)\n                self.assertEqual(human.call_count, expired_capture)\n                self.assertFalse(desktop.clicks)\n                self.assertEqual(session.cookie_relay_state[\"attempts\"], expected_attempts)\n                self.assertEqual(session.cookie_relay_state[\"status\"], \"pending\" if expected_attempts else \"ready\")\n\n    def test_raw_dispatch_obeys_stop_and_pause_after_the_last_window_check(self):\n        for desired in (\"stopped\", \"paused\"):\n            with self.subTest(desired=desired), tempfile.TemporaryDirectory() as temporary:\n                server, session, desktop, window, _frames, _capture = self.fixture(temporary)\n                verified = server._verified_action_window\n                checks = [0]\n\n                def boundary(_session):\n                    result = verified(_session)\n                    checks[0] += 1\n                    if checks[0] == 3:\n                        bridge.controller_module.patch_state(session.controller_state_path, desired_state=desired)\n                    return result\n\n                server._verified_action_window = boundary\n                with self.assertRaises(bridge.BridgeError):\n                    server._capture_cookie_relay_sample(session)\n                self.assertEqual(checks[0], 3)\n                self.assertFalse(desktop.clicks)\n                self.assertEqual(session.cookie_relay_state[\"status\"], \"pending\")\n                self.assertEqual(session.cookie_relay_state[\"attempts\"], 1)\n\n    def test_monitor_finally_closes_raw_capture_after_capture_failure(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            server, session, desktop, _window, _frames, _capture = self.fixture(temporary)\n            desktop.capture_relay_frame = mock.Mock(side_effect=RuntimeError(\"MSS failed\"))\n            desktop.close_relay_capture = mock.Mock()\n            session.running_monitor_started_monotonic = time.monotonic()\n            session.running_monitor_focus_seconds = 5\n            session.running_monitor_state = \"running\"\n            server._running_monitor_worker(session, session.running_monitor_stop)\n            desktop.close_relay_capture.assert_called_once()\n            self.assertEqual(session.running_monitor_state, \"error\")\n            self.assertFalse(desktop.clicks)\n            self.assertEqual(session.cookie_relay_state[\"attempts\"], 0)\n\n    def test_black_raw_sample_still_runs_one_human_check(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            server, session, desktop, window, _frames, _capture = self.fixture(temporary)\n            desktop.capture_relay_frame = lambda _window: RawRelayFrame.from_rgb((window.width, window.height),\n                bytes(window.width*window.height*3), captured_at=time.monotonic(), hwnd=window.hwnd,\n                bounds=(window.left, window.top, window.width, window.height))\n            human = mock.Mock(wraps=server._cookie_relay_human_guard)\n            server._cookie_relay_human_guard = human\n            server._capture_cookie_relay_sample(session)\n            human.assert_called_once()\n            self.assertFalse(desktop.clicks)\n            self.assertEqual(session.cookie_relay_state[\"attempts\"], 0)\n\n    def test_main_thread_cannot_close_the_monitor_threads_native_context(self):\n        desktop = object.__new__(bridge.WindowsDesktop)\n        desktop._relay_capture_local = threading.local()\n        window = SimpleNamespace(left=3, top=5, width=640, height=360, hwnd=77)\n        image = Image.new(\"RGB\", (640, 360), (30, 90, 50))\n        capture = mock.Mock()\n        capture.grab.return_value = SimpleNamespace(size=image.size, bgra=image.tobytes(\"raw\", \"BGRX\"))\n        ready, finish = threading.Event(), threading.Event()\n        owners = []\n        capture.close.side_effect = lambda: owners.append(threading.get_ident())\n        module = SimpleNamespace(mss=mock.Mock(return_value=capture))\n\n        def worker():\n            desktop.capture_relay_frame(window)\n            ready.set()\n            finish.wait(3)\n            desktop.close_relay_capture()\n\n        with mock.patch.dict(\"sys.modules\", {\"mss\": module}):\n            thread = threading.Thread(target=worker)\n            thread.start()\n            self.assertTrue(ready.wait(3))\n            desktop.close_relay_capture()\n            capture.close.assert_not_called()\n            finish.set()\n            thread.join(3)\n        self.assertFalse(thread.is_alive())\n        self.assertEqual(owners, [thread.ident])\n\n    def test_legacy_png_pending_or_committed_ledger_cannot_replay_through_raw_capture(self):\n        for status in (\"pending\", \"committed\"):\n            with self.subTest(status=status), tempfile.TemporaryDirectory() as temporary:\n                server, session, desktop, window, png = hot.CookieRelayHotPathTests.real_fixture(self, Path(temporary))\n                if status == \"pending\":\n                    detect = server._detect_cookie_relay\n                    calls = [0]\n\n                    def disappear(image):\n                        calls[0] += 1\n                        return None if calls[0] == 3 else detect(image)\n\n                    server._detect_cookie_relay = disappear\n                server._capture_cookie_relay_sample(session)\n                checkpoint = session.checkpoint_payload()\n                legacy = checkpoint[\"cookie_relay_state\"]\n                self.assertEqual(legacy[\"status\"], status)\n                self.assertEqual(legacy[\"before_frame_sha256\"], bridge.sha256_bytes(png))\n                for key in (\"frame_encoding\", \"dispatch_frame_encoding\", \"post_frame_encoding\"):\n                    legacy.pop(key, None)\n                before = copy.deepcopy(legacy)\n                restored = bridge.BridgeSession(session.mission_path, session.mission,\n                    Path(temporary) / \"restore.jsonl\", mission_contract_sha256=session.mission_contract_sha256,\n                    mission_source=\"universal-code\", universal_config=session.universal_config)\n                restored.data_root = Path(temporary)\n                self.assertTrue(restored.restore_checkpoint(checkpoint))\n                restored.resume_required = restored.resume_confirmation_pending = restored.checkpoint_recovery_pending = False\n                restored.running_monitor_active = True\n                restored.running_monitor_thread = threading.current_thread()\n                restored.running_monitor_stage_id, restored.running_monitor_stage_phase = \"passive-running\", \"entered\"\n                restored.fixed_geometry_bounds = session.fixed_geometry_bounds\n                restored._cookie_relay_controller_batch_id = session._cookie_relay_controller_batch_id\n                restored.last_window, restored.last_image = window, png\n                server.session = restored\n                if status == \"pending\":\n                    delattr(server, \"_detect_cookie_relay\")\n                with Image.open(io.BytesIO(png)) as source:\n                    rgb = source.convert(\"RGB\").tobytes()\n                captured = []\n\n                def raw(_window):\n                    captured.append(True)\n                    return RawRelayFrame.from_rgb((window.width, window.height), rgb,\n                        captured_at=time.monotonic(), hwnd=window.hwnd, bounds=restored.fixed_geometry_bounds)\n\n                desktop.capture_relay_frame = raw\n                desktop.capture_png = mock.Mock(side_effect=AssertionError(\"Legacy relay re-entered PNG path\"))\n                desktop.clicks.clear()\n                server._capture_cookie_relay_sample(restored)\n                self.assertEqual(len(captured), 1)\n                self.assertFalse(desktop.clicks)\n                self.assertEqual(restored.cookie_relay_state, before)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_cookie_relay_frame.py",
+    "before_sha256": null,
+    "after_sha256": "546f7c9b20e1433ebb0ce583908283450777608e01162d2998e95113a0e62729",
+    "content": "\"\"\"Immutable native pixels and exact PNG/raw guard equivalence.\"\"\"\nfrom __future__ import annotations\n\nfrom dataclasses import FrozenInstanceError\nimport hashlib\nimport io\nfrom pathlib import Path\nimport sys\nimport unittest\nfrom unittest import mock\n\nfrom PIL import Image, ImageDraw\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\n\nimport visionstudio_bridge as bridge\nfrom visionstudio_cookie_relay import detect_cookie_relay, detect_cookie_relay_frame\nfrom visionstudio_cookie_relay_frame import (\n    FRAME_FORMAT, RawRelayFrame, compare_raw_relay_freshness, frame_is_near_black,\n)\nfrom visionstudio_cookie_relay_freshness import compare_cookie_relay_freshness\nfrom test_cookie_relay_vision import relay_frame\n\n\ndef png(image):\n    output = io.BytesIO()\n    image.save(output, \"PNG\", compress_level=1)\n    return output.getvalue()\n\n\ndef raw(image, *, captured_at=1000.0, hwnd=17, left=40, top=30):\n    return RawRelayFrame.from_image(\n        image, captured_at=captured_at, hwnd=hwnd,\n        bounds=(left, top, image.width, image.height),\n    )\n\n\nclass CookieRelayFrameTests(unittest.TestCase):\n    def test_mss_bgrx_channels_are_rgb_and_alpha_is_unused(self):\n        pixels = bytearray((3, 2, 1, 0, 13, 12, 11, 255))\n        first = RawRelayFrame.from_bgra((2, 1), pixels, captured_at=1, hwnd=17, bounds=(-2, 3, 2, 1))\n        self.assertEqual(first.rgb, bytes((1, 2, 3, 11, 12, 13)))\n        self.assertEqual(first.image().getpixel((1, 0)), (11, 12, 13))\n        before = first.frame_sha256\n        pixels[:] = bytes(len(pixels))\n        self.assertEqual(first.frame_sha256, before)\n        self.assertEqual(first.rgb, bytes((1, 2, 3, 11, 12, 13)))\n        self.assertEqual(first.encoding, FRAME_FORMAT)\n        self.assertEqual(first.capture_size, (2, 1))\n\n    def test_pixel_storage_and_image_copies_cannot_mutate_a_frame(self):\n        image = Image.new(\"RGB\", (2, 2), (10, 20, 30))\n        frame = raw(image)\n        image.putpixel((0, 0), (255, 0, 0))\n        copy = frame.image()\n        copy.putpixel((0, 0), (0, 255, 0))\n        self.assertEqual(frame.image().getpixel((0, 0)), (10, 20, 30))\n        with self.assertRaises(FrozenInstanceError):\n            frame.rgb = bytes(12)\n        self.assertNotIn(str(frame.rgb), repr(frame))\n\n    def test_digest_binds_dimensions_and_pixels_with_a_separate_encoding_domain(self):\n        pixels = bytes(range(18))\n        a = RawRelayFrame.from_rgb((2, 3), pixels, captured_at=1, hwnd=1, bounds=(0, 0, 2, 3))\n        b = RawRelayFrame.from_rgb((3, 2), pixels, captured_at=1, hwnd=1, bounds=(0, 0, 3, 2))\n        c = RawRelayFrame.from_rgb((2, 3), pixels, captured_at=2, hwnd=2, bounds=(3, -4, 2, 3))\n        self.assertNotEqual(a.frame_sha256, b.frame_sha256)\n        self.assertEqual(a.frame_sha256, c.frame_sha256)\n        self.assertNotEqual(a.frame_sha256, hashlib.sha256(a.to_png()).hexdigest())\n\n    def test_invalid_native_buffer_and_window_metadata_are_rejected(self):\n        for size in ((0, 1), (1, -1), (True, 1), (4001, 4001), [1, 1]):\n            with self.subTest(size=size), self.assertRaises(ValueError):\n                RawRelayFrame.from_bgra(size, bytes(4), captured_at=1, hwnd=1, bounds=(0, 0, 1, 1))\n        for buffer in (bytes(3), bytes(5), \"1234\", None):\n            with self.subTest(buffer=buffer), self.assertRaises(ValueError):\n                RawRelayFrame.from_bgra((1, 1), buffer, captured_at=1, hwnd=1, bounds=(0, 0, 1, 1))\n        for timestamp in (True, -1, float(\"nan\"), float(\"inf\"), \"1\"):\n            with self.subTest(timestamp=timestamp), self.assertRaises(ValueError):\n                RawRelayFrame((1, 1), bytes(3), timestamp, 1, (0, 0, 1, 1))\n        for hwnd in (False, 0, -1, \"17\"):\n            with self.subTest(hwnd=hwnd), self.assertRaises(ValueError):\n                RawRelayFrame((1, 1), bytes(3), 1, hwnd, (0, 0, 1, 1))\n        for bounds in ((0, 0, 2, 1), (0, 0, True, 1), (0, 0, 1), [0, 0, 1, 1]):\n            with self.subTest(bounds=bounds), self.assertRaises(ValueError):\n                RawRelayFrame((1, 1), bytes(3), 1, 1, bounds)\n        with self.assertRaises(ValueError):\n            RawRelayFrame((1, 1), bytearray(3), 1, 1, (0, 0, 1, 1))\n\n    def test_png_compatibility_adapter_preserves_pixels_and_evidence_roundtrip(self):\n        image = relay_frame().resize((1600, 900), Image.Resampling.LANCZOS)\n        first = raw(image)\n        second = RawRelayFrame.from_png(png(image), captured_at=1001, hwnd=17, bounds=first.bounds)\n        self.assertEqual(first.rgb, second.rgb)\n        self.assertEqual(first.frame_sha256, second.frame_sha256)\n        with Image.open(io.BytesIO(first.to_png())) as saved:\n            self.assertEqual(saved.convert(\"RGB\").tobytes(), first.rgb)\n        for payload in (b\"\", b\"not-png\", bytearray(b\"not-png\")):\n            with self.subTest(payload=payload), self.assertRaises((OSError, ValueError)):\n                RawRelayFrame.from_png(payload, captured_at=1, hwnd=17, bounds=(0, 0, 2, 2))\n\n    def test_black_guard_matches_png_guard_for_dark_and_nonblack_scenes(self):\n        for color in ((0, 0, 0), (12, 12, 12), (13, 13, 13), (10, 50, 10), (255, 255, 255)):\n            image = Image.new(\"RGB\", (640, 360), color)\n            self.assertEqual(\n                frame_is_near_black(raw(image), level=bridge.CAPTURE_NEAR_BLACK_LEVEL,\n                                    ratio=bridge.CAPTURE_NEAR_BLACK_RATIO),\n                bridge.image_is_near_black(png(image)),\n            )\n\n    def test_raw_roi_metrics_match_existing_png_metrics_on_animated_background(self):\n        first = relay_frame().resize((1600, 900), Image.Resampling.LANCZOS)\n        second = first.copy()\n        ImageDraw.Draw(second).rectangle((0, 0, 600, 250), fill=(200, 0, 180))\n        region = (710, 320, 230, 230)\n        for changed_control in (False, True):\n            if changed_control:\n                ImageDraw.Draw(second).rectangle((730, 340, 850, 460), fill=(255, 0, 0))\n            expected = compare_cookie_relay_freshness(\n                png(first), png(second), region,\n                thumbnail_size=bridge.FRESHNESS_THUMBNAIL_SIZE,\n                pixel_delta=bridge.FRESHNESS_PIXEL_DELTA,\n            )\n            actual = compare_raw_relay_freshness(\n                raw(first), raw(second), region,\n                thumbnail_size=bridge.FRESHNESS_THUMBNAIL_SIZE,\n                pixel_delta=bridge.FRESHNESS_PIXEL_DELTA,\n            )\n            for key in (\"dimensions_match\", \"region_mean_delta\", \"region_changed_ratio\"):\n                self.assertEqual(actual[key], expected[key])\n\n    def test_raw_roi_rejects_dimensions_and_invalid_target_regions(self):\n        a = raw(Image.new(\"RGB\", (20, 10), \"red\"))\n        b = raw(Image.new(\"RGB\", (20, 11), \"red\"))\n        options = {\"thumbnail_size\": (96, 96), \"pixel_delta\": 24}\n        self.assertFalse(compare_raw_relay_freshness(a, b, (0, 0, 10, 10), **options)[\"dimensions_match\"])\n        for region in ((-1, 0, 1, 1), (0, 0, 0, 1), (0, 0, 21, 1), (0, 0, 1, 11), (0, 0, True, 1), [0, 0, 1, 1]):\n            result = compare_raw_relay_freshness(a, a, region, **options)\n            self.assertIsNone(result[\"region_mean_delta\"])\n\n    def test_raw_hot_helpers_never_encode_or_decode_png(self):\n        image = relay_frame().resize((1600, 900), Image.Resampling.LANCZOS)\n        bgra = image.tobytes(\"raw\", \"BGRX\")\n        with mock.patch.object(Image, \"open\", side_effect=AssertionError(\"PNG decode in raw path\")), \\\n             mock.patch.object(Image.Image, \"save\", side_effect=AssertionError(\"PNG encode in raw path\")):\n            frame = RawRelayFrame.from_bgra(image.size, bgra, captured_at=1, hwnd=17, bounds=(0, 0, *image.size))\n            self.assertFalse(frame_is_near_black(frame, level=12, ratio=.999))\n            proof = detect_cookie_relay_frame(frame)\n            self.assertIsNotNone(proof)\n            metrics = compare_raw_relay_freshness(frame, frame, proof.target_bounds,\n                                                 thumbnail_size=(96, 96), pixel_delta=24)\n            self.assertEqual(metrics[\"region_mean_delta\"], 0)\n\n    def test_png_and_raw_detection_keep_exact_semantic_proof_and_reject_missing_cues(self):\n        image = relay_frame().resize((1600, 900), Image.Resampling.LANCZOS)\n        for missing in (None, \"prompt\", \"card\", \"jump\", \"slide\"):\n            part = image.copy()\n            boxes = {\"prompt\": (470, 270, 1150, 320), \"card\": (710, 325, 925, 540),\n                     \"jump\": (20, 710, 350, 895), \"slide\": (1280, 710, 1599, 895)}\n            if missing:\n                ImageDraw.Draw(part).rectangle(boxes[missing], fill=(20, 20, 20))\n            encoded = png(part)\n            native = raw(part)\n            png_proof, raw_proof = detect_cookie_relay(encoded), detect_cookie_relay_frame(native)\n            self.assertEqual(png_proof is None, raw_proof is None)\n            self.assertEqual(png_proof is None, missing is not None)\n            if png_proof:\n                self.assertEqual((png_proof.capture_size, png_proof.target_bounds, png_proof.center,\n                                  png_proof.confidence, png_proof.detector_version),\n                                 (raw_proof.capture_size, raw_proof.target_bounds, raw_proof.center,\n                                  raw_proof.confidence, raw_proof.detector_version))\n                self.assertEqual(png_proof.frame_sha256, hashlib.sha256(encoded).hexdigest())\n                self.assertEqual(raw_proof.frame_sha256, native.frame_sha256)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_heart_runner.py",
+    "before_sha256": "e4433e30bea5867b43eb494c7786c624e43450a2086c996f791894080342e163",
+    "after_sha256": "397b9ad241f68daea750643b8b0a956fd5993923b220ac653c23fe987e1c18fb",
+    "edits": [
+      {
+        "start": 536,
+        "end": 537,
+        "before": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.18\")\n",
+        "after": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.19\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_local_runner.py",
+    "before_sha256": "f2cc719fc41d7043b065276754584811ccfdacef30d00893ce95cbdb357d5799",
+    "after_sha256": "9bc646d3a673750862d23c8004af978dbd9e613a6320e76628be491530e544c2",
+    "edits": [
+      {
+        "start": 103,
+        "end": 104,
+        "before": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.18\")\n",
+        "after": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.19\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_runtime_version.py",
+    "before_sha256": "77ba8af8c55e6b105ff750470e1cca1651b337257438c8f0d664f5c347f87b26",
+    "after_sha256": "e5b83d7e33f1ab8ab32dadaa7cd6f8f90c68cdaff1b2e161b099a9520171034b",
+    "edits": [
+      {
+        "start": 22,
+        "end": 25,
+        "before": "    plugin_version: str = \"0.18.18+codex.20261023.relay-response\",\n    controller_version: str = \"0.18.18\",\n    bridge_server_version: str = \"0.18.18-relay-response-304\",\n",
+        "after": "    plugin_version: str = \"0.18.19+codex.20261025.relay-direct\",\n    controller_version: str = \"0.18.19\",\n    bridge_server_version: str = \"0.18.19-relay-direct-305\",\n"
+      },
+      {
+        "start": 40,
+        "end": 41,
+        "before": "            'PRODUCT_VERSION = \"0.18.18\"\\n'\n",
+        "after": "            'PRODUCT_VERSION = \"0.18.19\"\\n'\n"
+      },
+      {
+        "start": 43,
+        "end": 44,
+        "before": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.18\"\\n',\n",
+        "after": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.19\"\\n',\n"
+      },
+      {
+        "start": 49,
+        "end": 50,
+        "before": "            'HEART_RUNNER_VERSION = \"0.18.18\"\\n'\n",
+        "after": "            'HEART_RUNNER_VERSION = \"0.18.19\"\\n'\n"
+      },
+      {
+        "start": 62,
+        "end": 63,
+        "before": "    (root / \"scripts/visionstudio_cookie_relay.py\").write_text('DETECTOR_VERSION = \"cookie-relay-visual-2\"\\n')\n",
+        "after": "    (root / \"scripts/visionstudio_cookie_relay.py\").write_text('DETECTOR_VERSION = \"cookie-relay-visual-2\"\\nRAW_RELAY_API_VERSION = \"1\"\\n')\n    (root / \"scripts/visionstudio_cookie_relay_frame.py\").write_text('RAW_RELAY_FRAME_VERSION = \"1\"\\n')\n"
+      },
+      {
+        "start": 76,
+        "end": 77,
+        "before": "            \"0.18.18+codex.20261023.relay-response\",\n",
+        "after": "            \"0.18.19+codex.20261025.relay-direct\",\n"
+      },
+      {
+        "start": 84,
+        "end": 85,
+        "before": "                \"plugin\": \"0.18.18\",\n",
+        "after": "                \"plugin\": \"0.18.19\",\n"
+      },
+      {
+        "start": 86,
+        "end": 87,
+        "before": "                    \"0.18.18+codex.20261023.relay-response\"\n",
+        "after": "                    \"0.18.19+codex.20261025.relay-direct\"\n"
+      },
+      {
+        "start": 88,
+        "end": 92,
+        "before": "                \"controller\": \"0.18.18\",\n                \"bridge\": \"0.18.18\",\n                \"bridge_server\": \"0.18.18-relay-response-304\",\n                \"local_runner\": \"0.18.18\",\n",
+        "after": "                \"controller\": \"0.18.19\",\n                \"bridge\": \"0.18.19\",\n                \"bridge_server\": \"0.18.19-relay-direct-305\",\n                \"local_runner\": \"0.18.19\",\n"
+      },
+      {
+        "start": 94,
+        "end": 95,
+        "before": "                \"heart_sender\": \"0.18.18\",\n",
+        "after": "                \"heart_sender\": \"0.18.19\",\n"
+      },
+      {
+        "start": 108,
+        "end": 109,
+        "before": "            [\"controller=0.10.27 (expected 0.18.18)\"],\n",
+        "after": "            [\"controller=0.10.27 (expected 0.18.19)\"],\n"
+      },
+      {
+        "start": 118,
+        "end": 119,
+        "before": "                plugin_version=\"0.18.18+codex.wrong-build\",\n",
+        "after": "                plugin_version=\"0.18.19+codex.wrong-build\",\n"
+      },
+      {
+        "start": 129,
+        "end": 131,
+        "before": "                \"plugin_manifest=0.18.18+codex.wrong-build \"\n                \"(expected 0.18.18+codex.20261023.relay-response)\",\n",
+        "after": "                \"plugin_manifest=0.18.19+codex.wrong-build \"\n                \"(expected 0.18.19+codex.20261025.relay-direct)\",\n"
+      },
+      {
+        "start": 132,
+        "end": 133,
+        "before": "                \"(expected 0.18.18-relay-response-304)\",\n",
+        "after": "                \"(expected 0.18.19-relay-direct-305)\",\n"
+      },
+      {
+        "start": 172,
+        "end": 173,
+        "before": "            (root / \"scripts/visionstudio_cookie_relay.py\").write_text('DETECTOR_VERSION = \"cookie-relay-visual-1\"\\n')\n",
+        "after": "            (root / \"scripts/visionstudio_cookie_relay.py\").write_text('DETECTOR_VERSION = \"cookie-relay-visual-1\"\\nRAW_RELAY_API_VERSION = \"1\"\\n')\n"
+      },
+      {
+        "start": 175,
+        "end": 175,
+        "before": "",
+        "after": "\n    def test_old_detector_missing_raw_api_is_rejected(self):\n        with tempfile.TemporaryDirectory() as temp_dir:\n            root = Path(temp_dir)\n            write_runtime_fixture(root)\n            (root / \"scripts/visionstudio_cookie_relay.py\").write_text('DETECTOR_VERSION = \"cookie-relay-visual-2\"\\n')\n            self.assertEqual(versions.verify(root), [\"cookie_relay_raw_api=missing or mixed raw frame API\"])\n"
+      },
+      {
+        "start": 180,
+        "end": 181,
+        "before": "        self.assertIn(\"Axiom Vision v0.18.18 Setup\", text)\n",
+        "after": "        self.assertIn(\"Axiom Vision v0.18.19 Setup\", text)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/update-package-files.json",
+    "before_sha256": "ada279f70f5f367610798b9ea5dc3ed451c937af2e4d284974e7e40d57bf59b7",
+    "after_sha256": "742045c84d0ae15af66a374591bf2a5f43812d6fb0f11f5b001c48a628f3e360",
+    "edits": [
+      {
+        "start": 23,
+        "end": 23,
+        "before": "",
+        "after": "  \"visionstudio/RELEASE_v0.18.19_TH.md\",\n"
+      },
+      {
+        "start": 66,
+        "end": 66,
+        "before": "",
+        "after": "  \"visionstudio/scripts/visionstudio_cookie_relay_frame.py\",\n"
+      },
+      {
+        "start": 105,
+        "end": 105,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_cookie_relay_direct_path.py\",\n  \"visionstudio/tests/test_cookie_relay_frame.py\",\n"
+      }
+    ]
+  }
+]

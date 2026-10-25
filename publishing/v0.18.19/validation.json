@@ -1,0 +1,167 @@
+{
+  "version": "0.18.19",
+  "tests": {
+    "version": "0.18.19",
+    "total": 1264,
+    "passed": 1247,
+    "skipped": 17,
+    "seconds": 71.075,
+    "log_sha256": "ad9787ae31353f924d30a539a55be12ad475ea1b15c787bd3b4cfc955d72e61d"
+  },
+  "package_files": 156,
+  "package_bytes": 9640549,
+  "package_sha256": "2dab8cec0991ad30bbdd0abfc0d8013d1419f54522e2ff6da0ea949dadc6279f",
+  "upgrades": [
+    {
+      "from": "0.18.13",
+      "to": "0.18.19",
+      "package_members_verified": 156,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.14",
+      "to": "0.18.19",
+      "package_members_verified": 156,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.15",
+      "to": "0.18.19",
+      "package_members_verified": 156,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.16",
+      "to": "0.18.19",
+      "package_members_verified": 156,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.17",
+      "to": "0.18.19",
+      "package_members_verified": 156,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.18",
+      "to": "0.18.19",
+      "package_members_verified": 156,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "plan_compatibility": {
+    "baseline": "0.18.18",
+    "candidate": "0.18.19",
+    "configs_exact": 63,
+    "off_configs_exact": 36,
+    "on_configs_exact": 27,
+    "off_revision": "9",
+    "on_revision": "11",
+    "visual_detector": "cookie-relay-visual-2",
+    "compiled_config_and_plan_identical": true
+  },
+  "direct_wall_replay": {
+    "real_clock": true,
+    "native_grab_window_input_mocked": true,
+    "summary": [
+      {
+        "version": "0.18.18",
+        "successful_cases": 9,
+        "total_cases": 9,
+        "median_capture_to_click_ms": 584.725,
+        "max_capture_to_click_ms": 592.187,
+        "two_second_window_successes": 3
+      },
+      {
+        "version": "0.18.19",
+        "successful_cases": 9,
+        "total_cases": 9,
+        "median_capture_to_click_ms": 183.405,
+        "max_capture_to_click_ms": 190.609,
+        "two_second_window_successes": 3
+      }
+    ],
+    "public_overlap_summary": [
+      {
+        "version": "0.18.18",
+        "successful_cases": 3,
+        "total_cases": 3,
+        "median_capture_to_click_ms": null,
+        "max_capture_to_click_ms": null,
+        "two_second_window_successes": 3
+      },
+      {
+        "version": "0.18.19",
+        "successful_cases": 3,
+        "total_cases": 3,
+        "median_capture_to_click_ms": null,
+        "max_capture_to_click_ms": null,
+        "two_second_window_successes": 3
+      }
+    ]
+  },
+  "diagnostic_findings": {
+    "version": "0.18.18",
+    "relay_enabled": false,
+    "plan_revision": "9",
+    "retained_running_intervals": 5,
+    "enabled_relay_latency_available": false
+  },
+  "independent_review": "clear at exact Bridge/raw/detector hashes; 32 Human equivalence cases, raw binding/ROI/context/races and legacy never-replay tested",
+  "ui_copy_scope": "OFF/ON/AUTO helper text fits real Linux Tk 1280x820",
+  "native_windows_ldplayer_tested": false
+}
