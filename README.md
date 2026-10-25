@@ -2,23 +2,23 @@
 
 Public Windows release assets and Ed25519-signed update feed for Axiom Vision.
 
-## Latest: v0.18.18 — Relay Response
+## Latest: v0.18.19 — Relay Direct
 
-[Download v0.18.18](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.18).
+[Download v0.18.19](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.19).
 
-Fixes a Cookie Relay input block for asymmetric LDPlayer chrome. Replaying the supplied Relay image in the diagnostic’s 1642×941 layout puts the valid card at x714 while the old allowed region starts at x722. Detection succeeds but the old guard rejects before intent. Five retained diagnostic Running intervals show Relay enabled and scheduled, with no prepared input. The missed live pixels were not retained, so this is a reproduced code/layout defect consistent with the log.
+The guarded Cookie Relay path reads immutable native RGB buffers directly, reuses its thread-owned MSS capture context, and removes PNG encoding/decoding from the click decision. The same visual-2 Relay matcher, Human signature, target region, ROI thresholds, three witnesses, durable intent and 0.5-second capture-start limit remain. The mouse implementation and input/replay protections are unchanged.
 
-Relay ON now uses **revision 11 / visual-2**. Its corrected left envelope still requires the complete fresh prompt, all yellow/green edges and both Running controls. One-pixel border sampling is more robust. The private path checks Human Verification once per immutable frame, measures only the proven Relay ROI with the same freshness thresholds, and retains the **0.5-second capture-start witness limit** and durable never-replay ledger. One monitor-end summary reports negative scans and pre-intent rejection reasons without logging every fast sample.
+Raw frame hashes use an explicit raw-rgb-v1 domain and are tagged separately from PNG evidence. The context closes on its owner monitor thread. A failed raw adapter blocks input; it never falls back to stale pixels. Existing pending/committed PNG Relay ledgers remain consumed after restore.
 
-**Existing unfinished Relay revision 10 batch:** Stop, then **Reset Batch** to archive it before starting the new plan. Start/Resume/automatic recovery cannot silently reinterpret or overwrite old authority. Saved timing presets remain. Relay OFF keeps exact revision 9 Plan identities.
+**Enable COOKIE RELAY → ON before starting the batch.** A timing preset saves seconds only. AUTO disables Relay. If the current frozen batch is OFF, Stop and Reset Batch before selecting a profile/preset, enabling ON and starting a new batch. The supplied v18 diagnostic is OFF, so it cannot establish enabled Relay latency. The UI now distinguishes the OFF and ON hints clearly.
 
-Validation: **1,224 passed / 17 skipped (1,241 total)**. All 42 actual-image chrome phases and 15 visual negatives pass. Fourteen modeled two-second button windows pass with actual detectors, Controller/Plan checks, ROI freshness and durable I/O; capture/input adapters and phase clocks are simulated. Native Windows/LDPlayer timing and game acceptance remain unverified. Independent card-size animation is not calibrated.
+Validation: **1,247 passed / 17 skipped (1,264 total)**. In real-clock replay with native grab/window/input adapters, the complete code transaction measured v18 median **584.725ms** versus v19 **183.405ms**, with 9/9 cases passing per version. Three additional two-second-window cases overlapping public sampling also pass. Classifiers, actual MSS conversion/PNG encoder, Controller/Plan checks, freshness and durable writes run. These are host code measurements, not native Windows/LDPlayer timing or game acceptance proof.
 
-Signed upgrades from v0.18.13–v0.18.17 preserve nine runtime files each byte-for-byte, including readable saved timing presets. All 152 package hashes match the frozen source. Heart Sender input, native mouse backend and dependency pins are unchanged. Stop/Pause/Human, foreground, geometry, watchdog and replay protections remain.
+All 63 compiled config/Plan identities match v18: OFF revision9, ON revision11, visual-2 calibration unchanged. No new Plan migration is introduced. Older unfinished revision10 Relay batches still require the existing explicit Stop/Reset archive. Signed upgrades from v0.18.13–v0.18.18 preserve nine runtime files per installation byte-for-byte and retain saved timing presets. All 156 package hashes match frozen source.
 
-Existing installations: use **Settings → CHECK UPDATE**, stop workers, then close the Controller when installation is eligible. If an active checkpoint defers this Relay plan upgrade, Stop and Reset Batch first. Runtime archives, statistics, sessions and saved timing presets are retained.
+Use **Settings → CHECK UPDATE**, stop workers, then close the Controller when installation is eligible. Active checkpoints defer installation. Reset only when changing a frozen OFF batch to ON or when the existing old-Plan guidance requires it. Archives, statistics, sessions and timing presets are retained.
 
-ZIP SHA-256: `1aef624093ed45ed3fea0ccb21deeb7c919a5869147432c78e26ca88b2c93934`.
+ZIP SHA-256: `2dab8cec0991ad30bbdd0abfc0d8013d1419f54522e2ff6da0ea949dadc6279f`.
 
 ## v0.18.0 (initial release)
 
