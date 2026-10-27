@@ -2,21 +2,21 @@
 
 Public Windows release assets and Ed25519-signed update feed for Axiom Vision.
 
-## Latest: v0.18.20 — Recovery Observation
+## Latest: v0.18.21 — Relay Logs on Windows
 
-[Download v0.18.20](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.20).
+[Download v0.18.21](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.21).
 
-Fixes Stage recovery after an expired Multi-Buy input lockout. Recovery previously rejected the fresh observation required to clear that lockout, causing repeated blocked recovery attempts. The new exception permits only a read-only post-expiry capture, with final Session, Controller batch/Plan, Stage, intent, ledger, Human and window checks before acknowledging the same lockout. Pending and committed purchases retain their replay restrictions; Stage resume still needs scene confirmation.
+Fixes the Windows Relay diagnostic reader introduced in v20. Windows DirEntry.stat caches zero file identity fields; comparing those cached values with the real open file handle rejected every selected journal. The reader now compares fresh non-following path metadata with the opened regular file's identity, preserves replacement/symlink checks, and binds its bounded tail read to the handle's captured size. Read failures carry fixed safe reason codes.
 
-SEND LOG now retains bounded, whitelisted Relay event history independently of the latest five session journals. A sequence of setup/recovery sessions can no longer displace all older retained Relay diagnostics. Coverage and omissions are explicit; summaries are telemetry only and are preserved exactly in the Telegram excerpt.
+Native Windows Server2025 with Python3.12.10 reproduced the v20 reader failure on an unchanged readable journal and confirmed that v21 reads the retained event. All19 reader tests passed there, including production bundle creation and exact Telegram excerpt retention. The Windows job gates publication. This validates diagnostic file reads, not LDPlayer screen capture, click timing or game acceptance.
 
-The supplied Oct27 diagnostic has Relay ON, Custom60s and revision11, but its five journals contain setup/recovery only. It cannot determine Relay detection or native input performance. This release fixes the demonstrated recovery deadlock and diagnostic retention. The direct RGB Relay matcher, native mouse path, thresholds and Plan remain unchanged. Native Windows/LDPlayer capture/input and game acceptance remain unverified.
+The Oct28 diagnostic selected64 of8,922 retained journals but read0bytes because all64 reads failed. Its installed package is v20 while the five attached runtime journals remain historical v19 records. Zero returned events in this report do not prove that Relay did not run, and historical recovery failures do not establish a v20 regression.
 
-Validation: **1,268 passed / 17 skipped (1,285 total)**. Existing v19 deadlock reproduces; corrected recovery preserves purchase state and blocks Stop/Pause/Human and same-Plan replacement batches. All91 tested config/Plan identities match v19 (OFF revision9, ON revision11). Signed upgrades from v0.18.13–v0.18.19 verify all160 package hashes and preserve nine runtime files per installation, including readable timing presets.
+Validation: **1,275 passed / 17 skipped (1,292 total)** on the host, including19 reader tests. Independent source/privacy/bounds review passed. Signed upgrades from v0.18.13–v0.18.20 verify all161 package members and preserve nine runtime files per installation, including readable timing presets. Relay/Recovery/native input behavior and frozen Plans remain unchanged (OFF revision9, ON revision11).
 
-Use **Settings → CHECK UPDATE** with workers stopped and no active checkpoint, then reopen the Controller. Select the intended Run Profile and **COOKIE RELAY → ON** before a new batch. Presets save time only; AUTO disables Relay. Existing old revision10 Relay guidance still applies. Archives, statistics, sessions and timing presets are retained.
+Use **Settings → CHECK UPDATE** while workers are stopped and installation is eligible, reopen the Controller, then **SEND LOG** to collect retained history from existing files. Collecting diagnostics requires no new farming batch. Presets and runtime data are retained; AUTO still disables Relay.
 
-ZIP SHA-256: `6b09fb34d5cbae7a616197cd454e908e0899a809a9c74cfca27f3f9f8fcf106a`.
+ZIP SHA-256: `e3eb419d924a7ad5398788ca1404e379e5bf241586e5278e7253c156fb34539d`.
 
 ## v0.18.0 (initial release)
 
