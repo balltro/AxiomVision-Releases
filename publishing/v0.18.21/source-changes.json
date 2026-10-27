@@ -1,0 +1,422 @@
+[
+  {
+    "path": "RUN-SETUP-WINDOWS.bat",
+    "before_sha256": "b833dfe573ad696a79be9bed10145ca93b84f2933cf6c5ec97c38e9bf488f2f0",
+    "after_sha256": "94539b4d54f297b86936ead7fb7b7f0dc8c0c5ed9ebeb11831f577bb9ab68f5c",
+    "edits": [
+      {
+        "start": 12,
+        "end": 13,
+        "before": "echo Axiom Vision v0.18.20 Setup\n",
+        "after": "echo Axiom Vision v0.18.21 Setup\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/.codex-plugin/plugin.json",
+    "before_sha256": "31c8aadea4c1d0e20f2d75305bca1e010b3377bc9f5944cd3bcf245778b3b113",
+    "after_sha256": "d67163170e0ce37fc2b5c9cee0d23b03a3c48b3656a8cf93f2ad975c586a8f8d",
+    "edits": [
+      {
+        "start": 2,
+        "end": 3,
+        "before": "  \"version\": \"0.18.20+codex.20261027.recovery-observation\",\n",
+        "after": "  \"version\": \"0.18.21+codex.20261028.relay-log-windows\",\n"
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "before": "    \"longDescription\": \"Axiom Vision v0.18.20 fixes read-only Stage recovery after an expired Multi-Buy lockout and keeps bounded Relay diagnostics across later recovery sessions. Cookie Relay uses direct local RGB capture with unchanged visual-2 and frozen Plan input guards. AUTO disables Relay. Runtime item/treasure reading remains disabled.\",\n",
+        "after": "    \"longDescription\": \"Axiom Vision v0.18.21 fixes Windows Relay diagnostic journal identity checks and retains bounded Relay history in SEND LOG. Recovery and direct local RGB Relay input guards are unchanged. AUTO disables Relay. Runtime item/treasure reading remains disabled.\",\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/AGENTS.md",
+    "before_sha256": "81b286a177cc2de4d07c5e45ae91ffa1180fd8920e5b70ae8b82e6778c436260",
+    "after_sha256": "2703f786dd6cbfe9f76c15db04ded13552ab2f34f72155cdd35958debcb63709",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.21 Windows Relay diagnostic identity\n\nDirEntry.stat cached st_ino/st_dev are zero on Windows. Use that cached\nmetadata only for bounded inventory ordering, then acquire fresh non-following\npath metadata and compare like file identity to the opened descriptor before\nreading a selected regular journal. Preserve replacement and symlink guards,\nwhitelisted fields, byte/line/source/output bounds and explicit coverage.\nAn unreadable history is unknown, not proof that Relay did not run. Never\ninfer installed package version from historical Session events or their errors.\n\nThe publisher requires native Windows Python 3.12 reader regression checks\nbefore release publication. This proves diagnostic file reads only, never\nLDPlayer capture, native click timing, game acceptance or recovery success.\nNo Relay detector, mouse method, mission/Plan, input/replay or runtime state\nchange is granted by this diagnostics patch.\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/README_TH.md",
+    "before_sha256": "b06598af217e62a6c3b1457d71176a1c82e572e25fbf9aa036326ba9de532b51",
+    "after_sha256": "a78ca44e82a2ea6fd7436c230b5442e2c27069edc8bebe8e806516bb5f56e3a7",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.21 — Relay Log Windows\n\nแก้ตัวอ่านประวัติ Relay บน Windows ที่รายงาน read_error ทุกไฟล์\nรายละเอียด: RELEASE_v0.18.21_TH.md\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/RELEASE_v0.18.21_TH.md",
+    "before_sha256": null,
+    "after_sha256": "a9166a5c680cef177b974af80cdac627be6f01a857fa4a66a6d569793d0e6895",
+    "content": "# Axiom Vision v0.18.21 — Relay Logs on Windows\n\nแก้บั๊กตัวเก็บประวัติ Relay ใน v0.18.20 ที่พบไฟล์แต่รายงาน read_error ทุกไฟล์บน Windows\nสาเหตุคือใช้ข้อมูล identity จาก DirEntry.stat ที่เป็นศูนย์บน Windows ไปเทียบกับ fstat ของไฟล์จริง\n\n- อ่าน metadata ใหม่ของไฟล์ที่เลือกก่อนเปิด แล้วเทียบกับ handle ในรูปแบบเดียวกัน\n- ยังคงตรวจไฟล์ปกติและบล็อกไฟล์ที่ถูกแทนที่หรือเปลี่ยนเป็น symlink\n- จำกัดจำนวนไฟล์ จำนวนบรรทัด bytes และขนาดรายงานตามเดิม\n- เก็บเฉพาะเหตุการณ์และฟิลด์ที่กำหนด พร้อม read_error_reason ที่ไม่เปิดเผย path หรือข้อความลับ\n- นับขนาดและตำแหน่ง tail จากไฟล์ที่เปิดสำเร็จ เพื่อรายงานไฟล์ที่โตขึ้นหรือถูกตัดได้ตรง\n\nการเผยแพร่รุ่นนี้ต้องผ่านการทดสอบตัวอ่านบน Windows จริงกับ Python 3.12.10\nโดยทดสอบให้ v0.18.20 เกิด read_error และ v0.18.21 อ่านเหตุการณ์เดิมได้\nรวมทั้งเส้นสร้าง diagnostic bundle และ Telegram excerpt\nการทดสอบนี้ครอบคลุมไฟล์ Log ไม่ใช่การรับคลิกหรือจับหน้าจอของ LDPlayer\n\nLog วันที่ 28 ตุลาคมแสดงแพ็กเกจ v0.18.20 แต่ Session ที่แนบมายังเป็น v0.18.19 เดิม\nและตัวอ่านประวัติ Relay อ่านไม่ผ่านทั้ง 64 ไฟล์ จึงยังสรุปผลการตรวจหรือกด Relay ไม่ได้\nข้อผิดพลาด Recovery ในไฟล์นี้เป็นเหตุการณ์เดิม ไม่ใช่หลักฐานว่า v0.18.20 แก้ไม่สำเร็จ\n\nอัปเดตผ่าน Settings → CHECK UPDATE เมื่อ worker หยุดและไม่มี checkpoint ที่กำลังทำงาน\nเปิด Controller ใหม่ แล้วกด SEND LOG เพื่อดึงประวัติจากไฟล์เดิมที่ยังเก็บอยู่\nการเก็บ Log ไม่ต้องเริ่มแบตช์ใหม่ และไม่เปลี่ยนสถานะการฟาร์ม\n\nโหมด Relay, Preset เวลา, Recovery และ Plan ใช้ค่าจาก v0.18.20 ตามเดิม\nOFF revision 9, ON revision 11; AUTO ยังปิด Relay\nไม่มีการปรับเกณฑ์ภาพหรือสิทธิ์คลิกจากข้อมูล Log\n"
+  },
+  {
+    "path": "visionstudio/scripts/setup-windows.ps1",
+    "before_sha256": "9cf1908c19400722673b725355423caf1fdab17fa7416ef2a363bc4bb438cb96",
+    "after_sha256": "f5a609f254c52c6266f963b60249bcb1105820070e94b8a0fd4244dd30dac093",
+    "edits": [
+      {
+        "start": 90,
+        "end": 91,
+        "before": "Write-Host \"Axiom Vision v0.18.20 Recovery Observation is ready.\" -ForegroundColor Green\n",
+        "after": "Write-Host \"Axiom Vision v0.18.21 Relay Log Windows is ready.\" -ForegroundColor Green\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/verify_runtime_version.py",
+    "before_sha256": "09ce1a2f6d4f32c6d52183a95574629389974138ad8b2a4c7b56158ef5b1c664",
+    "after_sha256": "ee6def3a8a81c7aa9fbae9cb64de8343c1f4290317c094252c562cd10724b885",
+    "edits": [
+      {
+        "start": 9,
+        "end": 12,
+        "before": "EXPECTED_VERSION = \"0.18.20\"\nEXPECTED_PLUGIN_VERSION = \"0.18.20+codex.20261027.recovery-observation\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.20-recovery-observation-306\"\n",
+        "after": "EXPECTED_VERSION = \"0.18.21\"\nEXPECTED_PLUGIN_VERSION = \"0.18.21+codex.20261028.relay-log-windows\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.21-relay-log-windows-307\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_bridge.py",
+    "before_sha256": "953227de5313c3968aa6837fb58b073f6a8c27467285b210b62608b8fc5fef2f",
+    "after_sha256": "0ab30dba808822aee4e5d2f404245856184ad0120784b83be91d0d813268f704",
+    "edits": [
+      {
+        "start": 72,
+        "end": 74,
+        "before": "SERVER_VERSION = \"0.18.20-recovery-observation-306\"\nPRODUCT_VERSION = \"0.18.20\"\n",
+        "after": "SERVER_VERSION = \"0.18.21-relay-log-windows-307\"\nPRODUCT_VERSION = \"0.18.21\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_controller.py",
+    "before_sha256": "5d07714b75be836db2ef64bff78886a9aa3709c04e953efd2061758c9822ecb9",
+    "after_sha256": "cceb6f12d836cfa1880be4d26da22c43493aa6cceb0fe877a51690935bff2b4f",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Axiom Vision v0.18.20 Universal Mission and Utility Controller.\n",
+        "after": "\"\"\"Axiom Vision v0.18.21 Universal Mission and Utility Controller.\n"
+      },
+      {
+        "start": 145,
+        "end": 146,
+        "before": "CONTROLLER_VERSION = \"0.18.20\"\n",
+        "after": "CONTROLLER_VERSION = \"0.18.21\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_heart_contract.py",
+    "before_sha256": "beb7346e30196e15264649606d10ee41faa5877f5e58adb1f43e80c6ff210d72",
+    "after_sha256": "00bda2f3a86ec7c15209be4790c5988bcec5616a3aa08170b5984fcd67e8ebb3",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.20.\"\"\"\n",
+        "after": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.21.\"\"\"\n"
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "before": "HEART_RUNNER_VERSION = \"0.18.20\"\n",
+        "after": "HEART_RUNNER_VERSION = \"0.18.21\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_local_runner.py",
+    "before_sha256": "48b0f2de0561e6ada8d5402d5132d0a21ecf64aab0510e4488b23f57fc5b5663",
+    "after_sha256": "51f30b0c57c677cc4eb94aae90b64d71030fb1bf8d4be37d8eb5e663827222d8",
+    "edits": [
+      {
+        "start": 40,
+        "end": 41,
+        "before": "LOCAL_RUNNER_VERSION = \"0.18.20\"\n",
+        "after": "LOCAL_RUNNER_VERSION = \"0.18.21\"\n"
+      },
+      {
+        "start": 2117,
+        "end": 2118,
+        "before": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.20\"\n",
+        "after": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.21\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_relay_diagnostics.py",
+    "before_sha256": "67e0a0cc7fcba953d5c45c597b0d6348025fe01cf9332382365a27912d04b552",
+    "after_sha256": "23c75803b8a9fe0c5d0487d4f297474cf107cf8b55e8620ab10a616731043a5c",
+    "edits": [
+      {
+        "start": 17,
+        "end": 17,
+        "before": "",
+        "after": "import stat as stat_module\n"
+      },
+      {
+        "start": 221,
+        "end": 222,
+        "before": "            \"size_at_capture\": size, \"start_byte_offset\": start, \"bytes_read\": 0,\n",
+        "after": "            \"size_at_inventory\": size, \"size_at_capture\": None, \"start_byte_offset\": start, \"bytes_read\": 0,\n"
+      },
+      {
+        "start": 227,
+        "end": 228,
+        "before": "        if budget > 0 and total_lines < max_source_lines:\n",
+        "after": "        if total_read < max_total_source_bytes and total_lines < max_source_lines:\n"
+      },
+      {
+        "start": 229,
+        "end": 229,
+        "before": "",
+        "after": "                # DirEntry.stat() caches zero st_ino/st_dev on Windows. Use it\n                # only to rank inventory; compare a fresh non-following stat\n                # with the opened handle's fstat, whose identity domain agrees.\n                path_stat = os.stat(path, follow_symlinks=False)\n                if not stat_module.S_ISREG(path_stat.st_mode):\n                    coverage[\"read_error_reason\"] = \"not_regular_file\"\n                    raise OSError(\"Journal path is no longer a regular file\")\n"
+      },
+      {
+        "start": 231,
+        "end": 232,
+        "before": "                    if (current_stat.st_ino, current_stat.st_dev) != (initial_stat.st_ino, initial_stat.st_dev):\n",
+        "after": "                    if not stat_module.S_ISREG(current_stat.st_mode):\n                        coverage[\"read_error_reason\"] = \"not_regular_file\"\n                        raise OSError(\"Opened journal is not a regular file\")\n                    if (current_stat.st_ino, current_stat.st_dev) != (path_stat.st_ino, path_stat.st_dev):\n                        coverage[\"read_error_reason\"] = \"file_identity_changed\"\n"
+      },
+      {
+        "start": 233,
+        "end": 233,
+        "before": "",
+        "after": "                    # Bind the tail and byte budget to this opened snapshot.\n                    # Appends after inventory are included up to this size;\n                    # later growth cannot extend the bounded read, and a short\n                    # read after truncation remains an explicitly limited scan.\n                    size = current_stat.st_size\n                    budget = min(size, max_source_bytes, max_total_source_bytes - total_read)\n                    start = max(0, size - budget)\n                    coverage.update(size_at_capture=size, start_byte_offset=start)\n"
+      },
+      {
+        "start": 237,
+        "end": 237,
+        "before": "",
+        "after": "                coverage.setdefault(\"read_error_reason\", \"os_error\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_bridge.py",
+    "before_sha256": "97651a2a68a3fdff3d93b5f89c7da88b05a4e7fa26d8f22920af96ef3fa301bb",
+    "after_sha256": "8b630ce9b74f4d62e33f4404b622034109dccbbe9c599fda11e58ceae79d52c2",
+    "edits": [
+      {
+        "start": 3085,
+        "end": 3086,
+        "before": "            \"0.18.20-recovery-observation-306\",\n",
+        "after": "            \"0.18.21-relay-log-windows-307\",\n"
+      },
+      {
+        "start": 10848,
+        "end": 10849,
+        "before": "                \"Axiom Vision v0.18.20 — Telegram test\\n\"\n",
+        "after": "                \"Axiom Vision v0.18.21 — Telegram test\\n\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_controller_state.py",
+    "before_sha256": "dd980d2ef07bd03f098dcd3bde51b795ac531fac840a8746aff406589580c363",
+    "after_sha256": "c16846f6e497ead95756e5a2ccfc35c3cfb3deb2d02e24d3777c253f658d3340",
+    "edits": [
+      {
+        "start": 2446,
+        "end": 2447,
+        "before": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.20\")\n",
+        "after": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.21\")\n"
+      },
+      {
+        "start": 5818,
+        "end": 5819,
+        "before": "            self.assertEqual(report[\"product_version\"], \"0.18.20\")\n",
+        "after": "            self.assertEqual(report[\"product_version\"], \"0.18.21\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_heart_runner.py",
+    "before_sha256": "34591ece2075d924d118fef880a9b4147ebb1be253cc4786889dc21f5ecb427c",
+    "after_sha256": "db101515794870958047b975327d7f29d067122ee64da3056d3ecfdae0700bc5",
+    "edits": [
+      {
+        "start": 536,
+        "end": 537,
+        "before": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.20\")\n",
+        "after": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.21\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_local_runner.py",
+    "before_sha256": "883d37894f5c8d1de5b6fdcacfdb95af2006ff861976267074ae4c738b747614",
+    "after_sha256": "c6c41eeb9402b881744443c992f3f04b3336fe973fcb8eb104cf3ee03ff8fd2c",
+    "edits": [
+      {
+        "start": 103,
+        "end": 104,
+        "before": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.20\")\n",
+        "after": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.21\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_relay_diagnostics.py",
+    "before_sha256": "cebbbab9615d979240f46cc932f236b5c7e1d623e0d843f0a2a3fdc2fba45804",
+    "after_sha256": "315fb094c74ecea136fc4c6fd8787715d78fbde372aed079b002ecf4aa3b221c",
+    "edits": [
+      {
+        "start": 2,
+        "end": 2,
+        "before": "",
+        "after": "from contextlib import contextmanager\n"
+      },
+      {
+        "start": 9,
+        "end": 9,
+        "before": "",
+        "after": "from types import SimpleNamespace\n"
+      },
+      {
+        "start": 10,
+        "end": 10,
+        "before": "",
+        "after": "from unittest import mock\n"
+      },
+      {
+        "start": 16,
+        "end": 16,
+        "before": "",
+        "after": "\n\n@contextmanager\ndef windows_cached_direntry_stats():\n    \"\"\"Model documented Windows DirEntry zero IDs; real stat/handles stay real.\"\"\"\n    original_scandir = os.scandir\n\n    class Entry:\n        def __init__(self, entry): self.entry = entry\n        def __getattr__(self, name): return getattr(self.entry, name)\n        def stat(self, **options):\n            result = self.entry.stat(**options)\n            fields = {name: getattr(result, name) for name in dir(result) if name.startswith(\"st_\")}\n            fields.update(st_ino=0, st_dev=0, st_nlink=0)\n            return SimpleNamespace(**fields)\n\n    class Scan:\n        def __init__(self, scan): self.scan = scan\n        def __enter__(self): self.scan.__enter__(); return self\n        def __exit__(self, *arguments): return self.scan.__exit__(*arguments)\n        def __iter__(self): return self\n        def __next__(self): return Entry(next(self.scan))\n        def close(self): return self.scan.close()\n\n    def scan(*arguments, **options): return Scan(original_scandir(*arguments, **options))\n\n    with mock.patch.object(diagnostics.os, \"scandir\", side_effect=scan):\n        yield\n"
+      },
+      {
+        "start": 52,
+        "end": 52,
+        "before": "",
+        "after": "\n    def test_windows_cached_zero_ids_do_not_reject_the_same_real_file(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            path = root / \"journal.jsonl\"\n            self.write(path, [relay()])\n            with windows_cached_direntry_stats():\n                rows, metadata, _ = self.snapshot(root)\n            self.assertEqual(len(rows), 1)\n            self.assertEqual(rows[0][\"metrics\"][\"capture_method\"], \"direct_raw_rgb\")\n            source = metadata[\"sources_newest_first\"][0]\n            self.assertEqual(source[\"bytes_read\"], path.stat().st_size)\n            self.assertNotIn(\"read_error\", source)\n\n    def test_replacement_between_fresh_stat_and_open_is_rejected_before_read(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            path = root / \"journal.jsonl\"\n            replacement = root / \"replacement.tmp\"\n            self.write(path, [relay(action_number=1)])\n            self.write(replacement, [relay(action_number=2)])\n            original_open = Path.open\n\n            def replace_then_open(current, mode=\"r\", *arguments, **options):\n                if current == path and mode == \"rb\":\n                    os.replace(replacement, path)\n                return original_open(current, mode, *arguments, **options)\n\n            with windows_cached_direntry_stats(), mock.patch.object(Path, \"open\", replace_then_open):\n                rows, metadata, _ = self.snapshot(root)\n            self.assertEqual(rows, [])\n            source = metadata[\"sources_newest_first\"][0]\n            self.assertTrue(source[\"read_error\"])\n            self.assertEqual(source[\"read_error_reason\"], \"file_identity_changed\")\n            self.assertEqual(source[\"bytes_read\"], 0)\n            self.assertIsNone(source[\"size_at_capture\"])\n\n    def test_journal_replaced_by_symlink_before_fresh_stat_is_not_read(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            sessions = root / \"sessions\"; sessions.mkdir()\n            path = sessions / \"journal.jsonl\"\n            outside = root / \"outside.jsonl\"\n            self.write(path, [relay(action_number=1)])\n            self.write(outside, [relay(action_number=2)])\n            original_stat = os.stat\n\n            def change_then_stat(current, *arguments, **options):\n                if Path(current) == path:\n                    path.unlink()\n                    path.symlink_to(outside)\n                return original_stat(current, *arguments, **options)\n\n            with windows_cached_direntry_stats(), mock.patch.object(diagnostics.os, \"stat\", change_then_stat):\n                rows, metadata, _ = self.snapshot(sessions)\n            self.assertEqual(rows, [])\n            source = metadata[\"sources_newest_first\"][0]\n            self.assertTrue(source[\"read_error\"])\n            self.assertEqual(source[\"read_error_reason\"], \"not_regular_file\")\n            self.assertEqual(source[\"bytes_read\"], 0)\n\n    def test_deleted_source_reports_error_and_does_not_hide_other_journal(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            missing = root / \"newest.jsonl\"\n            self.write(missing, [relay(action_number=2)], mtime=2)\n            self.write(root / \"older.jsonl\", [relay(action_number=1)], mtime=1)\n            original_stat = os.stat\n\n            def delete_then_stat(current, *arguments, **options):\n                if Path(current) == missing:\n                    missing.unlink()\n                return original_stat(current, *arguments, **options)\n\n            with windows_cached_direntry_stats(), mock.patch.object(diagnostics.os, \"stat\", delete_then_stat):\n                rows, metadata, _ = self.snapshot(root)\n            self.assertEqual([row[\"action_number\"] for row in rows], [1])\n            newest = metadata[\"sources_newest_first\"][0]\n            self.assertTrue(newest[\"read_error\"])\n            self.assertEqual(newest[\"read_error_reason\"], \"os_error\")\n            self.assertEqual(newest[\"bytes_read\"], 0)\n            self.assertIsNone(newest[\"size_at_capture\"])\n\n    def test_append_after_inventory_uses_the_opened_file_snapshot_even_if_it_was_empty(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            path = root / \"journal.jsonl\"; path.write_bytes(b\"\")\n            original_stat = os.stat\n\n            def append_then_stat(current, *arguments, **options):\n                if Path(current) == path:\n                    with path.open(\"ab\") as output:\n                        output.write((json.dumps(relay()) + \"\\n\").encode())\n                return original_stat(current, *arguments, **options)\n\n            with windows_cached_direntry_stats(), mock.patch.object(diagnostics.os, \"stat\", append_then_stat):\n                rows, metadata, _ = self.snapshot(root)\n            self.assertEqual(len(rows), 1)\n            source = metadata[\"sources_newest_first\"][0]\n            self.assertEqual(source[\"size_at_inventory\"], 0)\n            self.assertGreater(source[\"size_at_capture\"], 0)\n            self.assertEqual(source[\"bytes_read\"], source[\"size_at_capture\"])\n\n    def test_append_after_handle_stat_stays_within_captured_size(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            path = root / \"journal.jsonl\"\n            self.write(path, [relay(action_number=1)])\n            captured_size = path.stat().st_size\n            original_fstat = os.fstat\n\n            def append_after_stat(descriptor):\n                result = original_fstat(descriptor)\n                with path.open(\"ab\") as output:\n                    output.write((json.dumps(relay(action_number=2)) + \"\\n\").encode())\n                return result\n\n            with windows_cached_direntry_stats(), mock.patch.object(diagnostics.os, \"fstat\", append_after_stat):\n                rows, metadata, _ = self.snapshot(root)\n            self.assertEqual([row[\"action_number\"] for row in rows], [1])\n            source = metadata[\"sources_newest_first\"][0]\n            self.assertEqual(source[\"size_at_capture\"], captured_size)\n            self.assertEqual(source[\"bytes_read\"], captured_size)\n            self.assertLess(source[\"size_at_capture\"], path.stat().st_size)\n\n    def test_truncation_after_handle_stat_reports_short_incomplete_scan(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            path = root / \"journal.jsonl\"\n            first = (json.dumps(relay(action_number=1)) + \"\\n\").encode()\n            self.write(path, [relay(action_number=1), relay(action_number=2)])\n            captured_size = path.stat().st_size\n            original_fstat = os.fstat\n\n            def truncate_after_stat(descriptor):\n                result = original_fstat(descriptor)\n                path.write_bytes(first)\n                return result\n\n            with windows_cached_direntry_stats(), mock.patch.object(diagnostics.os, \"fstat\", truncate_after_stat):\n                rows, metadata, _ = self.snapshot(root)\n            self.assertEqual([row[\"action_number\"] for row in rows], [1])\n            source = metadata[\"sources_newest_first\"][0]\n            self.assertEqual(source[\"size_at_capture\"], captured_size)\n            self.assertEqual(source[\"bytes_read\"], len(first))\n            self.assertTrue(source[\"scan_limited\"])\n"
+      },
+      {
+        "start": 198,
+        "end": 199,
+        "before": "            bundle, report = controller.create_diagnostic_bundle(root=root, data_root=root, mission_path=mission, control_path=control)\n",
+        "after": "            with windows_cached_direntry_stats():\n                bundle, report = controller.create_diagnostic_bundle(root=root, data_root=root, mission_path=mission, control_path=control)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_runtime_version.py",
+    "before_sha256": "7d2c64b1fe09fe79261b7744383f4e69ffe5b838ef335aaf73a9d3bbcba098bb",
+    "after_sha256": "9cad85c85cc672bb91ee90f1431662a8f0c9f5f073239c2aea6fe162b7ae2023",
+    "edits": [
+      {
+        "start": 22,
+        "end": 25,
+        "before": "    plugin_version: str = \"0.18.20+codex.20261027.recovery-observation\",\n    controller_version: str = \"0.18.20\",\n    bridge_server_version: str = \"0.18.20-recovery-observation-306\",\n",
+        "after": "    plugin_version: str = \"0.18.21+codex.20261028.relay-log-windows\",\n    controller_version: str = \"0.18.21\",\n    bridge_server_version: str = \"0.18.21-relay-log-windows-307\",\n"
+      },
+      {
+        "start": 40,
+        "end": 41,
+        "before": "            'PRODUCT_VERSION = \"0.18.20\"\\n'\n",
+        "after": "            'PRODUCT_VERSION = \"0.18.21\"\\n'\n"
+      },
+      {
+        "start": 43,
+        "end": 44,
+        "before": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.20\"\\n',\n",
+        "after": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.21\"\\n',\n"
+      },
+      {
+        "start": 49,
+        "end": 50,
+        "before": "            'HEART_RUNNER_VERSION = \"0.18.20\"\\n'\n",
+        "after": "            'HEART_RUNNER_VERSION = \"0.18.21\"\\n'\n"
+      },
+      {
+        "start": 77,
+        "end": 78,
+        "before": "            \"0.18.20+codex.20261027.recovery-observation\",\n",
+        "after": "            \"0.18.21+codex.20261028.relay-log-windows\",\n"
+      },
+      {
+        "start": 85,
+        "end": 86,
+        "before": "                \"plugin\": \"0.18.20\",\n",
+        "after": "                \"plugin\": \"0.18.21\",\n"
+      },
+      {
+        "start": 87,
+        "end": 88,
+        "before": "                    \"0.18.20+codex.20261027.recovery-observation\"\n",
+        "after": "                    \"0.18.21+codex.20261028.relay-log-windows\"\n"
+      },
+      {
+        "start": 89,
+        "end": 93,
+        "before": "                \"controller\": \"0.18.20\",\n                \"bridge\": \"0.18.20\",\n                \"bridge_server\": \"0.18.20-recovery-observation-306\",\n                \"local_runner\": \"0.18.20\",\n",
+        "after": "                \"controller\": \"0.18.21\",\n                \"bridge\": \"0.18.21\",\n                \"bridge_server\": \"0.18.21-relay-log-windows-307\",\n                \"local_runner\": \"0.18.21\",\n"
+      },
+      {
+        "start": 95,
+        "end": 96,
+        "before": "                \"heart_sender\": \"0.18.20\",\n",
+        "after": "                \"heart_sender\": \"0.18.21\",\n"
+      },
+      {
+        "start": 109,
+        "end": 110,
+        "before": "            [\"controller=0.10.27 (expected 0.18.20)\"],\n",
+        "after": "            [\"controller=0.10.27 (expected 0.18.21)\"],\n"
+      },
+      {
+        "start": 119,
+        "end": 120,
+        "before": "                plugin_version=\"0.18.20+codex.wrong-build\",\n",
+        "after": "                plugin_version=\"0.18.21+codex.wrong-build\",\n"
+      },
+      {
+        "start": 130,
+        "end": 132,
+        "before": "                \"plugin_manifest=0.18.20+codex.wrong-build \"\n                \"(expected 0.18.20+codex.20261027.recovery-observation)\",\n",
+        "after": "                \"plugin_manifest=0.18.21+codex.wrong-build \"\n                \"(expected 0.18.21+codex.20261028.relay-log-windows)\",\n"
+      },
+      {
+        "start": 133,
+        "end": 134,
+        "before": "                \"(expected 0.18.20-recovery-observation-306)\",\n",
+        "after": "                \"(expected 0.18.21-relay-log-windows-307)\",\n"
+      },
+      {
+        "start": 188,
+        "end": 189,
+        "before": "        self.assertIn(\"Axiom Vision v0.18.20 Setup\", text)\n",
+        "after": "        self.assertIn(\"Axiom Vision v0.18.21 Setup\", text)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/update-package-files.json",
+    "before_sha256": "580d8e6de5e8949ff081e708d07c97613de74c26420b13874d821e573e9db21c",
+    "after_sha256": "59eb8db0619e2e83d949336973493d141b9dc1affeb12b5833ad331da8dfc796",
+    "edits": [
+      {
+        "start": 26,
+        "end": 26,
+        "before": "",
+        "after": "  \"visionstudio/RELEASE_v0.18.21_TH.md\",\n"
+      }
+    ]
+  }
+]

@@ -1,0 +1,237 @@
+{
+  "version": "0.18.21",
+  "package": {
+    "version": "0.18.21",
+    "package_members": 161,
+    "archive": "AxiomVision-v0.18.21-Relay-Logs-Windows10.zip",
+    "archive_bytes": 9707588,
+    "archive_sha256": "e3eb419d924a7ad5398788ca1404e379e5bf241586e5278e7253c156fb34539d",
+    "feed_bytes": 19024,
+    "feed_sha256": "0a23457b955db004ebf16113799d0e08cb027cd80124528fd0d886c069d91156",
+    "all_source_and_archive_file_hashes_match": true,
+    "signature_verified": true
+  },
+  "tests": {
+    "version": "0.18.21",
+    "total": 1292,
+    "passed": 1275,
+    "skipped": 17,
+    "seconds": 82.487,
+    "log_sha256": "ad886a234eec4f1f79fae5678636a6bc6a268fb308b205822ea079040025e448"
+  },
+  "reader_regressions": {
+    "version": "0.18.21",
+    "baseline": "0.18.20",
+    "targeted_tests": {
+      "total": 19,
+      "passed": 19
+    },
+    "baseline_windows_semantics_regressions": {
+      "cases": 2,
+      "failed": 2,
+      "log": "v0.18.21-reader-before-v20.log"
+    },
+    "scope": "Relay diagnostics reader only; runtime game input unchanged",
+    "windows_behavior_simulated_locally": true,
+    "native_windows_reader_tested_locally": false,
+    "source_bounds_stress": [
+      {
+        "maximum": 16000,
+        "output_bytes": 10029,
+        "source_count": 30,
+        "all_errors_are_typed_and_capture_size_unknown": true
+      },
+      {
+        "maximum": 48000,
+        "output_bytes": 20398,
+        "source_count": 64,
+        "all_errors_are_typed_and_capture_size_unknown": true
+      }
+    ],
+    "file_sha256": {
+      "scripts/visionstudio_relay_diagnostics.py": "23c75803b8a9fe0c5d0487d4f297474cf107cf8b55e8620ab10a616731043a5c",
+      "tests/test_relay_diagnostics.py": "315fb094c74ecea136fc4c6fd8787715d78fbde372aed079b002ecf4aa3b221c"
+    }
+  },
+  "independent_review": {
+    "version": "0.18.21",
+    "review_status": "clear",
+    "blocking_findings": [],
+    "independent_tests": {
+      "relay_diagnostics": {
+        "passed": 19,
+        "seconds": 0.091
+      }
+    },
+    "invariants": {
+      "ten_classifier_calibration_plan_state_updater_heart_log_delivery_files_byte_identical": true,
+      "bridge_controller_heart_contract_local_runner_ast_identical_except_version_strings": true,
+      "fresh_non_following_path_stat_compared_with_opened_fstat": true,
+      "regular_file_and_replacement_guards_retained": true,
+      "tail_and_byte_budget_bound_to_opened_file_size": true,
+      "read_error_reasons_fixed_enums_without_exception_prose": true,
+      "diagnostic_field_whitelist_unchanged": true,
+      "older_relay_survives_five_newer_sessions_and_telegram_excerpt_exact": true
+    },
+    "independent_footer_bound_stress": {
+      "partial_tail_16000": {
+        "bytes": 13679,
+        "sources": 30
+      },
+      "identity_errors_16000": {
+        "bytes": 10509,
+        "sources": 30
+      },
+      "partial_tail_48000": {
+        "bytes": 28196,
+        "sources": 64
+      },
+      "identity_errors_48000": {
+        "bytes": 21422,
+        "sources": 64
+      }
+    },
+    "windows_publication_gate_review": {
+      "python_version": "3.12.10",
+      "platform_assertion": "win32",
+      "requires_native_cached_zero_identity_and_like_path_handle_identity": true,
+      "requires_old_reader_failure_and_candidate_read_success": true,
+      "runs_complete_candidate_relay_diagnostic_tests": true,
+      "publisher_needs_windows_reader_job_success": true,
+      "setup_python_action_pinned_to_commit": true
+    },
+    "native_windows_gate_run_by_this_reviewer": false,
+    "native_ldplayer_capture_or_input_tested": false,
+    "file_sha256": {
+      "scripts/visionstudio_relay_diagnostics.py": "23c75803b8a9fe0c5d0487d4f297474cf107cf8b55e8620ab10a616731043a5c",
+      "tests/test_relay_diagnostics.py": "315fb094c74ecea136fc4c6fd8787715d78fbde372aed079b002ecf4aa3b221c",
+      "scripts/visionstudio_bridge.py": "0ab30dba808822aee4e5d2f404245856184ad0120784b83be91d0d813268f704",
+      "publishing/v0.18.21/verify_windows_relay.py": "8bdeca85b62ea703a4b5d5de6fdaf49523ac10ceefecb00c088cd4f07af295d3",
+      ".github/workflows/publish-v01821.yml": "001d76b39496b62baefaa9fc5dc340fc2494fddd797515281a7cf70ca88fb3c6"
+    }
+  },
+  "upgrades": [
+    {
+      "from": "0.18.13",
+      "to": "0.18.21",
+      "package_members_verified": 161,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.14",
+      "to": "0.18.21",
+      "package_members_verified": 161,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.15",
+      "to": "0.18.21",
+      "package_members_verified": 161,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.16",
+      "to": "0.18.21",
+      "package_members_verified": 161,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.17",
+      "to": "0.18.21",
+      "package_members_verified": 161,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.18",
+      "to": "0.18.21",
+      "package_members_verified": 161,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.19",
+      "to": "0.18.21",
+      "package_members_verified": 161,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.20",
+      "to": "0.18.21",
+      "package_members_verified": 161,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "native_windows_gate_required_before_publication": true,
+  "native_ldplayer_capture_or_input_tested": false
+}
