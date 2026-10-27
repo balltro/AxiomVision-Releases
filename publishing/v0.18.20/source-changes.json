@@ -1,0 +1,439 @@
+[
+  {
+    "path": "RUN-SETUP-WINDOWS.bat",
+    "before_sha256": "2871c08b92913e4373fabd330977ef9c08a3e7de89147bf0bcccf855b73deae3",
+    "after_sha256": "b833dfe573ad696a79be9bed10145ca93b84f2933cf6c5ec97c38e9bf488f2f0",
+    "edits": [
+      {
+        "start": 12,
+        "end": 13,
+        "before": "echo Axiom Vision v0.18.19 Setup\n",
+        "after": "echo Axiom Vision v0.18.20 Setup\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/.codex-plugin/plugin.json",
+    "before_sha256": "d1b50cf0688757ce2ed3113f35b528f1785f0199e41582e62c487c3c2fef1133",
+    "after_sha256": "31c8aadea4c1d0e20f2d75305bca1e010b3377bc9f5944cd3bcf245778b3b113",
+    "edits": [
+      {
+        "start": 2,
+        "end": 3,
+        "before": "  \"version\": \"0.18.19+codex.20261025.relay-direct\",\n",
+        "after": "  \"version\": \"0.18.20+codex.20261027.recovery-observation\",\n"
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "before": "    \"longDescription\": \"Axiom Vision v0.18.19 adds optional Cookie Relay below Random Boost. Short, Normal and Custom profiles schedule fast local visual watch for one guarded second-runner activation. AUTO disables Relay. Frozen plans, durable never-replay Relay intent, Human Verification and input guards remain enforced. Runtime item/treasure reading remains disabled.\",\n",
+        "after": "    \"longDescription\": \"Axiom Vision v0.18.20 fixes read-only Stage recovery after an expired Multi-Buy lockout and keeps bounded Relay diagnostics across later recovery sessions. Cookie Relay uses direct local RGB capture with unchanged visual-2 and frozen Plan input guards. AUTO disables Relay. Runtime item/treasure reading remains disabled.\",\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/AGENTS.md",
+    "before_sha256": "4943d7c344c703ab849533c63da1194e575467b4e91448f423e842686f1a0c81",
+    "after_sha256": "81b286a177cc2de4d07c5e45ae91ffa1180fd8920e5b70ae8b82e6778c436260",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.20 recovery observation and retained Relay diagnostics\n\nStage recovery may acquire a read-only frame after a GUI input lockout has\nexpired but still requires a fresh post-lockout observation. This is a narrow\ncapture exception only: active lockouts, pending/committed action identity,\nController/Stage generation, Stop/Pause/Human and replay restrictions remain.\nClear only the expired observation requirement bound before that successful\ncapture, after Human and authority rechecks; never erase or replay Multi-Buy.\nA failed capture, changed lockout, changed generation or Human boundary cannot\nclear it. Stage resume still requires the existing exact scene confirmation.\n\nSEND LOG includes bounded, whitelisted Relay event history from retained\njournals independently of the five newest sessions. Declare source coverage,\nscan limits and omissions. These counters, timestamps and hashes are telemetry\nonly; they never authorize input, prove game acceptance or reconstruct a frame.\nThe private raw Relay path, visual-2 calibration, Plans and native mouse input\nremain unchanged. Never claim a native Relay fix without runtime evidence.\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/README_TH.md",
+    "before_sha256": "9fef238b6b1a4c7e07761e50a2720e6707be79601f3621a42a6b9e50c49f850b",
+    "after_sha256": "b06598af217e62a6c3b1457d71176a1c82e572e25fbf9aa036326ba9de532b51",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.20 — Recovery Observation\n\nแก้ Recovery หลัง Multi-Buy ที่ติดเงื่อนไขดูภาพใหม่ และเก็บประวัติ Relay ใน SEND LOG\nแม้มี Session กู้คืนตามมาหลายครั้ง รายละเอียด: RELEASE_v0.18.20_TH.md\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/RELEASE_v0.18.20_TH.md",
+    "before_sha256": null,
+    "after_sha256": "171e107af6c000fba85280caa866c2a48287d3ab9cb2922c1ec610374d4e16a9",
+    "content": "# Axiom Vision v0.18.20 — Recovery Observation\n\nแก้เส้นกู้คืนที่ติดหลัง Multi-Buy: เมื่อเวลาล็อกอินพุตหมดแล้ว ระบบต้องดูภาพใหม่\nแต่เส้น Recovery เดิมกลับถูกเงื่อนไขเดียวกันขวางก่อนจับภาพ ทำให้กู้คืนซ้ำโดยไม่คืบหน้า\n\n- อนุญาตเฉพาะการดูภาพใน Recovery หลังหมดเวลาล็อก และตรวจสถานะอีกครั้งหลังจับภาพ\n- ปลดเฉพาะเงื่อนไขรอภาพใหม่ของ lockout เดิมเมื่อภาพสำเร็จและผ่าน Human Guard\n- ยังต้องยืนยัน Scene ก่อน Resume และไม่กด Multi-Buy หรือ Confirm ซ้ำ\n- Stop, Pause, Human Verification, intent และงบกู้คืนเดิมยังมีผล\n- SEND LOG เก็บประวัติ Relay แยกจาก Session ล่าสุด 5 รายการ พร้อมระบุขอบเขตและข้อมูลที่ขาด\n  เพื่อไม่ให้ Session กู้คืนหลายครั้งดันประวัติตอนวิ่งออกจาก Log ที่ส่ง\n\nLog วันที่ 27 ตุลาคมยืนยัน Relay ON, Custom 60 วินาที และ Plan revision 11\nแต่ Session ที่แนบมาทั้งห้าครอบคลุมเฉพาะการเตรียมเกมและกู้คืน ไม่มีช่วง Running\nจึงยังสรุปไม่ได้ว่า Relay ตรวจไม่พบปุ่ม ส่งคลิกช้า หรือเกมไม่รับคลิก\nรุ่นนี้แก้ปัญหากู้คืนที่พิสูจน์ได้และการเก็บ Log ไม่ได้เปลี่ยนเกณฑ์ตรวจหรือเส้นคลิก Relay\n\nอัปเดตที่ Settings → CHECK UPDATE ขณะหยุด worker และไม่มี checkpoint ที่กำลังทำงาน\nจากนั้นเปิด Controller ใหม่ ตั้ง Run Profile และตรวจ COOKIE RELAY → ON ก่อนเริ่ม\nPreset เวลาและข้อมูลเดิมยังอยู่ AUTO ยังคงปิด Relay\nไม่มีการเปลี่ยน Plan จาก v0.18.19: OFF revision 9, ON revision 11\nแบตช์ Relay revision 10 เก่ายังใช้กฎ Stop/Reset เดิม\n\nการตรวจยืนยันบนเครื่องทดสอบครอบคลุมโค้ดกู้คืนและการเก็บ Log\nยังไม่ได้ทดสอบการจับหน้าจอและรับคลิกจริงบน Windows/LDPlayer ของผู้ใช้\n"
+  },
+  {
+    "path": "visionstudio/scripts/setup-windows.ps1",
+    "before_sha256": "32aa17cc8b2ed6ee8ba925ad86148004c9bd0cd11697548ca0a246c9e63fcc17",
+    "after_sha256": "9cf1908c19400722673b725355423caf1fdab17fa7416ef2a363bc4bb438cb96",
+    "edits": [
+      {
+        "start": 90,
+        "end": 91,
+        "before": "Write-Host \"Axiom Vision v0.18.19 Relay Direct is ready.\" -ForegroundColor Green\n",
+        "after": "Write-Host \"Axiom Vision v0.18.20 Recovery Observation is ready.\" -ForegroundColor Green\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/verify_runtime_version.py",
+    "before_sha256": "ecc152c98bb850b733aaa208186f0699dbd459cdd09fe1f7ff064b9f9901c2ff",
+    "after_sha256": "09ce1a2f6d4f32c6d52183a95574629389974138ad8b2a4c7b56158ef5b1c664",
+    "edits": [
+      {
+        "start": 9,
+        "end": 12,
+        "before": "EXPECTED_VERSION = \"0.18.19\"\nEXPECTED_PLUGIN_VERSION = \"0.18.19+codex.20261025.relay-direct\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.19-relay-direct-305\"\n",
+        "after": "EXPECTED_VERSION = \"0.18.20\"\nEXPECTED_PLUGIN_VERSION = \"0.18.20+codex.20261027.recovery-observation\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.20-recovery-observation-306\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_bridge.py",
+    "before_sha256": "e4b9b7265bade74d8bdc20084c22789b05e295e6225659e864537d42d1cb36f3",
+    "after_sha256": "953227de5313c3968aa6837fb58b073f6a8c27467285b210b62608b8fc5fef2f",
+    "edits": [
+      {
+        "start": 72,
+        "end": 74,
+        "before": "SERVER_VERSION = \"0.18.19-relay-direct-305\"\nPRODUCT_VERSION = \"0.18.19\"\n",
+        "after": "SERVER_VERSION = \"0.18.20-recovery-observation-306\"\nPRODUCT_VERSION = \"0.18.20\"\n"
+      },
+      {
+        "start": 5881,
+        "end": 5881,
+        "before": "",
+        "after": "        allow_expired_lockout_observation: bool = False,\n"
+      },
+      {
+        "start": 5944,
+        "end": 5945,
+        "before": "        if lockout[\"active\"] or lockout[\"fresh_observation_required\"]:\n",
+        "after": "        if lockout[\"active\"] or (\n            lockout[\"fresh_observation_required\"]\n            and not allow_expired_lockout_observation\n        ):\n"
+      },
+      {
+        "start": 8980,
+        "end": 8980,
+        "before": "",
+        "after": "            # Recovery captures are read-only. The expired lockout requires\n            # precisely this new observation, not a Stage transition or input.\n            # An active animation lockout remains blocked by the helper.\n            allow_expired_lockout_observation=True,\n"
+      },
+      {
+        "start": 8987,
+        "end": 8987,
+        "before": "",
+        "after": "        lockout_binding = (\n            session.gui_input_lockout_until_unix,\n            session.gui_input_lockout_until_monotonic,\n            session.gui_input_lockout_reason,\n            session.gui_input_lockout_target_id,\n            session.gui_input_lockout_action_number,\n            session.gui_input_lockout_fresh_observation_required,\n        )\n        post_lockout_observation = bool(lockout_binding[-1])\n        recovery_controller_binding = None\n        if post_lockout_observation:\n            controller_state = self._controller_gate(session)\n            controller_batch = controller_state.get(\"batch_plan\")\n            recovery_controller_binding = (\n                controller_state.get(\"_attached\") is True,\n                controller_batch.get(\"batch_id\")\n                if isinstance(controller_batch, dict) else None,\n            )\n            if recovery_controller_binding[0] and not (\n                isinstance(recovery_controller_binding[1], str)\n                and recovery_controller_binding[1]\n            ):\n                raise BridgeError(\n                    \"Post-lockout recovery requires the attached Controller \"\n                    \"batch identity; input remains locked\"\n                )\n        recovery_signature = (\n            session.stage_alignment_checkpoint_signature()\n            if post_lockout_observation else None\n        )\n        if session.gui_input_lockout_status()[\"active\"]:\n            raise BridgeError(\n                \"GUI input lockout became active before recovery capture; \"\n                \"no recovery observation was accepted\"\n            )\n"
+      },
+      {
+        "start": 9018,
+        "end": 9018,
+        "before": "",
+        "after": "        if post_lockout_observation:\n            # Capture starts only after expiry. Revalidate every authority\n            # that could change while capture/Human Guard blocked before\n            # acknowledging the exact same lockout's fresh observation.\n            with session.runtime_transition_lock:\n                current_window = self._verified_window(session)\n                self._recovery_session(session_id)\n                current_controller_state = self._controller_gate(session)\n                current_controller_batch = current_controller_state.get(\"batch_plan\")\n                current_controller_binding = (\n                    current_controller_state.get(\"_attached\") is True,\n                    current_controller_batch.get(\"batch_id\")\n                    if isinstance(current_controller_batch, dict) else None,\n                )\n                session.ensure_live()\n                session.ensure_not_terminal()\n                current_lockout_binding = (\n                    session.gui_input_lockout_until_unix,\n                    session.gui_input_lockout_until_monotonic,\n                    session.gui_input_lockout_reason,\n                    session.gui_input_lockout_target_id,\n                    session.gui_input_lockout_action_number,\n                    session.gui_input_lockout_fresh_observation_required,\n                )\n                if (\n                    self.session is not session\n                    or current_controller_binding != recovery_controller_binding\n                    or session.paused_for_human\n                    or not session.resume_required\n                    or session.current_stage_id != recovery_stage_id\n                    or session.current_stage_phase != recovery_stage_phase\n                    or session.stage_alignment_checkpoint_signature() != recovery_signature\n                    or (session.pending_action_intent, session.local_recovery_pending_intent)\n                    != observation_intents\n                    or current_lockout_binding != lockout_binding\n                    or session.gui_input_lockout_status()[\"active\"]\n                    or capture_health.get(\"confirmed_black\")\n                    or current_window.hwnd != window.hwnd\n                    or (current_window.left, current_window.top, current_window.width, current_window.height)\n                    != (window.left, window.top, window.width, window.height)\n                    or (\n                        session.fixed_geometry_bounds is not None\n                        and (window.left, window.top, window.width, window.height)\n                        != session.fixed_geometry_bounds\n                    )\n                ):\n                    raise BridgeError(\n                        \"Post-lockout recovery observation authority changed \"\n                        \"or capture was unhealthy; input remains locked\"\n                    )\n                session.note_gui_input_lockout_observation()\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_controller.py",
+    "before_sha256": "ef48a0d2baf5331ea1e8db6fea168394bb590fa0b2eca31be764335eb596f46d",
+    "after_sha256": "5d07714b75be836db2ef64bff78886a9aa3709c04e953efd2061758c9822ecb9",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Axiom Vision v0.18.19 Universal Mission and Utility Controller.\n",
+        "after": "\"\"\"Axiom Vision v0.18.20 Universal Mission and Utility Controller.\n"
+      },
+      {
+        "start": 145,
+        "end": 146,
+        "before": "CONTROLLER_VERSION = \"0.18.19\"\n",
+        "after": "CONTROLLER_VERSION = \"0.18.20\"\n"
+      },
+      {
+        "start": 2528,
+        "end": 2528,
+        "before": "",
+        "after": "    from visionstudio_relay_diagnostics import relay_history_snapshot\n    relay_history, relay_history_coverage = relay_history_snapshot(data_root / \"sessions\")\n"
+      },
+      {
+        "start": 2671,
+        "end": 2671,
+        "before": "",
+        "after": "            \"relay_history\": relay_history_coverage,\n"
+      },
+      {
+        "start": 2693,
+        "end": 2693,
+        "before": "",
+        "after": "            \"relay_history_is_bounded_whitelisted_telemetry\": True,\n"
+      },
+      {
+        "start": 2758,
+        "end": 2758,
+        "before": "",
+        "after": "        archive.writestr(\"logs/relay-history.jsonl\", relay_history)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_heart_contract.py",
+    "before_sha256": "4e05bdd0273e63343455cb552a87dc5a86caf521408a596d1a62cbaddf46bfaf",
+    "after_sha256": "beb7346e30196e15264649606d10ee41faa5877f5e58adb1f43e80c6ff210d72",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.19.\"\"\"\n",
+        "after": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.20.\"\"\"\n"
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "before": "HEART_RUNNER_VERSION = \"0.18.19\"\n",
+        "after": "HEART_RUNNER_VERSION = \"0.18.20\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_local_runner.py",
+    "before_sha256": "8af9b73a8f1f53d8a35bcccd06d17b88be30fe9a8d037b6e5b5affcbbf37e3b4",
+    "after_sha256": "48b0f2de0561e6ada8d5402d5132d0a21ecf64aab0510e4488b23f57fc5b5663",
+    "edits": [
+      {
+        "start": 40,
+        "end": 41,
+        "before": "LOCAL_RUNNER_VERSION = \"0.18.19\"\n",
+        "after": "LOCAL_RUNNER_VERSION = \"0.18.20\"\n"
+      },
+      {
+        "start": 2117,
+        "end": 2118,
+        "before": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.19\"\n",
+        "after": "                    \"Local OCR is unavailable; run setup-windows.ps1 for v0.18.20\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_log_delivery.py",
+    "before_sha256": "0bc981f7c116bf859bbd48f44c86b0522f73b1b74c5b4bd1c53e23a5c278bd46",
+    "after_sha256": "5017e547e115e303b5679356acd2ac5073720314274bfd8f5fc46952f246bb93",
+    "edits": [
+      {
+        "start": 393,
+        "end": 394,
+        "before": "                  \"logs/recovery-history.jsonl\"}\n",
+        "after": "                  \"logs/recovery-history.jsonl\", \"logs/relay-history.jsonl\"}\n"
+      },
+      {
+        "start": 427,
+        "end": 428,
+        "before": "            elif name == \"logs/recovery-history.jsonl\":\n",
+        "after": "            elif name in {\"logs/recovery-history.jsonl\", \"logs/relay-history.jsonl\"}:\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_relay_diagnostics.py",
+    "before_sha256": null,
+    "after_sha256": "67e0a0cc7fcba953d5c45c597b0d6348025fe01cf9332382365a27912d04b552",
+    "content": "\"\"\"Bounded, read-only Relay telemetry retained across recovery sessions.\n\nThe latest five journals can all be setup/recovery sessions. This independent\nsnapshot scans retained journal tails for an exact event/field allowlist. Its\nrecords are diagnostic telemetry, never fresh observation or input authority.\n\"\"\"\nfrom __future__ import annotations\n\nfrom collections import deque\nfrom datetime import datetime, timezone\nimport hashlib\nimport heapq\nimport json\nimport math\nimport os\nfrom pathlib import Path\nimport re\nfrom typing import Any\n\nMAX_HISTORY_BYTES = 48_000\nMAX_EVENTS = 80\nMAX_SOURCE_FILES = 64\nMAX_DIRECTORY_ENTRIES = 20_000\nMAX_SOURCE_BYTES = 512_000\nMAX_TOTAL_SOURCE_BYTES = 16_000_000\nMAX_LINE_BYTES = 16_384\nMAX_SOURCE_LINES = 100_000\n_HEX = re.compile(r\"[a-f0-9]{32,64}\\Z\")\n_EVENTS = {\n    \"cookie_relay_watch_scheduled\", \"cookie_relay_watch_summary\",\n    \"cookie_relay_rejected\", \"cookie_relay_input_committed\",\n    \"cookie_relay_post_input_observed\", \"cookie_relay_post_input_failed\",\n    \"stage_checkpoint_cookie_relay_intent_prepared\",\n    \"stage_checkpoint_cookie_relay_action_committed\",\n}\n_REASONS = {\n    \"raw_frame_binding\", \"human_verification\", \"black_frame\",\n    \"frame_expired_before_detection\", \"controller_or_stage_boundary\",\n    \"frame_expired_after_authority\", \"geometry_or_frame_binding\",\n    \"target_outside_guard\", \"preflight_capture_or_human\",\n    \"preflight_not_stable_or_fresh\", \"dispatch_capture_expired\",\n    \"human_or_black_frame\", \"dispatch_scene_not_proved\", \"dispatch_target_moved\",\n    \"dispatch_control_changed\", \"dispatch_geometry_or_age\",\n    \"dispatch_watchdog_boundary\", \"dispatch_authority_expired\",\n    \"dispatch_point_not_interior\",\n}\n_ERROR_TYPES = {\n    \"BridgeError\", \"OSError\", \"ValueError\", \"RuntimeError\", \"TypeError\",\n    \"AttributeError\", \"PermissionError\", \"TimeoutError\",\n}\n_COUNTERS = {\n    \"samples\", \"visual_matches\", \"no_visual_match\", \"attempts_reserved\",\n    \"native_dispatch_calls\", \"inputs_committed\",\n}\n_TIMINGS = {\"max_capture_ms\", \"max_frame_age_ms\", \"max_dispatch_frame_age_ms\"}\n\n\ndef _limit(value: Any, ceiling: int, minimum: int = 1) -> int:\n    return max(minimum, min(ceiling, value)) if type(value) is int else ceiling\n\n\ndef _number(value: Any, maximum: float = 86_400_000) -> int | float | None:\n    if (type(value) not in (int, float) or not 0 <= value <= maximum\n            or (type(value) is float and not math.isfinite(value))):\n        return None\n    return value\n\n\ndef _counter(value: Any) -> int | None:\n    return value if type(value) is int and 0 <= value <= 2**53 else None\n\n\ndef _reason(value: Any) -> str | None:\n    if not isinstance(value, str):\n        return None\n    if value in _REASONS:\n        return value\n    if value.startswith(\"guard_or_dispatch_error:\"):\n        error_type = value.partition(\":\")[2]\n        return \"guard_or_dispatch_error:\" + (error_type if error_type in _ERROR_TYPES else \"other\")\n    return None\n\n\ndef _selected_event(payload: Any) -> dict[str, Any] | None:\n    if not isinstance(payload, dict) or not isinstance(payload.get(\"event\"), str):\n        return None\n    event = payload[\"event\"]\n    if event not in _EVENTS:\n        return None\n    fields: dict[str, Any] = {\"event\": event}\n    for key in (\"session_id\", \"intent_id\", \"before_frame_sha256\", \"dispatch_frame_sha256\", \"frame_sha256\"):\n        value = payload.get(key)\n        if isinstance(value, str) and _HEX.fullmatch(value):\n            fields[key] = value\n    stamp = payload.get(\"timestamp\")\n    if isinstance(stamp, str) and len(stamp) <= 40:\n        try:\n            datetime.fromisoformat(stamp.replace(\"Z\", \"+00:00\"))\n            fields[\"timestamp\"] = stamp\n        except ValueError:\n            pass\n    if payload.get(\"stage_id\") == \"passive-running\":\n        fields[\"stage_id\"] = \"passive-running\"\n    for key in (\"expected_first_runner_seconds\", \"watch_in_seconds\", \"interval_seconds\"):\n        value = _number(payload.get(key), 86_400)\n        if value is not None:\n            fields[key] = value\n    for key in (\"action_number\",):\n        value = _counter(payload.get(key))\n        if value is not None:\n            fields[key] = value\n    for key, allowed in {\n        \"ledger_status\": {\"ready\", \"pending\", \"committed\"},\n        \"monitor_state\": {\"running\", \"stopped\", \"timed_out\", \"error\"},\n        \"before_frame_encoding\": {\"png\", \"raw-rgb-v1\"},\n        \"dispatch_frame_encoding\": {\"png\", \"raw-rgb-v1\"},\n        \"frame_encoding\": {\"png\", \"raw-rgb-v1\"},\n        \"detector_version\": {\"cookie-relay-visual-1\", \"cookie-relay-visual-2\"},\n        \"error_type\": _ERROR_TYPES,\n    }.items():\n        value = payload.get(key)\n        if isinstance(value, str) and value in allowed:\n            fields[key] = value\n    for key in (\"native_dispatch_started\", \"allowance_consumed\", \"replay_allowed\",\n                \"input_committed\", \"game_effect_confirmed\", \"elapsed_time_grants_input\",\n                \"watchdog_transaction_serialized\", \"main_stage_action_committed\"):\n        value = payload.get(key)\n        if type(value) is bool:\n            fields[key] = value\n    reason = _reason(payload.get(\"reason\"))\n    if reason is not None:\n        fields[\"reason\"] = reason\n    source_metrics = payload.get(\"metrics\")\n    if isinstance(source_metrics, dict):\n        metrics: dict[str, Any] = {}\n        for key in _COUNTERS:\n            value = _counter(source_metrics.get(key))\n            if value is not None:\n                metrics[key] = value\n        for key in _TIMINGS:\n            value = _number(source_metrics.get(key))\n            if value is not None:\n                metrics[key] = value\n        for key, allowed in {\"capture_method\": {\"direct_raw_rgb\", \"primary\", \"png\"},\n                             \"frame_encoding\": {\"raw-rgb-v1\", \"png\"}}.items():\n            value = source_metrics.get(key)\n            if isinstance(value, str) and value in allowed:\n                metrics[key] = value\n        rejections = source_metrics.get(\"pre_intent_rejections\")\n        if isinstance(rejections, dict):\n            safe = {key: value for key, value in rejections.items()\n                    if isinstance(key, str) and key in _REASONS and _counter(value) is not None}\n            metrics[\"pre_intent_rejections\"] = safe\n        fields[\"metrics\"] = metrics\n    return fields\n\n\ndef _encode(record: dict[str, Any]) -> bytes:\n    return (json.dumps(record, ensure_ascii=False, separators=(\",\", \":\"), allow_nan=False) + \"\\n\").encode(\"utf-8\")\n\n\ndef relay_history_snapshot(\n    sessions_dir: Path, *, max_events: int = MAX_EVENTS,\n    maximum: int = MAX_HISTORY_BYTES, max_source_files: int = MAX_SOURCE_FILES,\n    max_directory_entries: int = MAX_DIRECTORY_ENTRIES,\n    max_source_bytes: int = MAX_SOURCE_BYTES,\n    max_total_source_bytes: int = MAX_TOTAL_SOURCE_BYTES,\n    max_line_bytes: int = MAX_LINE_BYTES,\n    max_source_lines: int = MAX_SOURCE_LINES,\n) -> tuple[bytes, dict[str, Any]]:\n    \"\"\"Return bounded Relay events with explicit, non-atomic retained scope.\n\n    Inventory and reads have hard independent ceilings. Newest journal files\n    receive read/event budgets first; each file is read from its retained tail\n    so an old verbose prefix cannot hide its final watch summary. Filenames are\n    represented by hashes rather than copying arbitrary user-controlled text.\n    \"\"\"\n    max_events = _limit(max_events, MAX_EVENTS)\n    maximum = _limit(maximum, MAX_HISTORY_BYTES, 16_000)\n    max_source_files = _limit(max_source_files, MAX_SOURCE_FILES)\n    max_directory_entries = _limit(max_directory_entries, MAX_DIRECTORY_ENTRIES)\n    max_source_bytes = _limit(max_source_bytes, MAX_SOURCE_BYTES)\n    max_total_source_bytes = _limit(max_total_source_bytes, MAX_TOTAL_SOURCE_BYTES)\n    max_line_bytes = _limit(max_line_bytes, MAX_LINE_BYTES)\n    max_source_lines = _limit(max_source_lines, MAX_SOURCE_LINES)\n    # Bound footer size even when a caller requests a smaller output budget.\n    max_source_files = min(max_source_files, max(1, (maximum - 4_000) // 400))\n    sources: list[tuple[int, str, Path, os.stat_result]] = []\n    entries_seen = candidates_seen = 0\n    inventory_limited = inventory_error = False\n    try:\n        with os.scandir(sessions_dir) as entries:\n            for entry in entries:\n                if entries_seen >= max_directory_entries:\n                    inventory_limited = True\n                    break\n                entries_seen += 1\n                try:\n                    if not entry.name.endswith(\".jsonl\") or entry.is_symlink() or not entry.is_file(follow_symlinks=False):\n                        continue\n                    stat = entry.stat(follow_symlinks=False)\n                except OSError:\n                    continue\n                candidates_seen += 1\n                candidate = (stat.st_mtime_ns, entry.name, Path(entry.path), stat)\n                if len(sources) < max_source_files:\n                    heapq.heappush(sources, candidate)\n                elif candidate[:2] > sources[0][:2]:\n                    heapq.heapreplace(sources, candidate)\n    except OSError:\n        inventory_error = True\n    ordered_sources = sorted(sources, key=lambda item: item[:2], reverse=True)\n    coverage_sources: list[dict[str, Any]] = []\n    selected_records: list[tuple[int, int, bytes]] = []\n    total_read = total_lines = selected = 0\n    for index, (_, name, path, initial_stat) in enumerate(ordered_sources):\n        size = initial_stat.st_size\n        budget = min(size, max_source_bytes, max_total_source_bytes - total_read)\n        start = max(0, size - budget)\n        coverage: dict[str, Any] = {\n            \"source\": index + 1, \"name_sha256\": hashlib.sha256(name.encode(\"utf-8\", \"surrogatepass\")).hexdigest(),\n            \"size_at_capture\": size, \"start_byte_offset\": start, \"bytes_read\": 0,\n            \"lines_read\": 0, \"malformed_records\": 0, \"oversized_records\": 0,\n        }\n        coverage_sources.append(coverage)\n        records: deque[tuple[int, int, bytes]] = deque(maxlen=max_events)\n        raw = b\"\"\n        if budget > 0 and total_lines < max_source_lines:\n            try:\n                with path.open(\"rb\") as source:\n                    current_stat = os.fstat(source.fileno())\n                    if (current_stat.st_ino, current_stat.st_dev) != (initial_stat.st_ino, initial_stat.st_dev):\n                        raise OSError(\"Journal identity changed during snapshot\")\n                    source.seek(start)\n                    raw = source.read(budget)\n            except OSError:\n                coverage[\"read_error\"] = True\n            coverage[\"bytes_read\"] = len(raw)\n            total_read += len(raw)\n        offset = 0\n        if start and raw:\n            # A suffix may begin in the middle of a record. Never parse it as\n            # a complete event, even when the fragment happens to be valid JSON.\n            end = raw.find(b\"\\n\")\n            offset = len(raw) if end < 0 else end + 1\n            coverage[\"prefix_record_discarded\"] = True\n        while offset < len(raw) and total_lines < max_source_lines:\n            end = raw.find(b\"\\n\", offset)\n            if end < 0:\n                coverage[\"partial_suffix_discarded\"] = True\n                break\n            line_offset = offset\n            line = raw[offset:end + 1]\n            offset = end + 1\n            coverage[\"lines_read\"] += 1\n            total_lines += 1\n            if len(line) > max_line_bytes:\n                coverage[\"oversized_records\"] += 1\n                continue\n            try:\n                payload = json.loads(line)\n            except (ValueError, UnicodeError, RecursionError):\n                coverage[\"malformed_records\"] += 1\n                continue\n            event = _selected_event(payload)\n            if event is not None:\n                selected += 1\n                event.update(source=index + 1, source_byte_offset=start + line_offset)\n                records.append((index, start + line_offset, _encode(event)))\n        coverage[\"scan_limited\"] = bool(start or offset < len(raw) or len(raw) < size)\n        selected_records.extend(records)\n    # Source order follows captured mtime, not an untrusted event timestamp.\n    ordered = sorted(selected_records, key=lambda item: (-item[0], item[1]))\n    records = deque(item[2] for item in ordered[-max_events:])\n    coverage = {\n        \"type\": \"axiom.relay_history_snapshot\", \"schema_version\": 1,\n        \"captured_at\": datetime.now(timezone.utc).isoformat(),\n        \"scope\": \"selected Relay telemetry from retained journal tails, independent of the latest five sessions\",\n        \"complete_history\": False, \"atomic_snapshot\": False, \"input_authority\": False,\n        \"source_scan_priority\": \"newest journal modification time first; tail bytes per source\",\n        \"sources_newest_first\": coverage_sources,\n        \"directory_entries_seen\": entries_seen, \"candidate_sources_seen\": candidates_seen,\n        \"inventory_limited\": inventory_limited, \"inventory_error\": inventory_error,\n        \"sources_omitted\": max(0, candidates_seen - len(sources)),\n        \"selected_events_seen\": selected, \"events_returned\": len(records),\n        \"events_omitted\": selected - len(records),\n        \"limits\": {\"events\": max_events, \"output_bytes\": maximum, \"source_files\": max_source_files,\n                   \"directory_entries\": max_directory_entries, \"source_bytes_each\": max_source_bytes,\n                   \"source_bytes_total\": max_total_source_bytes, \"line_bytes\": max_line_bytes,\n                   \"source_lines_total\": max_source_lines},\n        \"fields_are_whitelisted\": True, \"tool_arguments_and_content_excluded\": True,\n        \"source_filenames_are_hashed\": True,\n    }\n    total = sum(map(len, records))\n    while records and total + len(_encode(coverage)) > maximum:\n        total -= len(records.popleft())\n        coverage[\"events_returned\"] = len(records)\n        coverage[\"events_omitted\"] = selected - len(records)\n    return b\"\".join(records) + _encode(coverage), coverage\n"
+  },
+  {
+    "path": "visionstudio/tests/test_bridge.py",
+    "before_sha256": "256ffd9d38c842102f822cf00d8e8ba088b2b9651beae6fa51988491a8314027",
+    "after_sha256": "97651a2a68a3fdff3d93b5f89c7da88b05a4e7fa26d8f22920af96ef3fa301bb",
+    "edits": [
+      {
+        "start": 3085,
+        "end": 3086,
+        "before": "            \"0.18.19-relay-direct-305\",\n",
+        "after": "            \"0.18.20-recovery-observation-306\",\n"
+      },
+      {
+        "start": 10848,
+        "end": 10849,
+        "before": "                \"Axiom Vision v0.18.19 — Telegram test\\n\"\n",
+        "after": "                \"Axiom Vision v0.18.20 — Telegram test\\n\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_controller_state.py",
+    "before_sha256": "b36335e03c5ff1ed6f8374dbeb12a43c2e1072c41a9ec1f0d796ad57c7402940",
+    "after_sha256": "dd980d2ef07bd03f098dcd3bde51b795ac531fac840a8746aff406589580c363",
+    "edits": [
+      {
+        "start": 2446,
+        "end": 2447,
+        "before": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.19\")\n",
+        "after": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.20\")\n"
+      },
+      {
+        "start": 5818,
+        "end": 5819,
+        "before": "            self.assertEqual(report[\"product_version\"], \"0.18.19\")\n",
+        "after": "            self.assertEqual(report[\"product_version\"], \"0.18.20\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_heart_runner.py",
+    "before_sha256": "397b9ad241f68daea750643b8b0a956fd5993923b220ac653c23fe987e1c18fb",
+    "after_sha256": "34591ece2075d924d118fef880a9b4147ebb1be253cc4786889dc21f5ecb427c",
+    "edits": [
+      {
+        "start": 536,
+        "end": 537,
+        "before": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.19\")\n",
+        "after": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.20\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_local_runner.py",
+    "before_sha256": "9bc646d3a673750862d23c8004af978dbd9e613a6320e76628be491530e544c2",
+    "after_sha256": "883d37894f5c8d1de5b6fdcacfdb95af2006ff861976267074ae4c738b747614",
+    "edits": [
+      {
+        "start": 103,
+        "end": 104,
+        "before": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.19\")\n",
+        "after": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.20\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_recovery_lockout_observation.py",
+    "before_sha256": null,
+    "after_sha256": "daf982b3ee5a20f033be7d1b736657326b5979c5ad7efb666789c2d6d5c3c522",
+    "content": "\"\"\"Expired Multi-Buy lockout recovery observes once without replaying input.\"\"\"\nfrom __future__ import annotations\n\nimport copy\nimport sys\nimport tempfile\nimport unittest\nfrom pathlib import Path\nfrom unittest import mock\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport test_bridge\n\nbridge = test_bridge.bridge\n\n\nclass RecoveryLockoutObservationTests(unittest.TestCase):\n    def scene(self, root, *, pending=False):\n        fixture = test_bridge.VisionStudioBridgeTests()\n        server, session, desktop = fixture.make_universal_scene(\n            root, stage_id=\"multi-buy-target\", random_boost_mode=\"targeted\")\n        self.addCleanup(server.close)\n        session.current_stage_phase = \"entered\" if pending else \"action_committed\"\n        session.actions = 3\n        session.completed_stage_ids = [\"lobby-play\", \"select-random-boost-box\", \"open-multi-picker\", \"select-target-boost\"]\n        session.committed_stage_ids = [\"lobby-play\", \"select-random-boost-box\", \"open-multi-picker\"]\n        session.stage_action_attempts = {s: 1 for s in session.committed_stage_ids}\n        if not pending:\n            session.committed_stage_ids.append(\"multi-buy-target\")\n            session.stage_action_attempts[\"multi-buy-target\"] = 1\n            session.actions += 1\n        session.last_action_transition = {\n            \"stage_id\": \"multi-buy-target\", \"target_id\": \"multi-buy-confirm\",\n            \"action_number\": session.actions,\n        }\n        session.pending_action_intent = ({\n            \"intent_id\": \"uncertain-purchase\", \"stage_id\": \"multi-buy-target\",\n            \"target_id\": \"multi-buy-confirm\", \"action_replay\": \"never\",\n            \"action_number\": session.actions + 1,\n        } if pending else None)\n        session.stage_action_replay_blocked = True\n        session.resume_required = True\n        session.resume_confirmation_pending = True\n        session.checkpoint_recovery_pending = True\n        session.gui_input_lockout_until_unix = bridge.time.time() - 1\n        session.gui_input_lockout_until_monotonic = bridge.time.monotonic() - 1\n        session.gui_input_lockout_reason = \"Multi-Buy committed; Random Boost result is still animating\"\n        session.gui_input_lockout_target_id = \"multi-buy-confirm\"\n        session.gui_input_lockout_action_number = session.actions\n        session.gui_input_lockout_fresh_observation_required = True\n        frame = fixture.make_png((40, 80, 120))\n        desktop.capture_png = mock.Mock(return_value=frame)\n        return server, session, desktop, frame\n\n    @staticmethod\n    def input_ledger(session):\n        return copy.deepcopy({key: getattr(session, key) for key in (\n            \"actions\", \"pending_action_intent\", \"local_recovery_pending_intent\",\n            \"stage_action_attempts\", \"stage_verified_action_attempts\",\n            \"completed_stage_ids\", \"committed_stage_ids\", \"last_action_transition\",\n            \"current_stage_id\", \"current_stage_phase\", \"stage_action_replay_blocked\",\n        )})\n\n    def test_restored_expired_lockout_accepts_fresh_frame_and_preserves_purchase(self):\n        with tempfile.TemporaryDirectory() as root:\n            server, original, desktop, frame = self.scene(root)\n            checkpoint = original.checkpoint_payload(status=\"blocked\")\n            restored = bridge.BridgeSession(original.mission_path,\n                copy.deepcopy(original.mission), Path(root) / \"restored.jsonl\",\n                mission_source=\"universal-code\", universal_config=original.universal_config,\n                mission_contract_sha256=original.mission_contract_sha256)\n            restored.data_root = Path(root)\n            self.assertTrue(restored.restore_checkpoint(checkpoint))\n            server.session = restored\n            before = self.input_ledger(restored)\n            payload, image = server.recover_stage(restored.id)\n            self.assertEqual(image, frame)\n            self.assertFalse(payload[\"gui_input_lockout\"][\"fresh_observation_required\"])\n            self.assertEqual(self.input_ledger(restored), before)\n            self.assertTrue(restored.resume_required)\n            self.assertTrue(restored.resume_confirmation_pending)\n            self.assertEqual(restored.recovery_observation_witness[\"frame_sha256\"], bridge.sha256_bytes(frame))\n            self.assertFalse(desktop.clicks)\n            resumed = server.confirm_resume_stage(restored.id, \"multi-buy-target\", \"observe\", \"Exact picker still visible\")\n            self.assertFalse(resumed[\"action_replay_allowed\"])\n            with self.assertRaises(bridge.BridgeError):\n                server.execute_local_fixed_stage_target(restored.id, \"multi-buy-confirm\", \"purchase\", True, 0)\n            self.assertFalse(desktop.clicks)\n\n    def test_pending_purchase_can_be_observed_but_never_confirmed_or_replayed(self):\n        with tempfile.TemporaryDirectory() as root:\n            server, session, desktop, _ = self.scene(root, pending=True)\n            before = self.input_ledger(session)\n            server.recover_stage(session.id)\n            self.assertEqual(self.input_ledger(session), before)\n            for matched in (\"observe\", \"success\"):\n                with self.assertRaisesRegex(bridge.BridgeError, \"Pending input recovery is observation-only\"):\n                    server.confirm_resume_stage(session.id, \"multi-buy-target\", matched, \"Same exact frame\")\n            with self.assertRaises(bridge.BridgeError):\n                server.execute_local_fixed_stage_target(session.id, \"multi-buy-confirm\", \"purchase\", True, 0)\n            self.assertEqual(self.input_ledger(session), before)\n            self.assertFalse(desktop.clicks)\n\n    def attach_controller(self, session):\n        state = bridge.controller_module.request_start(\n            session.controller_state_path, mission_path=session.mission_path,\n            requested_loops=None, run_until=None, telegram_enabled=False,\n            universal_config=session.universal_config)\n        batch = {**state[\"batch_plan\"], \"status\": \"active\"}\n        bridge.controller_module.patch_state(session.controller_state_path, batch_plan=batch)\n        return batch\n\n    def test_same_attached_batch_accepts_observation_without_controller_or_input_changes(self):\n        with tempfile.TemporaryDirectory() as root:\n            server, session, desktop, frame = self.scene(root)\n            batch = self.attach_controller(session)\n            controller_before = session.controller_state_path.read_bytes()\n            ledger_before = self.input_ledger(session)\n            payload, returned = server.recover_stage(session.id)\n            self.assertEqual(returned, frame)\n            self.assertTrue(session.controller_attached)\n            self.assertFalse(payload[\"gui_input_lockout\"][\"fresh_observation_required\"])\n            self.assertEqual(self.input_ledger(session), ledger_before)\n            self.assertEqual(session.controller_state_path.read_bytes(), controller_before)\n            self.assertEqual(bridge.controller_module.read_state(session.controller_state_path)[\"batch_plan\"][\"batch_id\"], batch[\"batch_id\"])\n            self.assertFalse(desktop.clicks)\n\n    def test_same_plan_replacement_attached_batch_cannot_acknowledge_old_lockout(self):\n        with tempfile.TemporaryDirectory() as root:\n            server, session, desktop, frame = self.scene(root)\n            batch = self.attach_controller(session)\n            ledger_before = self.input_ledger(session)\n            replacement = {**batch, \"batch_id\": \"replacement-same-plan-batch\"}\n            controller_after = []\n            def capture(_):\n                bridge.controller_module.patch_state(session.controller_state_path, batch_plan=replacement)\n                controller_after.append(session.controller_state_path.read_bytes())\n                return frame\n            desktop.capture_png.side_effect = capture\n            with self.assertRaisesRegex(bridge.BridgeError, \"Post-lockout recovery observation authority changed\"):\n                server.recover_stage(session.id)\n            self.assertEqual(replacement[\"universal_plan\"], batch[\"universal_plan\"])\n            self.assertTrue(session.gui_input_lockout_fresh_observation_required)\n            self.assertEqual(self.input_ledger(session), ledger_before)\n            self.assertEqual(session.controller_state_path.read_bytes(), controller_after[0])\n            self.assertFalse(desktop.clicks)\n\n    def test_active_lockout_blocks_capture_even_if_it_would_expire_during_capture(self):\n        with tempfile.TemporaryDirectory() as root:\n            server, session, desktop, frame = self.scene(root)\n            session.gui_input_lockout_until_monotonic = bridge.time.monotonic() + 1\n            def crossing(_):\n                session.gui_input_lockout_until_monotonic = bridge.time.monotonic() - 1\n                return frame\n            desktop.capture_png.side_effect = crossing\n            with self.assertRaisesRegex(bridge.BridgeError, \"GUI input lockout\"):\n                server.recover_stage(session.id)\n            desktop.capture_png.assert_not_called()\n            self.assertTrue(session.gui_input_lockout_fresh_observation_required)\n            self.assertFalse(desktop.clicks)\n\n    def test_failed_or_black_capture_never_acknowledges_lockout(self):\n        for failure in (\"exception\", \"black\"):\n            with self.subTest(failure=failure), tempfile.TemporaryDirectory() as root:\n                server, session, desktop, frame = self.scene(root)\n                before = self.input_ledger(session)\n                options = ({\"side_effect\": bridge.BridgeError(\"capture failed\")} if failure == \"exception\"\n                           else {\"return_value\": (frame, {\"confirmed_black\": True})})\n                with mock.patch.object(server, \"_capture_reliable_png\", **options):\n                    with self.assertRaises(bridge.BridgeError):\n                        server.recover_stage(session.id)\n                self.assertTrue(session.gui_input_lockout_fresh_observation_required)\n                self.assertEqual(self.input_ledger(session), before)\n                self.assertFalse(desktop.clicks)\n\n    def test_human_challenge_keeps_lockout_and_replay_evidence(self):\n        with tempfile.TemporaryDirectory() as root:\n            server, session, desktop, _ = self.scene(root)\n            before = self.input_ledger(session)\n            def human(*_):\n                session.paused_for_human = True\n                return {\"matched\": True}\n            with mock.patch.object(server, \"_auto_latch_human_verification\", side_effect=human):\n                with self.assertRaisesRegex(bridge.BridgeError, \"Human verification detected\"):\n                    server.recover_stage(session.id)\n            self.assertTrue(session.paused_for_human)\n            self.assertTrue(session.gui_input_lockout_fresh_observation_required)\n            self.assertEqual(self.input_ledger(session), before)\n            self.assertFalse(desktop.clicks)\n\n    def test_changed_authority_during_capture_never_clears_fresh_requirement(self):\n        for boundary in (\"stop\", \"pause\", \"human\", \"new-lockout\", \"expired-new-lockout\",\n                         \"stage\", \"intent\", \"actions\", \"relay-ledger\", \"plan\",\n                         \"session\", \"window\", \"geometry\"):\n            with self.subTest(boundary=boundary), tempfile.TemporaryDirectory() as root:\n                server, session, desktop, frame = self.scene(root)\n                original_gate = server._controller_gate\n                def capture(_):\n                    if boundary == \"stop\": session.stop(\"test Stop during capture\")\n                    elif boundary == \"pause\":\n                        server._controller_gate = mock.Mock(side_effect=bridge.BridgeError(\"Local Controller state is paused\"))\n                    elif boundary == \"human\": session.paused_for_human = True\n                    elif boundary in {\"new-lockout\", \"expired-new-lockout\"}:\n                        session.gui_input_lockout_action_number += 1\n                        session.gui_input_lockout_until_monotonic = bridge.time.monotonic() + (10 if boundary == \"new-lockout\" else -2)\n                    elif boundary == \"stage\": session.current_stage_phase = \"entered\"\n                    elif boundary == \"intent\": session.pending_action_intent = {\"intent_id\": \"new\"}\n                    elif boundary == \"actions\": session.actions += 1\n                    elif boundary == \"relay-ledger\": session.cookie_relay_state = {\"status\": \"pending\"}\n                    elif boundary == \"plan\": session.mission_contract_sha256 = \"f\" * 64\n                    elif boundary == \"session\": server.session = None\n                    elif boundary == \"window\": desktop.window = test_bridge.VisionStudioBridgeTests().make_window(executable=\"dnplayer.exe\", hwnd=999)\n                    else: session.fixed_geometry_bounds = (1, 2, 3, 4)\n                    return frame\n                desktop.capture_png.side_effect = capture\n                with self.assertRaises(bridge.BridgeError):\n                    server.recover_stage(session.id)\n                self.assertTrue(session.gui_input_lockout_fresh_observation_required)\n                self.assertFalse(desktop.clicks)\n                server._controller_gate = original_gate\n                server.session = session\n\n    def test_stage_confirmation_helper_keeps_default_lockout_block(self):\n        with tempfile.TemporaryDirectory() as root:\n            server, session, desktop, _ = self.scene(root)\n            with self.assertRaisesRegex(bridge.BridgeError, \"GUI input lockout\"):\n                server._quiesce_running_monitor_before_stage_transition(session,\n                    expected_stage_id=session.current_stage_id,\n                    expected_stage_phase=session.current_stage_phase)\n            self.assertTrue(session.gui_input_lockout_fresh_observation_required)\n            self.assertFalse(desktop.clicks)\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_relay_diagnostics.py",
+    "before_sha256": null,
+    "after_sha256": "cebbbab9615d979240f46cc932f236b5c7e1d623e0d843f0a2a3fdc2fba45804",
+    "content": "from __future__ import annotations\n\nimport hashlib\nimport json\nimport os\nfrom pathlib import Path\nimport random\nimport sys\nimport tempfile\nimport unittest\nimport zipfile\n\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / \"scripts\"))\nimport visionstudio_relay_diagnostics as diagnostics\nimport visionstudio_log_delivery as delivery\n\n\ndef relay(event=\"cookie_relay_watch_summary\", **extra):\n    return {\"event\": event, \"session_id\": \"a\" * 32,\n            \"timestamp\": \"2026-10-27T10:10:00+00:00\", \"stage_id\": \"passive-running\",\n            \"ledger_status\": \"ready\", \"metrics\": {\"samples\": 100, \"visual_matches\": 0,\n                \"no_visual_match\": 100, \"capture_method\": \"direct_raw_rgb\",\n                \"frame_encoding\": \"raw-rgb-v1\", \"max_capture_ms\": 50.5,\n                \"pre_intent_rejections\": {\"frame_expired_before_detection\": 2}}, **extra}\n\n\nclass RelayDiagnosticTests(unittest.TestCase):\n    def write(self, path, rows, *, mtime=1):\n        path.write_bytes(b\"\".join((json.dumps(row) + \"\\n\").encode() for row in rows))\n        os.utime(path, (mtime, mtime))\n\n    def snapshot(self, path, **options):\n        content, metadata = diagnostics.relay_history_snapshot(path, **options)\n        rows = [json.loads(line) for line in content.splitlines()]\n        self.assertEqual(rows[-1], metadata)\n        self.assertLessEqual(len(content), metadata[\"limits\"][\"output_bytes\"])\n        self.assertFalse(metadata[\"input_authority\"])\n        return rows[:-1], metadata, content\n\n    def test_relay_survives_five_newer_setup_only_sessions(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            self.write(root / \"older-running.jsonl\", [relay(\"cookie_relay_watch_scheduled\"), relay()], mtime=1)\n            for index in range(5):\n                self.write(root / f\"setup-{index}.jsonl\", [{\"event\": \"session_restored_from_checkpoint\"}], mtime=index + 2)\n            rows, metadata, _ = self.snapshot(root)\n            self.assertEqual([row[\"event\"] for row in rows], [\"cookie_relay_watch_scheduled\", \"cookie_relay_watch_summary\"])\n            self.assertEqual(rows[-1][\"metrics\"][\"samples\"], 100)\n            self.assertEqual(rows[-1][\"source\"], 6)\n            self.assertEqual(len(metadata[\"sources_newest_first\"]), 6)\n            self.assertFalse(metadata[\"complete_history\"])\n\n    def test_exact_whitelist_excludes_prose_secrets_images_and_input_coordinates(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            value = relay(\"cookie_relay_input_committed\", input={\"selected_point\": [12, 34], \"secret\": \"input-secret\"},\n                          note=\"agent-secret\", arguments={\"token\": \"argument-secret\"},\n                          image_path=\"path-secret\", content=[{\"data\": \"image-secret\"}],\n                          before_frame_sha256=\"a\" * 64, dispatch_frame_sha256=\"b\" * 64,\n                          native_dispatch_started=True, game_effect_confirmed=False)\n            value[\"metrics\"].update(secret=\"metric-secret\", unknown_counter=555)\n            value[\"metrics\"][\"pre_intent_rejections\"][\"credential-secret\"] = 1\n            self.write(root / \"token-filename-secret.jsonl\", [value, {\"event\": \"cookie_relay_arbitrary\", \"note\": \"extra-secret\"}])\n            rows, metadata, content = self.snapshot(root)\n            self.assertEqual(len(rows), 1)\n            self.assertEqual(rows[0][\"dispatch_frame_sha256\"], \"b\" * 64)\n            self.assertTrue(rows[0][\"native_dispatch_started\"])\n            for word in (\"secret\", \"selected_point\", \"unknown_counter\"):\n                self.assertNotIn(word.encode(), content)\n            self.assertTrue(metadata[\"source_filenames_are_hashed\"])\n            self.assertEqual(metadata[\"sources_newest_first\"][0][\"name_sha256\"],\n                             hashlib.sha256(b\"token-filename-secret.jsonl\").hexdigest())\n\n    def test_known_rejection_and_error_types_survive_but_arbitrary_text_does_not(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            self.write(root / \"journal.jsonl\", [relay(\"cookie_relay_rejected\", reason=reason)\n                for reason in (\"dispatch_capture_expired\", \"guard_or_dispatch_error:BridgeError\",\n                               \"guard_or_dispatch_error:password-secret\", \"free-secret\")])\n            rows, _, content = self.snapshot(root)\n            self.assertEqual(rows[0][\"reason\"], \"dispatch_capture_expired\")\n            self.assertEqual(rows[1][\"reason\"], \"guard_or_dispatch_error:BridgeError\")\n            self.assertEqual(rows[2][\"reason\"], \"guard_or_dispatch_error:other\")\n            self.assertNotIn(\"reason\", rows[3])\n            self.assertNotIn(b\"secret\", content)\n\n    def test_malformed_oversized_and_wrong_typed_rows_cannot_hide_later_summary(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            path = root / \"journal.jsonl\"\n            path.write_bytes(b\"{invalid}\\n\" + b\"x\" * 2000 + b\"\\n\" +\n                             b'{\"event\":[]}\\n' + (json.dumps(relay()) + \"\\n\").encode())\n            rows, metadata, _ = self.snapshot(root, max_line_bytes=1024)\n            self.assertEqual(len(rows), 1)\n            source = metadata[\"sources_newest_first\"][0]\n            self.assertEqual(source[\"malformed_records\"], 1)\n            self.assertEqual(source[\"oversized_records\"], 1)\n            self.assertEqual(source[\"lines_read\"], 4)\n\n    def test_partial_tail_prefix_and_unfinished_last_record_are_not_parsed(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            path = root / \"journal.jsonl\"\n            valid = (json.dumps(relay()) + \"\\n\").encode()\n            path.write_bytes(b\"x\" * 2000 + b\"\\n\" + valid + json.dumps(relay()).encode())\n            rows, metadata, _ = self.snapshot(root, max_source_bytes=len(valid) * 2 + 50)\n            self.assertEqual(len(rows), 1)\n            source = metadata[\"sources_newest_first\"][0]\n            self.assertTrue(source[\"prefix_record_discarded\"])\n            self.assertTrue(source[\"partial_suffix_discarded\"])\n            self.assertGreater(rows[0][\"source_byte_offset\"], 0)\n\n    def test_tail_scan_retains_final_summary_after_verbose_prefix(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            path = root / \"journal.jsonl\"\n            path.write_bytes(b'{\"event\":\"bridge_observation\"}\\n' * 10000 +\n                             (json.dumps(relay()) + \"\\n\").encode())\n            rows, metadata, _ = self.snapshot(root, max_source_bytes=2048)\n            self.assertEqual(len(rows), 1)\n            self.assertEqual(rows[0][\"event\"], \"cookie_relay_watch_summary\")\n            source = metadata[\"sources_newest_first\"][0]\n            self.assertLessEqual(source[\"bytes_read\"], 2048)\n            self.assertTrue(source[\"scan_limited\"])\n\n    def test_newest_files_receive_file_byte_and_event_budgets_first(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            for index in range(5):\n                self.write(root / f\"journal-{index}.jsonl\", [relay(action_number=index)], mtime=index + 1)\n            rows, metadata, _ = self.snapshot(root, max_source_files=2, max_events=1)\n            self.assertEqual(rows[0][\"action_number\"], 4)\n            self.assertEqual(metadata[\"sources_omitted\"], 3)\n            self.assertEqual(metadata[\"events_omitted\"], 1)\n            _, metadata, _ = self.snapshot(root, max_total_source_bytes=1024, max_source_lines=2)\n            self.assertLessEqual(sum(s[\"bytes_read\"] for s in metadata[\"sources_newest_first\"]), 1024)\n            self.assertLessEqual(sum(s[\"lines_read\"] for s in metadata[\"sources_newest_first\"]), 2)\n\n    def test_output_event_and_inventory_limits_are_reported_truthfully(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            self.write(root / \"journal.jsonl\", [relay(action_number=index) for index in range(150)])\n            rows, metadata, content = self.snapshot(root, maximum=16_000, max_events=30)\n            self.assertLessEqual(len(rows), 30)\n            self.assertLessEqual(len(content), 16_000)\n            self.assertEqual(rows[-1][\"action_number\"], 149)\n            self.assertEqual(metadata[\"events_omitted\"], 150 - len(rows))\n            for index in range(10):\n                (root / f\"unrelated-{index}.txt\").write_text(\"unused\")\n            _, metadata, _ = self.snapshot(root, max_directory_entries=3)\n            self.assertEqual(metadata[\"directory_entries_seen\"], 3)\n            self.assertTrue(metadata[\"inventory_limited\"])\n\n    def test_nonfinite_negative_boolean_huge_and_wrong_typed_metrics_are_omitted(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            value = relay(ledger_status=[], expected_first_runner_seconds=10**400)\n            value[\"metrics\"].update(samples=True, visual_matches=-1, no_visual_match=\"1\",\n                                    max_capture_ms=float(\"nan\"), max_frame_age_ms=float(\"inf\"),\n                                    max_dispatch_frame_age_ms=10**400, capture_method=[])\n            self.write(root / \"journal.jsonl\", [value, relay()])\n            rows, _, content = self.snapshot(root)\n            self.assertNotIn(\"expected_first_runner_seconds\", rows[0])\n            self.assertNotIn(\"ledger_status\", rows[0])\n            self.assertNotIn(\"samples\", rows[0][\"metrics\"])\n            self.assertNotIn(\"max_capture_ms\", rows[0][\"metrics\"])\n            self.assertNotIn(b\"NaN\", content)\n            self.assertEqual(rows[1][\"metrics\"][\"samples\"], 100)\n\n    def test_symlinked_journal_is_never_read(self):\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory); sessions = root / \"sessions\"; sessions.mkdir()\n            outside = root / \"outside.jsonl\"; self.write(outside, [relay()])\n            (sessions / \"journal.jsonl\").symlink_to(outside)\n            rows, metadata, _ = self.snapshot(sessions)\n            self.assertEqual(rows, [])\n            self.assertEqual(metadata[\"candidate_sources_seen\"], 0)\n\n    def test_missing_sources_report_no_history_without_claiming_success(self):\n        with tempfile.TemporaryDirectory() as directory:\n            rows, metadata, _ = self.snapshot(Path(directory) / \"missing\")\n            self.assertEqual(rows, [])\n            self.assertTrue(metadata[\"inventory_error\"])\n            self.assertFalse(metadata[\"complete_history\"])\n            self.assertFalse(metadata[\"atomic_snapshot\"])\n\n    def test_full_bundle_collects_older_relay_and_excerpt_keeps_exact_summary_footer(self):\n        import visionstudio_controller as controller\n        with tempfile.TemporaryDirectory() as directory:\n            root = Path(directory)\n            (root / \"sessions\").mkdir(); (root / \"controller\").mkdir(); (root / \"examples\").mkdir()\n            mission = root / \"examples/mission.json\"\n            mission.write_text(json.dumps({\"name\": \"fixture\", \"version\": \"2.0\", \"steps\": []}))\n            control = root / \"controller/state.json\"; control.write_text('{\"desired_state\":\"idle\"}')\n            self.write(root / \"sessions/running.jsonl\", [relay()], mtime=1)\n            for index in range(5):\n                self.write(root / f\"sessions/setup-{index}.jsonl\", [{\"event\": \"session_started\"}], mtime=index + 2)\n            bundle, report = controller.create_diagnostic_bundle(root=root, data_root=root, mission_path=mission, control_path=control)\n            self.assertEqual(len(report[\"runtime\"][\"recent_session_journals\"]), 5)\n            self.assertNotIn(\"running.jsonl\", report[\"runtime\"][\"recent_session_journals\"])\n            with zipfile.ZipFile(bundle) as archive:\n                retained = archive.read(\"logs/relay-history.jsonl\")\n            self.assertEqual(json.loads(retained.splitlines()[0])[\"metrics\"][\"samples\"], 100)\n            # Incompressible optional evidence forces the real Telegram packing\n            # path. The bounded history must remain exact, including its footer.\n            with zipfile.ZipFile(bundle, \"a\", zipfile.ZIP_DEFLATED) as archive:\n                archive.writestr(\"rewards/large-frame.png\", random.Random(4).randbytes(400_000))\n            before = bundle.read_bytes()\n            excerpt = delivery.telegram_diagnostic_copy(bundle)\n            self.assertNotEqual(excerpt, bundle)\n            self.assertEqual(bundle.read_bytes(), before)\n            with zipfile.ZipFile(excerpt) as archive:\n                self.assertEqual(archive.read(\"logs/relay-history.jsonl\"), retained)\n                manifest = json.loads(archive.read(\"telegram-transfer.json\"))\n                self.assertEqual(manifest[\"members\"][\"logs/relay-history.jsonl\"][\"mode\"], \"exact\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_runtime_version.py",
+    "before_sha256": "e5b83d7e33f1ab8ab32dadaa7cd6f8f90c68cdaff1b2e161b099a9520171034b",
+    "after_sha256": "7d2c64b1fe09fe79261b7744383f4e69ffe5b838ef335aaf73a9d3bbcba098bb",
+    "edits": [
+      {
+        "start": 22,
+        "end": 25,
+        "before": "    plugin_version: str = \"0.18.19+codex.20261025.relay-direct\",\n    controller_version: str = \"0.18.19\",\n    bridge_server_version: str = \"0.18.19-relay-direct-305\",\n",
+        "after": "    plugin_version: str = \"0.18.20+codex.20261027.recovery-observation\",\n    controller_version: str = \"0.18.20\",\n    bridge_server_version: str = \"0.18.20-recovery-observation-306\",\n"
+      },
+      {
+        "start": 40,
+        "end": 41,
+        "before": "            'PRODUCT_VERSION = \"0.18.19\"\\n'\n",
+        "after": "            'PRODUCT_VERSION = \"0.18.20\"\\n'\n"
+      },
+      {
+        "start": 43,
+        "end": 44,
+        "before": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.19\"\\n',\n",
+        "after": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.20\"\\n',\n"
+      },
+      {
+        "start": 49,
+        "end": 50,
+        "before": "            'HEART_RUNNER_VERSION = \"0.18.19\"\\n'\n",
+        "after": "            'HEART_RUNNER_VERSION = \"0.18.20\"\\n'\n"
+      },
+      {
+        "start": 77,
+        "end": 78,
+        "before": "            \"0.18.19+codex.20261025.relay-direct\",\n",
+        "after": "            \"0.18.20+codex.20261027.recovery-observation\",\n"
+      },
+      {
+        "start": 85,
+        "end": 86,
+        "before": "                \"plugin\": \"0.18.19\",\n",
+        "after": "                \"plugin\": \"0.18.20\",\n"
+      },
+      {
+        "start": 87,
+        "end": 88,
+        "before": "                    \"0.18.19+codex.20261025.relay-direct\"\n",
+        "after": "                    \"0.18.20+codex.20261027.recovery-observation\"\n"
+      },
+      {
+        "start": 89,
+        "end": 93,
+        "before": "                \"controller\": \"0.18.19\",\n                \"bridge\": \"0.18.19\",\n                \"bridge_server\": \"0.18.19-relay-direct-305\",\n                \"local_runner\": \"0.18.19\",\n",
+        "after": "                \"controller\": \"0.18.20\",\n                \"bridge\": \"0.18.20\",\n                \"bridge_server\": \"0.18.20-recovery-observation-306\",\n                \"local_runner\": \"0.18.20\",\n"
+      },
+      {
+        "start": 95,
+        "end": 96,
+        "before": "                \"heart_sender\": \"0.18.19\",\n",
+        "after": "                \"heart_sender\": \"0.18.20\",\n"
+      },
+      {
+        "start": 109,
+        "end": 110,
+        "before": "            [\"controller=0.10.27 (expected 0.18.19)\"],\n",
+        "after": "            [\"controller=0.10.27 (expected 0.18.20)\"],\n"
+      },
+      {
+        "start": 119,
+        "end": 120,
+        "before": "                plugin_version=\"0.18.19+codex.wrong-build\",\n",
+        "after": "                plugin_version=\"0.18.20+codex.wrong-build\",\n"
+      },
+      {
+        "start": 130,
+        "end": 132,
+        "before": "                \"plugin_manifest=0.18.19+codex.wrong-build \"\n                \"(expected 0.18.19+codex.20261025.relay-direct)\",\n",
+        "after": "                \"plugin_manifest=0.18.20+codex.wrong-build \"\n                \"(expected 0.18.20+codex.20261027.recovery-observation)\",\n"
+      },
+      {
+        "start": 133,
+        "end": 134,
+        "before": "                \"(expected 0.18.19-relay-direct-305)\",\n",
+        "after": "                \"(expected 0.18.20-recovery-observation-306)\",\n"
+      },
+      {
+        "start": 188,
+        "end": 189,
+        "before": "        self.assertIn(\"Axiom Vision v0.18.19 Setup\", text)\n",
+        "after": "        self.assertIn(\"Axiom Vision v0.18.20 Setup\", text)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/update-package-files.json",
+    "before_sha256": "742045c84d0ae15af66a374591bf2a5f43812d6fb0f11f5b001c48a628f3e360",
+    "after_sha256": "580d8e6de5e8949ff081e708d07c97613de74c26420b13874d821e573e9db21c",
+    "edits": [
+      {
+        "start": 25,
+        "end": 25,
+        "before": "",
+        "after": "  \"visionstudio/RELEASE_v0.18.20_TH.md\",\n"
+      },
+      {
+        "start": 81,
+        "end": 81,
+        "before": "",
+        "after": "  \"visionstudio/scripts/visionstudio_relay_diagnostics.py\",\n"
+      },
+      {
+        "start": 139,
+        "end": 139,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_recovery_lockout_observation.py\",\n"
+      },
+      {
+        "start": 140,
+        "end": 140,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_relay_diagnostics.py\",\n"
+      }
+    ]
+  }
+]

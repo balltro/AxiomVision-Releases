@@ -1,0 +1,214 @@
+{
+  "version": "0.18.20",
+  "package": {
+    "version": "0.18.20",
+    "package_members": 160,
+    "archive": "AxiomVision-v0.18.20-Recovery-Observation-Windows10.zip",
+    "archive_bytes": 9692554,
+    "archive_sha256": "6b09fb34d5cbae7a616197cd454e908e0899a809a9c74cfca27f3f9f8fcf106a",
+    "feed_bytes": 18929,
+    "feed_sha256": "601d1d74b9c9c4c93c4c44dbd8c4aae87cd9512c335143980104d284cd18a175",
+    "all_source_and_archive_file_hashes_match": true,
+    "signature_verified": true
+  },
+  "tests": {
+    "version": "0.18.20",
+    "total": 1285,
+    "passed": 1268,
+    "skipped": 17,
+    "seconds": 69.754,
+    "log_sha256": "6e5ebb9d8704a265b5e44b04428bd899f1a513137dc1135480a9005b4e5bd17c"
+  },
+  "upgrades": [
+    {
+      "from": "0.18.13",
+      "to": "0.18.20",
+      "package_members_verified": 160,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.14",
+      "to": "0.18.20",
+      "package_members_verified": 160,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.15",
+      "to": "0.18.20",
+      "package_members_verified": 160,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.16",
+      "to": "0.18.20",
+      "package_members_verified": 160,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.17",
+      "to": "0.18.20",
+      "package_members_verified": 160,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.18",
+      "to": "0.18.20",
+      "package_members_verified": 160,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.19",
+      "to": "0.18.20",
+      "package_members_verified": 160,
+      "runtime_files_byte_preserved": 9,
+      "preset_library_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "plan_compatibility": {
+    "baseline": "0.18.19",
+    "candidate": "0.18.20",
+    "configs_exact": 91,
+    "off_configs_exact": 52,
+    "on_configs_exact": 39,
+    "compiled_config_and_plan_identical": true,
+    "off_revision": "9",
+    "on_revision": "11",
+    "unchanged_files": {
+      "scripts/visionstudio_cookie_relay.py": "d0a1ac3e28f1299b73346b37d2c4c4210105096c375869e9657a0cb6299f0daf",
+      "scripts/visionstudio_cookie_relay_frame.py": "0956b91baa7a0b0f9a61e65232e88b7bf62ca0eb80299f5a0a1693941f66b6a1",
+      "scripts/visionstudio_cookie_relay_freshness.py": "0ecb7d5a37c6e8db8c3037065b15884112b37a17f105c80688f98caa30b17ee7",
+      "scripts/data/cookie-relay-signatures.json": "36033e58a1d2ffbe48edc15df289096c4d86fbd60ebb162068baac3144bc680f",
+      "scripts/visionstudio_updater.py": "377340a051ad7b33f666a5671f9cd5c2b46b87bed037322554e8afe464c2c75d",
+      "scripts/visionstudio_controller_state.py": "e3f830a8ce57461d3f2505b24e92e3b2fc8ff39d3af4a5b853405f370e52f431",
+      "scripts/visionstudio_heart_input.py": "ebdb5cea74174a0904103a599154cee348466bfc0540ab2a6182b0b3c06b5b74",
+      "scripts/visionstudio_heart_runner.py": "b3a434b10129e743a970bf33f7fd6bc260682da348a4fbce016e87df4e83b739",
+      "scripts/visionstudio_universal_mission.py": "c05842ed01902d231a9a12a6b56712307a801ac098723adee0e4f1faa3f0f664"
+    },
+    "native_windows_ldplayer_tested": false
+  },
+  "independent_review": {
+    "version": "0.18.20",
+    "review_status": "clear",
+    "blocking_findings": [],
+    "fixed_during_review": [
+      "Bind attached Controller batch identity before and after expired-lockout recovery capture, rejecting same-Plan replacement batches."
+    ],
+    "independent_tests": {
+      "recovery_lockout_observation": {
+        "passed": 9,
+        "seconds": 1.149
+      },
+      "relay_diagnostics": {
+        "passed": 12,
+        "seconds": 0.075
+      }
+    },
+    "invariants": {
+      "nine_classifier_calibration_plan_state_updater_heart_files_byte_identical": true,
+      "bridge_relay_and_native_mouse_methods_ast_identical": 18,
+      "only_recover_stage_enables_private_expired_lockout_observation_exception": true,
+      "active_lockout_still_blocks_before_capture": true,
+      "pending_and_committed_purchase_ledger_preserved_without_input": true,
+      "diagnostic_output_bounds_and_privacy_whitelist_reviewed": true,
+      "telegram_excerpt_preserves_exact_bounded_history_and_footer": true
+    },
+    "native_windows_ldplayer_tested": false,
+    "file_sha256": {
+      "scripts/visionstudio_bridge.py": "953227de5313c3968aa6837fb58b073f6a8c27467285b210b62608b8fc5fef2f",
+      "tests/test_recovery_lockout_observation.py": "daf982b3ee5a20f033be7d1b736657326b5979c5ad7efb666789c2d6d5c3c522",
+      "scripts/visionstudio_relay_diagnostics.py": "67e0a0cc7fcba953d5c45c597b0d6348025fe01cf9332382365a27912d04b552",
+      "tests/test_relay_diagnostics.py": "cebbbab9615d979240f46cc932f236b5c7e1d623e0d843f0a2a3fdc2fba45804",
+      "scripts/visionstudio_controller.py": "5d07714b75be836db2ef64bff78886a9aa3709c04e953efd2061758c9822ecb9",
+      "scripts/visionstudio_log_delivery.py": "5017e547e115e303b5679356acd2ac5073720314274bfd8f5fc46952f246bb93"
+    }
+  },
+  "relay_input_unchanged": {
+    "baseline": "0.18.19",
+    "candidate": "0.18.20",
+    "relay_and_native_click_methods_ast_unchanged": [
+      "WindowsDesktop.click",
+      "BridgeServer._cookie_relay_contract",
+      "BridgeServer._cookie_relay_watch_delay",
+      "BridgeServer._cookie_relay_raw_frame",
+      "BridgeServer._cookie_relay_frame_hash",
+      "BridgeServer._cookie_relay_frame_encoding",
+      "BridgeServer._detect_cookie_relay",
+      "BridgeServer._capture_cookie_relay_frame",
+      "BridgeServer._cookie_relay_capture_started",
+      "BridgeServer._cookie_relay_freshness",
+      "BridgeServer._cookie_relay_human_guard",
+      "BridgeServer._cookie_relay_authority",
+      "BridgeServer._cookie_relay_target_allowed",
+      "BridgeServer._cookie_relay_same_target",
+      "BridgeServer._cookie_relay_metrics",
+      "BridgeServer._cookie_relay_pre_intent_rejected",
+      "BridgeServer._try_cookie_relay",
+      "BridgeServer._capture_cookie_relay_sample",
+      "BridgeServer._running_monitor_worker_with_relay"
+    ],
+    "native_windows_ldplayer_tested": false
+  },
+  "native_windows_ldplayer_tested": false
+}
