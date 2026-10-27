@@ -2,23 +2,21 @@
 
 Public Windows release assets and Ed25519-signed update feed for Axiom Vision.
 
-## Latest: v0.18.19 — Relay Direct
+## Latest: v0.18.20 — Recovery Observation
 
-[Download v0.18.19](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.19).
+[Download v0.18.20](https://github.com/balltro/AxiomVision-Releases/releases/tag/v0.18.20).
 
-The guarded Cookie Relay path reads immutable native RGB buffers directly, reuses its thread-owned MSS capture context, and removes PNG encoding/decoding from the click decision. The same visual-2 Relay matcher, Human signature, target region, ROI thresholds, three witnesses, durable intent and 0.5-second capture-start limit remain. The mouse implementation and input/replay protections are unchanged.
+Fixes Stage recovery after an expired Multi-Buy input lockout. Recovery previously rejected the fresh observation required to clear that lockout, causing repeated blocked recovery attempts. The new exception permits only a read-only post-expiry capture, with final Session, Controller batch/Plan, Stage, intent, ledger, Human and window checks before acknowledging the same lockout. Pending and committed purchases retain their replay restrictions; Stage resume still needs scene confirmation.
 
-Raw frame hashes use an explicit raw-rgb-v1 domain and are tagged separately from PNG evidence. The context closes on its owner monitor thread. A failed raw adapter blocks input; it never falls back to stale pixels. Existing pending/committed PNG Relay ledgers remain consumed after restore.
+SEND LOG now retains bounded, whitelisted Relay event history independently of the latest five session journals. A sequence of setup/recovery sessions can no longer displace all older retained Relay diagnostics. Coverage and omissions are explicit; summaries are telemetry only and are preserved exactly in the Telegram excerpt.
 
-**Enable COOKIE RELAY → ON before starting the batch.** A timing preset saves seconds only. AUTO disables Relay. If the current frozen batch is OFF, Stop and Reset Batch before selecting a profile/preset, enabling ON and starting a new batch. The supplied v18 diagnostic is OFF, so it cannot establish enabled Relay latency. The UI now distinguishes the OFF and ON hints clearly.
+The supplied Oct27 diagnostic has Relay ON, Custom60s and revision11, but its five journals contain setup/recovery only. It cannot determine Relay detection or native input performance. This release fixes the demonstrated recovery deadlock and diagnostic retention. The direct RGB Relay matcher, native mouse path, thresholds and Plan remain unchanged. Native Windows/LDPlayer capture/input and game acceptance remain unverified.
 
-Validation: **1,247 passed / 17 skipped (1,264 total)**. In real-clock replay with native grab/window/input adapters, the complete code transaction measured v18 median **584.725ms** versus v19 **183.405ms**, with 9/9 cases passing per version. Three additional two-second-window cases overlapping public sampling also pass. Classifiers, actual MSS conversion/PNG encoder, Controller/Plan checks, freshness and durable writes run. These are host code measurements, not native Windows/LDPlayer timing or game acceptance proof.
+Validation: **1,268 passed / 17 skipped (1,285 total)**. Existing v19 deadlock reproduces; corrected recovery preserves purchase state and blocks Stop/Pause/Human and same-Plan replacement batches. All91 tested config/Plan identities match v19 (OFF revision9, ON revision11). Signed upgrades from v0.18.13–v0.18.19 verify all160 package hashes and preserve nine runtime files per installation, including readable timing presets.
 
-All 63 compiled config/Plan identities match v18: OFF revision9, ON revision11, visual-2 calibration unchanged. No new Plan migration is introduced. Older unfinished revision10 Relay batches still require the existing explicit Stop/Reset archive. Signed upgrades from v0.18.13–v0.18.18 preserve nine runtime files per installation byte-for-byte and retain saved timing presets. All 156 package hashes match frozen source.
+Use **Settings → CHECK UPDATE** with workers stopped and no active checkpoint, then reopen the Controller. Select the intended Run Profile and **COOKIE RELAY → ON** before a new batch. Presets save time only; AUTO disables Relay. Existing old revision10 Relay guidance still applies. Archives, statistics, sessions and timing presets are retained.
 
-Use **Settings → CHECK UPDATE**, stop workers, then close the Controller when installation is eligible. Active checkpoints defer installation. Reset only when changing a frozen OFF batch to ON or when the existing old-Plan guidance requires it. Archives, statistics, sessions and timing presets are retained.
-
-ZIP SHA-256: `2dab8cec0991ad30bbdd0abfc0d8013d1419f54522e2ff6da0ea949dadc6279f`.
+ZIP SHA-256: `6b09fb34d5cbae7a616197cd454e908e0899a809a9c74cfca27f3f9f8fcf106a`.
 
 ## v0.18.0 (initial release)
 
