@@ -1,0 +1,631 @@
+[
+  {
+    "path": "RUN-SETUP-WINDOWS.bat",
+    "before_sha256": "e4356955ffae4111ad6d3b833bb7ae755ea63ae7e84c023a7b3e3718541e3eb8",
+    "after_sha256": "b5e56f47ad85f18661e6db8df5af4040085964eee5b4fa09631df8994e615401",
+    "edits": [
+      {
+        "start": 12,
+        "end": 13,
+        "before": "echo Axiom Vision v0.18.22 Setup\n",
+        "after": "echo Axiom Vision v0.18.23 Setup\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/.codex-plugin/plugin.json",
+    "before_sha256": "a209fb8980e93f4bfa093672894507d84a98f70867e9e4147fcb65fde733484d",
+    "after_sha256": "b7f49fbde640b6fc5004c5be6b7ada451a8828def5017b1c532e027bc07eee08",
+    "edits": [
+      {
+        "start": 2,
+        "end": 3,
+        "before": "  \"version\": \"0.18.22+codex.20261030.box-pixels\",\n",
+        "after": "  \"version\": \"0.18.23+codex.20261031.box-surfaces\",\n"
+      },
+      {
+        "start": 20,
+        "end": 21,
+        "before": "    \"longDescription\": \"Axiom Vision v0.18.22 identifies Mystery Box types and counts locally from stable pre-open Stage pixels, retains count provenance and bounded evidence, and carries resolved counts through recovery and summaries. Cookie Relay and input/replay guards remain enforced. Runtime item/treasure reading remains disabled.\",\n",
+        "after": "    \"longDescription\": \"Axiom Vision v0.18.23 separates Mystery Box sprites from the radial reward background and refines rarity samples at captured resolution. Stage-bound local counts feed checkpoint recovery and summaries; legacy evidence and input guards remain preserved.\",\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/AGENTS.md",
+    "before_sha256": "2f30c99bd9a7f67ab21c62286654114d63a1a5248f2ab387c5ee49155a4ebad2",
+    "after_sha256": "3c8092bbe116a09ebdcc0f7b435a15d82ab0cc521fd4b1d5e106d54b52c47f79",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.23 physical box surfaces on radial backgrounds\n\nCurrent schema2 classifier is stage-bound-hsv-v3. Retained v2/schema2 and\nlegacy schema1 evidence stay immutable and validated with their original\ncount provenance and once-only action state. New Bridge captures use v3 only.\nReward starburst/background brightness is not a physical box. Count only\nbounded sprite surfaces; keep unknown physical surfaces explicit instead of\nsilently undercounting. Preserve all separate exact Open All Scene, Stage,\nController, Human, freshness, watchdog and input/replay guards.\n\nThe public package contains procedural regressions only, never uploaded diagnostic\nimage bytes. Tests on supplied JPEG previews remain private host decoded-RGB\nclassification regressions.\nThey do not recreate original full-resolution PNG pixels or native LDPlayer\ncapture/input. Report that distinction explicitly.\n\nThe compact SEND LOG base stays bounded at 192KiB with current Human/review\npriority. Only the newest metadata/hash-bound original Mystery Box PNG may\nextend that same single file to 2MiB. Preserve all other excerpt/log budgets;\nover-bound or unbound originals use the explicitly lossy/omitted fallback.\nThis narrow v23 exception supersedes the original v8 small-file size guidance\nonly for the newest exact box image. It does not prove native upload success.\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/README_TH.md",
+    "before_sha256": "02ff3f5ec26ab51da0d6042aabfef48d1d5ad75c3dbb0736bb0ca828ae7fae51",
+    "after_sha256": "142d371f70fd588b2764aa3a11beafe1bd288f5154cf824f19dacef2ee93a26f",
+    "edits": [
+      {
+        "start": 0,
+        "end": 0,
+        "before": "",
+        "after": "# v0.18.23 — Mystery Box Surfaces\n\nแก้การตรวจ Mystery Box ที่ภาพเกมจริงมีแสงรัศมีด้านหลังแล้วถูกปฏิเสธผลทั้งหมด โดยตรวจขอบและตัวกล่องแยกจากพื้นหลัง และปรับตำแหน่งอ่านสีจากภาพที่จับได้เต็มความละเอียด กล่อง Brown จึงไม่หลุดเพราะการย่อภาพก่อน scan\n\n- ใช้การตรวจภาพภายในเครื่องใน Stage ก่อน Open All ยืนยันชนิดและจำนวนจากภาพที่ตรงกันสองภาพ\n- รองรับข้อมูล checkpoint เดิม v2 และ schema1 โดยไม่เขียนยอดย้อนหลังหรือส่ง input ซ้ำ\n- ผลที่ตรวจใหม่ยังผ่าน checkpoint → loop statistics → Summary และ Telegram ด้วยแหล่งที่มาของจำนวนเดิม\n- SEND LOG เพิ่มต้นฉบับ PNG ล่าสุดที่ตรวจกล่องภายในขนาดจำกัด พร้อมระบุเมื่อมีเพียงภาพ preview\n\nทดสอบภาพ Silver และ Brown ที่แนบมากับ Log v0.18.22 เป็นภาพ JPEG preview จริง ภาพเหล่านี้ใช้ทดสอบแกนประมวลผลภาพและเส้นข้อมูล ไม่ใช่ต้นฉบับ PNG หรือการทดสอบกดเกมบนเครื่องผู้ใช้ การทดสอบจำนวน 1–5 และสีอีกสองชนิดใช้ fixture ที่ระบุที่มา\n\nหยุดงานแล้วกด CHECK UPDATE จากนั้นเริ่มรอบใหม่ ผลเก่าที่นับไม่ได้ยังคงเป็นข้อมูลเดิมเพื่อรักษาประวัติ ไม่แก้ยอดย้อนหลังจากภาพ preview\n\n---\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/RELEASE_v0.18.23_TH.md",
+    "before_sha256": null,
+    "after_sha256": "5ecee92bca8816e67b9c5c8f4ec1f84f45e478db7539eb279bb7d2c91a7fb21b",
+    "content": "# v0.18.23 — Mystery Box Surfaces\n\nแก้การตรวจ Mystery Box ที่ภาพเกมจริงมีแสงรัศมีด้านหลังแล้วถูกปฏิเสธผลทั้งหมด โดยตรวจขอบและตัวกล่องแยกจากพื้นหลัง และปรับตำแหน่งอ่านสีจากภาพที่จับได้เต็มความละเอียด กล่อง Brown จึงไม่หลุดเพราะการย่อภาพก่อน scan\n\n- ใช้การตรวจภาพภายในเครื่องใน Stage ก่อน Open All ยืนยันชนิดและจำนวนจากภาพที่ตรงกันสองภาพ\n- รองรับข้อมูล checkpoint เดิม v2 และ schema1 โดยไม่เขียนยอดย้อนหลังหรือส่ง input ซ้ำ\n- ผลที่ตรวจใหม่ยังผ่าน checkpoint → loop statistics → Summary และ Telegram ด้วยแหล่งที่มาของจำนวนเดิม\n- SEND LOG เพิ่มต้นฉบับ PNG ล่าสุดที่ตรวจกล่องภายในขนาดจำกัด พร้อมระบุเมื่อมีเพียงภาพ preview\n\nทดสอบภาพ Silver และ Brown ที่แนบมากับ Log v0.18.22 เป็นภาพ JPEG preview จริง ภาพเหล่านี้ใช้ทดสอบแกนประมวลผลภาพและเส้นข้อมูล ไม่ใช่ต้นฉบับ PNG หรือการทดสอบกดเกมบนเครื่องผู้ใช้ การทดสอบจำนวน 1–5 และสีอีกสองชนิดใช้ fixture ที่ระบุที่มา\n\nหยุดงานแล้วกด CHECK UPDATE จากนั้นเริ่มรอบใหม่ ผลเก่าที่นับไม่ได้ยังคงเป็นข้อมูลเดิมเพื่อรักษาประวัติ ไม่แก้ยอดย้อนหลังจากภาพ preview\n"
+  },
+  {
+    "path": "visionstudio/scripts/setup-windows.ps1",
+    "before_sha256": "0fa3168fde05eb6287c20b480f363b9b888b58c78033c337c621f2b3c7befa74",
+    "after_sha256": "ac3f0b1a359b900ed8d2f06cf1e5753234065705f0c75ba36ed4f48e04da41ee",
+    "edits": [
+      {
+        "start": 90,
+        "end": 91,
+        "before": "Write-Host \"Axiom Vision v0.18.22 Mystery Box Pixels is ready.\" -ForegroundColor Green\n",
+        "after": "Write-Host \"Axiom Vision v0.18.23 Mystery Box Pixels is ready.\" -ForegroundColor Green\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/verify_runtime_version.py",
+    "before_sha256": "f6e23e27edbfd282b7d2038044e89c7d7b998c43b6929d3b85d62d04fb50fd6f",
+    "after_sha256": "0b4dbbf3ffbf4c22001f0025c86385e35d20b54b10c3ff3f9e408754fa3bd046",
+    "edits": [
+      {
+        "start": 9,
+        "end": 12,
+        "before": "EXPECTED_VERSION = \"0.18.22\"\nEXPECTED_PLUGIN_VERSION = \"0.18.22+codex.20261030.box-pixels\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.22-box-pixels-308\"\n",
+        "after": "EXPECTED_VERSION = \"0.18.23\"\nEXPECTED_PLUGIN_VERSION = \"0.18.23+codex.20261031.box-surfaces\"\nEXPECTED_BRIDGE_SERVER_VERSION = \"0.18.23-box-surfaces-309\"\n"
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "before": "EXPECTED_MYSTERY_BOX_CLASSIFIER_VERSION = \"stage-bound-hsv-v2\"\n",
+        "after": "EXPECTED_MYSTERY_BOX_CLASSIFIER_VERSION = \"stage-bound-hsv-v3\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_bridge.py",
+    "before_sha256": "9dbae37db36bb701f12e65ef0696a754ec6395a7c01e56b2fddc75781fe85bd2",
+    "after_sha256": "5b7d16704c7cc613679c7105786121a6f1950aeacd82fba9153b3ede723effd4",
+    "edits": [
+      {
+        "start": 72,
+        "end": 74,
+        "before": "SERVER_VERSION = \"0.18.22-box-pixels-308\"\nPRODUCT_VERSION = \"0.18.22\"\n",
+        "after": "SERVER_VERSION = \"0.18.23-box-surfaces-309\"\nPRODUCT_VERSION = \"0.18.23\"\n"
+      },
+      {
+        "start": 177,
+        "end": 178,
+        "before": "MYSTERY_BOX_PIXEL_CLASSIFIER_VERSION = \"stage-bound-hsv-v2\"\n",
+        "after": "MYSTERY_BOX_PIXEL_CLASSIFIER_VERSION = \"stage-bound-hsv-v3\"\n# Stored v2 telemetry remains immutable across an engine upgrade. Only the\n# current engine may establish a new private capture witness below.\nMYSTERY_BOX_RETAINED_PIXEL_CLASSIFIER_VERSIONS = frozenset({\n    \"stage-bound-hsv-v2\", MYSTERY_BOX_PIXEL_CLASSIFIER_VERSION,\n})\n"
+      },
+      {
+        "start": 243,
+        "end": 244,
+        "before": "            and evidence.get(\"classifier_version\") == MYSTERY_BOX_PIXEL_CLASSIFIER_VERSION)))\n",
+        "after": "            and isinstance(evidence.get(\"classifier_version\"), str)\n            and evidence[\"classifier_version\"] in MYSTERY_BOX_RETAINED_PIXEL_CLASSIFIER_VERSIONS)))\n"
+      },
+      {
+        "start": 16178,
+        "end": 16179,
+        "before": "            if (not isinstance(final, dict) or final.get(\"frame_sha256\") != sha256_bytes(image)\n",
+        "after": "            if (not isinstance(final, dict)\n                    or final.get(\"schema_version\") != MYSTERY_BOX_PIXEL_EVIDENCE_SCHEMA_VERSION\n                    or final.get(\"classifier_version\") != MYSTERY_BOX_PIXEL_CLASSIFIER_VERSION\n                    or final.get(\"frame_sha256\") != sha256_bytes(image)\n"
+      },
+      {
+        "start": 16259,
+        "end": 16260,
+        "before": "        resolution; v2 resolves telemetry from stable physical pixels while\n",
+        "after": "        resolution; schema2 resolves telemetry from stable physical pixels while\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_controller.py",
+    "before_sha256": "0d1a73d95f1ecb3d11f4092fca055854d8e9be8df2bc333a178b708a7915339e",
+    "after_sha256": "a622651374777a5ba2d4e8a0ef9286a0bab5303baafaae206db928c7b2c702ec",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Axiom Vision v0.18.22 Universal Mission and Utility Controller.\n",
+        "after": "\"\"\"Axiom Vision v0.18.23 Universal Mission and Utility Controller.\n"
+      },
+      {
+        "start": 145,
+        "end": 146,
+        "before": "CONTROLLER_VERSION = \"0.18.22\"\n",
+        "after": "CONTROLLER_VERSION = \"0.18.23\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_heart_contract.py",
+    "before_sha256": "b72e53766905081eb1f490f509c39a03ea87ae09fd585a45fc16a0bfb740d3ca",
+    "after_sha256": "238520a85983571cb7445bb7010d2493de4a023bcbec219993e283609fae53a0",
+    "edits": [
+      {
+        "start": 1,
+        "end": 2,
+        "before": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.22.\"\"\"\n",
+        "after": "\"\"\"Code-defined Heart Sender utility contract for Axiom Vision v0.18.23.\"\"\"\n"
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "before": "HEART_RUNNER_VERSION = \"0.18.22\"\n",
+        "after": "HEART_RUNNER_VERSION = \"0.18.23\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_local_runner.py",
+    "before_sha256": "fb2c46b5f8300ea03dc8a8aa9794abe64dcfb9e048625382c28dd3c06aeb8c17",
+    "after_sha256": "e11ba874999ad0674e2b0c963fb7a3946dd130c82a972cb51ff4aa0eb765db06",
+    "edits": [
+      {
+        "start": 40,
+        "end": 41,
+        "before": "LOCAL_RUNNER_VERSION = \"0.18.22\"\n",
+        "after": "LOCAL_RUNNER_VERSION = \"0.18.23\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_log_delivery.py",
+    "before_sha256": "ec970427ced8582aac60fa5155395e18de21386872edffe38026b657a999bf4f",
+    "after_sha256": "9c7fda7210631f418e8100e0c875b499e715afd2d47ed5bcce3f5accf984e7c0",
+    "edits": [
+      {
+        "start": 295,
+        "end": 295,
+        "before": "",
+        "after": "# The normal excerpt keeps its established small-upload budget. Only one\n# latest pre-open original may extend it, so classifier failures retain exact\n# pixels without reopening historical-image or log growth.\nMYSTERY_BOX_DIAGNOSTIC_BYTES = 2 * 1024 * 1024\n"
+      },
+      {
+        "start": 370,
+        "end": 372,
+        "before": "    every original member, hash and omission. Images are optional previews only,\n    so missing exact pixels cannot silently become OCR or input evidence.\n",
+        "after": "    every original member, hash and omission. The newest hash-bound Mystery Box\n    PNG is kept exact when it fits; otherwise its preview explicitly declares\n    the missing original pixels. Diagnostic images never grant input authority.\n"
+      },
+      {
+        "start": 400,
+        "end": 400,
+        "before": "",
+        "after": "    latest_box_original_details = None\n"
+      },
+      {
+        "start": 404,
+        "end": 404,
+        "before": "",
+        "after": "                dimensions = list(image.size)\n                original_format = image.format\n                original_frames = getattr(image, \"n_frames\", 1)\n            try:\n                metadata = json.loads(data.get(\"mystery-boxes/01-evidence.json\", b\"null\"))\n            except (ValueError, UnicodeError):\n                metadata = None\n            if (original_format == \"PNG\" and original_frames == 1\n                    and isinstance(metadata, dict)\n                    and metadata.get(\"frame_sha256\") == hashlib.sha256(data[latest_box_preview]).hexdigest()\n                    and metadata.get(\"capture_size\") == dimensions\n                    and metadata.get(\"input_authority\") is False):\n                latest_box_original_details = {\n                    \"lossless\": True, \"source_dimensions\": dimensions,\n                    \"retention_priority\": \"latest_mystery_box_preopen\",\n                    \"original_pixels_included\": True, \"image_format\": \"PNG\",\n                    \"input_authority\": False,\n                }\n"
+      },
+      {
+        "start": 413,
+        "end": 414,
+        "before": "                     \"note\": \"Recent diagnostic excerpt. Full history and original pixels remain in the local ZIP. JPEG previews are not exact OCR/input evidence. Consult members for omissions and report state references.\"}\n",
+        "after": "                     \"base_excerpt_limit_bytes\": SINGLE_DIAGNOSTIC_BYTES,\n                     \"mystery_box_original_limit_bytes\": MYSTERY_BOX_DIAGNOSTIC_BYTES,\n                     \"extended_for_mystery_box_original\": False,\n                     \"note\": \"Recent diagnostic excerpt. Full history remains in the local ZIP. Consult each image member for exact PNG retention or omitted original pixels. JPEG previews are not exact OCR/input evidence; diagnostic images grant no input authority.\"}\n"
+      },
+      {
+        "start": 505,
+        "end": 505,
+        "before": "",
+        "after": "                    if name == latest_box_preview and latest_box_original_details is not None:\n                        # Exact source pixels are preferable to a lossy excerpt,\n                        # but must fit the same cap after the active Human/current\n                        # preview. Its retained metadata must bind these bytes.\n                        alternatives.append((content, {\n                            **latest_box_original_details, \"_output_name\": name, \"_mode\": \"exact\",\n                        }))\n"
+      },
+      {
+        "start": 513,
+        "end": 513,
+        "before": "",
+        "after": "                            \"original_pixels_included\": False, \"image_format\": \"JPEG\",\n                            \"original_pixels_omission_reason\": \"Size budget; original retained in full local ZIP\",\n"
+      },
+      {
+        "start": 537,
+        "end": 539,
+        "before": "                for content, details in alternatives or [(content, details)]:\n                    candidate = {**files, output_name: content}\n",
+        "after": "                for content, alternative_details in alternatives or [(content, details)]:\n                    details = dict(alternative_details)\n                    candidate_output_name = details.pop(\"_output_name\", output_name)\n                    candidate_mode = details.pop(\"_mode\", mode)\n                    candidate = {**files, candidate_output_name: content}\n"
+      },
+      {
+        "start": 540,
+        "end": 541,
+        "before": "                    keep(ledger, name, content, output_name=output_name, mode=mode, **details)\n",
+        "after": "                    keep(ledger, name, content, output_name=candidate_output_name, mode=candidate_mode, **details)\n"
+      },
+      {
+        "start": 544,
+        "end": 545,
+        "before": "                            included_logs[content] = output_name\n",
+        "after": "                            included_logs[content] = candidate_output_name\n"
+      },
+      {
+        "start": 556,
+        "end": 556,
+        "before": "",
+        "after": "    if latest_box_preview is not None and latest_box_original_details is not None:\n        # First finish the unchanged small excerpt, including the active Human\n        # witness. Then grant the bounded extra space to this one exact PNG only.\n        # Keep core/history reductions and every other image selection unchanged.\n        exact_files = dict(files)\n        exact_ledger = {name: dict(entry) for name, entry in ledger.items()}\n        previous_output = exact_ledger[latest_box_preview].get(\"output_member\")\n        if previous_output is not None and previous_output != latest_box_preview:\n            exact_files.pop(previous_output, None)\n        original = data[latest_box_preview]\n        exact_files[latest_box_preview] = original\n        keep(exact_ledger, latest_box_preview, original, **latest_box_original_details)\n        base_manifest[\"extended_for_mystery_box_original\"] = True\n        extended = packed(exact_files, exact_ledger)\n        if len(extended) <= MYSTERY_BOX_DIAGNOSTIC_BYTES:\n            selected = extended\n        else:\n            # The selected fallback already declares whether source pixels were\n            # replaced by JPEG or omitted; never label it as an exact original.\n            base_manifest[\"extended_for_mystery_box_original\"] = False\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_mystery_box_evidence.py",
+    "before_sha256": "213929ee60cdcc5f04b8c119474abf7a62dfa0790be81e93efd27491dd2dd895",
+    "after_sha256": "9e5c23c0bdaa00bd41131885a4753a04154fffec3574790fa7bb6a84dba1be0b",
+    "edits": [
+      {
+        "start": 28,
+        "end": 28,
+        "before": "",
+        "after": "_CLASSIFIERS = {\"stage-bound-hsv-v2\", \"stage-bound-hsv-v3\"}\n"
+      },
+      {
+        "start": 79,
+        "end": 80,
+        "before": "    if not isinstance(metadata, dict) or metadata.get(\"schema_version\") != 2 or metadata.get(\"classifier_version\") != \"stage-bound-hsv-v2\":\n",
+        "after": "    if (not isinstance(metadata, dict) or metadata.get(\"schema_version\") != 2\n            or not isinstance(metadata.get(\"classifier_version\"), str)\n            or metadata[\"classifier_version\"] not in _CLASSIFIERS):\n"
+      },
+      {
+        "start": 83,
+        "end": 84,
+        "before": "    result = {\"schema_version\": 2, \"classifier_version\": \"stage-bound-hsv-v2\",\n",
+        "after": "    result = {\"schema_version\": 2, \"classifier_version\": metadata[\"classifier_version\"],\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/scripts/visionstudio_mystery_box_pixels.py",
+    "before_sha256": "1027fe3aef5276025d04268288fc1e0b5814818f699c7675d5195b47e6015f06",
+    "after_sha256": "d06dc2929371290395e09e8fc8508d53e231b9a0a1fa98e19a32205de43bdca1",
+    "edits": [
+      {
+        "start": 3,
+        "end": 4,
+        "before": "profiles and 1–5-box layouts retain the measured legacy calibration; Scene,\n",
+        "after": "rarity profiles and 1–5-box layouts retain the measured calibration. Closed-body\nedge runs exclude the radial backdrop; half-grid refinement reads original RGB. Scene,\n"
+      },
+      {
+        "start": 21,
+        "end": 22,
+        "before": "MYSTERY_BOX_PREOPEN_CLASSIFIER_VERSION = \"stage-bound-hsv-v2\"\n",
+        "after": "MYSTERY_BOX_PREOPEN_CLASSIFIER_VERSION = \"stage-bound-hsv-v3\"\n"
+      },
+      {
+        "start": 191,
+        "end": 191,
+        "before": "",
+        "after": "def _mystery_box_body_edges(image: Image.Image) -> tuple[list[list[int]], list[list[int]]]:\n    \"\"\"Bounded axis-edge projections for the closed, approximately square body.\n\n    Saturation/value foreground alone includes the animated blue radial glow.\n    A physical box must also have all four enclosing side runs. Taking the best\n    nearby side accommodates rounded corners, scaled borders and emulator chrome;\n    it does not add image/Scene/input authority or lower any rarity threshold.\n    \"\"\"\n    channels = image.split()\n    masks = []\n    for dx, dy in ((2, 0), (0, 2)):\n        differences = [ImageChops.difference(\n            ImageChops.offset(channel, dx, dy),\n            ImageChops.offset(channel, -dx, -dy),\n        ) for channel in channels]\n        edge = ImageChops.lighter(ImageChops.lighter(*differences[:2]), differences[2])\n        masks.append(edge.point(tuple(255 if value >= 28 else 0 for value in range(256))))\n    width, height = image.size\n    vertical, horizontal = masks[0].tobytes(), masks[1].tobytes()\n    columns = [[0] * (height + 1) for _ in range(width)]\n    rows = [[0] * (width + 1) for _ in range(height)]\n    for y in range(height):\n        offset = y * width\n        row = rows[y]\n        for x in range(width):\n            columns[x][y + 1] = columns[x][y] + bool(vertical[offset + x])\n            row[x + 1] = row[x] + bool(horizontal[offset + x])\n    return columns, rows\n\n\ndef _mystery_box_body_present(\n    edges: tuple[list[list[int]], list[list[int]]], center_x: float, center_y: float,\n) -> bool:\n    columns, rows = edges\n    width, height = len(columns), len(rows)\n    top, bottom = round((center_y - .06) * height), round((center_y + .06) * height)\n    left, right = round((center_x - .04) * width), round((center_x + .04) * width)\n    if not (0 <= top < bottom < height and 0 <= left < right < width):\n        return False\n    # Require continuous support on each side independently, never a total that\n    # lets one strong ray compensate for missing edges on the other three sides.\n    for direction in (-1, 1):\n        found = False\n        for distance in range(round(.04 * width), round(.09 * width) + 1):\n            x = round(center_x * width + direction * distance)\n            if (0 <= x < width and\n                    (columns[x][bottom] - columns[x][top]) / (bottom - top) >= .65):\n                found = True\n                break\n        if not found:\n            return False\n        found = False\n        for distance in range(round(.06 * height), round(.13 * height) + 1):\n            y = round(center_y * height + direction * distance)\n            if (0 <= y < height and\n                    (rows[y][right] - rows[y][left]) / (right - left) >= .65):\n                found = True\n                break\n        if not found:\n            return False\n    return True\n\n\n"
+      },
+      {
+        "start": 192,
+        "end": 193,
+        "before": "    \"\"\"Strong calibrated components plus unexplained foreground islands.\n",
+        "after": "    \"\"\"Strong calibrated bodies plus unexplained enclosed surfaces.\n"
+      },
+      {
+        "start": 203,
+        "end": 203,
+        "before": "",
+        "after": "    edges = _mystery_box_body_edges(working)\n    measured: dict[tuple[float, float], dict[str, Any]] = {}\n    refine: set[tuple[float, float]] = set()\n"
+      },
+      {
+        "start": 205,
+        "end": 211,
+        "before": "            slot = _mystery_box_slot_profile(working, center_x, center_y)\n            candidate = {\"center_x\": center_x, \"center_y\": center_y, **slot}\n            if slot[\"classification\"] != \"unknown\":\n                known.append(candidate)\n            elif slot[\"foreground_coverage\"] >= MYSTERY_BOX_MIN_FOREGROUND_COVERAGE:\n                unknown.append(candidate)\n",
+        "after": "            if not _mystery_box_body_present(edges, center_x, center_y):\n                continue\n            slot = _mystery_box_slot_profile(image, center_x, center_y)\n            measured[center_x, center_y] = slot\n            # A half-grid local refinement preserves the measured class/margin\n            # thresholds while avoiding a narrow valid body between coarse cells.\n            # Only enclosed candidate bodies are refined; background is not scanned\n            # again or promoted by a permissive profile/presence threshold.\n            if slot[\"present\"]:\n                refine.update((round(center_x + dx, 4), round(center_y + dy, 4))\n                              for dx in (-.01, 0., .01) for dy in (-.01, 0., .01))\n    for center_x, center_y in sorted(refine):\n        if ((center_x, center_y) not in measured and\n                _mystery_box_body_present(edges, center_x, center_y)):\n            measured[center_x, center_y] = _mystery_box_slot_profile(image, center_x, center_y)\n    for (center_x, center_y), slot in measured.items():\n        candidate = {\"center_x\": center_x, \"center_y\": center_y, **slot}\n        if slot[\"classification\"] != \"unknown\":\n            known.append(candidate)\n        elif slot[\"foreground_coverage\"] >= MYSTERY_BOX_MIN_FOREGROUND_COVERAGE:\n            unknown.append(candidate)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_bridge.py",
+    "before_sha256": "bbbe799be4aa309546e0648d711b5ffdf9cda4d8d8a87d509354e417f018a77c",
+    "after_sha256": "c98c735eecb4b78e2e673634dd250b7ffa9e7818919e4d887bd8d4bb7731f6aa",
+    "edits": [
+      {
+        "start": 3087,
+        "end": 3088,
+        "before": "            \"0.18.22-box-pixels-308\",\n",
+        "after": "            \"0.18.23-box-surfaces-309\",\n"
+      },
+      {
+        "start": 10850,
+        "end": 10851,
+        "before": "                \"Axiom Vision v0.18.22 — Telegram test\\n\"\n",
+        "after": "                \"Axiom Vision v0.18.23 — Telegram test\\n\"\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_controller_state.py",
+    "before_sha256": "0c44646cf1e559bc35e77732e4352c0323d6a709abd6c15f8b062307ab45bfe6",
+    "after_sha256": "d8205acc5cf3d45abb9a95c213a56052ab3defe832988e767b3e71919a0b76c0",
+    "edits": [
+      {
+        "start": 2446,
+        "end": 2447,
+        "before": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.22\")\n",
+        "after": "        self.assertEqual(controller_app.CONTROLLER_VERSION, \"0.18.23\")\n"
+      },
+      {
+        "start": 5818,
+        "end": 5819,
+        "before": "            self.assertEqual(report[\"product_version\"], \"0.18.22\")\n",
+        "after": "            self.assertEqual(report[\"product_version\"], \"0.18.23\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_heart_runner.py",
+    "before_sha256": "a9c41b89c14c5056299221f069cd14a58ecafa620168cd3141523e34c3257ac6",
+    "after_sha256": "e92044de384826983ff5c518745399231ac0b31abcb2603e10499390761f97cc",
+    "edits": [
+      {
+        "start": 536,
+        "end": 537,
+        "before": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.22\")\n",
+        "after": "        self.assertEqual(HEART_RUNNER_VERSION, \"0.18.23\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_local_runner.py",
+    "before_sha256": "915dafefa7990a8fabf4e525cfee689f3818ee001dbe08aae727ad4e685f936c",
+    "after_sha256": "531d74b6d122a0507ead65d73623d1bcd7908850bec31aae2a900dc47ae31b7b",
+    "edits": [
+      {
+        "start": 103,
+        "end": 104,
+        "before": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.22\")\n",
+        "after": "        self.assertEqual(runner.LOCAL_RUNNER_VERSION, \"0.18.23\")\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_log_delivery.py",
+    "before_sha256": "4d52bdfcdbbf3f4e9af908c5e1de859be3ded5d03bb651d02562bf5f4b8b7cab",
+    "after_sha256": "d90802fc3c6dae2b330b55c21acc996873389fe3ef69c848504fb12840b758cf",
+    "edits": [
+      {
+        "start": 165,
+        "end": 165,
+        "before": "",
+        "after": "\n    def test_box_original_extension_cannot_expand_or_trim_the_exact_core_budget(self):\n        with tempfile.TemporaryDirectory() as tmp:\n            source = Path(tmp) / \"diagnostic.zip\"\n            rng = random.Random(42)\n            checkpoint = json.dumps({\"pending_action_intent\": {\n                \"replay_policy\": \"never\", \"identity\": rng.randbytes(300_000).hex(),\n            }}).encode()\n            image = Image.frombytes(\"RGB\", (640, 360), rng.randbytes(640 * 360 * 3))\n            stream = io.BytesIO(); image.save(stream, \"PNG\"); frame = stream.getvalue()\n            metadata = {\"frame_sha256\": hashlib.sha256(frame).hexdigest(),\n                        \"capture_size\": [640, 360], \"input_authority\": False}\n            with zipfile.ZipFile(source, \"w\", zipfile.ZIP_DEFLATED) as archive:\n                archive.writestr(\"state/checkpoint.json\", checkpoint)\n                archive.writestr(\"mystery-boxes/01-frame.png\", frame)\n                archive.writestr(\"mystery-boxes/01-evidence.json\", json.dumps(metadata))\n            before = source.read_bytes()\n            self.assertLess(len(before), delivery.MYSTERY_BOX_DIAGNOSTIC_BYTES)\n            with self.assertRaisesRegex(ValueError, \"Exact current state\"):\n                delivery.telegram_diagnostic_copy(source)\n            self.assertEqual(source.read_bytes(), before)\n            self.assertFalse((Path(tmp) / \"diagnostic-send-log.zip\").exists())\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_mystery_box_evidence.py",
+    "before_sha256": "931fbbbfd45a451a95ffe6b8f6fd3573c4617b079ab73f85595afc7ca9a3b99f",
+    "after_sha256": "159ac2956dd0323db73f96000702c9daa2767b523b9962e101147763b836e96f",
+    "edits": [
+      {
+        "start": 52,
+        "end": 52,
+        "before": "",
+        "after": "    def test_v3_snapshots_preserve_valid_v2_metadata_and_pixels_byte_exact(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            root = Path(temporary); old_frame = png(1)\n            saved = evidence.save_mystery_box_evidence(root, old_frame, metadata(old_frame))\n            folder = root / evidence.EVIDENCE_FOLDER\n            old_metadata = (folder / f\"{saved['slot']}.json\").read_bytes()\n            new_frame = png(2); source = metadata(new_frame, 3)\n            source[\"classifier_version\"] = \"stage-bound-hsv-v3\"\n            evidence.save_mystery_box_evidence(root, new_frame, source)\n            rows, coverage = evidence.load_mystery_box_evidence(root)\n            self.assertEqual(coverage[\"snapshots_returned\"], 2)\n            self.assertEqual([row[\"metadata\"][\"classifier_version\"] for row in rows],\n                             [\"stage-bound-hsv-v3\", \"stage-bound-hsv-v2\"])\n            self.assertEqual((folder / f\"{saved['slot']}.json\").read_bytes(), old_metadata)\n            self.assertEqual((folder / f\"{saved['slot']}.png\").read_bytes(), old_frame)\n\n"
+      },
+      {
+        "start": 109,
+        "end": 109,
+        "before": "",
+        "after": "                   {\"classifier_version\": []}, {\"classifier_version\": {}},\n                   {\"classifier_version\": \"stage-bound-hsv-v4\"},\n"
+      },
+      {
+        "start": 201,
+        "end": 202,
+        "before": "    def test_telegram_keeps_latest_box_preview_metadata_and_exact_coverage_footer(self):\n",
+        "after": "    def test_telegram_keeps_latest_box_original_metadata_and_exact_coverage_footer(self):\n"
+      },
+      {
+        "start": 217,
+        "end": 217,
+        "before": "",
+        "after": "                self.assertEqual(archive.read(\"mystery-boxes/01-frame.png\"), png(3, noisy=True))\n                self.assertNotIn(\"mystery-boxes/01-frame.preview.jpg\", archive.namelist())\n                self.assertNotIn(\"mystery-boxes/02-frame.png\", archive.namelist())\n                self.assertIn(\"mystery-boxes/02-frame.preview.jpg\", archive.namelist())\n                manifest = json.loads(archive.read(\"telegram-transfer.json\"))\n                row = manifest[\"members\"][\"mystery-boxes/01-frame.png\"]\n                self.assertEqual(row[\"retention_priority\"], \"latest_mystery_box_preopen\")\n                self.assertTrue(row[\"lossless\"]); self.assertFalse(row[\"input_authority\"])\n                self.assertTrue(row[\"original_pixels_included\"])\n                self.assertEqual(row[\"image_format\"], \"PNG\")\n                self.assertTrue(manifest[\"extended_for_mystery_box_original\"])\n                self.assertEqual(row[\"source_sha256\"], json.loads(newest)[\"frame_sha256\"])\n                self.assertEqual(row[\"source_sha256\"], row[\"output_sha256\"])\n            self.assertLessEqual(excerpt.stat().st_size, delivery.MYSTERY_BOX_DIAGNOSTIC_BYTES)\n\n    def test_oversized_original_keeps_bounded_preview_with_explicit_missing_pixels(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            root = Path(temporary); frame = png(4, noisy=True)\n            evidence.save_mystery_box_evidence(root, frame, metadata(frame))\n            bundle, _ = self.bundle(root); before = bundle.read_bytes()\n            with mock.patch.object(delivery, \"MYSTERY_BOX_DIAGNOSTIC_BYTES\", delivery.SINGLE_DIAGNOSTIC_BYTES):\n                excerpt = delivery.telegram_diagnostic_copy(bundle)\n            self.assertEqual(bundle.read_bytes(), before)\n            self.assertLessEqual(excerpt.stat().st_size, delivery.SINGLE_DIAGNOSTIC_BYTES)\n            with zipfile.ZipFile(excerpt) as archive:\n                self.assertNotIn(\"mystery-boxes/01-frame.png\", archive.namelist())\n"
+      },
+      {
+        "start": 220,
+        "end": 223,
+        "before": "                self.assertEqual(row[\"retention_priority\"], \"latest_mystery_box_preopen\")\n                self.assertFalse(row[\"lossless\"]); self.assertFalse(row[\"input_authority\"])\n                self.assertEqual(row[\"source_sha256\"], json.loads(newest)[\"frame_sha256\"])\n",
+        "after": "                self.assertFalse(manifest[\"extended_for_mystery_box_original\"])\n                self.assertFalse(row[\"original_pixels_included\"])\n                self.assertFalse(row[\"lossless\"])\n                self.assertEqual(row[\"image_format\"], \"JPEG\")\n                self.assertIn(\"original retained\", row[\"original_pixels_omission_reason\"])\n                self.assertEqual(row[\"source_sha256\"], hashlib.sha256(frame).hexdigest())\n\n    def test_original_extension_requires_exact_metadata_hash_binding(self):\n        with tempfile.TemporaryDirectory() as temporary:\n            root = Path(temporary); frame = png(4, noisy=True)\n            evidence.save_mystery_box_evidence(root, frame, metadata(frame))\n            bundle, _ = self.bundle(root)\n            with zipfile.ZipFile(bundle) as archive:\n                members = {name: archive.read(name) for name in archive.namelist()}\n            source = json.loads(members[\"mystery-boxes/01-evidence.json\"])\n            source[\"frame_sha256\"] = \"f\" * 64\n            members[\"mystery-boxes/01-evidence.json\"] = json.dumps(source).encode()\n            with zipfile.ZipFile(bundle, \"w\", zipfile.ZIP_DEFLATED) as archive:\n                for name, content in members.items(): archive.writestr(name, content)\n            excerpt = delivery.telegram_diagnostic_copy(bundle)\n"
+      },
+      {
+        "start": 224,
+        "end": 224,
+        "before": "",
+        "after": "            with zipfile.ZipFile(excerpt) as archive:\n                self.assertNotIn(\"mystery-boxes/01-frame.png\", archive.namelist())\n                manifest = json.loads(archive.read(\"telegram-transfer.json\"))\n                self.assertFalse(manifest[\"extended_for_mystery_box_original\"])\n"
+      },
+      {
+        "start": 227,
+        "end": 228,
+        "before": "            root = Path(temporary); frame = png(4, noisy=True)\n",
+        "after": "            root = Path(temporary)\n            image = Image.frombytes(\"RGB\", (820, 450), random.Random(4).randbytes(820 * 450 * 3))\n            stream = io.BytesIO(); image.save(stream, \"PNG\"); frame = stream.getvalue()\n            self.assertGreater(len(frame), 1_100_000)\n            self.assertLess(len(frame), 1_150_000)\n"
+      },
+      {
+        "start": 241,
+        "end": 242,
+        "before": "                self.assertIn(\"mystery-boxes/01-frame.preview.jpg\", archive.namelist())\n",
+        "after": "                self.assertEqual(archive.read(\"mystery-boxes/01-frame.png\"), frame)\n                self.assertNotIn(\"mystery-boxes/01-frame.preview.jpg\", archive.namelist())\n"
+      },
+      {
+        "start": 244,
+        "end": 244,
+        "before": "",
+        "after": "                self.assertTrue(manifest[\"members\"][\"mystery-boxes/01-frame.png\"][\"lossless\"])\n                # The expanded budget is granted solely to the newest box PNG.\n                original_row = manifest[\"members\"][\"mystery-boxes/01-frame.png\"]\n                self.assertEqual(original_row[\"source_sha256\"], original_row[\"output_sha256\"])\n                self.assertNotEqual(manifest[\"members\"][\"images/result-ocr-failure.png\"].get(\"mode\"), \"exact\")\n            self.assertLessEqual(excerpt.stat().st_size, delivery.MYSTERY_BOX_DIAGNOSTIC_BYTES)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_mystery_box_pixel_pipeline.py",
+    "before_sha256": "3a2fc1435ab17f379aaefd248b0185cf8008016741d2786cf4bb8aaa81ad42a2",
+    "after_sha256": "dbdf49c915ce4dff38b435d4665d916fe1e3a72d5ad27a2594dc7e0dcdc26b63",
+    "edits": [
+      {
+        "start": 66,
+        "end": 67,
+        "before": "        return {\"schema_version\": 2, \"classifier_version\": \"stage-bound-hsv-v2\",\n",
+        "after": "        return {\"schema_version\": 2, \"classifier_version\": \"stage-bound-hsv-v3\",\n"
+      },
+      {
+        "start": 86,
+        "end": 87,
+        "before": "        image, evidence, _samples = self.collect(server, session, frame, [types, types])\n",
+        "after": "        image, evidence, _samples = self.collect(server, session, frame, [types, types, types])\n"
+      },
+      {
+        "start": 164,
+        "end": 164,
+        "before": "",
+        "after": "\n    def test_previous_v2_checkpoint_resolution_is_reused_without_reclassification(self):\n        for types, result_count in (([\"brown\", \"silver\"], None), ([\"brown\", \"silver\"], 1), (None, 3), (None, None)):\n            with self.subTest(types=types, result_count=result_count), tempfile.TemporaryDirectory() as directory:\n                helper, server, original, desktop, frame = self.fixture(directory, result_count=result_count)\n                retained = self.retain(server, original, frame, types)\n                # This is the exact prior schema2 payload format: engine label\n                # participates in the unchanged canonical digest. Upgrades may\n                # validate it, never relabel, reclassify or overwrite it.\n                previous = original.loop_recovery_context[\"mystery_box_preopen_evidence\"]\n                previous[\"classifier_version\"] = \"stage-bound-hsv-v2\"\n                previous[\"evidence_integrity_sha256\"] = bridge.mystery_box_preopen_integrity_sha256(previous)\n                previous = copy.deepcopy(previous)\n                expected = copy.deepcopy(retained[\"boxes\"])\n                restored = bridge.BridgeSession(original.mission_path, copy.deepcopy(original.mission),\n                    Path(directory) / \"previous-v2-restore.jsonl\", mission_source=\"universal-code\",\n                    mission_contract_sha256=original.mission_contract_sha256,\n                    universal_config=copy.deepcopy(original.universal_config))\n                restored.data_root = Path(directory)\n                self.assertTrue(restored.restore_checkpoint(original.checkpoint_payload(status=\"active\")))\n                restored.fixed_geometry_bounds = original.fixed_geometry_bounds\n                restored.last_window, restored.last_image, restored.needs_observation = original.last_window, frame, False\n                restored.resume_required = restored.resume_confirmation_pending = restored.checkpoint_recovery_pending = False\n                server.session = restored\n                preopen, known, count, boxes = server._validated_durable_mystery_box_preopen(restored)\n                self.assertEqual(preopen, previous)\n                self.assertEqual(boxes, expected)\n                self.assertEqual(bridge.mystery_box_preopen_count_resolution(preopen, known, count),\n                    (retained[\"resolved_count_known\"], retained[\"resolved_count\"]))\n                local = object.__new__(runner.LocalRunner); local.server = server\n                local._adopt_retained_mystery_box_preopen(retained)\n                self.assertTrue(local._restored_mystery_box_preopen_is_reconcilable(restored))\n                with mock.patch.object(pixels, \"detect_mystery_box_pixels\") as detector, \\\n                        mock.patch.object(server, \"_interruptible_delay\"):\n                    server.execute_local_reward_stage_target(restored.id, \"reward-open-all\", \"reversible\", False, 0)\n                detector.assert_not_called()\n                self.assertEqual(len(desktop.clicks), 1)\n                self.assertEqual(restored.loop_recovery_context[\"mystery_box_preopen_evidence\"], previous)\n                helper.set_exact_universal_stage_prefix(restored, \"verify-lobby-return\")\n                recorded = server.record_loop_result(restored.id, 859, 14675, 4228003, 4228862,\n                    boxes, \"high\", \"immutable v2 upgrade telemetry\")\n                row = json.loads(Path(recorded[\"stats_file\"]).read_text())[\"loop_history\"][-1]\n                self.assertEqual(row[\"box_count_known\"], retained[\"resolved_count_known\"])\n                self.assertEqual(row[\"box_count\"], retained[\"resolved_count\"])\n                self.assertEqual(row[\"boxes\"], expected)\n                self.assertEqual(restored.loop_recovery_context[\"mystery_box_preopen_evidence\"], previous)\n\n    def test_previous_v2_pending_or_committed_reward_checkpoint_never_replays(self):\n        for stage, target in ((\"open-all-boxes\", \"reward-open-all\"), (\"confirm-rewards\", \"reward-confirm\")):\n            for phase in (\"pending\", \"committed\"):\n                with self.subTest(stage=stage, phase=phase), tempfile.TemporaryDirectory() as directory:\n                    helper, server, original, desktop, frame = self.fixture(directory)\n                    self.retain(server, original, frame, [\"silver\"])\n                    previous = original.loop_recovery_context[\"mystery_box_preopen_evidence\"]\n                    previous[\"classifier_version\"] = \"stage-bound-hsv-v2\"\n                    previous[\"evidence_integrity_sha256\"] = bridge.mystery_box_preopen_integrity_sha256(previous)\n                    previous = copy.deepcopy(previous)\n                    helper.set_exact_universal_stage_prefix(original, stage,\n                        phase=\"action_committed\" if phase == \"committed\" else \"entered\")\n                    if phase == \"pending\":\n                        original.pending_action_intent = {\"intent_id\": \"uncertain-previous-v2\", \"stage_id\": stage,\n                            \"action\": \"click\", \"target_id\": target, \"action_replay\": \"never\"}\n                    checkpoint = original.checkpoint_payload(status=\"active\")\n                    restored = bridge.BridgeSession(original.mission_path, copy.deepcopy(original.mission),\n                        Path(directory) / \"pending-previous-v2.jsonl\", mission_source=\"universal-code\",\n                        mission_contract_sha256=original.mission_contract_sha256,\n                        universal_config=copy.deepcopy(original.universal_config))\n                    restored.data_root = Path(directory)\n                    self.assertTrue(restored.restore_checkpoint(checkpoint))\n                    restored.fixed_geometry_bounds = original.fixed_geometry_bounds\n                    server.session = restored\n                    ledger = copy.deepcopy((restored.pending_action_intent, restored.committed_stage_ids,\n                        restored.stage_action_attempts, restored.stage_action_replay_blocked))\n                    desktop.capture_png.reset_mock()\n                    with self.assertRaises(bridge.BridgeError), mock.patch.object(server, \"_interruptible_delay\"):\n                        server.execute_local_reward_stage_target(restored.id, target, \"reversible\", False, 0)\n                    desktop.capture_png.assert_not_called()\n                    self.assertFalse(desktop.clicks)\n                    self.assertEqual((restored.pending_action_intent, restored.committed_stage_ids,\n                        restored.stage_action_attempts, restored.stage_action_replay_blocked), ledger)\n                    self.assertEqual(restored.loop_recovery_context[\"mystery_box_preopen_evidence\"], previous)\n\n    def test_old_engine_cannot_establish_a_new_pixel_capture_witness(self):\n        with tempfile.TemporaryDirectory() as directory:\n            _helper, server, session, desktop, frame = self.fixture(directory)\n            previous = self.proof(frame, [\"silver\"])\n            previous[\"classifier_version\"] = \"stage-bound-hsv-v2\"\n            self.assertTrue(bridge.mystery_box_preopen_version_supported(previous))\n            with mock.patch.object(pixels, \"detect_mystery_box_pixels\", return_value=previous), \\\n                    self.assertRaisesRegex(bridge.BridgeError, \"detector did not bind\"):\n                server._collect_mystery_box_pixel_evidence(session.id)\n            self.assertIsNone(session._mystery_box_pixel_witness)\n            self.assertNotIn(\"mystery_box_preopen_evidence\", session.loop_recovery_context)\n            self.assertFalse(desktop.clicks)\n            for unsupported in (\"stage-bound-hsv-v1\", \"stage-bound-hsv-v4\", None, [], {}):\n                self.assertFalse(bridge.mystery_box_preopen_version_supported({**previous,\n                    \"classifier_version\": unsupported}))\n"
+      },
+      {
+        "start": 472,
+        "end": 472,
+        "before": "",
+        "after": "    def test_procedural_silver_surface_flows_through_private_capture_restore_and_telegram(self):\n        from test_mystery_box_surfaces import load_surface\n        with tempfile.TemporaryDirectory() as directory:\n            helper, server, original, desktop, _frame = self.fixture(directory)\n            # Procedural radial background and measured-profile surface pixels\n            # exercise the private count/reporting pipeline. This fixture has\n            # no user image bytes and does not establish native game accuracy.\n            image = load_surface(kind=\"silver\", count=1)\n            output = io.BytesIO(); image.save(output, format=\"PNG\"); frame = output.getvalue()\n            window = helper.make_window(executable=\"dnplayer.exe\", title=\"Cookie Run\",\n                left=120, top=80, width=image.width, height=image.height)\n            desktop.window = original.last_window = window\n            original.fixed_geometry_bounds = (window.left, window.top, window.width, window.height)\n            original.last_image = frame\n            desktop.capture_png.return_value = frame\n            helper.set_complete_universal_loop_start_anchor(original)\n            original.loop_recovery_context.update(result_box_count_known=False,\n                result_box_count=None, result_confidence=\"high\")\n            helper.set_exact_mystery_box_route(original)\n            with mock.patch.object(server, \"_interruptible_delay\"):\n                captured, evidence, samples = server._collect_mystery_box_pixel_evidence(original.id)\n            self.assertEqual(samples, 2)\n            self.assertEqual(evidence[\"classifier_version\"], \"stage-bound-hsv-v3\")\n            self.assertTrue(evidence[\"pixel_stability\"][\"stable\"])\n            expected = {kind: int(kind == \"silver\") for kind in bridge.BOX_TYPES}\n            self.assertEqual(evidence[\"boxes\"], expected)\n            retained = server.retain_mystery_box_preopen_evidence(original.id, original.observations,\n                bridge.sha256_bytes(captured), evidence, _local_exact_scene_confirmed=True)\n            self.assertTrue(retained[\"resolved_count_known\"])\n            self.assertEqual(retained[\"resolved_count\"], 1)\n            self.assertFalse(retained[\"result_box_count_known\"])\n            self.assertEqual(retained[\"boxes\"], expected)\n            original_evidence = copy.deepcopy(original.loop_recovery_context[\"mystery_box_preopen_evidence\"])\n            restored = bridge.BridgeSession(original.mission_path, copy.deepcopy(original.mission),\n                Path(directory) / \"procedural-silver-surface-restore.jsonl\", mission_source=\"universal-code\",\n                mission_contract_sha256=original.mission_contract_sha256,\n                universal_config=copy.deepcopy(original.universal_config))\n            restored.data_root = Path(directory)\n            self.assertTrue(restored.restore_checkpoint(original.checkpoint_payload(status=\"active\")))\n            restored.fixed_geometry_bounds = original.fixed_geometry_bounds\n            restored.last_window, restored.last_image, restored.needs_observation = window, frame, False\n            restored.resume_required = restored.resume_confirmation_pending = restored.checkpoint_recovery_pending = False\n            helper.set_exact_universal_stage_prefix(restored, \"verify-lobby-return\")\n            server.session = restored\n            recorded = server.record_loop_result(restored.id, 859, 14675, 4228003, 4228862,\n                expected, \"high\", \"procedural Silver surface fixture pipeline\")\n            stats = json.loads(Path(recorded[\"stats_file\"]).read_text())\n            row = stats[\"loop_history\"][-1]\n            self.assertEqual(row[\"box_count\"], 1)\n            self.assertEqual(row[\"box_count_source\"], \"stable-preopen-pixels\")\n            self.assertEqual(row[\"boxes\"], expected)\n            summary = controller.current_batch_summary_payload(stats)\n            self.assertEqual(summary[\"box_count\"], 1)\n            self.assertEqual(summary[\"boxes\"], expected)\n            self.assertEqual(summary[\"box_count_unavailable_loops\"], 0)\n            caption = controller.current_batch_summary_caption(summary)\n            for text in (\"Total collected: 1\", \"Silver: 1\", \"Brown: 0\", \"Count unavailable: 0 loops\"):\n                self.assertIn(text, caption)\n            self.assertEqual(restored.loop_recovery_context[\"mystery_box_preopen_evidence\"], original_evidence)\n            self.assertFalse(desktop.clicks)\n\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_mystery_box_pixels.py",
+    "before_sha256": "d5f2e4d70d40f356d7541c49608c145f72512bb71895756f50978abfd3a8b266",
+    "after_sha256": "b22e2d8b3ac974bc91f6aef500b7c766a57ae59509a2455528783de2e1d6d843",
+    "edits": [
+      {
+        "start": 51,
+        "end": 52,
+        "before": "        self.assertEqual(result['schema_version'],2); self.assertEqual(result['classifier_version'],'stage-bound-hsv-v2')\n",
+        "after": "        self.assertEqual(result['schema_version'],2); self.assertEqual(result['classifier_version'],'stage-bound-hsv-v3')\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/tests/test_mystery_box_surfaces.py",
+    "before_sha256": null,
+    "after_sha256": "2facc128cb78c1f12907af48a81f5428ed68057beaca6def6b84742526248d46",
+    "content": "\"\"\"Procedural body/blue-radial-background regressions; no sourced image bytes.\"\"\"\nfrom __future__ import annotations\nimport colorsys\nimport copy\nimport math\nfrom functools import lru_cache\nfrom pathlib import Path\nimport sys\nimport unittest\nfrom PIL import Image, ImageDraw\nROOT = Path(__file__).resolve().parents[1]\nsys.path.insert(0, str(ROOT / 'scripts'))\nimport visionstudio_mystery_box_pixels as pixels\nfrom test_mystery_box_pixels import CASES, PROFILES, ambiguous_profile, profile_image\n\n\ndef radial_background(size=(800, 450)) -> Image.Image:\n    return Image.frombytes('RGB', size, _radial_background_bytes(size))\n\n\n@lru_cache(maxsize=4)\ndef _radial_background_bytes(size):\n    \"\"\"Generate a saturated radial glow whose foreground is not a box body.\"\"\"\n    width, height = size\n    target = Image.new('RGB', size)\n    data = bytearray(width * height * 3)\n    for y in range(height):\n        dy = (y / height - .52) * 1.65\n        for x in range(width):\n            dx = x / width - .5\n            radius = math.hypot(dx, dy)\n            angle = math.atan2(dy, dx)\n            spoke = .09 if int((angle + math.pi) * 12 / math.pi) % 2 else -.09\n            value = max(.08, min(.8, .16 + .47 * math.exp(-radius * radius / .16) + spoke))\n            rgb = colorsys.hsv_to_rgb(.64, .55, value)\n            offset = (y * width + x) * 3\n            data[offset:offset + 3] = bytes(round(channel * 255) for channel in rgb)\n    return bytes(data)\n\n\ndef load_surface(kind='silver', count=1) -> Image.Image:\n    \"\"\"Return a procedural surface on a procedural radial backdrop.\"\"\"\n    if kind not in PROFILES or type(count) is not int or not 1 <= count <= 5:\n        raise ValueError('unsupported procedural fixture')\n    centers = (((.49, .56),), ((.28, .55), (.70, .55)),\n               ((.25, .54), (.50, .54), (.75, .54)),\n               ((.28, .33), (.70, .33), (.28, .65), (.70, .65)),\n               ((.21, .34), (.50, .30), (.78, .34), (.36, .60), (.64, .60)))[count - 1]\n    return surface_image([(center, kind) for center in centers])\n\n\ndef surface_image(boxes, *, size=(800, 450), overrides=None):\n    image = radial_background(size)\n    texture = profile_image(boxes, size=size, overrides=overrides, half_size=(.066, .104))\n    for (cx, cy), _ in boxes:\n        bounds = (round((cx - .066) * size[0]), round((cy - .104) * size[1]),\n                  round((cx + .066) * size[0]), round((cy + .104) * size[1]))\n        image.paste(texture.crop(bounds), bounds[:2])\n    return image\n\n\nclass MysteryBoxSurfaceTests(unittest.TestCase):\n    def test_procedural_silver_and_brown_body_counts_are_exact(self):\n        for kind in ('silver', 'brown'):\n            with self.subTest(kind=kind):\n                result = pixels.classify_mystery_boxes_image(load_surface(kind))\n                self.assertTrue(result['complete_layout'], result)\n                self.assertEqual(result['visible_slot_count'], 1)\n                self.assertEqual(result['boxes'], {key: int(key == kind) for key in pixels.BOX_TYPES})\n                self.assertFalse(result['exact_scene'])\n                self.assertTrue(pixels.stable_evidence(result, copy.deepcopy(result)))\n\n    def test_all_four_measured_types_survive_radial_background(self):\n        for kind in PROFILES:\n            with self.subTest(kind=kind):\n                result = pixels.classify_mystery_boxes_image(load_surface(kind))\n                self.assertTrue(result['complete_layout'], result)\n                self.assertEqual(result['boxes'][kind], 1)\n\n    def test_one_through_five_physical_bodies_are_counted_individually(self):\n        for count in range(1, 6):\n            with self.subTest(count=count):\n                result = pixels.classify_mystery_boxes_image(load_surface('brown', count))\n                self.assertTrue(result['complete_layout'], result)\n                self.assertEqual(result['visible_slot_count'], count)\n                self.assertEqual(result['boxes']['brown'], count)\n\n    def test_radial_background_alone_cannot_supply_four_box_edges(self):\n        result = pixels.classify_mystery_boxes_image(radial_background())\n        self.assertFalse(result['complete_layout'], result)\n        self.assertFalse(any(result['boxes'].values()))\n        self.assertIsNone(result['visible_slot_count'])\n\n    def test_one_strong_side_never_substitutes_for_four_side_enclosure(self):\n        image = Image.new('RGB', (480, 270), (20, 40, 100))\n        ImageDraw.Draw(image).line((210, 90, 210, 190), fill='white', width=4)\n        edges = pixels._mystery_box_body_edges(image)\n        self.assertFalse(pixels._mystery_box_body_present(edges, .50, .52))\n\n    def test_closed_unknown_body_is_never_dropped_as_blue_background(self):\n        for kind, override in (\n                ('ambiguous', ambiguous_profile()),\n                ('white', ((1., 0., 0., 0., 0., 0., 0., 0., 0., 0.), .0, .95)),\n                ('blue', ((0., 0., 0., 0., 0., 0., 1., 0., 0., 0.), .8, .85))):\n            with self.subTest(kind=kind):\n                image = surface_image([((.28, .55), 'silver'), ((.70, .55), kind)], overrides={kind: override})\n                result = pixels.classify_mystery_boxes_image(image)\n                self.assertFalse(result['complete_layout'], result)\n                self.assertEqual(result['incomplete_reason'], 'unclassified_presence')\n                self.assertEqual(result['candidate_visible_count'], 2)\n                self.assertIsNone(result['visible_slot_count'])\n                self.assertFalse(any(result['boxes'].values()))\n\n    def test_extra_unknown_body_outside_verified_layout_prevents_undercount(self):\n        image = surface_image(CASES[2] + [((.5, .285), 'ambiguous')],\n                              overrides={'ambiguous': ambiguous_profile()})\n        result = pixels.classify_mystery_boxes_image(image)\n        self.assertFalse(result['complete_layout'], result)\n        self.assertEqual(result['incomplete_reason'], 'unexplained_presence')\n        self.assertFalse(any(result['boxes'].values()))\n\n    def test_procedural_body_remains_normalized_across_capture_sizes(self):\n        source = load_surface('silver')\n        for size in ((640, 360), (800, 450), (1647, 944)):\n            with self.subTest(size=size):\n                image = source.resize(size, Image.Resampling.LANCZOS)\n                result = pixels.classify_mystery_boxes_image(image)\n                self.assertTrue(result['complete_layout'], result)\n                self.assertEqual(result['boxes']['silver'], 1)\n                self.assertEqual(result['visible_slot_count'], 1)\n\n\nif __name__ == '__main__':\n    unittest.main()\n"
+  },
+  {
+    "path": "visionstudio/tests/test_runtime_version.py",
+    "before_sha256": "ffca598d88ffb8643e329cc7da6f1c246ef934c40fe35c0506f0b06ae2e30d61",
+    "after_sha256": "637d9af8d45e78bc9fc952e352c35a5cb4bd91eb62fc9b204ef3445e2775f498",
+    "edits": [
+      {
+        "start": 22,
+        "end": 25,
+        "before": "    plugin_version: str = \"0.18.22+codex.20261030.box-pixels\",\n    controller_version: str = \"0.18.22\",\n    bridge_server_version: str = \"0.18.22-box-pixels-308\",\n",
+        "after": "    plugin_version: str = \"0.18.23+codex.20261031.box-surfaces\",\n    controller_version: str = \"0.18.23\",\n    bridge_server_version: str = \"0.18.23-box-surfaces-309\",\n"
+      },
+      {
+        "start": 40,
+        "end": 41,
+        "before": "            'PRODUCT_VERSION = \"0.18.22\"\\n'\n",
+        "after": "            'PRODUCT_VERSION = \"0.18.23\"\\n'\n"
+      },
+      {
+        "start": 43,
+        "end": 44,
+        "before": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.22\"\\n',\n",
+        "after": "        \"visionstudio_local_runner.py\": 'LOCAL_RUNNER_VERSION = \"0.18.23\"\\n',\n"
+      },
+      {
+        "start": 49,
+        "end": 50,
+        "before": "            'HEART_RUNNER_VERSION = \"0.18.22\"\\n'\n",
+        "after": "            'HEART_RUNNER_VERSION = \"0.18.23\"\\n'\n"
+      },
+      {
+        "start": 67,
+        "end": 68,
+        "before": "        'MYSTERY_BOX_PREOPEN_CLASSIFIER_VERSION = \"stage-bound-hsv-v2\"\\n'\n",
+        "after": "        'MYSTERY_BOX_PREOPEN_CLASSIFIER_VERSION = \"stage-bound-hsv-v3\"\\n'\n"
+      },
+      {
+        "start": 83,
+        "end": 84,
+        "before": "            \"0.18.22+codex.20261030.box-pixels\",\n",
+        "after": "            \"0.18.23+codex.20261031.box-surfaces\",\n"
+      },
+      {
+        "start": 91,
+        "end": 92,
+        "before": "                \"plugin\": \"0.18.22\",\n",
+        "after": "                \"plugin\": \"0.18.23\",\n"
+      },
+      {
+        "start": 93,
+        "end": 94,
+        "before": "                    \"0.18.22+codex.20261030.box-pixels\"\n",
+        "after": "                    \"0.18.23+codex.20261031.box-surfaces\"\n"
+      },
+      {
+        "start": 95,
+        "end": 99,
+        "before": "                \"controller\": \"0.18.22\",\n                \"bridge\": \"0.18.22\",\n                \"bridge_server\": \"0.18.22-box-pixels-308\",\n                \"local_runner\": \"0.18.22\",\n",
+        "after": "                \"controller\": \"0.18.23\",\n                \"bridge\": \"0.18.23\",\n                \"bridge_server\": \"0.18.23-box-surfaces-309\",\n                \"local_runner\": \"0.18.23\",\n"
+      },
+      {
+        "start": 101,
+        "end": 102,
+        "before": "                \"heart_sender\": \"0.18.22\",\n",
+        "after": "                \"heart_sender\": \"0.18.23\",\n"
+      },
+      {
+        "start": 115,
+        "end": 116,
+        "before": "            [\"controller=0.10.27 (expected 0.18.22)\"],\n",
+        "after": "            [\"controller=0.10.27 (expected 0.18.23)\"],\n"
+      },
+      {
+        "start": 125,
+        "end": 126,
+        "before": "                plugin_version=\"0.18.22+codex.wrong-build\",\n",
+        "after": "                plugin_version=\"0.18.23+codex.wrong-build\",\n"
+      },
+      {
+        "start": 136,
+        "end": 138,
+        "before": "                \"plugin_manifest=0.18.22+codex.wrong-build \"\n                \"(expected 0.18.22+codex.20261030.box-pixels)\",\n",
+        "after": "                \"plugin_manifest=0.18.23+codex.wrong-build \"\n                \"(expected 0.18.23+codex.20261031.box-surfaces)\",\n"
+      },
+      {
+        "start": 139,
+        "end": 140,
+        "before": "                \"(expected 0.18.22-box-pixels-308)\",\n",
+        "after": "                \"(expected 0.18.23-box-surfaces-309)\",\n"
+      },
+      {
+        "start": 211,
+        "end": 212,
+        "before": "        self.assertIn(\"Axiom Vision v0.18.22 Setup\", text)\n",
+        "after": "        self.assertIn(\"Axiom Vision v0.18.23 Setup\", text)\n"
+      }
+    ]
+  },
+  {
+    "path": "visionstudio/update-package-files.json",
+    "before_sha256": "29263d3d2e2becdbc77a77ec8f94fb720d5d16f4d948a4080a6f471b84725f92",
+    "after_sha256": "8dfaaabfe49f1b9664ebc09f81517c4b64f49952099fc66a22b991e35313eb29",
+    "edits": [
+      {
+        "start": 28,
+        "end": 28,
+        "before": "",
+        "after": "  \"visionstudio/RELEASE_v0.18.23_TH.md\",\n"
+      },
+      {
+        "start": 142,
+        "end": 142,
+        "before": "",
+        "after": "  \"visionstudio/tests/test_mystery_box_surfaces.py\",\n"
+      }
+    ]
+  }
+]

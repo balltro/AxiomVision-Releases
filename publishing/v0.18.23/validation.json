@@ -1,0 +1,612 @@
+{
+  "version": "0.18.23",
+  "package": {
+    "version": "0.18.23",
+    "package_members": 169,
+    "archive": "AxiomVision-v0.18.23-Mystery-Box-Surfaces-Windows10.zip",
+    "archive_bytes": 9880728,
+    "archive_sha256": "354eff5b1c4db7cc0c39f795a7c0210756cecab76761cc620b427c93828c2476",
+    "feed_bytes": 19968,
+    "feed_sha256": "c04c7db579578f8c83ed81f6e15d4ace011e69bbe1984c07be2b647949a9add1",
+    "all_source_and_archive_file_hashes_match": true,
+    "signature_verified": true
+  },
+  "tests": {
+    "version": "0.18.23",
+    "total": 1354,
+    "passed": 1337,
+    "skipped": 17,
+    "seconds": 107.621,
+    "log_sha256": "e825ccd3fb03f8c1252940793110032690d0297c7fefca9ae4410877de4c9b95"
+  },
+  "pixel_detector": {
+    "status": "passed",
+    "scope": "Public procedural-only regression; no sourced image, JPEG, PNG, base64 or captured account data is included in candidate tests.",
+    "measured_profile_tests": 16,
+    "procedural_surface_tests": 8,
+    "production_module_unchanged": true,
+    "cases": [
+      "Four-sided body vs blue radial background",
+      "Measured Brown/Silver/Gold/Rainbow texture profiles",
+      "One through five enclosed bodies",
+      "Unknown blue/white/ambiguous body prevents undercount",
+      "Extra unknown body outside fixed layout abstains",
+      "One strong edge does not replace four enclosing sides",
+      "Capture-size normalization"
+    ],
+    "private_preview_qa": "Previously supplied actual-preview tests and image bytes retained only in local publication-evidence/box-private-qa; removed from public candidate source/package.",
+    "files": {
+      "scripts/visionstudio_mystery_box_pixels.py": {
+        "sha256": "d06dc2929371290395e09e8fc8508d53e231b9a0a1fa98e19a32205de43bdca1",
+        "bytes": 25276
+      },
+      "tests/test_mystery_box_pixels.py": {
+        "sha256": "b22e2d8b3ac974bc91f6aef500b7c766a57ae59509a2455528783de2e1d6d843",
+        "bytes": 11506
+      },
+      "tests/test_mystery_box_surfaces.py": {
+        "sha256": "2facc128cb78c1f12907af48a81f5428ed68057beaca6def6b84742526248d46",
+        "bytes": 6605
+      }
+    },
+    "public_deleted": [
+      "tests/test_mystery_box_real_frames.py",
+      "tests/fixtures/mystery-box-oct31-previews.json"
+    ]
+  },
+  "private_actual_frame_qa": {
+    "production_module_sha256": "d06dc2929371290395e09e8fc8508d53e231b9a0a1fa98e19a32205de43bdca1",
+    "actual_jpeg_rgb_core_tests_passed": 8,
+    "actual_silver_pipeline_test_passed": true,
+    "images_or_base64_in_public_package": false,
+    "original_png_available": false,
+    "native_ldplayer_capture_or_input_tested": false
+  },
+  "pipeline": {
+    "tests": 20,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "seconds": 7.918,
+    "log_sha256": "9cb2a89fa1ebc706d6a483d957d71968af44494eee3786b9a2d9cfff0fc51083",
+    "new_engine": "stage-bound-hsv-v3",
+    "retained_v2_immutable": true,
+    "legacy_schema1_unchanged": true,
+    "procedural_silver_surface_pipeline": true,
+    "fixture_contains_user_image_bytes": false,
+    "native_ldplayer_capture_or_input_tested": false,
+    "original_native_png_tested": false,
+    "source_sha256": {
+      "scripts/visionstudio_bridge.py": "5b7d16704c7cc613679c7105786121a6f1950aeacd82fba9153b3ede723effd4",
+      "tests/test_mystery_box_pixel_pipeline.py": "dbdf49c915ce4dff38b435d4665d916fe1e3a72d5ad27a2594dc7e0dcdc26b63"
+    }
+  },
+  "evidence": {
+    "version": "0.18.23",
+    "scope": "Mystery Box diagnostic source compatibility and latest exact pre-open PNG delivery",
+    "changed_files": {
+      "scripts/visionstudio_mystery_box_evidence.py": "9e5c23c0bdaa00bd41131885a4753a04154fffec3574790fa7bb6a84dba1be0b",
+      "scripts/visionstudio_log_delivery.py": "9c7fda7210631f418e8100e0c875b499e715afd2d47ed5bcce3f5accf984e7c0",
+      "tests/test_mystery_box_evidence.py": "159ac2956dd0323db73f96000702c9daa2767b523b9962e101147763b836e96f",
+      "tests/test_log_delivery.py": "d90802fc3c6dae2b330b55c21acc996873389fe3ef69c848504fb12840b758cf"
+    },
+    "compatibility": {
+      "schema_version": 2,
+      "classifiers": [
+        "stage-bound-hsv-v2",
+        "stage-bound-hsv-v3"
+      ],
+      "old_v2_metadata_and_png_bytes_preserved": true,
+      "unsupported_or_non_string_classifier_rejected_as_valueerror": true
+    },
+    "delivery": {
+      "normal_excerpt_limit_bytes": 196608,
+      "latest_box_original_total_limit_bytes": 2097152,
+      "extended_members": [
+        "mystery-boxes/01-frame.png"
+      ],
+      "normal_excerpt_selected_first": true,
+      "core_log_history_other_image_budgets_unchanged": true,
+      "requires_png_singleframe": true,
+      "requires_matching_metadata_frame_sha256_dimensions_and_input_authority_false": true,
+      "active_human_preview_priority_preserved": true,
+      "fallback_declares_original_pixels_included_false": true,
+      "fallback_preview_format": "JPEG",
+      "full_local_zip_unchanged": true,
+      "one_api_document_unchanged": true
+    },
+    "tests": [
+      {
+        "suite": "test_mystery_box_evidence.py",
+        "passed": 15,
+        "seconds": 1.488
+      },
+      {
+        "suite": "test_log_delivery.py",
+        "passed": 23,
+        "seconds": 2.251
+      },
+      {
+        "suite": "test_log_single.py",
+        "passed": 4,
+        "seconds": 0.604
+      },
+      {
+        "suite": "test_diagnostic_delivery_priority.py",
+        "passed": 5,
+        "seconds": 2.107
+      },
+      {
+        "suite": "test_relay_diagnostics.py",
+        "passed": 19,
+        "seconds": 0.163
+      }
+    ],
+    "simulated_exact_original_case": {
+      "image_dimensions": [
+        820,
+        450
+      ],
+      "png_bytes": 1109005,
+      "active_human_preview_retained": true,
+      "exact_original_hash_preserved": true,
+      "total_bundle_bytes_bounded": 2097152
+    },
+    "limitations": {
+      "actual_native_telegram_large_upload_tested": false,
+      "native_windows_tested_in_this_task": false,
+      "historical_192kib_cap_reason": "v0.18.8 small single ZIP followed user large upload stalls; exact network cause unproven. New bounded extension can increase upload bytes and does not alter transport timeouts, retry policies or success acknowledgement."
+    }
+  },
+  "independent_review": {
+    "version": "0.18.23",
+    "review_status": "clear_public_candidate_and_delta_with_documented_calibration_limits",
+    "blocking_findings": [],
+    "invariants": {
+      "original_result_count_and_route_binding_preserved": true,
+      "schema2_resolution_and_legacy_hash_canonicalization_unchanged": true,
+      "legacy_v1_and_v2_evidence_immutable_without_reclassification": true,
+      "new_private_capture_requires_exact_current_v3_engine": true,
+      "separate_fresh_open_all_scene_validation_before_retention_and_input": true,
+      "once_only_pending_or_committed_open_all_confirm_never_replayed": true,
+      "stop_pause_human_batch_plan_stage_window_watchdog_guards_preserved": true,
+      "protected_relay_native_input_count_ledger_route_helpers_ast_exact": [
+        "WindowsDesktop.click",
+        "BridgeServer.execute_local_fixed_stage_target",
+        "BridgeServer._cookie_relay_contract",
+        "BridgeServer._cookie_relay_watch_delay",
+        "BridgeServer._cookie_relay_raw_frame",
+        "BridgeServer._cookie_relay_frame_hash",
+        "BridgeServer._cookie_relay_frame_encoding",
+        "BridgeServer._detect_cookie_relay",
+        "BridgeServer._capture_cookie_relay_frame",
+        "BridgeServer._cookie_relay_capture_started",
+        "BridgeServer._cookie_relay_freshness",
+        "BridgeServer._cookie_relay_human_guard",
+        "BridgeServer._cookie_relay_authority",
+        "BridgeServer._cookie_relay_target_allowed",
+        "BridgeServer._cookie_relay_same_target",
+        "BridgeServer._cookie_relay_metrics",
+        "BridgeServer._cookie_relay_pre_intent_rejected",
+        "BridgeServer._try_cookie_relay",
+        "BridgeServer._capture_cookie_relay_sample",
+        "BridgeSession.ensure_action_ready",
+        "BridgeSession.prepare_action_intent",
+        "BridgeServer._verified_action_window",
+        "BridgeServer._controller_gate",
+        "BridgeServer.confirm_resume_stage",
+        "BridgeServer._validated_durable_mystery_box_preopen",
+        "mystery_box_preopen_integrity_sha256",
+        "mystery_box_preopen_recovery_binding",
+        "exact_mystery_box_route_matches_context"
+      ],
+      "all_changed_bridge_functions": [
+        "BridgeServer._collect_mystery_box_pixel_evidence",
+        "BridgeServer._retain_mystery_box_preopen_evidence",
+        "mystery_box_preopen_version_supported"
+      ],
+      "unchanged_core_files": [
+        "scripts/visionstudio_cookie_relay.py",
+        "scripts/visionstudio_cookie_relay_frame.py",
+        "scripts/visionstudio_cookie_relay_freshness.py",
+        "scripts/data/cookie-relay-signatures.json",
+        "scripts/visionstudio_universal_mission.py",
+        "scripts/visionstudio_controller_state.py",
+        "scripts/visionstudio_updater.py",
+        "scripts/visionstudio_heart_input.py",
+        "scripts/visionstudio_heart_runner.py"
+      ],
+      "unchanged_rarity_profiles_and_threshold_constants": [
+        "MYSTERY_BOX_HSV_PROFILES",
+        "MYSTERY_BOX_HUE_BIN_EDGES",
+        "MYSTERY_BOX_SLOT_PRESENCE_MAX_L1",
+        "MYSTERY_BOX_CLASS_MAX_L1",
+        "MYSTERY_BOX_CLASS_MIN_MARGIN",
+        "MYSTERY_BOX_MIN_FOREGROUND_COVERAGE",
+        "MYSTERY_BOX_SLOT_HALF_WIDTH",
+        "MYSTERY_BOX_SLOT_HALF_HEIGHT"
+      ],
+      "no_historical_stats_checkpoint_or_input_ledger_rewrite": true
+    },
+    "cross_version_v22_checkpoint_proof": {
+      "producer": {
+        "old_classifier": "stage-bound-hsv-v2"
+      },
+      "candidate_validation": {
+        "actual_v22_checkpoint_validates_without_reclassification": true,
+        "evidence_equal": true,
+        "source_checkpoint_bytes_unchanged": true,
+        "context_unchanged": true,
+        "resolved_count": 3,
+        "original_result_count_known": false,
+        "original_result_count": null,
+        "malformed_classifiers_typed_rejected": 6,
+        "boxes": {
+          "brown": 1,
+          "silver": 1,
+          "gold": 0,
+          "rainbow": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "evidence_delivery_review": {
+      "status": "clear",
+      "bounded_three_slot_png_store_preserves_v2_and_v3": true,
+      "malformed_classifier_values_raise_typed_rejection_before_writes": true,
+      "latest_exact_png_hash_dimensions_inputfalse_bound": true,
+      "extension_only_after_base192KiB_excerpt_preserves_current_human_priority": true,
+      "extended_bundle_max_bytes": 2097152,
+      "oversized_original_falls_back_to_explicit_lossy_preview": true,
+      "core_controller_and_checkpoint_documents_stay_byte_exact": true
+    },
+    "actual_jpeg_visual_probes": {
+      "positive_cases": 15,
+      "positive_passed": 15,
+      "unique_actual_preopen_jpegs": 2,
+      "actual_snapshot_previews": 3,
+      "scales": [
+        400,
+        640,
+        800,
+        1200,
+        1647
+      ],
+      "negative_previews_checked": 15,
+      "negative_preview_complete_count": 7,
+      "complete_negative_unique_hashes": [
+        "d4b95c23ac1e53c512775b04ab11bac5b558373c25202b6522c4a9467a19f056"
+      ],
+      "probe_file": "publication-evidence/v0.18.23-independent-visual-probes.json",
+      "nonblocking_false_positive": "Historical Result score/background satisfies pure Gold1 telemetry. Seven files are duplicates of one historical frame. The independent exact MysteryBox+OpenAll scene guard rejects that Result before telemetry retention; no input authority is created."
+    },
+    "calibration_limits": [
+      "The supplied actual positive scenes are lossy 800x459 JPEG previews of single Silver and Brown. Native original PNGs are absent; resized/re-encoded previews do not reconstruct omitted original pixels.",
+      "Actual-layout1–5 tests compose supplied sprite bodies and background. Gold/Rainbow still have measured-profile fixtures without a new actual current-game sprite positive.",
+      "The unchanged Brown class margin may abstain after +5percent brightness, rather than infer an unsupported rarity.",
+      "Pure pixel classifier does not establish Scene authority. Independent exact OpenAll Scene/Stage/route validation is mandatory; Result text may satisfy shape/color telemetry in isolation."
+    ],
+    "native_windows_tested_by_this_reviewer": false,
+    "native_ldplayer_capture_or_input_tested": false,
+    "file_sha256": {
+      "scripts/visionstudio_mystery_box_pixels.py": "d06dc2929371290395e09e8fc8508d53e231b9a0a1fa98e19a32205de43bdca1",
+      "scripts/visionstudio_mystery_box_evidence.py": "9e5c23c0bdaa00bd41131885a4753a04154fffec3574790fa7bb6a84dba1be0b",
+      "scripts/visionstudio_bridge.py": "5b7d16704c7cc613679c7105786121a6f1950aeacd82fba9153b3ede723effd4",
+      "scripts/visionstudio_local_runner.py": "e11ba874999ad0674e2b0c963fb7a3946dd130c82a972cb51ff4aa0eb765db06",
+      "scripts/visionstudio_log_delivery.py": "9c7fda7210631f418e8100e0c875b499e715afd2d47ed5bcce3f5accf984e7c0",
+      "tests/test_mystery_box_pixels.py": "b22e2d8b3ac974bc91f6aef500b7c766a57ae59509a2455528783de2e1d6d843",
+      "tests/test_mystery_box_evidence.py": "159ac2956dd0323db73f96000702c9daa2767b523b9962e101147763b836e96f",
+      "tests/test_mystery_box_pixel_pipeline.py": "dbdf49c915ce4dff38b435d4665d916fe1e3a72d5ad27a2594dc7e0dcdc26b63",
+      "tests/test_log_delivery.py": "d90802fc3c6dae2b330b55c21acc996873389fe3ef69c848504fb12840b758cf",
+      "tests/test_mystery_box_surfaces.py": "2facc128cb78c1f12907af48a81f5428ed68057beaca6def6b84742526248d46"
+    },
+    "private_actual_qa_independent_tests": {
+      "actual_frames": {
+        "passed": 8,
+        "seconds": 3.235,
+        "log": "publication-evidence/v0.18.23-independent-real-frames.log",
+        "sha256": "fe1cd5ef8916365c8bf80b726111f65d1a38b0d74d52cc6b9f5f6d663d5cf992"
+      },
+      "actual_pipeline": {
+        "passed": 20,
+        "seconds": 9.081,
+        "log": "publication-evidence/v0.18.23-independent-pipeline.log",
+        "sha256": "a938527a00c5bb4202263d5aa6c7da6a4612d06843307c53d8efc8a9b414fe74"
+      },
+      "scope": "Previously executed against supplied actual JPEG fixture, now retained only in private QA outside the public source/release payload."
+    },
+    "public_independent_tests": {
+      "pixels": {
+        "passed": 16,
+        "seconds": 7.865,
+        "log": "publication-evidence/v0.18.23-independent-pixels.log",
+        "sha256": "8863063d57437d52c6d8741874d268eb815cb2cabd98db70a709ca2d02a01472"
+      },
+      "procedural_surfaces": {
+        "passed": 8,
+        "seconds": 3.017,
+        "path": "publication-evidence/v0.18.23-independent-public-surfaces.log",
+        "sha256": "49bc2472ee175559a9ba7b0e7847c9f73a06c7cef0803e50b5dfc9cfaad5471c"
+      },
+      "pipeline": {
+        "passed": 20,
+        "seconds": 9.661,
+        "path": "publication-evidence/v0.18.23-independent-public-pipeline.log",
+        "sha256": "e5fcf172253d8b2a111afaa865e75ede559a7c776ab7fb83b319bd096ba1337b"
+      },
+      "evidence": {
+        "passed": 15,
+        "seconds": 1.268,
+        "log": "publication-evidence/v0.18.23-independent-evidence.log",
+        "sha256": "2285103e49b23865d06639a0c2a1e869d56e2bc4ddcb03d97f99487ce9aca815"
+      },
+      "delivery": {
+        "passed": 23,
+        "seconds": 2.124,
+        "log": "publication-evidence/v0.18.23-independent-delivery.log",
+        "sha256": "f1d06c1dfb79df35aa3fc47d94beb8391b49334aca309214afe4dcb97b743464"
+      }
+    },
+    "total_public_independent_tests_passed": 82,
+    "total_private_actual_qa_tests_passed": 28,
+    "public_source_privacy_review": {
+      "status": "clear_public_candidate_and_rebuilt_delta_only",
+      "source_changes": {
+        "path": "publishing/v0.18.23/source-changes.json",
+        "sha256": "032e8788104489b82f6cb2b740233ad267e56d7fdd5da763e67691707c367b99",
+        "bytes": 66558,
+        "changed_paths": 25,
+        "actual_jpeg_bytes_or_encoded_jpeg_values_present": false,
+        "forbidden_private_fixture_paths_present": false,
+        "new_photographic_asset_paths": []
+      },
+      "package": {
+        "path": "deliverables/AxiomVision-v0.18.23-Mystery-Box-Surfaces-Windows10.zip",
+        "bytes": 9880728,
+        "sha256": "354eff5b1c4db7cc0c39f795a7c0210756cecab76761cc620b427c93828c2476",
+        "members": 169,
+        "all_signed_hashes_verified": true,
+        "all_members_equal_public_candidate": true,
+        "ed25519_feed_signature_verified": true,
+        "feed_sha256": "c04c7db579578f8c83ed81f6e15d4ace011e69bbe1984c07be2b647949a9add1",
+        "actual_private_jpeg_bytes_present": false
+      },
+      "existing_media": {
+        "count": 5,
+        "all_byte_exact_against_published22": true,
+        "scope": "Existing signed baseline logos/redacted fixtures retained; no newly supplied diagnostic image or identifying Lobby image introduced."
+      },
+      "tests": {
+        "surfaces": {
+          "passed": 8,
+          "seconds": 3.017,
+          "path": "publication-evidence/v0.18.23-independent-public-surfaces.log",
+          "sha256": "49bc2472ee175559a9ba7b0e7847c9f73a06c7cef0803e50b5dfc9cfaad5471c"
+        },
+        "pipeline": {
+          "passed": 20,
+          "seconds": 9.661,
+          "path": "publication-evidence/v0.18.23-independent-public-pipeline.log",
+          "sha256": "e5fcf172253d8b2a111afaa865e75ede559a7c776ab7fb83b319bd096ba1337b"
+        }
+      },
+      "public_fixture_review": {
+        "procedural_math_generated_rgb_only": true,
+        "no_file_or_base64_image_loads_in_new_surface_module": true,
+        "pipeline_uses_procedural_load_surface": true,
+        "actual_previous_tests_preserved_privately_outside_public_candidate_and_delta": true
+      },
+      "production_pixel_module_sha256": "d06dc2929371290395e09e8fc8508d53e231b9a0a1fa98e19a32205de43bdca1",
+      "stop_conditions": [
+        "Do not submit any old tree-payload generated before this 169-member rebuild; those carried the removed private image fixture.",
+        "Final public tree payload must be regenerated after final validation and independently scanned for private fixture paths/encoded JPEG values.",
+        "Any delta/package/payload hash change or newly added diagnostic image requires another privacy/hash check.",
+        "No private QA directory, actual diagnostic images, encoded JPEG fixture, or identifying Lobby screenshot may be included in public tree or release ZIP."
+      ]
+    },
+    "public_private_fixture_distinction": {
+      "public": "Procedural HSV-profile box bodies on a mathematically generated radial background; no supplied image bytes or base64 fixture. New public pipeline uses load_surface.",
+      "private": "Actual Brown/Silver JPEG previews and the 8 actual-scene tests plus actual-scene pipeline remain only outside public candidate/delta/release. Previous actual positive/negative findings remain unchanged.",
+      "production_runtime": "All runtime behavior/hash unchanged from the reviewed candidate; classifier d06dc2929371290395e09e8fc8508d53e231b9a0a1fa98e19a32205de43bdca1."
+    },
+    "private_actual_qa_file_sha256": {
+      "tests/test_mystery_box_real_frames.py": "f53bda3be3f173ca399b136d82b7b07d46c6226e8528571f6bd287d6e518c0e6",
+      "tests/fixtures/mystery-box-oct31-previews.json": "05cdb861c82eb1325b03d04b82a7a7a7b9fba42ba74a0e87a376d96704172e10"
+    }
+  },
+  "safety": {
+    "version": "0.18.23",
+    "review": "independent safety adversarial probes",
+    "passed": 13,
+    "checks": [
+      "conflicting physical count preserves original Result and route",
+      "rehashed inconsistent restore rejected: count-source",
+      "rehashed inconsistent restore rejected: resolved-count",
+      "rehashed inconsistent restore rejected: resolved-known",
+      "rehashed inconsistent restore rejected: original-count",
+      "rehashed inconsistent restore rejected: stability-observation",
+      "rehashed inconsistent restore rejected: stability-hash",
+      "rehashed inconsistent restore rejected: candidate-count",
+      "rehashed inconsistent restore rejected: complete-layout",
+      "rehashed inconsistent restore rejected: schema-downgrade",
+      "legacy v1 integrity is exact v21 canonical digest and keeps unavailable semantics",
+      "pending open-all-boxes rejects before capture or input and preserves ledger",
+      "pending confirm-rewards rejects before capture or input and preserves ledger"
+    ],
+    "native_ldplayer_capture_or_input_tested": false,
+    "review_status": "clear_with_documented_rarity_calibration_limits",
+    "blocking_findings": [],
+    "independent_shape_probes": [
+      {
+        "fixture": "silver",
+        "complete": true,
+        "count": 1,
+        "boxes": {
+          "brown": 0,
+          "silver": 1,
+          "gold": 0,
+          "rainbow": 0,
+          "unknown": 0
+        },
+        "input_authority": false
+      },
+      {
+        "fixture": "brown",
+        "complete": true,
+        "count": 1,
+        "boxes": {
+          "brown": 1,
+          "silver": 0,
+          "gold": 0,
+          "rainbow": 0,
+          "unknown": 0
+        },
+        "input_authority": false
+      },
+      {
+        "fixture": "silver-plus-constructed-white-body",
+        "complete": false,
+        "candidate_count": 2,
+        "count": null,
+        "reason": "unclassified_presence"
+      },
+      {
+        "fixture": "silver-plus-constructed-purple-body",
+        "complete": false,
+        "candidate_count": 2,
+        "count": null,
+        "reason": "unclassified_presence"
+      },
+      {
+        "fixture": "silver-plus-constructed-cyan-body",
+        "complete": false,
+        "candidate_count": 2,
+        "count": null,
+        "reason": "unclassified_presence"
+      },
+      {
+        "fixture": "constructed-brown-brightness-plus-five-percent",
+        "complete": false,
+        "candidate_count": 1,
+        "count": null,
+        "reason": "unclassified_presence",
+        "limit": "Legacy rarity thresholds unchanged; no invented zero or guessed rarity"
+      }
+    ],
+    "supported_version_and_malformed_classifier_checks_passed": true,
+    "unchanged_native_input_and_replay_guards_ast": [
+      "WindowsDesktop.click",
+      "BridgeSession.ensure_action_ready",
+      "BridgeSession.prepare_action_intent",
+      "BridgeServer.execute_local_fixed_stage_target",
+      "BridgeServer._verified_action_window",
+      "BridgeServer._controller_gate",
+      "BridgeServer.confirm_resume_stage"
+    ],
+    "pixel_fixture_scope": "Private source JPEG previews and constructed variants validate local actual-image processing; public fixtures are procedural only. Neither proves unavailable original full-resolution PNG or live input.",
+    "original_preopen_png_available": false,
+    "file_sha256": {
+      "scripts/visionstudio_bridge.py": "5b7d16704c7cc613679c7105786121a6f1950aeacd82fba9153b3ede723effd4",
+      "scripts/visionstudio_mystery_box_pixels.py": "d06dc2929371290395e09e8fc8508d53e231b9a0a1fa98e19a32205de43bdca1",
+      "tests/test_mystery_box_surfaces.py": "2facc128cb78c1f12907af48a81f5428ed68057beaca6def6b84742526248d46",
+      "tests/test_mystery_box_pixel_pipeline.py": "dbdf49c915ce4dff38b435d4665d916fe1e3a72d5ad27a2594dc7e0dcdc26b63"
+    },
+    "independent_shape_probe_scope": "PRIVATE local actual JPEG QA and constructed variants; no image or base64 fixture in the public package",
+    "private_actual_jpeg_qa": {
+      "retained_outside_public_package": true,
+      "private_artifact_sha256": {
+        "test_mystery_box_real_frames.py": "b2a0ea7ab118a6e6961e6d9320583a9d74c700b265e608b6fa3b080c44ec176a",
+        "mystery-box-oct31-previews.json": "05cdb861c82eb1325b03d04b82a7a7a7b9fba42ba74a0e87a376d96704172e10"
+      },
+      "historical_private_test_sha256": "f53bda3be3f173ca399b136d82b7b07d46c6226e8528571f6bd287d6e518c0e6",
+      "source_jpeg_bytes_or_base64_published": false,
+      "independent_test_suite_passed": 8,
+      "independent_test_suite_seconds": 3.319
+    },
+    "public_test_fixture_scope": "Procedural RGB/radial backgrounds and measured surface profiles only; no diagnostic image bytes or base64",
+    "public_procedural_test_suite": {
+      "suite": "test_mystery_box_surfaces.py",
+      "passed": 8,
+      "seconds": 2.42,
+      "log_sha256": "4aaa91d3de2749a7c903ad01c457f6fb210cc719a2079f4152901dec4f567327",
+      "diagnostic_image_bytes_or_base64_in_public_test_fixture": false
+    }
+  },
+  "plan_compatibility": {
+    "baseline": "0.18.22",
+    "candidate": "0.18.23",
+    "configs_exact": 91,
+    "off_configs_exact": 52,
+    "on_configs_exact": 39,
+    "off_revision": "9",
+    "on_revision": "11",
+    "compiled_config_and_plan_identical": true,
+    "unchanged_files": {
+      "scripts/visionstudio_universal_mission.py": "c05842ed01902d231a9a12a6b56712307a801ac098723adee0e4f1faa3f0f664",
+      "scripts/visionstudio_controller_state.py": "e3f830a8ce57461d3f2505b24e92e3b2fc8ff39d3af4a5b853405f370e52f431",
+      "scripts/visionstudio_updater.py": "377340a051ad7b33f666a5671f9cd5c2b46b87bed037322554e8afe464c2c75d",
+      "scripts/visionstudio_cookie_relay.py": "d0a1ac3e28f1299b73346b37d2c4c4210105096c375869e9657a0cb6299f0daf",
+      "scripts/visionstudio_cookie_relay_frame.py": "0956b91baa7a0b0f9a61e65232e88b7bf62ca0eb80299f5a0a1693941f66b6a1",
+      "scripts/visionstudio_cookie_relay_freshness.py": "0ecb7d5a37c6e8db8c3037065b15884112b37a17f105c80688f98caa30b17ee7",
+      "scripts/data/cookie-relay-signatures.json": "36033e58a1d2ffbe48edc15df289096c4d86fbd60ebb162068baac3144bc680f",
+      "scripts/visionstudio_heart_input.py": "ebdb5cea74174a0904103a599154cee348466bfc0540ab2a6182b0b3c06b5b74",
+      "scripts/visionstudio_heart_runner.py": "b3a434b10129e743a970bf33f7fd6bc260682da348a4fbce016e87df4e83b739"
+    },
+    "native_ldplayer_capture_or_input_tested": false
+  },
+  "upgrades": [
+    {
+      "from": "0.18.13",
+      "to": "0.18.23",
+      "package_members_verified": 169,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.17",
+      "to": "0.18.23",
+      "package_members_verified": 169,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.22",
+      "to": "0.18.23",
+      "package_members_verified": 169,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "native_windows_gate_required_before_publication": true,
+  "native_ldplayer_capture_or_input_tested": false,
+  "original_preopen_png_available": false,
+  "supplied_jpeg_preview_rgb_artwork_tested": true,
+  "historical_unavailable_counts_rewritten": false
+}
