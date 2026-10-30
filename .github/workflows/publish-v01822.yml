@@ -1,0 +1,132 @@
+name: Publish Axiom Vision v0.18.22
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'publishing/v0.18.22/**'
+      - '.github/workflows/publish-v01822.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: axiom-vision-release-publisher
+  cancel-in-progress: false
+
+jobs:
+  windows-runtime:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out exact reviewed commit
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          git init .
+          git remote add origin "https://github.com/$env:GITHUB_REPOSITORY.git"
+          git -c core.autocrlf=false fetch --depth=1 origin "$env:GITHUB_SHA"
+          git -c core.autocrlf=false checkout --detach FETCH_HEAD
+      - name: Match native Windows Python version
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12.10'
+          architecture: x64
+      - name: Prepare isolated diagnostic test dependencies
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          python -m pip install cryptography==50.0.1 "Pillow>=10,<13"
+      - name: Reproduce signed candidate and test native Windows Mystery Box pipeline
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          gh release download v0.18.21 --pattern AxiomVision-v0.18.21-Relay-Logs-Windows10.zip --dir "$env:RUNNER_TEMP"
+          python publishing/v0.18.22/assemble_release.py --base-zip "$env:RUNNER_TEMP/AxiomVision-v0.18.21-Relay-Logs-Windows10.zip" --output "$env:RUNNER_TEMP/AxiomVision-v0.18.22-Mystery-Box-Pixels-Windows10.zip" --signed-feed publishing/v0.18.22/signed-feed.json
+          python publishing/v0.18.22/verify_windows_runtime.py --base-zip "$env:RUNNER_TEMP/AxiomVision-v0.18.21-Relay-Logs-Windows10.zip" --candidate-zip "$env:RUNNER_TEMP/AxiomVision-v0.18.22-Mystery-Box-Pixels-Windows10.zip"
+  publish:
+    needs: windows-runtime
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Check out exact reviewed commit
+        run: |
+          git init .
+          git remote add origin "https://github.com/$GITHUB_REPOSITORY.git"
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Prepare signature verification
+        run: |
+          python3 -m venv "$RUNNER_TEMP/axiom-release-env"
+          "$RUNNER_TEMP/axiom-release-env/bin/pip" install cryptography==50.0.1
+      - name: Download verified baseline and reproduce signed package
+        run: |
+          gh release download v0.18.21 --pattern AxiomVision-v0.18.21-Relay-Logs-Windows10.zip --dir "$RUNNER_TEMP"
+          "$RUNNER_TEMP/axiom-release-env/bin/python" publishing/v0.18.22/assemble_release.py \
+            --base-zip "$RUNNER_TEMP/AxiomVision-v0.18.21-Relay-Logs-Windows10.zip" \
+            --output "$RUNNER_TEMP/AxiomVision-v0.18.22-Mystery-Box-Pixels-Windows10.zip" \
+            --signed-feed publishing/v0.18.22/signed-feed.json
+          cp publishing/v0.18.22/signed-feed.json "$RUNNER_TEMP/updates-v0.18.22.json"
+      - name: Create or inspect draft release
+        run: |
+          gh api "repos/$GH_REPO/releases?per_page=100" > "$RUNNER_TEMP/release-list.json"
+          "$RUNNER_TEMP/axiom-release-env/bin/python" - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          releases = json.loads((root / 'release-list.json').read_bytes())
+          matching = [r for r in releases if r['tag_name'] == 'v0.18.22']
+          assert len(matching) <= 1, 'More than one matching release'
+          if matching:
+              (root / 'release-id.txt').write_text(str(matching[0]['id']))
+          PY
+          if [ ! -s "$RUNNER_TEMP/release-id.txt" ]; then
+            gh release create v0.18.22 \
+              "$RUNNER_TEMP/AxiomVision-v0.18.22-Mystery-Box-Pixels-Windows10.zip" \
+              "$RUNNER_TEMP/updates-v0.18.22.json" \
+              --draft --target "$GITHUB_SHA" \
+              --title 'Axiom Vision v0.18.22 — Mystery Box Pixels' \
+              --notes-file publishing/v0.18.22/publication-notes.md
+            gh api "repos/$GH_REPO/releases?per_page=100" > "$RUNNER_TEMP/release-list.json"
+            "$RUNNER_TEMP/axiom-release-env/bin/python" - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          releases = json.loads((root / 'release-list.json').read_bytes())
+          matching = [r for r in releases if r['tag_name'] == 'v0.18.22']
+          assert len(matching) == 1 and matching[0]['draft']
+          (root / 'release-id.txt').write_text(str(matching[0]['id']))
+          PY
+          fi
+      - name: Verify uploaded bytes before publishing
+        run: |
+          release_id="$(cat "$RUNNER_TEMP/release-id.txt")"
+          gh api "repos/$GH_REPO/releases/$release_id" > "$RUNNER_TEMP/release-result.json"
+          "$RUNNER_TEMP/axiom-release-env/bin/python" - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          result = json.loads((root / 'release-result.json').read_bytes())
+          assert result['tag_name'] == 'v0.18.22' and not result['prerelease']
+          assets = {a['name']: a for a in result['assets']}
+          for name in ('AxiomVision-v0.18.22-Mystery-Box-Pixels-Windows10.zip', 'updates-v0.18.22.json'):
+              data = (root / name).read_bytes()
+              assert assets[name]['state'] == 'uploaded'
+              assert assets[name]['size'] == len(data)
+              assert assets[name]['digest'] == 'sha256:' + hashlib.sha256(data).hexdigest()
+          print('Both release asset hashes match the reviewed local files')
+          PY
+          gh api --method PATCH "repos/$GH_REPO/releases/$release_id" \
+            -F draft=false -f make_latest=true > "$RUNNER_TEMP/published-release.json"

@@ -1,0 +1,471 @@
+{
+  "version": "0.18.22",
+  "package": {
+    "version": "0.18.22",
+    "package_members": 167,
+    "archive": "AxiomVision-v0.18.22-Mystery-Box-Pixels-Windows10.zip",
+    "archive_bytes": 9839742,
+    "archive_sha256": "84544ba7d360f3bd084b18b79e014083ca25f93edde0acf36e98cb31ba2308b0",
+    "feed_bytes": 19744,
+    "feed_sha256": "c99f9e45cdc785376b4c5ffcf94a3d8279bea16d73a706b4808d33e02d8ecdec",
+    "all_source_and_archive_file_hashes_match": true,
+    "signature_verified": true
+  },
+  "tests": {
+    "version": "0.18.22",
+    "total": 1338,
+    "passed": 1321,
+    "skipped": 17,
+    "seconds": 94.7,
+    "log_sha256": "aafd7fb6151b99d12e8d5039e72163652808abd99b369a460fdd61a46e50fbbf"
+  },
+  "pixel_detector": {
+    "version": "0.18.22",
+    "schema_version": 2,
+    "classifier_version": "stage-bound-hsv-v2",
+    "calibration_profiles_and_layouts_unchanged": true,
+    "positive_layout_comparisons": [
+      {
+        "visible_boxes": 1,
+        "boxes": {
+          "brown": 1,
+          "silver": 0,
+          "gold": 0,
+          "rainbow": 0,
+          "unknown": 0
+        },
+        "layout": "generic-components",
+        "legacy_pixel_evidence_exact": true
+      },
+      {
+        "visible_boxes": 2,
+        "boxes": {
+          "brown": 1,
+          "silver": 1,
+          "gold": 0,
+          "rainbow": 0,
+          "unknown": 0
+        },
+        "layout": "generic-components",
+        "legacy_pixel_evidence_exact": true
+      },
+      {
+        "visible_boxes": 3,
+        "boxes": {
+          "brown": 0,
+          "silver": 0,
+          "gold": 1,
+          "rainbow": 2,
+          "unknown": 0
+        },
+        "layout": "verified-3",
+        "legacy_pixel_evidence_exact": true
+      },
+      {
+        "visible_boxes": 4,
+        "boxes": {
+          "brown": 1,
+          "silver": 1,
+          "gold": 1,
+          "rainbow": 1,
+          "unknown": 0
+        },
+        "layout": "generic-components",
+        "legacy_pixel_evidence_exact": true
+      },
+      {
+        "visible_boxes": 5,
+        "boxes": {
+          "brown": 1,
+          "silver": 2,
+          "gold": 1,
+          "rainbow": 1,
+          "unknown": 0
+        },
+        "layout": "verified-5",
+        "legacy_pixel_evidence_exact": true
+      }
+    ],
+    "timings": {
+      "legacy_png_classifier_ms": [
+        1228.33,
+        1293.288,
+        1309.979
+      ],
+      "stage_bound_png_classifier_ms": [
+        201.609,
+        207.031,
+        171.564
+      ]
+    },
+    "median_ms": {
+      "legacy_png_classifier_ms": 1293.288,
+      "stage_bound_png_classifier_ms": 201.609
+    },
+    "source_hashes": {
+      "scripts/visionstudio_mystery_box_pixels.py": "1027fe3aef5276025d04268288fc1e0b5814818f699c7675d5195b47e6015f06",
+      "tests/test_mystery_box_pixels.py": "d5f2e4d70d40f356d7541c49608c145f72512bb71895756f50978abfd3a8b266"
+    },
+    "scope": "host processing on reconstructed measured HSV profiles; not original sprite artwork or native capture",
+    "native_ldplayer_capture_or_input_tested": false,
+    "real_unopened_box_artwork_available": false,
+    "targeted_tests": {
+      "total": 16,
+      "passed": 16
+    }
+  },
+  "pipeline": {
+    "version": "0.18.22",
+    "pipeline_new_tests": {
+      "total": 16,
+      "passed": 16
+    },
+    "runner_existing_tests": {
+      "total": 164,
+      "passed": 159,
+      "skipped": 5
+    },
+    "old_bridge_semantic_fixture_updates_passed": 2,
+    "original_result_count_binding_unchanged": true,
+    "legacy_v1_evidence_supported": true,
+    "resolved_physical_count_primary": true,
+    "actual_ldplayer_input_tested": false,
+    "file_sha256": {
+      "scripts/visionstudio_bridge.py": "9dbae37db36bb701f12e65ef0696a754ec6395a7c01e56b2fddc75781fe85bd2",
+      "scripts/visionstudio_local_runner.py": "fb2c46b5f8300ea03dc8a8aa9794abe64dcfb9e048625382c28dd3c06aeb8c17",
+      "tests/test_mystery_box_pixel_pipeline.py": "3a2fc1435ab17f379aaefd248b0185cf8008016741d2786cf4bb8aaa81ad42a2",
+      "tests/test_bridge.py": "bbbe799be4aa309546e0648d711b5ffdf9cda4d8d8a87d509354e417f018a77c",
+      "tests/test_local_runner.py": "915dafefa7990a8fabf4e525cfee689f3818ee001dbe08aae727ad4e685f936c"
+    }
+  },
+  "evidence": {
+    "version": "0.18.22",
+    "new_evidence_tests": 12,
+    "targeted_diagnostic_tests_passed": 75,
+    "evidence_slots": 3,
+    "exact_png_hash_bound": true,
+    "metadata_fields_whitelisted": true,
+    "latest_box_telegram_preview_preserved": true,
+    "active_human_review_preview_keeps_priority": true,
+    "runtime_input_authority": false,
+    "native_windows_ldplayer_tested_locally": false,
+    "file_sha256": {
+      "scripts/visionstudio_mystery_box_evidence.py": "213929ee60cdcc5f04b8c119474abf7a62dfa0790be81e93efd27491dd2dd895",
+      "tests/test_mystery_box_evidence.py": "931fbbbfd45a451a95ffe6b8f6fd3573c4617b079ab73f85595afc7ca9a3b99f",
+      "scripts/visionstudio_controller.py": "0d1a73d95f1ecb3d11f4092fca055854d8e9be8df2bc333a178b708a7915339e",
+      "scripts/visionstudio_log_delivery.py": "ec970427ced8582aac60fa5155395e18de21386872edffe38026b657a999bf4f"
+    }
+  },
+  "independent_review": {
+    "version": "0.18.22",
+    "review_status": "clear_with_calibration_limits",
+    "blocking_findings": [],
+    "independent_tests": {
+      "pixels": {
+        "passed": 16,
+        "seconds": 6.636
+      },
+      "evidence": {
+        "passed": 12,
+        "seconds": 0.837
+      },
+      "pipeline": {
+        "passed": 16,
+        "seconds": 4.588
+      }
+    },
+    "invariants": {
+      "original_result_count_and_route_binding_preserved": true,
+      "schema2_resolved_count_can_establish_missing_result_count": true,
+      "schema2_conflicting_result_preserved_with_provenance": true,
+      "legacy_v1_retained_evidence_immutable": true,
+      "private_two_capture_witness_required_before_schema2_retention": true,
+      "separate_fresh_action_frame_after_checkpoint_and_diagnostic_writes": true,
+      "stage_watchdog_stop_pause_human_batch_window_and_intent_boundaries_tested": true,
+      "actual_measured_profile_detector_to_restore_record_ui_telegram_test_passed": true,
+      "open_all_and_restored_confirm_each_commit_once": true,
+      "pending_or_committed_action_does_not_replenish": true,
+      "bounded_exact_pngs_and_hash_bound_metadata": true,
+      "telegram_previews_are_non_authoritative_and_active_review_has_priority": true,
+      "protected_relay_and_native_input_methods_ast_identical": [
+        "WindowsDesktop.click",
+        "BridgeServer.execute_local_fixed_stage_target",
+        "BridgeServer._cookie_relay_contract",
+        "BridgeServer._cookie_relay_watch_delay",
+        "BridgeServer._cookie_relay_raw_frame",
+        "BridgeServer._cookie_relay_frame_hash",
+        "BridgeServer._cookie_relay_frame_encoding",
+        "BridgeServer._detect_cookie_relay",
+        "BridgeServer._capture_cookie_relay_frame",
+        "BridgeServer._cookie_relay_capture_started",
+        "BridgeServer._cookie_relay_freshness",
+        "BridgeServer._cookie_relay_human_guard",
+        "BridgeServer._cookie_relay_authority",
+        "BridgeServer._cookie_relay_target_allowed",
+        "BridgeServer._cookie_relay_same_target",
+        "BridgeServer._cookie_relay_metrics",
+        "BridgeServer._cookie_relay_pre_intent_rejected",
+        "BridgeServer._try_cookie_relay",
+        "BridgeServer._capture_cookie_relay_sample"
+      ],
+      "unchanged_files": [
+        "scripts/visionstudio_cookie_relay.py",
+        "scripts/visionstudio_cookie_relay_frame.py",
+        "scripts/visionstudio_cookie_relay_freshness.py",
+        "scripts/data/cookie-relay-signatures.json",
+        "scripts/visionstudio_universal_mission.py",
+        "scripts/visionstudio_controller_state.py",
+        "scripts/visionstudio_updater.py",
+        "scripts/visionstudio_heart_input.py",
+        "scripts/visionstudio_heart_runner.py"
+      ]
+    },
+    "negative_preview_probes": [
+      {
+        "source": "Oct30 Running",
+        "complete_layout": false,
+        "purpose": "negative classification only; JPEG is not live input proof"
+      },
+      {
+        "source": "Sept19 historical Result failure",
+        "complete_layout": false,
+        "purpose": "negative classification only; JPEG is not live input proof"
+      },
+      {
+        "source": "Oct27 Lobby",
+        "complete_layout": false,
+        "purpose": "negative classification only; JPEG is not live input proof"
+      },
+      {
+        "source": "Oct23 reward Confirm",
+        "complete_layout": false,
+        "purpose": "negative classification only; JPEG is not live input proof"
+      }
+    ],
+    "calibration_limits": [
+      "No exact current unopened-box screenshot is present in the supplied diagnostic/workspace. Positive visual tests reconstruct measured legacy HSV profiles, not current sprite artwork.",
+      "The conservative unknown-foreground absence check can abstain on a large off-profile bright background patch. Reproduced on a synthetic purple patch; actual game background impact is unknown. This does not authorize input or invent a count."
+    ],
+    "native_windows_tested_by_this_reviewer": false,
+    "native_ldplayer_capture_or_input_tested": false,
+    "file_sha256": {
+      "scripts/visionstudio_mystery_box_pixels.py": "1027fe3aef5276025d04268288fc1e0b5814818f699c7675d5195b47e6015f06",
+      "scripts/visionstudio_mystery_box_evidence.py": "213929ee60cdcc5f04b8c119474abf7a62dfa0790be81e93efd27491dd2dd895",
+      "scripts/visionstudio_bridge.py": "9dbae37db36bb701f12e65ef0696a754ec6395a7c01e56b2fddc75781fe85bd2",
+      "scripts/visionstudio_local_runner.py": "fb2c46b5f8300ea03dc8a8aa9794abe64dcfb9e048625382c28dd3c06aeb8c17",
+      "scripts/visionstudio_controller.py": "0d1a73d95f1ecb3d11f4092fca055854d8e9be8df2bc333a178b708a7915339e",
+      "scripts/visionstudio_log_delivery.py": "ec970427ced8582aac60fa5155395e18de21386872edffe38026b657a999bf4f",
+      "tests/test_mystery_box_pixels.py": "d5f2e4d70d40f356d7541c49608c145f72512bb71895756f50978abfd3a8b266",
+      "tests/test_mystery_box_evidence.py": "931fbbbfd45a451a95ffe6b8f6fd3573c4617b079ab73f85595afc7ca9a3b99f",
+      "tests/test_mystery_box_pixel_pipeline.py": "3a2fc1435ab17f379aaefd248b0185cf8008016741d2786cf4bb8aaa81ad42a2"
+    }
+  },
+  "independent_safety_probes": {
+    "version": "0.18.22",
+    "review": "independent safety adversarial probes",
+    "passed": 13,
+    "checks": [
+      "conflicting physical count preserves original Result and route",
+      "rehashed inconsistent restore rejected: count-source",
+      "rehashed inconsistent restore rejected: resolved-count",
+      "rehashed inconsistent restore rejected: resolved-known",
+      "rehashed inconsistent restore rejected: original-count",
+      "rehashed inconsistent restore rejected: stability-observation",
+      "rehashed inconsistent restore rejected: stability-hash",
+      "rehashed inconsistent restore rejected: candidate-count",
+      "rehashed inconsistent restore rejected: complete-layout",
+      "rehashed inconsistent restore rejected: schema-downgrade",
+      "legacy v1 integrity is exact v21 canonical digest and keeps unavailable semantics",
+      "pending open-all-boxes rejects before capture or input and preserves ledger",
+      "pending confirm-rewards rejects before capture or input and preserves ledger"
+    ],
+    "native_ldplayer_capture_or_input_tested": false,
+    "unchanged_native_input_and_replay_guards_ast": [
+      "WindowsDesktop.click",
+      "BridgeSession.ensure_action_ready",
+      "BridgeSession.prepare_action_intent",
+      "BridgeServer.execute_local_fixed_stage_target",
+      "BridgeServer._verified_action_window",
+      "BridgeServer._controller_gate",
+      "BridgeServer.confirm_resume_stage"
+    ],
+    "review_status": "clear",
+    "blocking_findings": [],
+    "file_sha256": {
+      "scripts/visionstudio_bridge.py": "9dbae37db36bb701f12e65ef0696a754ec6395a7c01e56b2fddc75781fe85bd2",
+      "scripts/visionstudio_local_runner.py": "fb2c46b5f8300ea03dc8a8aa9794abe64dcfb9e048625382c28dd3c06aeb8c17",
+      "tests/test_mystery_box_pixel_pipeline.py": "3a2fc1435ab17f379aaefd248b0185cf8008016741d2786cf4bb8aaa81ad42a2"
+    }
+  },
+  "plan_compatibility": {
+    "baseline": "0.18.21",
+    "candidate": "0.18.22",
+    "configs_exact": 91,
+    "off_configs_exact": 52,
+    "on_configs_exact": 39,
+    "off_revision": "9",
+    "on_revision": "11",
+    "compiled_config_and_plan_identical": true,
+    "unchanged_files": {
+      "scripts/visionstudio_universal_mission.py": "c05842ed01902d231a9a12a6b56712307a801ac098723adee0e4f1faa3f0f664",
+      "scripts/visionstudio_controller_state.py": "e3f830a8ce57461d3f2505b24e92e3b2fc8ff39d3af4a5b853405f370e52f431",
+      "scripts/visionstudio_updater.py": "377340a051ad7b33f666a5671f9cd5c2b46b87bed037322554e8afe464c2c75d",
+      "scripts/visionstudio_cookie_relay.py": "d0a1ac3e28f1299b73346b37d2c4c4210105096c375869e9657a0cb6299f0daf",
+      "scripts/visionstudio_cookie_relay_frame.py": "0956b91baa7a0b0f9a61e65232e88b7bf62ca0eb80299f5a0a1693941f66b6a1",
+      "scripts/visionstudio_cookie_relay_freshness.py": "0ecb7d5a37c6e8db8c3037065b15884112b37a17f105c80688f98caa30b17ee7",
+      "scripts/data/cookie-relay-signatures.json": "36033e58a1d2ffbe48edc15df289096c4d86fbd60ebb162068baac3144bc680f",
+      "scripts/visionstudio_heart_input.py": "ebdb5cea74174a0904103a599154cee348466bfc0540ab2a6182b0b3c06b5b74",
+      "scripts/visionstudio_heart_runner.py": "b3a434b10129e743a970bf33f7fd6bc260682da348a4fbce016e87df4e83b739"
+    },
+    "native_ldplayer_capture_or_input_tested": false
+  },
+  "upgrades": [
+    {
+      "from": "0.18.13",
+      "to": "0.18.22",
+      "package_members_verified": 167,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.14",
+      "to": "0.18.22",
+      "package_members_verified": 167,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.15",
+      "to": "0.18.22",
+      "package_members_verified": 167,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.16",
+      "to": "0.18.22",
+      "package_members_verified": 167,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.17",
+      "to": "0.18.22",
+      "package_members_verified": 167,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.18",
+      "to": "0.18.22",
+      "package_members_verified": 167,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.19",
+      "to": "0.18.22",
+      "package_members_verified": 167,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.20",
+      "to": "0.18.22",
+      "package_members_verified": 167,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    },
+    {
+      "from": "0.18.21",
+      "to": "0.18.22",
+      "package_members_verified": 167,
+      "runtime_files_byte_preserved": 11,
+      "preset_library_loads_after_upgrade": true,
+      "mystery_box_evidence_loads_after_upgrade": true,
+      "deferred_without_package_edits": [
+        "Universal running",
+        "Universal paused",
+        "Human verification",
+        "Active checkpoint",
+        "Heart worker running"
+      ],
+      "native_windows_ldplayer_tested": false
+    }
+  ],
+  "native_windows_gate_required_before_publication": true,
+  "native_ldplayer_capture_or_input_tested": false,
+  "current_original_preopen_sprite_artwork_tested": false
+}
